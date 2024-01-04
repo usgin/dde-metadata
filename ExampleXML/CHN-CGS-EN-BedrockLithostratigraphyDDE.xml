@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MD_Metadata xmlns="https://www.ddeworld.org/resource/1.0/metadata"
+    xmlns:metadata="https://www.ddeworld.org/resource/1.0/metadata"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.ddeworld.org/resource/1.0/metadata ../DDEMetadata20231103.xsd">
+    <metadataIdentifier>
+        <authority>China Geological Survey</authority>
+        <code>22e1d1ca752a7bc3ff4e90014e760e8a08947654</code>
+        <codeSpace>UUID</codeSpace>
+    </metadataIdentifier>
+    <metadataStandardName>DDE S01-2023: Geosciences Information Metadata</metadataStandardName>
+    <metadataResponsibleParty>
+        <name>Yang Tiantian</name>
+        <role>pointOfContact</role>
+        <identifier>
+            <code>http://orcid.org/q34r2675427</code>
+        </identifier>
+        <country>CHN</country>
+        <electronicMailAddress>ytiantian@mail.cgs.gov.cn</electronicMailAddress>
+    </metadataResponsibleParty>
+    <metadataDate>
+        <date>2018-09-07T08:49:30</date>
+        <dateType>lastUpdate</dateType>
+    </metadataDate>
+    <identificationInfo>
+        <resourceIdentifier>
+            <code>nil:missing</code>
+        </resourceIdentifier>
+        <title>CHN CGS EN 1:1M Bedrock Lithostratigraphy</title>
+        <alternateTitle>Bedrock lithostratigraphic map of China@eng</alternateTitle>
+        <alternateTitle>中国基岩地层图@zho</alternateTitle>
+        <resourceDate>
+            <date>2018-09-07T08:49:30</date>
+            <dateType>revision</dateType>
+        </resourceDate>
+        <abstract>China 1:1M Bedrock Geology layer are composed by 63 sheets separate geological layers and information about sedimentary strata, quaternary strata , Igneous and metamorphic rocks. Sedimentary strata are be mapped by chronostratigraphic unitsand the rock formations. Intrusive rocks are be showed  by the "rock plus years," Pliocene strata are expressed by lithology and volcanic pattern. The layer includes more than 5,000 lithostratigraphic units and more than 1700 intrusive unit. Each geological units have attributes.  
+            For more information about  China geological maps that are available please visit http://en.cgs.gov.cn/</abstract>
+        <keyword>OneGeology</keyword>
+        <keyword>geology</keyword>
+        <keyword>continent@Asia</keyword>
+        <keyword>geographicarea@China</keyword>
+        <topicCategory>geoscientificInformation</topicCategory>
+        <resourceType>GeographicDataset</resourceType>
+        <resourceType>Map</resourceType>
+        <browseGraphic>
+            <title>thumbnail</title>
+            <applicationProfile>image/png</applicationProfile>
+            <linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</linkage>
+            <function>browseGraphic</function>
+        </browseGraphic>
+        <browseGraphic>
+            <title>large thumbnail</title>
+            <applicationProfile>image/png</applicationProfile>
+            <linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</linkage>
+            <function>browseGraphic</function>
+        </browseGraphic>
+        <language>zho</language>
+        <characterEncoding>utf8</characterEncoding>
+        <restriction>
+            <restrictionCode>licenceUnrestricted</restrictionCode>
+        </restriction>
+        
+        <acquisitionType>geological mapping</acquisitionType>
+        <acquisitionType>data integration synthesis</acquisitionType>
+        <geoTime>Paleoarchean through Holocene</geoTime>
+        <geographicExtent>
+            <westBoundLongitude>73.499</westBoundLongitude>
+            <eastBoundLongitude>135.08</eastBoundLongitude>
+            <southBoundLatitude>18.1609</southBoundLatitude>
+            <northBoundLatitude>53.5585</northBoundLatitude>
+        </geographicExtent>
+        <temporalExtent>
+            <beginName>Paleoarchean</beginName>
+            <beginIdentifier>
+                <authority>International Commission on Stratigraphy</authority>
+                <code>http://resource.geosciml.org/classifier/ics/ischart/Paleoarchean</code>
+                <description>Paleoarchean</description>
+            </beginIdentifier>
+            <endName>Holocene</endName>
+            <endIdentifier>
+                <authority>International Commission on Stratigraphy</authority>
+                <code>http://resource.geosciml.org/classifier/ics/ischart/Holocene</code>
+                <description>Holocene</description>
+            </endIdentifier>
+            <beginCoordinate>3804</beginCoordinate>
+            <endCoordinate>0</endCoordinate>
+            <coordinateUnits>Ma</coordinateUnits>
+        </temporalExtent>
+        <associatedResource>
+            <title>China geological maps that are available</title>
+            <applicationProfile>application/html</applicationProfile>
+            <linkage>http://en.cgs.gov.cn/</linkage>
+            <function>order</function>
+        </associatedResource>
+        <distributionInfo>
+            <distributionFormat>image/jpg</distributionFormat>
+            <distributionFormat>image/png</distributionFormat>
+            <distributionFormat>image/tif</distributionFormat>
+            <onlineResource>
+                <title>CHN_CGS_EN_1M_BLS</title>
+                <applicationProfile>OGC:WMS-1.3.0-http-get-map</applicationProfile>
+                <description>CHN CGS EN 1:1M Bedrock Lithostratigraphy</description>
+                <linkage>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;</linkage>
+                <function>browsing</function>
+            </onlineResource>
+            <spatialRepresentationInfo>
+                <spatialRepresentationType>grid</spatialRepresentationType>
+                <spatialResolution>1:1000000</spatialResolution>
+                
+                <referenceSystemIdentifier>
+                    <code>nil:missing</code>
+                    
+                </referenceSystemIdentifier>
+            </spatialRepresentationInfo>
+        </distributionInfo>
+        
+    </identificationInfo>
+</MD_Metadata>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ddemd:MD_Metadata xmlns:ddemd="https://www.ddeworld.org/resource/metadata/1.0"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://www.ddeworld.org/resource/metadata/1.0 file:metadatav3-2023-07-16.xsd">
+    <ddemd:metadataStandardName>DDE S01-2021:Geosciences Information Metadata</ddemd:metadataStandardName>
+    <ddemd:metadataIdentifier>
+        <ddemd:authority>Geological Survey of Timbuktu</ddemd:authority>
+        <ddemd:code>57839</ddemd:code>
+        <ddemd:codeSpace>https://example.org/identifiers/</ddemd:codeSpace>
+        <ddemd:description>dataset URI. Server implements content negotiation. Make HEAD request to see content options</ddemd:description>
+    </ddemd:metadataIdentifier>
+    <ddemd:metadataDate>
+        <ddemd:date>2006-05-04</ddemd:date>
+        <ddemd:dateType>creation</ddemd:dateType>
+    </ddemd:metadataDate>
+    <ddemd:metadataDate>
+        <ddemd:date>2008-05-24</ddemd:date>
+        <ddemd:dateType>lastUpdate</ddemd:dateType>
+    </ddemd:metadataDate>
+    <ddemd:metadataResponsibility>
+        <ddemd:name>Metadata curator</ddemd:name>
+        <ddemd:country>Botswana</ddemd:country>
+       <ddemd:identifier>
+            <ddemd:authority>https://orcid.org</ddemd:authority>
+           <ddemd:code>orcid:0000-0001-9999-9999</ddemd:code>
+           <ddemd:codeSpace>https://orcid.org/</ddemd:codeSpace>
+        </ddemd:identifier>
+        <ddemd:electronicMailAddress>metadata@somewhere.org</ddemd:electronicMailAddress>
+        <ddemd:roleType>custodian</ddemd:roleType>
+    </ddemd:metadataResponsibility>
+    <ddemd:resourceType>dataset</ddemd:resourceType>
+    <ddemd:browseGraphic>
+        <ddemd:linkage>http://www.mapsrus.edu/quicklook/map57839.png</ddemd:linkage>
+        <ddemd:name>Browse image of Geologic Map of Mt. Reallybig Quadrangle, Imaginary Country</ddemd:name>
+        <ddemd:description>100 dpi image of geologic map, 10 Mb.</ddemd:description>
+        <ddemd:function>browseGraphic</ddemd:function>
+    </ddemd:browseGraphic>
+    <ddemd:browseGraphic>
+        <ddemd:linkage>http://example.org/logos/45835.jpg/</ddemd:linkage>
+        <ddemd:name>Geologic Survey of Imaginary Country Logo</ddemd:name>
+        <ddemd:function>download</ddemd:function>
+    </ddemd:browseGraphic>
+    <ddemd:identificationInfo>
+        <ddemd:title>Geologic map of Mt. Reallybig Quandrangle, Imaginary Country</ddemd:title>
+        <ddemd:alternateTitle>备用标题 @chi</ddemd:alternateTitle>
+        <ddemd:identifier>
+            <ddemd:authority>DataCite</ddemd:authority>
+            <ddemd:code>23567/gsic/27839</ddemd:code>
+            <ddemd:codeSpace>https://doi.org/</ddemd:codeSpace>
+            <ddemd:version>3</ddemd:version>
+        </ddemd:identifier>
+        <ddemd:abstract>lots of cool information about this dataset</ddemd:abstract>
+        <ddemd:date>
+            <ddemd:date>2004-05-04</ddemd:date>
+            <ddemd:dateType>creation</ddemd:dateType>
+        </ddemd:date>
+        <ddemd:date>
+            <ddemd:date>2006-07-14</ddemd:date>
+            <ddemd:dateType>publication</ddemd:dateType>
+        </ddemd:date>
+        <ddemd:edition>1</ddemd:edition>
+        <ddemd:language>chi</ddemd:language>
+        <ddemd:characterEncoding>utf8</ddemd:characterEncoding>
+        <ddemd:keyword>Granite</ddemd:keyword>
+        <ddemd:keyword>Mogobongo Thrust</ddemd:keyword>
+        <ddemd:keyword>Limpopo Belt</ddemd:keyword>
+        <ddemd:keyword>Pan African orogen</ddemd:keyword>
+        <ddemd:geoTime>Paleoproterozoic</ddemd:geoTime>
+        <ddemd:geoTime>Cambrian</ddemd:geoTime>
+        <ddemd:geoTime>Eocene to Miocene</ddemd:geoTime>
+        <ddemd:topicCategory>geoscientificInformation</ddemd:topicCategory>
+        <ddemd:topicCategory>other: lithotratigraphy</ddemd:topicCategory>
+        <ddemd:additionalDocumentation>Anon, 2004, Map compilation methods at the Geological Survey of Imaginary country: GSIC OFR 2004-08, 57 p.</ddemd:additionalDocumentation>
+        <ddemd:lineage>Mapping done with grid of file traveses spaced 300 m, locations determined on air photo. Observation locations photogramettrical transferred to topographic basemap</ddemd:lineage>
+        <ddemd:lineage>Some mapping compiled from older source mapping using a zoom-transfer optical projector</ddemd:lineage>
+        <ddemd:source>Explorer, O., 1933, Geologic observations from a travers across the Limpopo Belt: J. Geol., v2, p. 220-240.</ddemd:source>
+        <ddemd:acquisitionType>geologicalMapping</ddemd:acquisitionType>
+        <ddemd:acquisitionType>remoteSensing</ddemd:acquisitionType>
+        <ddemd:acquisitionType>dataIntegrationCompilation</ddemd:acquisitionType>
+        <ddemd:dataQuality>Map accuracy is standard for mapping with 1:25000 scale air photo base. </ddemd:dataQuality>
+        <ddemd:associatedResource>
+            <ddemd:linkage> https://doi.org/32476/geo476247</ddemd:linkage>
+            <ddemd:name>Baze, K, Younk, M.B.L, 2009, Geological studies in the Limpopo belt: J. Irreproducible Research, v. 27, p22-55, https://doi.org/32476/geo476247.</ddemd:name>
+            <ddemd:function>information</ddemd:function>
+        </ddemd:associatedResource>
+        <ddemd:associatedResource>
+            <ddemd:linkage>https://geology.org/photos/mtreallybig</ddemd:linkage>
+            <ddemd:applicationProfile>oai:aggregation</ddemd:applicationProfile>
+            <ddemd:name>Mt Reallybig geology photo album</ddemd:name>
+            <ddemd:description>web site with collection of field photos taken during mapping project</ddemd:description>
+            <ddemd:function>browsing</ddemd:function>
+        </ddemd:associatedResource>
+        <ddemd:metadataReference>
+            <ddemd:linkage>http://gsic.archive.org/iso19139/377</ddemd:linkage>
+            <ddemd:applicationProfile>ISO-USGIN</ddemd:applicationProfile>
+            <ddemd:name>USGIN ISO19115/19139 metadata record</ddemd:name>
+            <ddemd:function>download</ddemd:function>
+        </ddemd:metadataReference>
+        <ddemd:resourceResponsibility>
+            <ddemd:name>Xamwwa, J. K</ddemd:name>
+            <ddemd:country>South Africa</ddemd:country>
+            <ddemd:identifier>
+                <ddemd:authority>orcid</ddemd:authority>
+                <ddemd:code>0000-0001-1111-2222</ddemd:code>
+                <ddemd:codeSpace>https://orcid.org/</ddemd:codeSpace>
+            </ddemd:identifier>
+            <ddemd:electronicMailAddress>xamwwageo@icgs.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>author</ddemd:roleType>
+        </ddemd:resourceResponsibility>
+        <ddemd:resourceResponsibility>
+            <ddemd:name>Samwa, A.B.</ddemd:name>
+            <ddemd:country>Botswana</ddemd:country>
+            <ddemd:identifier>
+                <ddemd:authority>orcid</ddemd:authority>
+                <ddemd:code>0000-0001-1167-2322</ddemd:code>
+                <ddemd:codeSpace>https://orcid.org/</ddemd:codeSpace>
+            </ddemd:identifier>
+            <ddemd:electronicMailAddress>samwaab@icgs.org</ddemd:electronicMailAddress>
+            <ddemd:electronicMailAddress>electronicMailAddress7</ddemd:electronicMailAddress>
+            <ddemd:roleType>editor</ddemd:roleType>
+        </ddemd:resourceResponsibility>
+        <ddemd:accessConstraints>unrestricted</ddemd:accessConstraints>
+        <ddemd:useConstraints>copyright</ddemd:useConstraints>
+        <ddemd:constraintsReference>
+            <ddemd:linkage>https://creativecommons.org/licenses/by/3.0/</ddemd:linkage>
+            <ddemd:name>Attribution 3.0 Unported (CC BY 3.0)</ddemd:name>
+            <ddemd:function>information</ddemd:function>
+        </ddemd:constraintsReference>
+        <ddemd:elevation>90-452 meters a.s.l.</ddemd:elevation>
+        <ddemd:westBoundLongitude>3.236</ddemd:westBoundLongitude>
+        <ddemd:eastBoundLongitude>1.229</ddemd:eastBoundLongitude>
+        <ddemd:southBoundLatitude>-27.356</ddemd:southBoundLatitude>
+        <ddemd:northBoundLatitude>-25.907</ddemd:northBoundLatitude>
+        <ddemd:geographicIdentifier>geoname:204232</ddemd:geographicIdentifier>
+    </ddemd:identificationInfo>
+    <ddemd:distributionInfo>
+        <ddemd:distributionFormat>x-gis/x-shapefile</ddemd:distributionFormat>
+        <ddemd:onlineResource>
+            <ddemd:linkage>https://getmymap.org/map/246lkyhewr</ddemd:linkage>
+            <ddemd:applicationProfile>INSPIRE geology</ddemd:applicationProfile>
+            <ddemd:name>Spatial data for Geology of Mt. Reallybig Quadrangle</ddemd:name>
+            <ddemd:description>Zip archive containing Shapefiles conforming to INSPIRE geology profile</ddemd:description>
+            <ddemd:function>download</ddemd:function>
+        </ddemd:onlineResource>
+        <ddemd:spatialRepresentationInfo>
+            <ddemd:spatialRepresentationType>vector</ddemd:spatialRepresentationType>
+            <ddemd:spatialResolution>10 m</ddemd:spatialResolution>
+            <ddemd:referenceSystemType>projected</ddemd:referenceSystemType>
+            <ddemd:referenceSystemIdentifier>
+                <ddemd:authority>EPSG</ddemd:authority>
+                <ddemd:code>22287</ddemd:code>
+                <ddemd:codeSpace>https://epsg.io/</ddemd:codeSpace>
+            </ddemd:referenceSystemIdentifier>
+        </ddemd:spatialRepresentationInfo>
+        <ddemd:contactInfo>
+            <ddemd:name>map sales</ddemd:name>
+            <ddemd:country>south africa</ddemd:country>
+            <ddemd:electronicMailAddress>mapsales@somewhere.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>distributor</ddemd:roleType>
+        </ddemd:contactInfo>
+    </ddemd:distributionInfo>
+    <ddemd:distributionInfo>
+        <ddemd:distributionFormat>application/pdf</ddemd:distributionFormat>
+        <ddemd:onlineResource>
+            <ddemd:linkage>https://getmymap.org/map/246lkyhewr.pdf</ddemd:linkage>
+            <ddemd:applicationProfile>pdf/A</ddemd:applicationProfile>
+            <ddemd:name>Image of Geolgoic Map of Mt. Reallbig Quadrangle, IC</ddemd:name>
+            <ddemd:description>Map layout produced for printing at a scale of 1:25000, full color. Map size (at 1:25000) is 60 by 120 cm. Includes legend and coorelation of map units diagram. Data projected into UTM Zone 2.</ddemd:description>
+            <ddemd:function>download</ddemd:function>
+        </ddemd:onlineResource>
+        <ddemd:spatialRepresentationInfo>
+            <ddemd:spatialRepresentationType>other: image</ddemd:spatialRepresentationType>
+            <ddemd:spatialResolution>1:25000</ddemd:spatialResolution>
+            <ddemd:referenceSystemType>projected</ddemd:referenceSystemType>
+            <ddemd:referenceSystemIdentifier>
+                <ddemd:authority>EPSG</ddemd:authority>
+                <ddemd:code>22234</ddemd:code>
+                <ddemd:codeSpace>https://epsg.io/</ddemd:codeSpace>
+            </ddemd:referenceSystemIdentifier>
+        </ddemd:spatialRepresentationInfo>
+        <ddemd:contactInfo>
+            <ddemd:name>map sales</ddemd:name>
+            <ddemd:country>south africa</ddemd:country>
+            <ddemd:electronicMailAddress>mapsales@somewhere.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>distributor</ddemd:roleType>
+        </ddemd:contactInfo>
+    </ddemd:distributionInfo>
+</ddemd:MD_Metadata>

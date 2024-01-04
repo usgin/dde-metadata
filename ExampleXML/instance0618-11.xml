@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ddemd:MD_Metadata xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ddemd="https://www.ddeworld.org/resource/metadata/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://www.ddeworld.org/resource/metadata/1.0 file:metadatav3-2023-06-18.xsd">
+    <ddemd:metadataStandardName>DDE S01-2021:Geosciences Information Metadata</ddemd:metadataStandardName>
+    <ddemd:metadataIdentifier>
+        <ddemd:authority>Geological Survey of Timbuktu</ddemd:authority>
+        <ddemd:code>57839</ddemd:code>
+        <ddemd:codeSpace>https://example.org/identifiers/</ddemd:codeSpace>
+        <ddemd:description>metadata URI. Server implements content negotiation. Make HEAD request to see content options</ddemd:description>
+    </ddemd:metadataIdentifier>
+    <ddemd:dateInfo>
+        <ddemd:date>2006-05-04</ddemd:date>
+        <ddemd:dateType>creation</ddemd:dateType>
+    </ddemd:dateInfo>
+    <ddemd:dateInfo>
+        <ddemd:date>2006-05-04</ddemd:date>
+        <ddemd:dateType>lastUpdate</ddemd:dateType>
+    </ddemd:dateInfo>
+    <ddemd:browseGraphic>http://www.mapsrus.edu/quicklook/map57839.png</ddemd:browseGraphic>
+    <ddemd:browseGraphic>http://example.org/logos/45835.jpg/</ddemd:browseGraphic>
+    <ddemd:dataIdentificationInfo>
+        <ddemd:title>Geologic map of Mt. Reallybig Quandrangle, Imaginary Country</ddemd:title>
+        <ddemd:alternateTitle>备用标题 @chi</ddemd:alternateTitle>
+        <ddemd:date>
+            <ddemd:date>2004-05-04</ddemd:date>
+            <ddemd:dateType>creation</ddemd:dateType>
+        </ddemd:date>
+        <ddemd:date>
+            <ddemd:date>2006-07-14</ddemd:date>
+            <ddemd:dateType>publication</ddemd:dateType>
+        </ddemd:date>
+        <ddemd:edition>1</ddemd:edition>
+        <ddemd:language>chi</ddemd:language>
+        <ddemd:characterEncoding>utf8</ddemd:characterEncoding>
+        <ddemd:keyword>Granite</ddemd:keyword>
+        <ddemd:keyword>Mogobongo Thrust</ddemd:keyword>
+        <ddemd:keyword>Limpopo Belt</ddemd:keyword>
+        <ddemd:keyword>Pan African orogen</ddemd:keyword>
+        <ddemd:abstract>lots of cool information about this dataset</ddemd:abstract>
+        <ddemd:topicCategory>geoscientificInformation</ddemd:topicCategory>
+        <ddemd:topicCategory>other: lithotratigraphy</ddemd:topicCategory>
+        <ddemd:additionalDocumentation>Anon, 2004, Map compilation methods at the Geological Survey of Imaginary country: GSIC OFR 2004-08, 57 p.</ddemd:additionalDocumentation>
+        <ddemd:dataQuality>Map accuracy is standard for mapping with 1:25000 scale air photo base. </ddemd:dataQuality>
+        <ddemd:lineage>Mapping done with grid of file traveses spaced 300 m, locations determined on air photo. Observation locations photogramettrical transferred to topographic basemap</ddemd:lineage>
+        <ddemd:lineage>Some mapping compiled from older source mapping using a zoom-transfer optical projector</ddemd:lineage>
+        <ddemd:source>Explorer, O., 1933, Geologic observations from a traverse across the Limpopo Belt: J. Geol., v2, p. 220-240.</ddemd:source>
+        <ddemd:acquisitionType>geologicalMapping</ddemd:acquisitionType>
+        <ddemd:acquisitionType>remoteSensing</ddemd:acquisitionType>
+        <ddemd:acquisitionType>dataIntegrationCompilation</ddemd:acquisitionType>
+        <ddemd:geoTime>Paleoproterozoic</ddemd:geoTime>
+        <ddemd:geoTime>Cambrian</ddemd:geoTime>
+        <ddemd:geoTime>Eocene to Miocene</ddemd:geoTime>
+        <ddemd:associatedResource>Baze, K, Younk, M.B.L, 2009, Geological studies in the Limpopo belt: J. Irreproducible Research, v. 27, p22-55, https://doi.org/32476/geo476247.</ddemd:associatedResource>
+        <ddemd:associatedResource>https://geology.org/photos/mtreallybig</ddemd:associatedResource>
+        <ddemd:metadataReference>http://gsic.archive.org/iso19139/377</ddemd:metadataReference>
+        <ddemd:dataCode>
+            <ddemd:code>ark:36437/226/maps/373h</ddemd:code>
+            <ddemd:codeSpace>https://n2t.net/</ddemd:codeSpace>
+        </ddemd:dataCode>
+        <ddemd:spatialRepresentationInfo>
+            <ddemd:spatialRepresentationType>vector</ddemd:spatialRepresentationType>
+            <ddemd:spatialResolution>10 m</ddemd:spatialResolution>
+            <ddemd:referenceSystemType>projected</ddemd:referenceSystemType>
+            <ddemd:elevation>90-452 meters a.s.l.</ddemd:elevation>
+            <ddemd:westBoundLongitude>3.236</ddemd:westBoundLongitude>
+            <ddemd:eastBoundLongitude>1.229</ddemd:eastBoundLongitude>
+            <ddemd:southBoundLatitude>-27.356</ddemd:southBoundLatitude>
+            <ddemd:northBoundLatitude>-25.907</ddemd:northBoundLatitude>
+            <ddemd:geographicIdentifier>geoname:204232</ddemd:geographicIdentifier>
+        </ddemd:spatialRepresentationInfo>
+        <ddemd:pointOfContact>
+            <ddemd:name>Data manager</ddemd:name>
+            <ddemd:country>South Africa</ddemd:country>
+            <ddemd:electronicMailAddress>data@example.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>dataOwner</ddemd:roleType>
+        </ddemd:pointOfContact>
+    </ddemd:dataIdentificationInfo>
+    <ddemd:distributionInfo>
+        <ddemd:accessConstraints>unrestricted</ddemd:accessConstraints>
+        <ddemd:useConstraints>copyright</ddemd:useConstraints>
+        <ddemd:distributionFormat>x-gis/x-shapefile</ddemd:distributionFormat>
+        <ddemd:onlineResource>https://getmymap.org/map/246lkyhewr</ddemd:onlineResource>
+        <ddemd:contactInfo>
+            <ddemd:name>map sales</ddemd:name>
+            <ddemd:country>south africa</ddemd:country>
+            <ddemd:electronicMailAddress>mapsales@somewhere.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>dataRelease</ddemd:roleType>
+        </ddemd:contactInfo>
+    </ddemd:distributionInfo>
+    <ddemd:distributionInfo>
+        <ddemd:accessConstraints>unrestricted</ddemd:accessConstraints>
+        <ddemd:useConstraints>copyright</ddemd:useConstraints>
+        <ddemd:distributionFormat>application/pdf</ddemd:distributionFormat>
+        <ddemd:onlineResource>https://getmymap.org/map/246lkyhewr.pdf</ddemd:onlineResource>
+        <ddemd:contactInfo>
+            <ddemd:name>map sales</ddemd:name>
+            <ddemd:country>South Africa</ddemd:country>
+            <ddemd:electronicMailAddress>sales@icsa.org</ddemd:electronicMailAddress>
+            <ddemd:roleType>dataRelease</ddemd:roleType>
+        </ddemd:contactInfo>
+    </ddemd:distributionInfo>
+    <ddemd:responsiblePartyInfo>
+        <ddemd:name>Xamwwa, J. K</ddemd:name>
+        <ddemd:country>South Africa</ddemd:country>
+        <ddemd:electronicMailAddress>xamwwageo@icgs.org</ddemd:electronicMailAddress>
+        <ddemd:roleType>other: author</ddemd:roleType>
+    </ddemd:responsiblePartyInfo>
+    <ddemd:responsiblePartyInfo>
+        <ddemd:name>Metadata curator</ddemd:name>
+        <ddemd:country>Botswana</ddemd:country>
+        <ddemd:electronicMailAddress>metadata@somewhere.org</ddemd:electronicMailAddress>
+        <ddemd:roleType>metadataMaintenance</ddemd:roleType>
+    </ddemd:responsiblePartyInfo>
+</ddemd:MD_Metadata>

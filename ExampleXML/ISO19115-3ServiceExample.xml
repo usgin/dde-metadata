@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+    xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+    xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+    xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+    xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+    xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+    xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+    xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+    xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+    xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+    xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+    xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+    xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+    xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+    xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+    xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
+    <mdb:metadataIdentifier>
+        <mcc:MD_Identifier>
+            <mcc:code>
+                <gco:CharacterString>eo-pdgs-landsat-datacube</gco:CharacterString>
+            </mcc:code>
+        </mcc:MD_Identifier>
+    </mdb:metadataIdentifier>
+    <mdb:defaultLocale>
+        <lan:PT_Locale>
+            <lan:language>
+                <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/LanguageCode.xml#LanguageCode " codeListValue="eng"/>
+            </lan:language>
+            <lan:characterEncoding/>
+        </lan:PT_Locale>
+    </mdb:defaultLocale>
+    <mdb:metadataScope>
+        
+        <mdb:MD_MetadataScope>
+            
+            <mdb:resourceScope>
+                <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode" codeListValue="service"/>
+            </mdb:resourceScope>
+        </mdb:MD_MetadataScope>
+    </mdb:metadataScope>
+    
+    <mdb:contact>
+        <cit:CI_Responsibility>
+            <cit:role>
+                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
+            </cit:role>
+            <cit:party>
+                <cit:CI_Organisation>
+                    <cit:name>
+                        <gco:CharacterString>ESA/ESRIN</gco:CharacterString>
+                    </cit:name>
+                    <cit:contactInfo>
+                        <cit:CI_Contact>
+                            <cit:phone>
+                                <cit:CI_Telephone>
+                                    <cit:number>
+                                        <gco:CharacterString>+3906941801</gco:CharacterString>
+                                    </cit:number>
+                                    <cit:numberType>
+                                        <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_TelephoneTyp eCode" codeListValue="voice"/>
+                                    </cit:numberType>
+                                </cit:CI_Telephone>
+                            </cit:phone>
+                            <cit:phone>
+                                <cit:CI_Telephone>
+                                    <cit:number>
+                                        <gco:CharacterString>+390694180280</gco:CharacterString>
+                                    </cit:number>
+                                    <cit:numberType>
+                                        <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_TelephoneTyp eCode" codeListValue="facsimile"/>
+                                    </cit:numberType>
+                                </cit:CI_Telephone>
+                            </cit:phone>
+                            <cit:address>
+                                <cit:CI_Address>
+                                    <cit:deliveryPoint>
+                                        <gco:CharacterString>Largo Galileo Galilei
+                                            1</gco:CharacterString>
+                                    </cit:deliveryPoint>
+                                    <cit:city>
+                                        <gco:CharacterString>Frascati (Roma)</gco:CharacterString>
+                                    </cit:city>
+                                    <cit:postalCode>
+                                        <gco:CharacterString>00044</gco:CharacterString>
+                                    </cit:postalCode>
+                                    <cit:country>
+                                        <gco:CharacterString>Italy</gco:CharacterString>
+                                    </cit:country>
+                                    <cit:electronicMailAddress>
+                                        <gco:CharacterString>eohelp@esa.int</gco:CharacterString>
+                                    </cit:electronicMailAddress>
+                                </cit:CI_Address>
+                            </cit:address>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://earth.esa.int</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Contact>
+                    </cit:contactInfo>
+                    <cit:individual>
+                        <cit:CI_Individual>
+                            <cit:positionName>
+                                <gco:CharacterString>ESRIN Earth Observation Help
+                                    Desk</gco:CharacterString>
+                            </cit:positionName>
+                        </cit:CI_Individual>
+                    </cit:individual>
+                </cit:CI_Organisation>
+            </cit:party>
+        </cit:CI_Responsibility>
+    </mdb:contact>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2019-05-15T09:00:00</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode codeList=" http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</cit:CI_DateTypeCode>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:metadataStandard>
+
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>ISO 19115-3</gco:CharacterString>
+            </cit:title>
+            <cit:edition>
+                <gco:CharacterString>2016-08-15</gco:CharacterString>
+            </cit:edition>
+        </cit:CI_Citation>
+    </mdb:metadataStandard>
+    <mdb:identificationInfo>
+
+        <srv:SV_ServiceIdentification>
+            <mri:citation>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>rasdaman - raster data manager</gco:CharacterString>
+                    </cit:title>
+                    <cit:date>
+                        <cit:CI_Date>
+                            <cit:date>
+                                <gco:DateTime>2020-12-04T00:00:00</gco:DateTime>
+                            </cit:date>
+                            <cit:dateType>
+                                <cit:CI_DateTypeCode codeList=" http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</cit:CI_DateTypeCode>
+                            </cit:dateType>
+                        </cit:CI_Date>
+                    </cit:date>
+                    <cit:edition>
+                        <gco:CharacterString>9.5</gco:CharacterString>
+                    </cit:edition>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString>eo-pdgs-landsat-datacube</gco:CharacterString>
+                            </mcc:code>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                </cit:CI_Citation>
+            </mri:citation>
+            <mri:abstract>
+                <gco:CharacterString>ESA PDGS-DataCube enables multi-temporal and pixel-based access
+                    to a subset of the data available in the European Space Agency dissemination
+                    services, including Heritage Missions (HM), Third-Party Missions (TPM) and Earth
+                    Explorer (EE) data.</gco:CharacterString>
+            </mri:abstract>
+            <mri:pointOfContact>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList=" http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>ESA/ESRIN</gco:CharacterString>
+                            </cit:name>
+                            <cit:contactInfo>
+                                <cit:CI_Contact>
+                                    <cit:phone>
+                                        <cit:CI_Telephone>
+                                            <cit:number>
+                                                <gco:CharacterString>+3906941801</gco:CharacterString>
+                                            </cit:number>
+                                            <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                            </cit:numberType>
+
+                                        </cit:CI_Telephone>
+                                    </cit:phone>
+                                    <cit:phone>
+                                        <cit:CI_Telephone>
+                                            <cit:number>
+                                                <gco:CharacterString>+390694180280</gco:CharacterString>
+                                            </cit:number>
+                                            <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                            </cit:numberType>
+                                        </cit:CI_Telephone>
+                                    </cit:phone>
+                                    <cit:address>
+                                        <cit:CI_Address>
+                                            <cit:deliveryPoint>
+                                                <gco:CharacterString>Largo Galileo Galilei
+                                                  1</gco:CharacterString>
+                                            </cit:deliveryPoint>
+                                            <cit:city>
+                                                <gco:CharacterString>Frascati
+                                                  (Roma)</gco:CharacterString>
+                                            </cit:city>
+                                            <cit:postalCode>
+                                                <gco:CharacterString>00044</gco:CharacterString>
+                                            </cit:postalCode>
+                                            <cit:country>
+                                                <gco:CharacterString>Italy</gco:CharacterString>
+                                            </cit:country>
+                                            <cit:electronicMailAddress>
+                                                <gco:CharacterString>eohelp@esa.int</gco:CharacterString>
+                                            </cit:electronicMailAddress>
+                                        </cit:CI_Address>
+                                    </cit:address>
+                                    <cit:onlineResource>
+                                        <cit:CI_OnlineResource>
+                                            <cit:linkage>
+                                                <gco:CharacterString>https://www.esa.int</gco:CharacterString>
+                                            </cit:linkage>
+                                        </cit:CI_OnlineResource>
+                                    </cit:onlineResource>
+                                </cit:CI_Contact>
+                            </cit:contactInfo>
+                            <cit:individual>
+                                <cit:CI_Individual>
+                                    <cit:positionName>
+                                        <gco:CharacterString>ESRIN Earth Observation Help
+                                            Desk</gco:CharacterString>
+                                    </cit:positionName>
+                                </cit:CI_Individual>
+                            </cit:individual>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </mri:pointOfContact>
+            
+            <mri:extent>
+                <gex:EX_Extent>
+                    <gex:geographicElement>
+                        <gex:EX_GeographicBoundingBox>
+                            <gex:westBoundLongitude>
+                                <gco:Decimal>-180</gco:Decimal>
+                            </gex:westBoundLongitude>
+                            <gex:eastBoundLongitude>
+                                <gco:Decimal>180</gco:Decimal>
+                            </gex:eastBoundLongitude>
+                            <gex:southBoundLatitude>
+                                <gco:Decimal>-90</gco:Decimal>
+                            </gex:southBoundLatitude>
+                            <gex:northBoundLatitude>
+                                <gco:Decimal>90</gco:Decimal>
+                            </gex:northBoundLatitude>
+                        </gex:EX_GeographicBoundingBox>
+                    </gex:geographicElement>
+                </gex:EX_Extent>
+            </mri:extent>
+            
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        
+                        <gcx:Anchor xlink:href="https://earth.esa.int/concept/landsat-7">Landsat7</gcx:Anchor>
+                    </mri:keyword>
+                    <mri:keyword>
+                        <gcx:Anchor xlink:href="https://earth.esa.int/concept/landsat-8">Landsat8</gcx:Anchor>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeListValue="platform" codeList="https://schemas.isotc211.org/19115/resources/Codelists/cat/codelists.xml#MD_KeywordType Code"/>
+                    </mri:type>
+                    <mri:thesaurusName>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gcx:Anchor xlink:href="https://earth.esa.int/concepts/concept_scheme/platforms">EO Parameter Code List - Platforms</gcx:Anchor>
+                            </cit:title>
+                            <cit:date>
+                                <cit:CI_Date>
+                                    <cit:date>
+                                        <gco:DateTime>2019-07-24T00:00:00</gco:DateTime>
+                                    </cit:date>
+                                    <cit:dateType>
+                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCod e" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                                    </cit:dateType>
+                                </cit:CI_Date>
+                            </cit:date>
+                        </cit:CI_Citation>
+                    </mri:thesaurusName>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:resourceConstraints>
+                <mco:MD_LegalConstraints>
+                    <mco:useConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeLists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+                    </mco:useConstraints>
+                    <mco:otherConstraints>
+                        <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadatacodelist/ConditionsApplyingToAccessAndUse/noConditionsApply">No conditions apply to access and use.</gcx:Anchor>
+                    </mco:otherConstraints>
+                </mco:MD_LegalConstraints>
+            </mri:resourceConstraints>
+            <mri:resourceConstraints>
+                <mco:MD_LegalConstraints>
+                    <mco:accessConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeLists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+                    </mco:accessConstraints>
+                    <mco:otherConstraints>
+                        <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadatacodelist/LimitationsOnPublicAccess/noLimitations">no limitations to public access.</gcx:Anchor>
+                    </mco:otherConstraints>
+                </mco:MD_LegalConstraints>
+            </mri:resourceConstraints>
+            <mri:associatedResource>
+                <mri:MD_AssociatedResource>
+                    <mri:associationType>
+                        <mri:DS_AssociationTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#DS_AssociationTypeCode" codeListValue="dependency"/>
+                    </mri:associationType>
+                    <mri:metadataReference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>Landsat 7 ETM+ (Enhanced Thematic Mapper Plus) Geolocated Terrain Corrected Systematic processing</gco:CharacterString>
+                            </cit:title>
+                            <cit:identifier>
+                                <mcc:MD_Identifier>
+                                    <mcc:code>
+                                        <gco:CharacterString>C1532648148-ESA</gco:CharacterString>
+                                    </mcc:code>
+                                    <mcc:codeSpace>
+                                        <gco:CharacterString>https://idn.ceos.org</gco:CharacterString>
+                                    </mcc:codeSpace>
+                                </mcc:MD_Identifier>
+                            </cit:identifier>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://eovoc.spacebel.be/collections/series/items/LANDSAT.ETM.GTC</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mri:metadataReference>
+                </mri:MD_AssociatedResource>
+            </mri:associatedResource>
+            
+            <srv:serviceType>
+                <gco:ScopedName codeSpace="http://inspire.ec.europa.eu/metadatacodelist/SpatialDataServiceType">transformation</gco:ScopedName>
+            </srv:serviceType>
+            <srv:accessProperties>
+                <mrd:MD_StandardOrderProcess>
+                    <mrd:fees>
+                        <gco:CharacterString>fees to use sevice</gco:CharacterString>
+                    </mrd:fees>  
+                    <mrd:orderingInstructions>
+                        <gco:CharacterString>service access properties ordering instructions</gco:CharacterString>
+                    </mrd:orderingInstructions>
+                    <mrd:turnaround>
+                        <gco:CharacterString>serviceturnaround</gco:CharacterString>
+                    </mrd:turnaround>
+                    <mrd:orderOptions>
+                        <gco:Record>ordering options </gco:Record>
+                    </mrd:orderOptions>
+                </mrd:MD_StandardOrderProcess>
+            </srv:accessProperties>
+            <srv:operatedDataset> <!-- see https://www.energistics.org/sites/default/files/2023-03/EIP_v1.1.pdf section 4.6.2 -->
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>Title of operatedDateset</gco:CharacterString>
+                    </cit:title>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:authority>
+                                <cit:CI_Citation>
+                                    <cit:title></cit:title>
+                                </cit:CI_Citation>
+                            </mcc:authority>
+                            
+                            <mcc:code>
+                                <gco:CharacterString>identifier for operated dataset</gco:CharacterString>
+                            </mcc:code>
+                            <mcc:codeSpace>
+                                <gco:CharacterString>operatedDataset id codespace</gco:CharacterString>
+                            </mcc:codeSpace>
+                            <mcc:version></mcc:version>
+                            <mcc:description>
+                                <gco:CharacterString>description of operatedDataset</gco:CharacterString>
+                            </mcc:description>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                </cit:CI_Citation>
+            </srv:operatedDataset>
+            
+            <srv:containsOperations>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>
+                        <gco:CharacterString></gco:CharacterString>
+                    </srv:operationName>
+                    <srv:distributedComputingPlatform/>
+                    <srv:operationDescription>
+                        <gco:CharacterString>operation description</gco:CharacterString>
+                    </srv:operationDescription>
+                    <srv:invocationName>
+                        <gco:CharacterString>operation invocation name</gco:CharacterString>
+                    </srv:invocationName>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://operation.connectpoint.org/427637</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:parameter>
+                        <srv:SV_Parameter>
+                            <srv:name>
+                                <gco:MemberName>
+                                    <gco:aName>
+                                        <gco:CharacterString>operation parameter aName</gco:CharacterString>
+                                    </gco:aName>
+                                    <gco:attributeType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>operation parmeter attribute type aName</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </gco:attributeType>
+                                </gco:MemberName>
+                            </srv:name>
+                            <srv:direction/>
+                            <srv:optionality/>
+                            <srv:repeatability/>
+                        </srv:SV_Parameter>
+                    </srv:parameter>
+                </srv:SV_OperationMetadata>
+            </srv:containsOperations>
+            
+            <srv:containsOperations>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>
+                        <gco:CharacterString>simple operation</gco:CharacterString>
+                    </srv:operationName>
+                    <srv:distributedComputingPlatform/>
+                    <srv:connectPoint/>
+                </srv:SV_OperationMetadata>
+            </srv:containsOperations>
+            
+        </srv:SV_ServiceIdentification>
+    </mdb:identificationInfo>
+    <mdb:distributionInfo>
+        <mrd:MD_Distribution>
+            <mrd:distributor xlink:type="simple">
+                <mrd:MD_Distributor>
+                    <mrd:distributorContact>
+                        <cit:CI_Responsibility>
+                            <cit:role>
+                                <cit:CI_RoleCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode"
+                                    codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+                            </cit:role>
+                            <cit:party>
+                                
+                                <cit:CI_Organisation>
+                                    <cit:name>
+                                        <gco:CharacterString>Arizona Geological Survey</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:contactInfo>
+                                        <cit:CI_Contact>
+                                            <cit:address>
+                                                <cit:CI_Address>
+                                                    <cit:country>
+                                                        <gco:CharacterString>USA</gco:CharacterString>
+                                                    </cit:country>
+                                                    <cit:electronicMailAddress>
+                                                        <gco:CharacterString>data@azgs.az.gov</gco:CharacterString>
+                                                    </cit:electronicMailAddress>
+                                                </cit:CI_Address>
+                                            </cit:address>
+                                        </cit:CI_Contact>
+                                    </cit:contactInfo>
+                                    <cit:partyIdentifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:authority>
+                                                <cit:CI_Citation>
+                                                    <cit:title>
+                                                        <gco:CharacterString>Research Organization Registry</gco:CharacterString>
+                                                    </cit:title>
+                                                </cit:CI_Citation>
+                                            </mcc:authority>
+                                            <mcc:code>
+                                                <gco:CharacterString>https://ror.org/00vcszp55</gco:CharacterString>
+                                            </mcc:code>
+                                        </mcc:MD_Identifier>
+                                    </cit:partyIdentifier>
+                                </cit:CI_Organisation>
+                            </cit:party>
+                        </cit:CI_Responsibility>
+                    </mrd:distributorContact>
+                </mrd:MD_Distributor>
+            </mrd:distributor>
+            
+            <mrd:transferOptions>
+                <mrd:MD_DigitalTransferOptions>
+                    <mrd:onLine>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://datacube.pdgs.eo.esa.int/wcs?service=WCS&amp;Request=DescribeCove
+                                    rage&amp;version=2.0.0&amp;CoverageId=LE7_RGB</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>OGC:WCS:DescribeCoverage</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:name>
+                                <gco:CharacterString>DescribeCoverage</gco:CharacterString>
+                            </cit:name>
+                            <cit:description>
+                                <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadatacodelist/OnLineDescriptionCode/accessPoint">accessPoint</gcx:Anchor>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeLists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </mrd:onLine>
+
+                    <mrd:onLine>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://datacube.pdgs.eo.esa.int/wcs?service=WCS&amp;Request=GetCapabilit
+                                    ies&amp;version=2.0.0</gco:CharacterString>
+                            </cit:linkage>
+
+                            <cit:protocol>
+                                <gcx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wcs/2.0">OGC:WCS:GetCapabilities</gcx:Anchor>
+                            </cit:protocol>
+                            <cit:name>
+                                <gco:CharacterString>GetCapabilities</gco:CharacterString>
+                            </cit:name>
+                            <cit:description>
+                                <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadatacodelist/OnLineDescriptionCode/accessPoint">accessPoint</gcx:Anchor>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeLists.xml#CI_OnLineFuncti onCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </mrd:onLine>
+                </mrd:MD_DigitalTransferOptions>
+            </mrd:transferOptions>
+        </mrd:MD_Distribution>
+    </mdb:distributionInfo>
+    <mdb:dataQualityInfo>
+        <mdq:DQ_DataQuality>
+            <mdq:scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/CodeLists.xml#MD_ScopeCode" codeListValue="service"/>
+                    </mcc:level>
+                    <mcc:levelDescription/>
+                </mcc:MD_Scope>
+            </mdq:scope>
+            <mdq:report>
+                <mdq:DQ_DomainConsistency>
+                    <mdq:result>
+                        <mdq:DQ_ConformanceResult>
+                            <mdq:specification>
+                                <cit:CI_Citation>
+                                    <cit:title>
+                                        <gcx:Anchor xlink:href="http://docs.opengeospatial.org/is/17089r1/17-089r1.html">OGC Web Coverage Service 2.0</gcx:Anchor>
+                                    </cit:title>
+                                    <cit:date>
+                                        <cit:CI_Date>
+                                            <cit:date>
+                                                <gco:Date>2010-10-27</gco:Date>
+                                            </cit:date>
+                                            <cit:dateType>
+                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#CI_DateTypeCode " codeListValue="publication"/>
+                                            </cit:dateType>
+                                        </cit:CI_Date>
+                                    </cit:date>
+                                </cit:CI_Citation>
+                            </mdq:specification>
+                            <mdq:explanation>
+                                <gco:CharacterString>This Spatial Data Service is conformant with
+                                    the OGC Web Coverage Service 2.0
+                                    specification</gco:CharacterString>
+                            </mdq:explanation>
+                            <mdq:pass gco:nilReason="unknown"/>
+                        </mdq:DQ_ConformanceResult>
+                    </mdq:result>
+                </mdq:DQ_DomainConsistency>
+
+            </mdq:report>
+        </mdq:DQ_DataQuality>
+    </mdb:dataQualityInfo>
+    <mdb:acquisitionInformation>
+        <mac:MI_AcquisitionInformation>
+            
+            <mac:platform>
+                <mac:MI_Platform>
+                    <mac:citation>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gcx:Anchor xlink:href="https://earth.esa.int/concept/landsat-7">Landsat7</gcx:Anchor>
+                            </cit:title>
+                            <cit:alternateTitle>
+                                <gcx:Anchor xlink:href="https://gcmd.earthdata.nasa.gov/kms/concept/c7a09e9f-3c99-4b31-a521313c379ba2b4">LANDSAT-7</gcx:Anchor>
+                            </cit:alternateTitle>
+                        </cit:CI_Citation>
+                    </mac:citation>
+                    <mac:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gcx:Anchor xlink:href="https://earth.esa.int/concept/landsat-7">Landsat7</gcx:Anchor>
+                            </mcc:code>
+                        </mcc:MD_Identifier>
+                    </mac:identifier>
+                    <mac:description>
+                        <gco:CharacterString/>
+                    </mac:description>
+                    <mac:instrument>
+                        <mac:MI_Instrument>
+                            <mac:citation>
+                                <cit:CI_Citation>
+                                    <cit:title>
+                                        <gcx:Anchor xlink:href="https://earth.esa.int/concept/etm">ETM</gcx:Anchor>
+                                    </cit:title>
+                                    <cit:alternateTitle>
+                                        <gcx:Anchor xlink:href="https://gcmd.earthdata.nasa.gov/kms/concept/4dbe7764-a2ea-4a19-b754696c35ac3205">ETM+</gcx:Anchor>
+                                    </cit:alternateTitle>
+                                    <cit:identifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gcx:Anchor xlink:href="https://earth.esa.int/concept/etm">ETM</gcx:Anchor>
+                                            </mcc:code>
+                                        </mcc:MD_Identifier>
+                                    </cit:identifier>
+                                </cit:CI_Citation>
+                            </mac:citation>
+                            <mac:identifier/>
+                            <mac:type/>
+                        </mac:MI_Instrument>
+                    </mac:instrument>
+                </mac:MI_Platform>
+            </mac:platform>
+        </mac:MI_AcquisitionInformation>
+    </mdb:acquisitionInformation>
+</mdb:MD_Metadata>
