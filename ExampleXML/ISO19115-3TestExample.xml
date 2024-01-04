@@ -1,0 +1,1849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+   xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+   xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+   xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+   xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+   xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+   xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+   xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+   xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+   xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+   xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+   xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+   xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
+   xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+   xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+   xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+   xmlns:dqm="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+   xmlns:iscodelist="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#"
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
+   <mdb:metadataIdentifier>
+      <mcc:MD_Identifier xmlns:gml="http://www.opengis.net/gml/3.2">
+         <mcc:code>
+            <gco:CharacterString>G01065</gco:CharacterString>
+         </mcc:code>
+         <mcc:codeSpace>
+            <gco:CharacterString>gov.noaa.ngdc.mgg.geophysics</gco:CharacterString>
+         </mcc:codeSpace>
+      </mcc:MD_Identifier>
+   </mdb:metadataIdentifier>
+   <mdb:defaultLocale>
+      <lan:PT_Locale xmlns:gml="http://www.opengis.net/gml/3.2">
+         <lan:language>
+            <lan:LanguageCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#LanguageCode" codeListValue="eng; USA">eng; USA</lan:LanguageCode>
+         </lan:language>
+         <lan:characterEncoding>
+            <lan:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</lan:MD_CharacterSetCode>
+         </lan:characterEncoding>
+      </lan:PT_Locale>
+   </mdb:defaultLocale>
+   <mdb:metadataScope xmlns:gml="http://www.opengis.net/gml/3.2">
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:contact xlink:title="Brian Meyer" xlink:type="simple">
+      <cit:CI_Responsibility uuid="7df204c0-eb7c-47de-af08-9d2afb5c15a0">
+         <cit:role>
+            <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+         </cit:role>
+         <cit:party xmlns:gml="http://www.opengis.net/gml/3.2">
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString>DOC/NOAA/NESDIS/NGDC &gt; National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce</gco:CharacterString>
+               </cit:name>
+
+               <cit:contactInfo>
+                  <cit:CI_Contact>
+                     <cit:address xlink:type="simple">
+                        <cit:CI_Address>
+                           <cit:country>
+                              <gco:CharacterString>/*/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString</gco:CharacterString>
+                           </cit:country>
+                           <cit:electronicMailAddress>
+                              <gco:CharacterString>Brian.Meyer@noaa.gov</gco:CharacterString>
+                           </cit:electronicMailAddress>
+                        </cit:CI_Address>
+                     </cit:address>
+                  </cit:CI_Contact>
+               </cit:contactInfo>
+               <cit:partyIdentifier>
+                  <mcc:MD_Identifier>
+                     <mcc:code/>
+                     <mcc:codeSpace/>
+                     <mcc:version>
+                        <gco:CharacterString/>
+                     </mcc:version>
+                     <mcc:description>
+                        <gco:CharacterString/>
+                     </mcc:description>
+
+                  </mcc:MD_Identifier>
+               </cit:partyIdentifier>
+
+            </cit:CI_Individual>
+         </cit:party>
+      </cit:CI_Responsibility>
+   </mdb:contact>
+   <mdb:dateInfo xmlns:gml="http://www.opengis.net/gml/3.2">
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime>2012-10-26T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </mdb:dateInfo>
+
+   <mdb:metadataStandard>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString>Geographic information - Metadata - Part 3: XML schema implementation for fundamental concepts</gco:CharacterString>
+         </cit:title>
+
+         <cit:edition>
+            <gco:CharacterString>ISO 19115-3:2016</gco:CharacterString>
+         </cit:edition>
+      </cit:CI_Citation>
+   </mdb:metadataStandard>
+
+   <mdb:metadataProfile>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString/>
+         </cit:title>
+      </cit:CI_Citation>
+   </mdb:metadataProfile>
+
+   <mdb:alternativeMetadataReference>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString/>
+         </cit:title>
+         <cit:onlineResource>
+            <cit:CI_OnlineResource>
+               <cit:linkage>
+                  <gco:CharacterString/>
+               </cit:linkage>
+               <cit:applicationProfile>
+                  <gco:CharacterString/>
+               </cit:applicationProfile>
+               <cit:description>
+                  <gco:CharacterString/>
+               </cit:description>
+               <cit:function>
+                  <cit:CI_OnLineFunctionCode codeList="" codeListValue=""/>
+               </cit:function>
+            </cit:CI_OnlineResource>
+         </cit:onlineResource>
+      </cit:CI_Citation>
+   </mdb:alternativeMetadataReference>
+
+   <mdb:spatialRepresentationInfo>
+
+      <msr:MD_VectorSpatialRepresentation>
+
+         <msr:geometricObjects>
+            <msr:MD_GeometricObjects>
+               <msr:geometricObjectType gco:nilReason="missing"/>
+            </msr:MD_GeometricObjects>
+         </msr:geometricObjects>
+      </msr:MD_VectorSpatialRepresentation>
+   </mdb:spatialRepresentationInfo>
+
+   <mdb:referenceSystemInfo xlink:title="WGS84" xlink:type="simple">
+      <mrs:MD_ReferenceSystem uuid="2504d000-8345-11e1-b0c4-0800200c9a66">
+
+         <mrs:referenceSystemIdentifier xlink:type="simple">
+            <mcc:MD_Identifier xmlns:gml="http://www.opengis.net/gml/3.2">
+               <mcc:authority xlink:type="simple">
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>World Geodetic System 1984</gco:CharacterString>
+                     </cit:title>
+                     <cit:alternateTitle>
+                        <gco:CharacterString>WGS 84</gco:CharacterString>
+                     </cit:alternateTitle>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2007-08-27T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty xlink:type="simple"/>
+                     <cit:citedResponsibleParty xlink:title="EPSG Registry" xlink:type="simple">
+                        <cit:CI_Responsibility uuid="68498237-c535-48dd-a292-17c2fc36cb97">
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>European Petroleum Survey Group</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:onlineResource xlink:type="simple">
+                                          <cit:CI_OnlineResource>
+                                             <cit:linkage>
+                                                <gco:CharacterString>http://www.epsg-registry.org/</gco:CharacterString>
+                                             </cit:linkage>
+                                             <cit:name>
+                                                <gco:CharacterString>European Petroleum Survey Group Geodetic Parameter Registry</gco:CharacterString>
+                                             </cit:name>
+                                             <cit:description>
+                                                <gco:CharacterString>Registry that accesses the EPSG Geodetic Parameter Dataset, which is a structured dataset of Coordinate Reference Systems and Coordinate Transformations.</gco:CharacterString>
+                                             </cit:description>
+                                             <cit:function>
+                                                <cit:CI_OnLineFunctionCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="search">search</cit:CI_OnLineFunctionCode>
+                                             </cit:function>
+                                          </cit:CI_OnlineResource>
+                                       </cit:onlineResource>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:onlineResource xlink:type="simple">
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4326</gco:CharacterString>
+                           </cit:linkage>
+                           <cit:name>
+                              <gco:CharacterString>WGS 84</gco:CharacterString>
+                           </cit:name>
+                           <cit:description>
+                              <gco:CharacterString>GML of World Geodetic System 1984 coordinate reference system.</gco:CharacterString>
+                           </cit:description>
+                           <cit:function>
+                              <cit:CI_OnLineFunctionCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode>
+                           </cit:function>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mcc:authority>
+               <mcc:code>
+                  <gco:CharacterString>urn:ogc:def:crs:EPSG::4326</gco:CharacterString>
+               </mcc:code>
+            </mcc:MD_Identifier>
+         </mrs:referenceSystemIdentifier>
+         <mrs:referenceSystemType>
+            <mrs:MD_ReferenceSystemTypeCode codeList="" codeListValue=""/>
+         </mrs:referenceSystemType>
+      </mrs:MD_ReferenceSystem>
+   </mdb:referenceSystemInfo>
+
+
+   <mdb:identificationInfo>
+      <mri:MD_DataIdentification>
+         <mri:citation xlink:type="simple">
+            <cit:CI_Citation>
+               <cit:title>
+                  <gco:CharacterString>Total Sediment Thickness of the World's Oceans &amp; Marginal Seas</gco:CharacterString>
+               </cit:title>         
+               <cit:alternateTitle>
+                  <gco:CharacterString>alt title</gco:CharacterString>
+               </cit:alternateTitle>
+               <cit:date xlink:type="simple">
+                  <cit:CI_Date>
+                     <cit:date>
+                        <gco:DateTime>2003-12-23T00:00:00</gco:DateTime>
+                     </cit:date>
+                     <cit:dateType>
+                        <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                     </cit:dateType>
+                  </cit:CI_Date>
+               </cit:date>
+               <cit:edition>
+                  <gco:CharacterString></gco:CharacterString>
+               </cit:edition>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility uuid="A085BFDF-C10F-818D-3EA8-08330125842F">
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>DOC/NOAA/NESDIS/NGDC - National Geophysical Data Center</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6826</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6513</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address xlink:type="simple">
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>National Geophysical Data Center NOAA, Mail Code E/GC, 325 Broadway</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Boulder</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>CO</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>80305-3328</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>ngdc.info@noaa.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                                 <cit:hoursOfService>
+                                    <gco:CharacterString>8am-5pm, Monday through Friday</gco:CharacterString>
+                                 </cit:hoursOfService>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:positionName>
+                                    <gco:CharacterString>User Services</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility uuid="A5B0BAEE-2A90-103F-E040-0AC8C5BB459F">
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>DOC/NOAA/NESDIS/NGDC &gt; National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6505</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6513</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address xlink:type="simple">
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>NOAA/NESDIS/NGDC</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>325 Broadway, E/GC3</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Boulder</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>Colorado</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>80305-3328</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>Barry.Eakins@noaa.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                                 <cit:hoursOfService>
+                                    <gco:CharacterString>9am-5pm, M-F, Mountain Time</gco:CharacterString>
+                                 </cit:hoursOfService>
+                                 <cit:contactInstructions>
+                                    <gco:CharacterString>Contact NGDC's Marine Geology and Geophysics Division. http://www.ngdc.noaa.gov/mgg/aboutmgg/contacts.html</gco:CharacterString>
+                                 </cit:contactInstructions>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Barry W. Eakins</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Research Scientist</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:presentationForm>
+                  <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+               </cit:presentationForm>
+            </cit:CI_Citation>
+         </mri:citation>
+         <mri:abstract>
+            <gco:CharacterString>A digital total-sediment-thickness database for the world's oceans and marginal seas has been compiled by the NOAA National Geophysical Data Center (NGDC). The data were gridded with a grid spacing of 5 arc-minutes by 5 arc-minutes. Sediment-thickness data were compiled from three principle sources: (i) previously published isopach maps including Ludwig and Houtz [1979], Matthias et al. [1988], Divins and Rabinowitz [1990], Hayes and LaBrecque [1991], and Divins [2003]; (ii) ocean drilling results, both from the Ocean Drilling Program (ODP) and the Deep Sea Drilling Project (DSDP); and (iii) seismic reflection profiles archived at NGDC as well as seismic data and isopach maps available as part of the IOC's International Geological-Geophysical Atlas of the Pacific Ocean [Udinstev, 2003].</gco:CharacterString>
+         </mri:abstract>
+         <mri:purpose>
+            <gco:CharacterString>To create a global sediment-thickness database for use by researchers and interested public.</gco:CharacterString>
+         </mri:purpose>
+         <mri:status>
+            <mcc:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeListValue="completed">completed</mcc:MD_ProgressCode>
+         </mri:status>
+         <mri:pointOfContact>
+            <cit:CI_Responsibility uuid="A5B0BAEE-2A90-103F-E040-0AC8C5BB459F">
+               <cit:role>
+                  <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+               </cit:role>
+               <cit:party>
+                  <cit:CI_Organisation>
+                     <cit:name>
+                        <gco:CharacterString>DOC/NOAA/NESDIS/NGDC &gt; National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce</gco:CharacterString>
+                     </cit:name>
+                     <cit:contactInfo>
+                        <cit:CI_Contact>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>303-497-6505</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>303-497-6513</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:address xlink:type="simple">
+                              <cit:CI_Address>
+                                 <cit:deliveryPoint>
+                                    <gco:CharacterString>NOAA/NESDIS/NGDC</gco:CharacterString>
+                                 </cit:deliveryPoint>
+                                 <cit:deliveryPoint>
+                                    <gco:CharacterString>325 Broadway, E/GC3</gco:CharacterString>
+                                 </cit:deliveryPoint>
+                                 <cit:city>
+                                    <gco:CharacterString>Boulder</gco:CharacterString>
+                                 </cit:city>
+                                 <cit:administrativeArea>
+                                    <gco:CharacterString>Colorado</gco:CharacterString>
+                                 </cit:administrativeArea>
+                                 <cit:postalCode>
+                                    <gco:CharacterString>80305-3328</gco:CharacterString>
+                                 </cit:postalCode>
+                                 <cit:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                 </cit:country>
+                                 <cit:electronicMailAddress>
+                                    <gco:CharacterString>Barry.Eakins@noaa.gov</gco:CharacterString>
+                                 </cit:electronicMailAddress>
+                              </cit:CI_Address>
+                           </cit:address>
+                           <cit:hoursOfService>
+                              <gco:CharacterString>9am-5pm, M-F, Mountain Time</gco:CharacterString>
+                           </cit:hoursOfService>
+                           <cit:contactInstructions>
+                              <gco:CharacterString>Contact NGDC's Marine Geology and Geophysics Division. http://www.ngdc.noaa.gov/mgg/aboutmgg/contacts.html</gco:CharacterString>
+                           </cit:contactInstructions>
+                        </cit:CI_Contact>
+                     </cit:contactInfo>
+                     <cit:individual>
+                        <cit:CI_Individual>
+                           <cit:name>
+                              <gco:CharacterString>Barry W. Eakins</gco:CharacterString>
+                           </cit:name>
+                           <cit:positionName>
+                              <gco:CharacterString>Research Scientist</gco:CharacterString>
+                           </cit:positionName>
+                        </cit:CI_Individual>
+                     </cit:individual>
+                  </cit:CI_Organisation>
+               </cit:party>
+            </cit:CI_Responsibility>
+         </mri:pointOfContact>
+         <mri:spatialRepresentationType>
+            <mcc:MD_SpatialRepresentationTypeCode codeList="" codeListValue=""/>
+         </mri:spatialRepresentationType>
+         <mri:spatialResolution>
+            <mri:MD_Resolution>
+               <mri:distance>
+                  <gco:Distance uom="jjj">44</gco:Distance>
+               </mri:distance>
+            </mri:MD_Resolution>
+         </mri:spatialResolution>
+         <mri:spatialResolution>
+            <mri:MD_Resolution>
+               <mri:levelOfDetail>
+                  <gco:CharacterString/>
+               </mri:levelOfDetail>
+            </mri:MD_Resolution>
+         </mri:spatialResolution>
+         <mri:topicCategory>
+            <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:extent>
+            <gex:EX_Extent>
+               <gex:description>
+                  <gco:CharacterString/>
+               </gex:description>
+               <gex:geographicElement>
+                  <gex:EX_GeographicDescription>
+                     <gex:geographicIdentifier>
+                        <mcc:MD_Identifier>
+                           <mcc:code/>
+                        </mcc:MD_Identifier>
+                     </gex:geographicIdentifier>
+                  </gex:EX_GeographicDescription>
+               </gex:geographicElement>
+               <gex:geographicElement>
+                  <gex:EX_GeographicBoundingBox>
+                     <gex:westBoundLongitude>
+                        <gco:Decimal>-180.0000</gco:Decimal>
+                     </gex:westBoundLongitude>
+                     <gex:eastBoundLongitude>
+                        <gco:Decimal>180.0000</gco:Decimal>
+                     </gex:eastBoundLongitude>
+                     <gex:southBoundLatitude>
+                        <gco:Decimal>-70.0000</gco:Decimal>
+                     </gex:southBoundLatitude>
+                     <gex:northBoundLatitude>
+                        <gco:Decimal>79.0000</gco:Decimal>
+                     </gex:northBoundLatitude>
+                  </gex:EX_GeographicBoundingBox>
+               </gex:geographicElement>
+               <gex:temporalElement>
+                  <gex:EX_TemporalExtent>
+                     <gex:extent>
+                        <gml:TimePeriod>
+                           <gml:description></gml:description>
+                           <gml:begin nilReason="inapplicable"/>
+                           <gml:end nilReason="inapplicable"/>
+                        </gml:TimePeriod>
+                     </gex:extent>
+                  </gex:EX_TemporalExtent>
+               </gex:temporalElement>
+               <gex:temporalElement>
+                  <gex:EX_TemporalExtent>
+                     <gex:extent>
+                        <gml:TimePeriod>
+                           <gml:description></gml:description>
+                           <gml:begin>
+                              <gml:TimeInstant>
+                                 
+                                 <gml:identifier codeSpace="">
+                               </gml:identifier>
+                                 <gml:name codeSpace=""/>
+                                 <gml:timePosition frame=""/>
+                              </gml:TimeInstant>
+                           </gml:begin>
+                           <gml:end>
+                              <gml:TimeInstant>
+                                 <gml:identifier codeSpace=""/>
+                                 <gml:name codeSpace=""/>
+                                 <gml:timePosition indeterminatePosition="unknown"/>
+                              </gml:TimeInstant>
+                           </gml:end>
+                        </gml:TimePeriod>
+                     </gex:extent>
+                  </gex:EX_TemporalExtent>
+               </gex:temporalElement>
+               <gex:temporalElement>
+                  <gex:EX_TemporalExtent id="boundingTemporalExtent">
+
+                     <gex:extent>
+
+                        <gml:TimePeriod gml:id="d1e546" frame="#ISO-8601">
+                           <gml:description>   </gml:description>
+                           <gml:beginPosition frame="#ISO-8601">1979-01-01</gml:beginPosition>
+                           <gml:endPosition frame="#ISO-8601">2003-01-01</gml:endPosition>
+                        </gml:TimePeriod>
+                     </gex:extent>
+                  </gex:EX_TemporalExtent>
+               </gex:temporalElement>
+               <gex:verticalElement>
+                  <gex:EX_VerticalExtent>
+                     <gex:minimumValue/>
+                     <gex:maximumValue/>
+                  </gex:EX_VerticalExtent>
+               </gex:verticalElement>
+            </gex:EX_Extent>
+         </mri:extent>
+         <mri:resourceMaintenance xlink:type="simple">
+            <mmi:MD_MaintenanceInformation>
+               <mmi:maintenanceAndUpdateFrequency>
+                  <mmi:MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</mmi:MD_MaintenanceFrequencyCode>
+               </mmi:maintenanceAndUpdateFrequency>
+            </mmi:MD_MaintenanceInformation>
+         </mri:resourceMaintenance>
+         <mri:graphicOverview xlink:type="simple">
+            <mcc:MD_BrowseGraphic>
+               <mcc:fileName>
+                  <gco:CharacterString>http://www.ngdc.noaa.gov/mgg/image/sedthick9.jpg</gco:CharacterString>
+               </mcc:fileName>
+               <mcc:fileDescription>
+                  <gco:CharacterString>Image of total sediment thickness of the world's oceans and marginal seas.</gco:CharacterString>
+               </mcc:fileDescription>
+               <mcc:fileType>
+                  <gco:CharacterString>JPG</gco:CharacterString>
+               </mcc:fileType>
+            </mcc:MD_BrowseGraphic>
+         </mri:graphicOverview>
+         <mri:descriptiveKeywords xlink:type="simple">
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>EARTH SCIENCE&gt;OCEANS&gt;Marine Sediments</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName xlink:title="NASA/GCMD Science Keywords" xlink:type="simple">
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>NASA/Global Change Master Directory (GCMD) Earth Science Keywords</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2007-04-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:edition>
+                        <gco:CharacterString>Version 6.0.0.0.0</gco:CharacterString>
+                     </cit:edition>
+                     <cit:editionDate>
+                        <gco:DateTime>2007-04-01T00:00:00</gco:DateTime>
+                     </cit:editionDate>
+                     <cit:citedResponsibleParty xlink:type="simple">
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>NASA/GSFC/SED/ESD/GCDC/GCMD &gt; Global Change Master Directory, Global Change Data Center, Earth Sciences Division, Science and Exploration Directorate, Goddard Space Flight Center, NASA</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:onlineResource xlink:type="simple">
+                                          <cit:CI_OnlineResource>
+                                             <cit:linkage>
+                                                <gco:CharacterString>http://gcmd.gsfc.nasa.gov/Resources/valids/archives/keyword_list.html</gco:CharacterString>
+                                             </cit:linkage>
+                                             <cit:protocol>
+                                                <gco:CharacterString>http</gco:CharacterString>
+                                             </cit:protocol>
+                                             <cit:applicationProfile>
+                                                <gco:CharacterString>web browser</gco:CharacterString>
+                                             </cit:applicationProfile>
+                                             <cit:name>
+                                                <gco:CharacterString>GCMD Keywords, Version 6.0.0.0.0</gco:CharacterString>
+                                             </cit:name>
+                                             <cit:description>
+                                                <gco:CharacterString>Thesuarus for earth science keywords and associated directories hosted and maintained by NASA.</gco:CharacterString>
+                                             </cit:description>
+                                             <cit:function>
+                                                <cit:CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode>
+                                             </cit:function>
+                                          </cit:CI_OnlineResource>
+                                       </cit:onlineResource>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords xlink:type="simple">
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Sediment Thickness</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName xlink:type="simple">
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Uncontrolled Keywords</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords xlink:type="simple">
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>H : 1 km - &lt; 10 km or approximately .01 degree - &lt; .09 degree</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>V : 1 meter - &lt; 10 meters</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName xlink:type="simple">
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>NASA/GCMD Data Resolution Keywords</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords xlink:type="simple">
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Ocean&gt;Atlantic Ocean</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Ocean&gt;Indian Ocean</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Ocean&gt;Pacific Ocean</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Ocean&gt;Southern Ocean</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Vertical Location&gt;Sea Floor</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place">place</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName xlink:title="GCMD Location Keywords" xlink:type="simple">
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>NASA/GCMD Location Keywords</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
+                     <cit:citedResponsibleParty xlink:title="GCMD User Support Office"
+                        xlink:type="simple">
+                        <cit:CI_Responsibility uuid="8294BEE08B11359FE040AC8C5AB460D1">
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>NASA</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:electronicMailAddress>
+                                                <gco:CharacterString>gcmduso@gcmd.gsfc.nasa.gov</gco:CharacterString>
+                                             </cit:electronicMailAddress>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                       <cit:onlineResource xlink:type="simple">
+                                          <cit:CI_OnlineResource>
+                                             <cit:linkage>
+                                                <gco:CharacterString>http://gcmd.nasa.gov/MailComments/MailComments.jsf?rcpt=gcmduso</gco:CharacterString>
+                                             </cit:linkage>
+                                             <cit:name>
+                                                <gco:CharacterString>GCMD Feedback Form</gco:CharacterString>
+                                             </cit:name>
+                                             <cit:description>
+                                                <gco:CharacterString>Have a Comment for the GCMD?</gco:CharacterString>
+                                             </cit:description>
+                                             <cit:function>
+                                                <cit:CI_OnLineFunctionCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode>
+                                             </cit:function>
+                                          </cit:CI_OnlineResource>
+                                       </cit:onlineResource>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                                 <cit:individual>
+                                    <cit:CI_Individual>
+                                       <cit:positionName>
+                                          <gco:CharacterString>GCMD User Support Office</gco:CharacterString>
+                                       </cit:positionName>
+                                    </cit:CI_Individual>
+                                 </cit:individual>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty xlink:title="GCMD Valids" xlink:type="simple"/>
+                     <cit:onlineResource xlink:title="GCMD Keyword Page" xlink:type="simple">
+                        <cit:CI_OnlineResource uuid="18ec3410-4289-11df-9879-0800200c9a66">
+                           <cit:linkage>
+                              <gco:CharacterString>http://gcmd.nasa.gov/Resources/valids/</gco:CharacterString>
+                           </cit:linkage>
+                           <cit:name>
+                              <gco:CharacterString>GCMD Keywords Page</gco:CharacterString>
+                           </cit:name>
+                           <cit:description>
+                              <gco:CharacterString>This page describes the NASA GCMD Keywords, how to reference those keywords and provides download instructions.</gco:CharacterString>
+                           </cit:description>
+                           <cit:function>
+                              <cit:CI_OnLineFunctionCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode>
+                           </cit:function>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:resourceConstraints xlink:title="NOAA Disclaimer" xlink:type="simple">
+            <mco:MD_LegalConstraints uuid="dadd4ac3-2b9f-4db5-8603-71285b94c3d7">
+               <mco:useLimitation>
+                  <gco:CharacterString>While every effort has been made to ensure that these data are accurate and reliable within the limits of the current state of the art, NOAA cannot assume liability for any damages caused by any errors or omissions in the data, nor as a result of the failure of the data to function on a particular system. NOAA makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</gco:CharacterString>
+               </mco:useLimitation>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:resourceConstraints xlink:type="simple">
+            <mco:MD_LegalConstraints>
+               <mco:useConstraints>
+                  <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+               </mco:useConstraints>
+               <mco:otherConstraints>
+                  <gco:CharacterString>Use Constraints: None</gco:CharacterString>
+               </mco:otherConstraints>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:resourceConstraints xlink:type="simple">
+            <mco:MD_LegalConstraints>
+               <mco:accessConstraints>
+                  <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+               </mco:accessConstraints>
+               <mco:otherConstraints>
+                  <gco:CharacterString>Access Constraints: None</gco:CharacterString>
+               </mco:otherConstraints>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Isopach Map of the Sediments in the Pacific Ocean Basin</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>1979-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>American Association of Petroleum Geologists</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Tulsa</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString>Oklahoma</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Ludwig, W. J.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Houtz, R. E.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:presentationForm>
+                        <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+                     </cit:presentationForm>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+               <mri:initiativeType>
+                  <mri:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="sciencePaper">sciencePaper</mri:DS_InitiativeTypeCode>
+               </mri:initiativeType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Sediment Thickness map of the Indian Ocean</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>1988-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>American Association of Petroleum Geologists</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Tulsa</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString>Oklahoma</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Mathhias, P. K.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Rabinowitz, P. D.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Dipiazza, N.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:presentationForm>
+                        <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+                     </cit:presentationForm>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+               <mri:initiativeType>
+                  <mri:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="sciencePaper">sciencePaper</mri:DS_InitiativeTypeCode>
+               </mri:initiativeType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Thickness of Sedimentary Cover for the South Atlantic</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>1990-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility uuid="e012716f-6933-4518-bf40-e4104f6ceb91">
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>UNESCO/IOC&gt;Intergovernmental Oceanographic Commission, United Nations Educational, Scientific and Cultural Organization</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:phone>
+                                          <cit:CI_Telephone>
+                                             <cit:number>
+                                                <gco:CharacterString>+33 1 45 68 10 00</gco:CharacterString>
+                                             </cit:number>
+                                             <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                             </cit:numberType>
+                                          </cit:CI_Telephone>
+                                       </cit:phone>
+                                       <cit:phone>
+                                          <cit:CI_Telephone>
+                                             <cit:number>
+                                                <gco:CharacterString>+33 1 45 68 58 12</gco:CharacterString>
+                                             </cit:number>
+                                             <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                             </cit:numberType>
+                                          </cit:CI_Telephone>
+                                       </cit:phone>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:deliveryPoint>
+                                                <gco:CharacterString>1 rue Miollis</gco:CharacterString>
+                                             </cit:deliveryPoint>
+                                             <cit:city>
+                                                <gco:CharacterString>Paris</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString>??le-de-France</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                             <cit:postalCode>
+                                                <gco:CharacterString>75732 Paris Cedex 15</gco:CharacterString>
+                                             </cit:postalCode>
+                                             <cit:country>
+                                                <gco:CharacterString>France</gco:CharacterString>
+                                             </cit:country>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Divins, D. L.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Rabinowitz, P. D.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:presentationForm>
+                        <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+                     </cit:presentationForm>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>pp. 126-127</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+               <mri:initiativeType>
+                  <mri:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="sciencePaper">sciencePaper</mri:DS_InitiativeTypeCode>
+               </mri:initiativeType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Sediment Isopachs: Circum-Antarctic to 30S,</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>1991-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>American Geophysical Union (AGU)</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:phone>
+                                          <cit:CI_Telephone>
+                                             <cit:number>
+                                                <gco:CharacterString>(800) 966-2841</gco:CharacterString>
+                                             </cit:number>
+                                             <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                             </cit:numberType>
+                                          </cit:CI_Telephone>
+                                       </cit:phone>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:deliveryPoint>
+                                                <gco:CharacterString>2000 Florida Avenue N.W.</gco:CharacterString>
+                                             </cit:deliveryPoint>
+                                             <cit:city>
+                                                <gco:CharacterString>Washington</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString>District of Columbia</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                             <cit:postalCode>
+                                                <gco:CharacterString>20009-1277</gco:CharacterString>
+                                             </cit:postalCode>
+                                             <cit:country>
+                                                <gco:CharacterString>USA</gco:CharacterString>
+                                             </cit:country>
+                                             <cit:electronicMailAddress>
+                                                <gco:CharacterString>service@agu.org</gco:CharacterString>
+                                             </cit:electronicMailAddress>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Hayes, D. E.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>LaBrecque, J. L.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:presentationForm>
+                        <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+                     </cit:presentationForm>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>pp. 29-33</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+               <mri:initiativeType>
+                  <mri:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="sciencePaper">sciencePaper</mri:DS_InitiativeTypeCode>
+               </mri:initiativeType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Thickness of Sedimentary Cover in the Eastern Pacific Ocean</gco:CharacterString>
+                     </cit:title>
+                     <cit:date xlink:type="simple">
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2003-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility uuid="e012716f-6933-4518-bf40-e4104f6ceb91">
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>UNESCO/IOC&gt;Intergovernmental Oceanographic Commission, United Nations Educational, Scientific and Cultural Organization</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:phone>
+                                          <cit:CI_Telephone>
+                                             <cit:number>
+                                                <gco:CharacterString>+33 1 45 68 10 00</gco:CharacterString>
+                                             </cit:number>
+                                             <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                             </cit:numberType>
+                                          </cit:CI_Telephone>
+                                       </cit:phone>
+                                       <cit:phone>
+                                          <cit:CI_Telephone>
+                                             <cit:number>
+                                                <gco:CharacterString>+33 1 45 68 58 12</gco:CharacterString>
+                                             </cit:number>
+                                             <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                             </cit:numberType>
+                                          </cit:CI_Telephone>
+                                       </cit:phone>
+                                       <cit:address xlink:type="simple">
+                                          <cit:CI_Address>
+                                             <cit:deliveryPoint>
+                                                <gco:CharacterString>1 rue Miollis</gco:CharacterString>
+                                             </cit:deliveryPoint>
+                                             <cit:city>
+                                                <gco:CharacterString>Paris</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString>??le-de-France</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                             <cit:postalCode>
+                                                <gco:CharacterString>75732 Paris Cedex 15</gco:CharacterString>
+                                             </cit:postalCode>
+                                             <cit:country>
+                                                <gco:CharacterString>France</gco:CharacterString>
+                                             </cit:country>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Divins, D. L.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:presentationForm>
+                        <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+                     </cit:presentationForm>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>pp. 120, 126-127, 130</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+               <mri:initiativeType>
+                  <mri:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="sciencePaper">sciencePaper</mri:DS_InitiativeTypeCode>
+               </mri:initiativeType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:defaultLocale>
+            <lan:PT_Locale>
+               <lan:language>
+                  <lan:LanguageCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#LanguageCode" codeListValue="eng; USA">eng; USA</lan:LanguageCode>
+               </lan:language>
+               <lan:characterEncoding gco:nilReason="unknown"/>
+            </lan:PT_Locale>
+         </mri:defaultLocale>
+         <mri:otherLocale>
+            <lan:PT_Locale>
+               <lan:language></lan:language>
+               <lan:characterEncoding></lan:characterEncoding>
+            </lan:PT_Locale>
+         </mri:otherLocale>
+         <mri:supplementalInformation>
+            <gco:CharacterString></gco:CharacterString>
+         </mri:supplementalInformation>
+      </mri:MD_DataIdentification>
+   </mdb:identificationInfo>
+   <mdb:distributionInfo xlink:type="simple">
+      <mrd:MD_Distribution>
+         <mrd:distributionFormat xlink:type="simple">
+            <mrd:MD_Format>
+               <mrd:formatSpecificationCitation>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>netCDF</gco:CharacterString>
+                     </cit:title>
+                     <cit:alternateTitle>
+                        <gco:CharacterString>binary grid created using GMT (Generic Mapping Tools)</gco:CharacterString>
+                     </cit:alternateTitle>
+                     <cit:date gco:nilReason="unknown"/>
+                     <cit:edition>
+                        <gco:CharacterString>1</gco:CharacterString>
+                     </cit:edition>
+                     <cit:identifier>
+                        <mcc:MD_Identifier>
+                           <mcc:code>
+                              <gco:CharacterString>netCDF</gco:CharacterString>
+                           </mcc:code>
+                        </mcc:MD_Identifier>
+                     </cit:identifier>
+                  </cit:CI_Citation>
+               </mrd:formatSpecificationCitation>
+               <mrd:fileDecompressionTechnique>
+                  <gco:CharacterString>No compression applied</gco:CharacterString>
+               </mrd:fileDecompressionTechnique>
+            </mrd:MD_Format>
+         </mrd:distributionFormat>
+         <mrd:distributionFormat xlink:type="simple">
+            <mrd:MD_Format>
+               <mrd:formatSpecificationCitation>
+                  <cit:CI_Citation>
+                     <cit:title xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">ASCII</gco:CharacterString>
+                     </cit:title>
+                     <cit:alternateTitle xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">ASCII text versions, both with and without NaNs (not a number)</gco:CharacterString>
+                     </cit:alternateTitle>
+                     <cit:date xmlns:gml="http://www.opengis.net/gml/3.2" gco:nilReason="unknown"/>
+                     <cit:edition xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">1</gco:CharacterString>
+                     </cit:edition>
+                     <cit:identifier xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <mcc:MD_Identifier>
+                           <mcc:code>
+                              <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">ASCII</gco:CharacterString>
+                           </mcc:code>
+                        </mcc:MD_Identifier>
+                     </cit:identifier>
+                  </cit:CI_Citation>
+               </mrd:formatSpecificationCitation>
+               <mrd:fileDecompressionTechnique>
+                  <gco:CharacterString>No compression applied</gco:CharacterString>
+               </mrd:fileDecompressionTechnique>
+            </mrd:MD_Format>
+         </mrd:distributionFormat>
+         <mrd:distributionFormat xlink:type="simple">
+            <mrd:MD_Format>
+               <mrd:formatSpecificationCitation>
+                  <cit:CI_Citation>
+                     <cit:title xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">e00</gco:CharacterString>
+                     </cit:title>
+                     <cit:alternateTitle xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">ESRI ArcGIS interchange format</gco:CharacterString>
+                     </cit:alternateTitle>
+                     <cit:date xmlns:gml="http://www.opengis.net/gml/3.2" gco:nilReason="unknown"/>
+                     <cit:edition xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">1</gco:CharacterString>
+                     </cit:edition>
+                     <cit:identifier xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <mcc:MD_Identifier>
+                           <mcc:code>
+                              <gco:CharacterString xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts">e00</gco:CharacterString>
+                           </mcc:code>
+                        </mcc:MD_Identifier>
+                     </cit:identifier>
+                  </cit:CI_Citation>
+               </mrd:formatSpecificationCitation>
+               <mrd:fileDecompressionTechnique>
+                  <gco:CharacterString>WINZIP</gco:CharacterString>
+               </mrd:fileDecompressionTechnique>
+            </mrd:MD_Format>
+         </mrd:distributionFormat>
+         <mrd:distributor xlink:type="simple">
+            <mrd:MD_Distributor>
+               <mrd:distributorContact xlink:title="User Services" xlink:type="simple">
+                  <cit:CI_Responsibility uuid="A085BFDF-C10F-818D-3EA8-08330125842F">
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="distributor">distributor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>DOC/NOAA/NESDIS/NGDC - National Geophysical Data Center</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6826</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>303-497-6513</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address xlink:type="simple">
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>National Geophysical Data Center NOAA, Mail Code E/GC, 325 Broadway</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Boulder</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>CO</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>80305-3328</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>ngdc.info@noaa.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                                 <cit:hoursOfService>
+                                    <gco:CharacterString>8am-5pm, Monday through Friday</gco:CharacterString>
+                                 </cit:hoursOfService>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:positionName>
+                                    <gco:CharacterString>User Services</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrd:distributorContact>
+               <mrd:distributionOrderProcess xlink:type="simple">
+                  <mrd:MD_StandardOrderProcess>
+                     <mrd:fees>
+                        <gco:CharacterString>None</gco:CharacterString>
+                     </mrd:fees>
+                  </mrd:MD_StandardOrderProcess>
+               </mrd:distributionOrderProcess>
+            </mrd:MD_Distributor>
+         </mrd:distributor>
+         <mrd:transferOptions xlink:type="simple">
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:transferSize>
+                  <gco:Real>35600000</gco:Real>
+               </mrd:transferSize>
+               <mrd:onLine xlink:type="simple">
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/gmt_netcdf/</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+         <mrd:transferOptions xlink:type="simple">
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:transferSize>
+                  <gco:Real>31000000</gco:Real>
+               </mrd:transferSize>
+               <mrd:onLine xlink:type="simple">
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/ascii_nans/</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+         <mrd:transferOptions xlink:type="simple">
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:transferSize>
+                  <gco:Real>9700000</gco:Real>
+               </mrd:transferSize>
+               <mrd:onLine xlink:type="simple">
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/arcgis/</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+      </mrd:MD_Distribution>
+   </mdb:distributionInfo>
+   <mdb:dataQualityInfo xmlns:gml="http://www.opengis.net/gml/3.2">
+      <dqm:DQ_DataQuality>
+
+         <dqm:scope>
+            <mcc:MD_Scope>
+               <mcc:level>
+                  <mcc:MD_ScopeCode codeList="" codeListValue=""/>
+               </mcc:level>
+            </mcc:MD_Scope>
+         </dqm:scope>
+         <dqm:standaloneQualityReport>
+            <dqm:DQ_StandaloneQualityReportInformation>
+
+               <dqm:reportReference gco:nilReason="missing"/>
+
+               <dqm:abstract>
+                  <gco:CharacterString/>
+               </dqm:abstract>
+            </dqm:DQ_StandaloneQualityReportInformation>
+         </dqm:standaloneQualityReport>
+         <dqm:report gco:nilReason="missing"/>
+         <dqm:report>
+            <dqm:DQ_CompletenessCommission>
+               <dqm:measure>
+                  <dqm:DQ_MeasureReference/>
+               </dqm:measure>
+               <dqm:evaluationMethod>
+                  <dqm:DQ_FullInspection>
+                     <dqm:evaluationMethodDescription>
+                        <gco:CharacterString>NGDC made every effort to obtain all available sediment thickness compilations and data for use in building the global sediment-thickness grid.</gco:CharacterString>
+                     </dqm:evaluationMethodDescription>
+                     <dqm:evaluationProcedure/>
+                  </dqm:DQ_FullInspection>
+               </dqm:evaluationMethod>
+               <dqm:result gco:nilReason="unknown" xlink:type="simple"/>
+
+            </dqm:DQ_CompletenessCommission>
+         </dqm:report>
+         <dqm:report>
+            <dqm:DQ_ConceptualConsistency>
+               <dqm:measure>
+                  <dqm:DQ_MeasureReference>
+                     <dqm:measureDescription>
+                        <gco:CharacterString>The distribution of sediments in the oceans is controlled by five primary factors: 1. Age of the underlying crust 2. Tectonic history of the ocean crust 3. Structural trends in basement 4. Nature and location of sediment source, and 5. Nature of the sedimentary processes delivering sediments to depocenters</gco:CharacterString>
+                     </dqm:measureDescription>
+                  </dqm:DQ_MeasureReference>
+               </dqm:measure>
+               <dqm:evaluationMethod>
+                  <dqm:DQ_FullInspection>
+                     <dqm:evaluationProcedure/>
+                  </dqm:DQ_FullInspection>
+               </dqm:evaluationMethod>
+               <dqm:result gco:nilReason="unknown" xlink:type="simple"/>
+
+            </dqm:DQ_ConceptualConsistency>
+         </dqm:report>
+      </dqm:DQ_DataQuality>
+   </mdb:dataQualityInfo>
+   <mdb:resourceLineage>
+      
+      <mrl:LI_Lineage>
+
+         <mrl:statement>
+            <gco:CharacterString/>
+         </mrl:statement>
+         <mrl:scope>
+            <mcc:MD_Scope>
+               <mcc:level>
+                  <mcc:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+               </mcc:level>
+            </mcc:MD_Scope>
+         </mrl:scope>
+         <mrl:source>
+            <mrl:LI_Source>
+               <mrl:sourceCitation>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString/>
+                     </cit:title>
+                     <cit:identifier>
+                        <mcc:MD_Identifier>
+                           <mcc:code/>
+                        </mcc:MD_Identifier>
+                     </cit:identifier>
+                  </cit:CI_Citation>
+               </mrl:sourceCitation>
+            </mrl:LI_Source>
+         </mrl:source>
+         <mrl:processStep xlink:type="simple">
+
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>The sediment isopach contour maps for the Pacific were digitized by Greg Cole of Los Alamos National Laboratory, for the Indian Ocean by Carol Stein of Northwestern University, and the South Atlantic and Southern Ocean by Dennis Hayes of Lamont-Doherty Earth Observatory.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d2e1031">
+                     <gml:timePosition>2000-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep xlink:type="simple">
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>The digitized data were then gridded at NGDC using the algorithm for "Gridding with Continuous Curvature Splines in Tension" of Smith and Wessel [1990].</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d2e1039">
+                     <gml:timePosition>2003-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+      </mrl:LI_Lineage>
+   </mdb:resourceLineage>
+   <mdb:metadataConstraints xlink:type="simple">
+      <mco:MD_LegalConstraints>
+         <mco:accessConstraints>
+            <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+         </mco:accessConstraints>
+         <mco:otherConstraints>
+            <gco:CharacterString>Metadata Access Constraints: None</gco:CharacterString>
+         </mco:otherConstraints>
+      </mco:MD_LegalConstraints>
+   </mdb:metadataConstraints>
+   <mdb:metadataConstraints xlink:type="simple">
+      <mco:MD_LegalConstraints>
+         <mco:accessConstraints>
+            <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+         </mco:accessConstraints>
+         <mco:otherConstraints>
+            <gco:CharacterString>Metadata Use Constraints: None</gco:CharacterString>
+         </mco:otherConstraints>
+      </mco:MD_LegalConstraints>
+   </mdb:metadataConstraints>
+   <mdb:metadataMaintenance xlink:type="simple">
+      <mmi:MD_MaintenanceInformation>
+         <mmi:maintenanceAndUpdateFrequency>
+            <mmi:MD_MaintenanceFrequencyCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="annually">annually</mmi:MD_MaintenanceFrequencyCode>
+         </mmi:maintenanceAndUpdateFrequency>
+         <mmi:maintenanceDate xmlns:gml="http://www.opengis.net/gml/3.2">
+            <cit:CI_Date>
+               <cit:date>
+                  <gco:DateTime>2013-01-18T00:00:00</gco:DateTime>
+               </cit:date>
+               <cit:dateType>
+                  <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="update">update</cit:CI_DateTypeCode>
+               </cit:dateType>
+            </cit:CI_Date>
+         </mmi:maintenanceDate>
+         <mmi:maintenanceNote>
+            <gco:CharacterString>This metadata was automatically generated from the Content Standard for Digital Geospatial Metadata: Extensions for Remote Sensing Metadata standard (version FGDC-STD-012-2002) using the 2012-08-08 version of the FGDC RSE to ISO 19115-2 transform.</gco:CharacterString>
+         </mmi:maintenanceNote>
+         <mmi:maintenanceNote>
+            <gco:CharacterString>Translated from FGDC 2012-10-10T10:31:49.827-06:00</gco:CharacterString>
+         </mmi:maintenanceNote>
+         <mmi:maintenanceNote>
+            <gco:CharacterString>Last Metadata Review Date: 2012-10-25</gco:CharacterString>
+         </mmi:maintenanceNote>
+         <mmi:contact xlink:title="Brian Meyer" xlink:type="simple">
+            <cit:CI_Responsibility uuid="7df204c0-eb7c-47de-af08-9d2afb5c15a0">
+               <cit:role>
+                  <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+               </cit:role>
+               <cit:party xmlns:gml="http://www.opengis.net/gml/3.2">
+                  <cit:CI_Organisation>
+                     <cit:name>
+                        <gco:CharacterString>DOC/NOAA/NESDIS/NGDC &gt; National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce</gco:CharacterString>
+                     </cit:name>
+                     <cit:contactInfo>
+                        <cit:CI_Contact>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>303-497-6125</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:address xlink:type="simple">
+                              <cit:CI_Address>
+                                 <cit:electronicMailAddress>
+                                    <gco:CharacterString>Brian.Meyer@noaa.gov</gco:CharacterString>
+                                 </cit:electronicMailAddress>
+                              </cit:CI_Address>
+                           </cit:address>
+                        </cit:CI_Contact>
+                     </cit:contactInfo>
+                     <cit:individual>
+                        <cit:CI_Individual>
+                           <cit:name>
+                              <gco:CharacterString>Brian Meyer</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Individual>
+                     </cit:individual>
+                  </cit:CI_Organisation>
+               </cit:party>
+            </cit:CI_Responsibility>
+         </mmi:contact>
+      </mmi:MD_MaintenanceInformation>
+   </mdb:metadataMaintenance>
+   <mdb:acquisitionInformation>
+      <mac:MI_AcquisitionInformation>
+         <mac:operation>
+            <mac:MI_Operation>
+               <mac:description>
+                  <gco:CharacterString/>
+               </mac:description>
+               <mac:status gco:nilReason="unknown"/>
+            </mac:MI_Operation>
+         </mac:operation>
+      </mac:MI_AcquisitionInformation>
+   </mdb:acquisitionInformation>
+</mdb:MD_Metadata>

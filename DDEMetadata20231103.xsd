@@ -36,13 +36,12 @@
       <xs:element name="title" type="xs:string"/>
       <xs:element name="alternateTitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="resourceDate" type="metadata:CI_Date" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="abstract" type="xs:string "/>
+      <xs:element name="abstract" type="xs:string"/>
       <xs:element name="keyword" type="metadata:StringW_ID" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="topicCategory" type="metadata:TopicCategoryCode" minOccurs="1"
         maxOccurs="unbounded"/>
       <xs:element name="resourceType" type="metadata:ResourceTypeCode" maxOccurs="unbounded"/>
-      <xs:element name="resourceResponsibleParty" type="metadata:CI_Responsibility" minOccurs="0"
-        maxOccurs="unbounded"/>
+      <xs:element name="resourceResponsibleParty" type="metadata:CI_Responsibility" minOccurs="0"  maxOccurs="unbounded"/>
       <xs:element name="browseGraphic" type="metadata:CI_OnlineResource" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="additionalDocumentation" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -108,14 +107,22 @@
     <xs:sequence>
       <xs:element name="geographicIdentifier" type="metadata:MD_Identifier" minOccurs="0"
         maxOccurs="unbounded"/>
+      <xs:element name="elevation" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="westBoundLongitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
       <xs:element name="eastBoundLongitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
       <xs:element name="southBoundLatitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
       <xs:element name="northBoundLatitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="elevation" type="xs:string" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-
+  
+  <xs:complexType name="MD_Constraints">
+    <xs:sequence>
+      <xs:element name="restrictionText" type="metadata:StringW_ID" minOccurs="0"/>
+      <xs:element name="restrictionCode" type="metadata:RestrictionCode" minOccurs="0"
+        maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:complexType name="SV_ServiceIdentification">
     <xs:sequence>
       <xs:element name="serviceType" type="xs:string" maxOccurs="unbounded"/>
@@ -128,7 +135,18 @@
         maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-
+  
+  <xs:complexType name="CI_OnlineResource">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="applicationProfile" type="metadata:StringW_ID" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="linkage" type="xs:anyURI"/>
+      <xs:element name="function" type="metadata:FunctionCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:complexType name="MD_Imagery">
     <xs:sequence>
       <xs:element name="sensor" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -154,7 +172,6 @@
     </xs:sequence>
   </xs:complexType>
 
-
   <xs:element name="spatialRepresentationInfo">
     <xs:complexType>
       <xs:sequence>
@@ -166,32 +183,6 @@
     </xs:complexType>
   </xs:element>
 
-  <xs:complexType name="CI_OnlineResource">
-    <xs:sequence>
-      <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="applicationProfile" type="metadata:StringW_ID" minOccurs="0"
-        maxOccurs="unbounded"/>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="linkage" type="xs:anyURI"/>
-      <xs:element name="function" type="metadata:FunctionCode" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="StringW_ID">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="uri" type="xs:anyURI" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="CI_Date">
-    <xs:sequence>
-      <xs:element name="date" type="metadata:DateTime"/>
-      <xs:element name="dateType" type="metadata:DateTypeCode"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <xs:complexType name="CI_Responsibility">
     <xs:sequence>
       <xs:element name="name" type="xs:string"/>
@@ -202,12 +193,12 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="MD_Constraints">
-    <xs:sequence>
-      <xs:element name="restrictionText" type="metadata:StringW_ID" minOccurs="0"/>
-      <xs:element name="restrictionCode" type="metadata:RestrictionCode" minOccurs="0"
-        maxOccurs="unbounded"/>
-    </xs:sequence>
+  <xs:complexType name="StringW_ID">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="DateTime">
@@ -255,6 +246,7 @@
       <xs:enumeration value="creation"/>
       <xs:enumeration value="deprecated"/>
       <xs:enumeration value="distribution"/>
+      <xs:enumeration value="expiry"/> 
       <xs:enumeration value="inForce"/>
       <xs:enumeration value="lastRevision"/>
       <xs:enumeration value="lastUpdate"/>
@@ -559,4 +551,3 @@
   </xs:simpleType>
 
 </xs:schema>
-

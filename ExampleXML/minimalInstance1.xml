@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:MD_Metadata xmlns:metadata="https://www.ddeworld.org/resource/metadata/0.4"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://www.ddeworld.org/resource/metadata/0.4 file:/C:/Users/smrTu/OneDrive/Documents/Workspace/Projects/DDE/DDE%20metadata/DraftDDEMetadataProposal20230927.xsd">
+    <metadata:metadataIdentifier>
+        <metadata:code>http://www.ddeworld.org/metadata/3427q5wuh4oy</metadata:code>
+    </metadata:metadataIdentifier>
+    <metadata:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</metadata:metadataStandardName>
+    <metadata:metadataResponsibleParty>
+        <metadata:name>metadata curator</metadata:name>
+        <metadata:role>author</metadata:role>
+        <metadata:country>BWA</metadata:country>
+        <metadata:electronicMailAddress>metadata@geosurvey.bwa.org</metadata:electronicMailAddress>
+    </metadata:metadataResponsibleParty>
+    <metadata:metadataDate>
+        <metadata:date>2006-05-04</metadata:date>
+        <metadata:dateType>lastUpdate</metadata:dateType>
+    </metadata:metadataDate>
+    <metadata:resourceType>Document</metadata:resourceType>
+    <metadata:identificationInfo>
+        <metadata:resourceIdentifier>
+            <metadata:code>http://doi.org/24676/alhgwreopyi</metadata:code>
+        </metadata:resourceIdentifier>
+        <metadata:title>Geology of the thrust belt</metadata:title>
+        <metadata:abstract>lots of information</metadata:abstract>
+        <metadata:keyword>thrust fault</metadata:keyword>
+        <metadata:topicCategory>8_07-structureGeology</metadata:topicCategory>
+        <metadata:language>eng</metadata:language>
+        <metadata:characterEncoding>utf8</metadata:characterEncoding>
+        <metadata:geoTime>Jurassic</metadata:geoTime>
+    </metadata:identificationInfo>
+    <metadata:distributionInfo>
+        <metadata:onlineResource>
+            <metadata:linkage>http://doi.org/24676/alhgwreopyi</metadata:linkage>
+            <metadata:function>information</metadata:function>
+        </metadata:onlineResource>
+    </metadata:distributionInfo>
+</metadata:MD_Metadata>

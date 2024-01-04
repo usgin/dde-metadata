@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+   xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+   xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+   xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+   xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+   xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+   xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+   xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+   xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+   xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+   xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+   xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+   xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
+   xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+   xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+   xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+   xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+   xmlns:iscodelist="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#"
+
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
+
+   <mdb:metadataIdentifier>
+      <!-- required by DDE profile -->
+      <mcc:MD_Identifier>
+         <mcc:code>
+            <gco:CharacterString>22e1d1ca752a7bc3ff4e90014e760e8a08947654</gco:CharacterString>
+         </mcc:code>
+      </mcc:MD_Identifier>
+   </mdb:metadataIdentifier>
+
+   <mdb:defaultLocale>
+      <!-- Optional: this locale applies to the metadata record;  -->
+      <lan:PT_Locale>
+         <lan:language>
+            <lan:LanguageCode codeList="iscodelist:LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+         </lan:language>
+         <lan:characterEncoding>
+            <lan:MD_CharacterSetCode codeList="iscodelist:MD_CharacterSetCode" codeListValue="utf8">utf8</lan:MD_CharacterSetCode>
+         </lan:characterEncoding>
+      </lan:PT_Locale>
+   </mdb:defaultLocale>
+
+   <mdb:metadataScope>
+      <!-- scope is optional, defaults to dataset if missing -->
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="iscodelist:MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+            <!-- scope = dataset condition requires including a spatial extent.   -->
+         </mdb:resourceScope>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+
+   <mdb:contact>
+      <!-- metadata contact, Optional, but suggest should be recommended or required for DDE -->
+      <!-- identifies who to contact to report problems with metadata content -->
+      <cit:CI_Responsibility>
+         <cit:role>
+            <cit:CI_RoleCode codeList="iscodelist:CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+         </cit:role>
+         <cit:party>
+            <cit:CI_Organisation>
+               <cit:name>
+                  <gco:CharacterString>China Geological Survey</gco:CharacterString>
+               </cit:name>
+               <cit:contactInfo>
+                  <cit:CI_Contact>
+                     <cit:address>
+                        <cit:CI_Address>
+                           <!-- DDE requires country and e-mail address -->
+                           <cit:country>
+                              <gco:CharacterString>CHN</gco:CharacterString>
+                           </cit:country>
+                           <cit:electronicMailAddress>
+                              <gco:CharacterString>ytiantian@mail.cgs.gov.cn</gco:CharacterString>
+                           </cit:electronicMailAddress>
+                        </cit:CI_Address>
+                     </cit:address>
+                  </cit:CI_Contact>
+               </cit:contactInfo>
+               <cit:individual>
+                  <cit:CI_Individual>
+                     <cit:name>
+                        <gco:CharacterString>Yang Tiantian</gco:CharacterString>
+                     </cit:name>
+                  </cit:CI_Individual>
+               </cit:individual>
+            </cit:CI_Organisation>
+         </cit:party>
+      </cit:CI_Responsibility>
+   </mdb:contact>
+
+   <mdb:dateInfo>
+      <!-- 19115-3	A ‘dateInfo’ property value with date type = 'creation' SHALL be present in every MD_Metadata instance -->
+      <!-- mandatory create date under 19115-3; should DDE also recommend 'update' date for better harvesting efficiency -->
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime>2018-09-07T08:49:30</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="iscodelist:CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </mdb:dateInfo>
+   <mdb:metadataStandard>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString>https://standards.iso.org/iso/19115/-3/1.0/conf/metadata-data-or-service-instance</gco:CharacterString>
+         </cit:title>
+      </cit:CI_Citation>
+   </mdb:metadataStandard>
+
+   <mdb:metadataProfile>
+      <cit:CI_Citation>
+         <cit:title>
+            <!-- this string needs to be specified in the DDE metadata specification -->
+            <gco:CharacterString>DDE1.0-profile</gco:CharacterString>
+         </cit:title>
+      </cit:CI_Citation>
+   </mdb:metadataProfile>
+   <mdb:alternativeMetadataReference>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString>alt metadata</gco:CharacterString>
+         </cit:title>
+         <cit:identifier>
+            <mcc:MD_Identifier>
+               <mcc:code>
+                  <gco:CharacterString>http://exampl.org/othermetadata/247437</gco:CharacterString>
+               </mcc:code>
+            </mcc:MD_Identifier>
+         </cit:identifier>
+      </cit:CI_Citation>
+   </mdb:alternativeMetadataReference>
+   <!-- DDE conditional: the dataset is in a geographically coordination system -->
+   <mdb:referenceSystemInfo>
+      <mrs:MD_ReferenceSystem>
+         <!-- add identifier for spatial reference system -->
+         <mrs:referenceSystemIdentifier>
+            <mcc:MD_Identifier>
+               <mcc:authority>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Klokan Technologies GmbH, Switzerland</gco:CharacterString>
+                     </cit:title>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>https://www.klokantech.com/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mcc:authority>
+               <mcc:code>
+                  <gco:CharacterString>EPSG:33329</gco:CharacterString>
+               </mcc:code>
+               <mcc:codeSpace>
+                  <gco:CharacterString>https://epsg.io/</gco:CharacterString>
+               </mcc:codeSpace>
+            </mcc:MD_Identifier>
+         </mrs:referenceSystemIdentifier>
+         <mrs:referenceSystemType>
+            <mrs:MD_ReferenceSystemTypeCode codeList="iscodelist:MD_ReferenceSystemTypeCode" codeListValue="projected"/>
+         </mrs:referenceSystemType>
+
+      </mrs:MD_ReferenceSystem>
+   </mdb:referenceSystemInfo>
+   <mdb:identificationInfo>
+      <mri:MD_DataIdentification>
+         <mri:citation>
+            <cit:CI_Citation>
+               <!-- DDE only requires title -->
+               <cit:title>
+                  <gco:CharacterString>CHN CGS EN 1:1M Bedrock Lithostratigraphy</gco:CharacterString>
+               </cit:title>
+               <cit:alternateTitle>
+                  <gco:CharacterString>备用标题 @chi</gco:CharacterString>
+               </cit:alternateTitle>
+               <cit:date>
+                  <!-- dates associated with the resource are optional under DDE and ISO19115-3 -->
+                  <cit:CI_Date>
+                     <cit:date>
+                        <gco:DateTime>2018-09-07T08:49:30</gco:DateTime>
+                     </cit:date>
+                     <cit:dateType>
+                        <cit:CI_DateTypeCode codeList="iscodelist:CI_DateTypeCode" codeListValue="revision"/>
+                     </cit:dateType>
+                  </cit:CI_Date>
+               </cit:date>
+               <cit:identifier>
+                  <mcc:MD_Identifier>
+                     <mcc:code>
+                        <gco:CharacterString>https://id.org/38748i</gco:CharacterString>
+                     </mcc:code>
+                  </mcc:MD_Identifier>
+               </cit:identifier>
+               <cit:citedResponsibleParty>
+                  <!-- optional, authors, orignators for the resource here, using iso19115 codelist -->
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="iscodelist:CI_RoleCode" codeListValue="author"/>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Individual>
+                           <cit:name>
+                              <gco:CharacterString>Randome Author</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Individual>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+            </cit:CI_Citation>
+         </mri:citation>
+
+         <mri:abstract>
+            <!-- mandatory under DDE and ISO 19115; DDE specifies minimum 100 words -->
+            <gco:CharacterString>China 1:1M Bedrock Geology layer is composed of 63 sheets separate geological layers and information about sedimentary strata, Quaternary strata, igneous, and metamorphic rocks. Sedimentary strata are be mapped by chronostratigraphic units and rock formation. Intrusive rocks are shown by "rock plus years," Pliocene strata are expressed by lithology and volcanic pattern. The layer includes more than 5,000 lithostratigraphic units and more than 1700 intrusive unit. Each geological unit has attributes.  For more information about China geological maps that are available please visit http://en.cgs.gov.cn/</gco:CharacterString>
+         </mri:abstract>
+         <mri:pointOfContact>
+            <!-- optional: contact for information about the resource -->
+            <cit:CI_Responsibility>
+               <cit:role>
+                  <cit:CI_RoleCode codeList="iscodelist:CI_RoleCode" codeListValue="pointOfContact"/>
+               </cit:role>
+               <cit:party>
+                  <cit:CI_Organisation>
+                     <cit:name>
+                        <gco:CharacterString>China Geological Survey</gco:CharacterString>
+                     </cit:name>
+                     <cit:contactInfo>
+                        <cit:CI_Contact>
+                           <cit:address>
+                              <cit:CI_Address>
+                                 <cit:country>
+                                    <gco:CharacterString>CHN</gco:CharacterString>
+                                 </cit:country>
+                                 <cit:electronicMailAddress>
+                                    <gco:CharacterString>ytiantian@mail.cgs.gov.cn</gco:CharacterString>
+                                 </cit:electronicMailAddress>
+                              </cit:CI_Address>
+                           </cit:address>
+                        </cit:CI_Contact>
+                     </cit:contactInfo>
+                     <cit:individual>
+                        <cit:CI_Individual>
+                           <cit:positionName>
+                              <gco:CharacterString>International Cooperation</gco:CharacterString>
+                           </cit:positionName>
+                        </cit:CI_Individual>
+                     </cit:individual>
+                  </cit:CI_Organisation>
+               </cit:party>
+            </cit:CI_Responsibility>
+         </mri:pointOfContact>
+         <!-- optional -->
+         <mri:spatialRepresentationType>
+            <mcc:MD_SpatialRepresentationTypeCode codeList="iscodelist:MD_SpatialRepresentationTypeCode" codeListValue="vector"/>
+         </mri:spatialRepresentationType>
+         <!-- DDE conditional : the dataset consists of geospatial data with scalable resolution in distance or size. -->
+         <mri:spatialResolution>
+            <mri:MD_Resolution>
+               <mri:distance>
+                  <gco:Distance uom="meter">50</gco:Distance>
+               </mri:distance>
+            </mri:MD_Resolution>
+         </mri:spatialResolution>
+
+         <mri:topicCategory>
+            <!-- Required; geoscientificInformation is a reaonable default value for DDE; DDE extensions to 
+               vocabulary are encoded as keyword types; See below. If no value for the MD_Metadata.metadata-Scope 
+               property is provided, or if the value of MD_Metadata.metadataScope.MD_Metadata-Scope.ResourceScope 
+               property is equal to "dataset" or  equal to "series", then a value for topicCategory SHALL be provided. -->
+            <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:extent>
+            <!-- If no value for the MD_Metadata.metadataScope property is provided, or if the value of MD_Metadata.metadataScope.
+                 -MD_Metadata¬Scope.resourceScope property is equal to "dataset", then a resource identification instance 
+                 SHALL provide at least one ‘extent’ property value that is either an EX_GeographicBoundingBox or an EX_GeographicDescription. 
+               (*** unnecessary if the profile allows for non-geospatial anchored resources***)
+          	If an EX_Extent element is instantiated, then a value for either ‘description’, ‘geographic-Element’, 
+               ‘temporalElement’ or ‘verticalElement’ SHALL be present.  -->
+            <gex:EX_Extent>
+
+               <gex:geographicElement>
+
+                  <gex:EX_GeographicBoundingBox>
+                     <gex:westBoundLongitude>
+                        <gco:Decimal>73.499</gco:Decimal>
+                     </gex:westBoundLongitude>
+                     <gex:eastBoundLongitude>
+                        <gco:Decimal>135.08</gco:Decimal>
+                     </gex:eastBoundLongitude>
+                     <gex:southBoundLatitude>
+                        <gco:Decimal>18.1609</gco:Decimal>
+                     </gex:southBoundLatitude>
+                     <gex:northBoundLatitude>
+                        <gco:Decimal>53.5585</gco:Decimal>
+                     </gex:northBoundLatitude>
+                  </gex:EX_GeographicBoundingBox>
+               </gex:geographicElement>
+               <gex:verticalElement>
+                  <gex:EX_VerticalExtent>
+                     <gex:minimumValue>
+                        <gco:Real>0</gco:Real>
+                     </gex:minimumValue>
+                     <gex:maximumValue>
+                        <gco:Real>6500</gco:Real>
+                     </gex:maximumValue>
+                     <gex:verticalCRSId xlink:href="https://epsg.io/1027-datum"/>
+                  </gex:EX_VerticalExtent>
+               </gex:verticalElement>
+            </gex:EX_Extent>
+         </mri:extent>
+         <mri:graphicOverview>
+            <mcc:MD_BrowseGraphic>
+               <mcc:fileName>
+                  <gco:CharacterString>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</gco:CharacterString>
+               </mcc:fileName>
+               <mcc:fileDescription>
+                  <gco:CharacterString>thumbnail</gco:CharacterString>
+               </mcc:fileDescription>
+               <mcc:fileType>
+                  <gco:CharacterString>png</gco:CharacterString>
+               </mcc:fileType>
+            </mcc:MD_BrowseGraphic>
+         </mri:graphicOverview>
+         <mri:graphicOverview>
+            <mcc:MD_BrowseGraphic>
+               <mcc:fileName>
+                  <gco:CharacterString>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</gco:CharacterString>
+               </mcc:fileName>
+               <mcc:fileDescription>
+                  <gco:CharacterString>large_thumbnail</gco:CharacterString>
+               </mcc:fileDescription>
+               <mcc:fileType>
+                  <gco:CharacterString>png</gco:CharacterString>
+               </mcc:fileType>
+            </mcc:MD_BrowseGraphic>
+         </mri:graphicOverview>
+
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>OneGeology</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>geology</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>China</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>continent@Asia</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>subcontinent@Eastern Asia</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>geographicarea@China</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>serviceprovider@China Geological Survey</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>dataprovider@China Geological Survey</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>DS_TOPIC@geoscientificinformation</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>DS_DATE@2014-4-22</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="iscodelist:MD_KeywordTypeCode" codeListValue="theme">OneGeology Keywords</mri:MD_KeywordTypeCode>
+               </mri:type>
+
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>China</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="iscodelist:MD_KeywordTypeCode" codeListValue="place">GeographicIdentifier</mri:MD_KeywordTypeCode>
+               </mri:type>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Data integration and compilation</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="iscodelist:MD_KeywordTypeCode" codeListValue="process">AcquisitionCode</mri:MD_KeywordTypeCode>
+               </mri:type>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>geological map compilation</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="iscodelist:MD_KeywordTypeCode" codeListValue="theme">DDEtopicCategoryCode</mri:MD_KeywordTypeCode>
+               </mri:type>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Proterozoic</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Phanerozoic>Paleozoic</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Phanerozoic>Mesozoic</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Phanerozoic>Neogene</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="iscodelist:MD_KeywordTypeCode" codeListValue="temporal">ICS Geologic Time Scale 2021</mri:MD_KeywordTypeCode>
+               </mri:type>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+
+         <mri:resourceConstraints>
+            <mco:MD_LegalConstraints>
+               <mco:useLimitation>
+                  <gco:CharacterString>The 1:1M geological map data is available online for your personal, teaching, research, or non-commercial use (The copyright belongs to Development Research Center of China Geological Survey). Your use of any information provided at http://en.cgs.gov.cn/ is at your own risk.</gco:CharacterString>
+               </mco:useLimitation>
+               <!-- example showing link to licence by identifier -->
+               <mco:reference
+                  xlink:href="https://creativecommons.org/share-your-work/public-domain/cc0/"
+                  xlink:title="CC0 No Rights Reserved"/>
+               <!-- access and use constraints are mandatory; license text can be put in the use Limitation element -->
+               <mco:accessConstraints>
+                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestriction"/>
+               </mco:accessConstraints>
+               <mco:useConstraints>
+                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestriction"/>
+               </mco:useConstraints>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:associatedResource>
+            <!-- DDE Conditional: if metadataReference not documented citation information about the associated resource that describes association between resources to allow users to navigate between related resources in a discovery context -->
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>CHN CGS EN 1:1M Bedrock Lithostratigraphy</gco:CharacterString>
+                     </cit:title>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="iscodelist:DS_AssociationTypeCode" codeListValue="crossReference"/>
+               </mri:associationType>
+               <mri:metadataReference>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>CHN CGS EN 1:1M Bedrock Lithostratigraphy</gco:CharacterString>
+                     </cit:title>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng/catalog.search#/metadata/22e1d1ca752a7bc3ff4e90014e760e8a08947654</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:metadataReference>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:defaultLocale>
+            <!-- this local applies to the content of the resource -->
+            <!-- not required if default language and encoding are specified by profile -->
+            <lan:PT_Locale>
+               <lan:language>
+                  <lan:LanguageCode codeList="iscodelist:LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+               </lan:language>
+               <lan:characterEncoding>
+                  <lan:MD_CharacterSetCode codeList="iscodelist:MD_CharacterSetCode" codeListValue="utf8">utf8</lan:MD_CharacterSetCode>
+               </lan:characterEncoding>
+            </lan:PT_Locale>
+         </mri:defaultLocale>
+      </mri:MD_DataIdentification>
+   </mdb:identificationInfo>
+
+   <mdb:distributionInfo>
+      <mrd:MD_Distribution>
+         <!-- distributor contact is mandatory for DDE -->
+         <mrd:distributor>
+            <mrd:MD_Distributor>
+               <mrd:distributorContact>
+                  <!-- who to contact to report problemns accessing the data using the distributions described in this record -->
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="iscodelist:CI_RoleCode" codeListValue="distributor"/>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>China Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>ytiantian@mail.cgs.gov.cn</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrd:distributorContact>
+            </mrd:MD_Distributor>
+         </mrd:distributor>
+         <mrd:transferOptions>
+            <!-- transfer options included here because metadata needs to have content telling user how to get the data -->
+            <!-- at least one transfer  -->
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:onLine>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;</gco:CharacterString>
+                     </cit:linkage>
+                     <!-- linkage is not an OGC WMS request. I can't access onegeologychina.cgs.gov.cn, seems to be offline. Is this the base URL for the service? a request=getCapabilities should work. -->
+                     <cit:protocol>
+                        <!-- protocol in distribution plays role of serviceType in DDE specification -->
+                        <gco:CharacterString>OGC:WMS-1.3.0-http-get-map</gco:CharacterString>
+                     </cit:protocol>
+                     <cit:name>
+                        <gco:CharacterString>CHN_CGS_EN_1M_BLS</gco:CharacterString>
+                     </cit:name>
+                     <cit:description>
+                        <gco:CharacterString>CHN CGS EN 1:1M Bedrock Lithostratigraphy</gco:CharacterString>
+                     </cit:description>
+                     <cit:function>
+                        <!--ISO function codelist does not include code for WebAPI distribution -->
+                        <cit:CI_OnLineFunctionCode codeList="iscodelist:CI_DateTypeCode" codeListValue="fileAccess">WebAPI</cit:CI_OnLineFunctionCode>
+                     </cit:function>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+               <mrd:onLine>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=CHN_CGS_EN_1M_BLS&amp;format=image/png&amp;STYLE=default</gco:CharacterString>
+                     </cit:linkage>
+                     <cit:protocol>
+                        <gco:CharacterString>image/png</gco:CharacterString>
+                     </cit:protocol>
+                     <cit:name>
+                        <gco:CharacterString>default (LegendURL)</gco:CharacterString>
+                     </cit:name>
+                     <cit:description>
+                        <gco:CharacterString/>
+                     </cit:description>
+                     <cit:function>
+                        <cit:CI_OnLineFunctionCode codeList="iscodelist:CI_OnLineFunctionCode" codeListValue="fileAccess"/>
+                     </cit:function>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+      </mrd:MD_Distribution>
+   </mdb:distributionInfo>
+
+   <mdb:dataQualityInfo>
+      <mdq:DQ_DataQuality>
+         <mdq:scope>
+            <mcc:MD_Scope>
+               <mcc:level>
+                  <mcc:MD_ScopeCode codeList="iscodelist:MD_ScopeCode" codeListValue="Dataset"/>
+               </mcc:level>
+            </mcc:MD_Scope>
+         </mdq:scope>
+         <mdq:standaloneQualityReport>
+            <mdq:DQ_StandaloneQualityReportInformation>
+               <mdq:reportReference gco:nilReason="missing"/>
+               <mdq:abstract>
+                  <gco:CharacterString>Text summary of quality information here</gco:CharacterString>
+               </mdq:abstract>
+            </mdq:DQ_StandaloneQualityReportInformation>
+         </mdq:standaloneQualityReport>
+         <mdq:report gco:nilReason="missing"/>
+      </mdq:DQ_DataQuality>
+   </mdb:dataQualityInfo>
+
+   <mdb:resourceLineage>
+      <mrl:LI_Lineage>
+         <mrl:statement>
+            <gco:CharacterString>statement about lineage</gco:CharacterString>
+         </mrl:statement>
+         <mrl:source>
+            <mrl:LE_Source>
+               <mrl:description>
+                  <gco:CharacterString>description of a source</gco:CharacterString>
+               </mrl:description>
+            </mrl:LE_Source>
+         </mrl:source>
+      </mrl:LI_Lineage>
+   </mdb:resourceLineage>
+
+</mdb:MD_Metadata>

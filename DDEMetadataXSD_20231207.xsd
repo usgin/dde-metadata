@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  targetNamespace="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+  xmlns:metadata="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <xs:element name="MD_Metadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadataIdentifier" type="metadata:MD_Identifier"/>
+        <xs:element name="metadataStandardName" type="xs:string"
+          default="DDE S01-2023: Geosciences Information Metadata"/>
+        <xs:element name="metadataResponsibleParty" type="metadata:CI_Responsibility"
+          maxOccurs="unbounded"/>
+        <xs:element name="metadataDate" type="metadata:CI_Date" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="identificationInfo" type="metadata:MD_Identification"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="MD_Identifier">
+    <xs:sequence>
+      <xs:element name="authority" type="metadata:CI_Responsibility" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="codeSpace" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="version" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MD_Identification">
+    <xs:sequence>
+      <xs:element name="resourceIdentifier" type="metadata:MD_Identifier"/>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="alternateTitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="resourceDate" type="metadata:CI_Date" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="abstract" type="xs:string"/>
+      <xs:element name="keyword" type="metadata:Anchor_Type" minOccurs="1" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>using Anchor_Type allows including URIs for keywords in the href
+            attribute. This will enable interoperability and linked data</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="topicCategory" type="metadata:TopicCategoryCode" minOccurs="1"
+        maxOccurs="unbounded"/>
+      <xs:element name="resourceType" type="metadata:ResourceTypeCode" maxOccurs="unbounded"/>
+      <xs:element name="additionalDocumentation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="resourceResponsibleParty" type="metadata:CI_Responsibility" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="browseGraphic" type="metadata:CI_OnlineResource" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="language" type="xs:string" minOccurs="1" maxOccurs="unbounded" default="en">
+        <xs:annotation>
+          <xs:documentation> LanguageCode is implemented as xs:string; full language code list is
+            not included in the schema. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="characterEncoding" type="xs:string" minOccurs="1" maxOccurs="unbounded"
+        default="utf8">
+        <xs:annotation>
+          <xs:documentation>full IANA character encoding list is not included in schema, implemented
+            with xs:string. Use IANA Character Set register:
+            http://www.iana.org/assignments/character-sets. These are the official names for
+            character sets that may be used on the Internet and may be referred to in Internet
+            documentation. These names are expressed in ANSI_X3.4-1968 which is commonly called
+            US-ASCII or simply ASCII</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="restriction" type="metadata:MD_Constraints" minOccurs="1"
+        maxOccurs="unbounded"/>
+      <xs:element name="edition" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="dataQuality" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Use of the anchor type allows an href link to a more complete data
+            quality report that might conform to ISO19157 or other scheme for reporting data quality
+            assesment and testing in detail.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lineage" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Use of the anchor type allows an href link to a more complete lineage
+            statment using the prov vocabulary or some profile of that, or the detailed linage that
+            can be reported with ISO19115-3 mrl namespace. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="source" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Use of the anchor type allows an href link to DOI or other identifiers
+            for sources used to create the described resource.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="acquisitionType" type="metadata:AcquisitionCode" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="geoTime" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="geographicExtent" type="metadata:EX_GeographicExtent" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="temporalExtent" type="metadata:EX_TemporalExtent" minOccurs="0"
+        maxOccurs="1"/>
+      <xs:element name="associatedResource" type="metadata:CI_OnlineResource" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="metadataReference" type="metadata:CI_OnlineResource" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="distributionInfo" type="metadata:MD_Distribution" maxOccurs="unbounded"/>
+      <xs:element name="serviceIdentificationInfo" type="metadata:SV_ServiceIdentification"
+        minOccurs="0" maxOccurs="1"/>
+      <xs:element name="imageryInfo" type="metadata:MD_Imagery" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EX_TemporalExtent">
+    <xs:sequence>
+      <xs:element name="beginName" type="xs:string"/>
+      <xs:element name="beginIdentifier" type="metadata:MD_Identifier" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="endName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="endIdentifier" type="metadata:MD_Identifier" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="beginDate" type="metadata:DateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="endDate" type="metadata:DateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="beginCoordinate" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="endCoordinate" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="coordinateUnits" type="metadata:TemporalUnitsEnum" minOccurs="0"
+        maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="TemporalUnitsEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Ka"/>
+      <xs:enumeration value="Ma"/>
+      <xs:enumeration value="Ga"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="EX_GeographicExtent">
+    <xs:sequence>
+      <xs:element name="geographicIdentifier" type="metadata:MD_Identifier" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="elevation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="westBoundLongitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="eastBoundLongitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="southBoundLatitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="northBoundLatitude" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MD_Constraints">
+    <xs:sequence>
+      <xs:element name="restrictionText" type="metadata:Anchor_Type" minOccurs="0"
+        maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>restriction text has type anchor type to allow href link (URI) to formal statement of restriction, without having to copy that into the metadata document.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="restrictionCode" type="metadata:RestrictionCode" minOccurs="1"
+        maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SV_ServiceIdentification">
+    <xs:sequence>
+      <xs:element name="serviceType" type="metadata:ServiceTypeCode" maxOccurs="1"/>
+      <xs:element name="containOperations" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="accessProperties" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="operatedDataset" type="metadata:MD_Identifier" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <!-- see https://www.energistics.org/sites/default/files/2023-03/EIP_v1.1.pdf section 4.6.2 -->
+      <xs:element name="endpointDescription" type="metadata:CI_OnlineResource" minOccurs="0"
+        maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CI_OnlineResource">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="applicationProfile" type="metadata:Anchor_Type" minOccurs="0"
+        maxOccurs="unbounded">
+        <xs:annotation><xs:documentation>the href on the applicationProfile anchorType should provide a URI for a detailed profile definition, typically extending the base mime types sepcified in the distributionFormat element. See https://www.w3.org/TR/dx-prof/</xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="linkage" type="xs:anyURI"/>
+      <xs:element name="function" type="metadata:FunctionCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MD_Imagery">
+    <xs:sequence>
+      <xs:element name="sensor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="platform" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="equipment" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="collector" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="startTime" type="metadata:DateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="endTime" type="metadata:DateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="signalGenerator" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="wavelength" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="processingLevel" type="metadata:ProcessedLevelCode" minOccurs="0"
+        maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MD_Distribution">
+    <xs:sequence>
+      <xs:element name="distributionFormat" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>format has anchor type to allow href to URI that will identify a format using a globally unique identifier, for better interoperability. Generally formats will be identified with MIME types. The applicationProfile on the CI_OnlineResource should be used to identify specific profiles for a particular download.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onlineResource" type="metadata:CI_OnlineResource" minOccurs="1"
+        maxOccurs="unbounded"/>
+      <xs:element name="distributionResponsibleParty" type="metadata:CI_Responsibility"
+        minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="spatialRepresentationInfo" type="metadata:MD_SpatialRepresentation"
+        minOccurs="0" maxOccurs="1"/>
+
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="MD_SpatialRepresentation">
+    <xs:sequence>
+      <xs:element name="spatialRepresentationType" type="metadata:SpatialRepresentationTypeCode"/>
+      <xs:element name="spatialResolution" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="referenceSystemType" minOccurs="0" type="metadata:ReferenceSystemTypeCode"/>
+      <xs:element name="referenceSystemIdentifier" type="metadata:MD_Identifier"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CI_Responsibility">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="role" type="metadata:RoleTypeCode" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="identifier" type="metadata:MD_Identifier" minOccurs="0"
+        maxOccurs="unbounded"/>
+      <xs:element name="country" type="metadata:CountryCode" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="electronicMailAddress" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Anchor_Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="CI_Date">
+    <xs:sequence>
+      <xs:element name="date" type="metadata:DateTime"/>
+      <xs:element name="dateType" type="metadata:DateTypeCode"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="DateTime">
+    <xs:annotation>
+      <xs:documentation>DateTime element for DDE allows YYYY, YYYY-MM, YYYY-MM-DD, and
+        YYYY-MM-DDThh:mm:ss </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:date xs:dateTime xs:gYear xs:gYearMonth"/>
+  </xs:simpleType>
+
+  <!-- *********************************************************************** -->
+  <!-- ***********************codelists ********************************** -->
+
+  <xs:simpleType name="AcquisitionCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="geologicalMapping"/>
+      <xs:enumeration value="survey"/>
+      <xs:enumeration value="observation"/>
+      <xs:enumeration value="directObservation"/>
+      <xs:enumeration value="indirectObservation"/>
+      <xs:enumeration value="outcropObservation"/>
+      <xs:enumeration value="remoteSensing"/>
+      <xs:enumeration value="drillBorehole"/>
+      <xs:enumeration value="boreholeCuttingsObservation"/>
+      <xs:enumeration value="boreholeGeophysicalLogMeasurements"/>
+      <xs:enumeration value="drillCoreObservation"/>
+      <xs:enumeration value="laboratoryInstrumentation"/>
+      <xs:enumeration value="dataIntegrationSynthesis"/>
+      <xs:enumeration value="dataFromSinglePublishedDescription"/>
+      <xs:enumeration value="synthesisFromMultipleSources"/>
+      <xs:enumeration value="synthesisFromMultipleOutcropObservations"/>
+      <xs:enumeration value="synthesisFromMultiplePublishedDescriptions"/>
+      <xs:enumeration value="digitalConversionFromPublishedSource"/>
+      <xs:enumeration value="digitalSimulation"/>
+      <xs:enumeration value="dataAndMapCompilation"/>
+      <xs:enumeration value="webResource"/>
+      <xs:enumeration value="other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DateTypeCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="adopted"/>
+      <xs:enumeration value="creation"/>
+      <xs:enumeration value="deprecated"/>
+      <xs:enumeration value="distribution"/>
+      <xs:enumeration value="expiry"/>
+      <xs:enumeration value="inForce"/>
+      <xs:enumeration value="lastRevision"/>
+      <xs:enumeration value="lastUpdate"/>
+      <xs:enumeration value="nextUpdate"/>
+      <xs:enumeration value="publication"/>
+      <xs:enumeration value="released"/>
+      <xs:enumeration value="revision"/>
+      <xs:enumeration value="superseded"/>
+      <xs:enumeration value="unavailable"/>
+      <xs:enumeration value="validityBegins"/>
+      <xs:enumeration value="validityExpires"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FunctionCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="browseGraphic"/>
+      <xs:enumeration value="browsing"/>
+      <xs:enumeration value="completeMetadata"/>
+      <xs:enumeration value="coupledResource"/>
+      <xs:enumeration value="download"/>
+      <xs:enumeration value="emailService"/>
+      <xs:enumeration value="fileAccess"/>
+      <xs:enumeration value="order"/>
+      <xs:enumeration value="search"/>
+      <xs:enumeration value="information"/>
+      <xs:enumeration value="offlineAccess"/>
+      <xs:enumeration value="upload"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ProcessedLevelCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Level0"/>
+      <xs:enumeration value="Level1"/>
+      <xs:enumeration value="Level2"/>
+      <xs:enumeration value="Level3"/>
+      <xs:enumeration value="Level4"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ReferenceSystemTypeCode ">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="compoundEngineeringParametric"/>
+      <xs:enumeration value="compoundEngineeringParametricTemporal"/>
+      <xs:enumeration value="compoundEngineeringTemporal"/>
+      <xs:enumeration value="compoundEngineeringVertical"/>
+      <xs:enumeration value="compoundEngineeringVerticalTemporal"/>
+      <xs:enumeration value="compoundGeographic2DParametric"/>
+      <xs:enumeration value="compoundGeographic2DParametricTemporal"/>
+      <xs:enumeration value="compoundGeographic2DTemporal"/>
+      <xs:enumeration value="compoundGeographic2DVertical"/>
+      <xs:enumeration value="compoundGeographicVerticalTemporal"/>
+      <xs:enumeration value="compoundGeographic3DTemporal"/>
+      <xs:enumeration value="compoundProjected2DParametric"/>
+      <xs:enumeration value="compoundProjected2DParametricTemporal"/>
+      <xs:enumeration value="compoundProjectedTemporal"/>
+      <xs:enumeration value="compoundProjectedVertical"/>
+      <xs:enumeration value="compoundProjectedVerticalTemporal"/>
+      <xs:enumeration value="engineering"/>
+      <xs:enumeration value="engineeringDesign"/>
+      <xs:enumeration value="engineeringImage"/>
+      <xs:enumeration value="geodeticGeocentric"/>
+      <xs:enumeration value="geodeticGeographic2D"/>
+      <xs:enumeration value="geodeticGeographic3D"/>
+      <xs:enumeration value="geographicIdentifier"/>
+      <xs:enumeration value="linear"/>
+      <xs:enumeration value="parametric"/>
+      <xs:enumeration value="projected"/>
+      <xs:enumeration value="temporal"/>
+      <xs:enumeration value="vertical"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ResourceTypeCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="aggregate"/>
+      <xs:enumeration value="application"/>
+      <xs:enumeration value="webApplication"/>
+      <xs:enumeration value="collection"/>
+      <xs:enumeration value="dataset"/>
+      <xs:enumeration value="dataCatalog"/>
+      <xs:enumeration value="geographicDataset"/>
+      <xs:enumeration value="nonGeographicDataset"/>
+      <xs:enumeration value="document"/>
+      <xs:enumeration value="article"/>
+      <xs:enumeration value="thesis"/>
+      <xs:enumeration value="book"/>
+      <xs:enumeration value="poster"/>
+      <xs:enumeration value="webPage"/>
+      <xs:enumeration value="image"/>
+      <xs:enumeration value="map"/>
+      <xs:enumeration value="photograph"/>
+      <xs:enumeration value="explanatoryFigure"/>
+      <xs:enumeration value="initiative"/>
+      <xs:enumeration value="fieldSession"/>
+      <xs:enumeration value="learningResource"/>
+      <xs:enumeration value="guide"/>
+      <xs:enumeration value="model"/>
+      <xs:enumeration value="movie"/>
+      <xs:enumeration value="repository"/>
+      <xs:enumeration value="semanticResource"/>
+      <xs:enumeration value="definedTermSet"/>
+      <xs:enumeration value="series"/>
+      <xs:enumeration value="service"/>
+      <xs:enumeration value="webAPI"/>
+      <xs:enumeration value="software"/>
+      <xs:enumeration value="sound"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RestrictionCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="copyright"/>
+      <xs:enumeration value="patent"/>
+      <xs:enumeration value="patentPending"/>
+      <xs:enumeration value="trademark"/>
+      <xs:enumeration value="licence"/>
+      <xs:enumeration value="intellectualPropertyRights"/>
+      <xs:enumeration value="restricted"/>
+      <xs:enumeration value="otherRestrictions"/>
+      <xs:enumeration value="unrestricted"/>
+      <xs:enumeration value="licenceUnrestricted"/>
+      <xs:enumeration value="licenceEndUser"/>
+      <xs:enumeration value="licenceDistributor"/>
+      <xs:enumeration value="private"/>
+      <xs:enumeration value="statutory"/>
+      <xs:enumeration value="confidential"/>
+      <xs:enumeration value="SBU"/>
+      <xs:enumeration value="in-confidence"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RoleTypeCode">
+    <xs:annotation>
+      <xs:documentation>Specifies the relationship of an agent to some aspect of a described
+        resource. Copied from
+        https://wiki.esipfed.org/ISO_19115-3_Codelists#CI_RoleCode</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="author">
+        <xs:annotation>
+          <xs:documentation>party who authored the resource</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="coAuthor"/>
+      <xs:enumeration value="collaborator"/>
+      <xs:enumeration value="contributor"/>
+      <xs:enumeration value="custodian"/>
+      <xs:enumeration value="distributor"/>
+      <xs:enumeration value="editor"/>
+      <xs:enumeration value="funder"/>
+      <xs:enumeration value="mediator"/>
+      <xs:enumeration value="originator"/>
+      <xs:enumeration value="owner"/>
+      <xs:enumeration value="pointOfContact"/>
+      <xs:enumeration value="principalInvestigator"/>
+      <xs:enumeration value="processor"/>
+      <xs:enumeration value="publisher"/>
+      <xs:enumeration value="resourceProvider"/>
+      <xs:enumeration value="rightsHolder"/>
+      <xs:enumeration value="sponsor"/>
+      <xs:enumeration value="stakeholder"/>
+      <xs:enumeration value="user"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ServiceTypeCode ">
+    <xs:annotation>
+      <xs:documentation>This is a set of categories to populate DDE serviceType for metadata records
+        for which the resourceType is ‘Service’. ISO19115-1 does not define a serviceType
+        vocabulary. This vocabulary has been defined by the DDE metadata
+        workgroup.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="dataService"/>
+      <xs:enumeration value="dataAccessService"/>
+      <xs:enumeration value="dataWorkFlowService"/>
+      <xs:enumeration value="dataProcessingService"/>
+      <xs:enumeration value="dataMapService"/>
+      <xs:enumeration value="dataOtherService"/>
+      <xs:enumeration value="knowledgeService"/>
+      <xs:enumeration value="knowledgeGeoscienceCatalogueService"/>
+      <xs:enumeration value="knowledgeGeoscienceContentService"/>
+      <xs:enumeration value="knowledgeReasoningService"/>
+      <xs:enumeration value="knowledgeDeepShovel"/>
+      <xs:enumeration value="knowledgeDDEScholar"/>
+      <xs:enumeration value="knowledgeOtherService"/>
+      <xs:enumeration value="platformService"/>
+      <xs:enumeration value="platformCatalogueService"/>
+      <xs:enumeration value="platformRegistryService"/>
+      <xs:enumeration value="platformModelService"/>
+      <xs:enumeration value="platformCloudComputingResourceService"/>
+      <xs:enumeration value="platformAnnotationService"/>
+      <xs:enumeration value="platformAPIService"/>
+      <xs:enumeration value="platformEarthExplorer"/>
+      <xs:enumeration value="platformDataEvaluationService"/>
+      <xs:enumeration value="platformDDEIdentifierService"/>
+      <xs:enumeration value="platformOtherPlatformService"/>
+      <xs:enumeration value="thematicService"/>
+      <xs:enumeration value="thematicMineralResourceAssessmentService"/>
+      <xs:enumeration value="thematicGeologicMappingGlobalService"/>
+      <xs:enumeration value="thematicGeologicalTimelineService"/>
+      <xs:enumeration value="thematicDigitalGeologicalOccurrenceService"/>
+      <xs:enumeration value="thematicDinosaurService"/>
+      <xs:enumeration value="thematicGlobalNamingService"/>
+      <xs:enumeration value="thematicGeomorphologyMappingService"/>
+      <xs:enumeration value="thematicGeoscienceStandardService"/>
+      <xs:enumeration value="thematicOtherService"/>
+      <xs:enumeration value="vocabularyService"/>
+      <xs:enumeration value="registryService"/>
+      <xs:enumeration value="discoveryService"/>
+      <xs:enumeration value="viewService"/>
+      <xs:enumeration value="otherService"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SpatialRepresentationTypeCode">
+    <xs:annotation>
+      <xs:documentation>Codes that specify the method used to represent geographic information in
+        the resource</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="vector"/>
+      <xs:enumeration value="grid"/>
+      <xs:enumeration value="textTable"/>
+      <xs:enumeration value="tin"/>
+      <xs:enumeration value="stereoModel"/>
+      <xs:enumeration value="video"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <xs:simpleType name="TopicCategoryCode">
+    <xs:annotation>
+      <xs:documentation>This codelist extends the ISO19115-1 codelist (see
+        https://wiki.esipfed.org/ISO_19115-3_Codelists#MD_TopicCategoryCode) with more granular
+        topic categories for geoscience resources. The categories that do not have an 'GI_' prefix
+        are from the ISO19115-3 codelist, except for DataScience, which is also added in this
+        vocabulary.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="farming"/>
+      <xs:enumeration value="biota"/>
+      <xs:enumeration value="boundaries"/>
+      <xs:enumeration value="climatologyMeteorologyAtmosphere"/>
+      <xs:enumeration value="economy"/>
+      <xs:enumeration value="elevation"/>
+      <xs:enumeration value="environment"/>
+      <xs:enumeration value="geoscientificInformation"/>
+      <xs:enumeration value="GI_stratigraphy"/>
+      <xs:enumeration value="GI_SG_magnetostratigraphy"/>
+      <xs:enumeration value="GI_SG_cyclostratigraphy"/>
+      <xs:enumeration value="GI_SG_chronostratigraphy"/>
+      <xs:enumeration value="GI_SG_sequenceStratigraphy"/>
+      <xs:enumeration value="GI_SG_lithotratigraphy"/>
+      <xs:enumeration value="GI_SG_biostratigraphy"/>
+      <xs:enumeration value="GI_SG_chemostratigraphy"/>
+      <xs:enumeration value="GI_SG_eventStratigraphy"/>
+      <xs:enumeration value="GI_SG_geologicTimeScale"/>
+      <xs:enumeration value="GI_paleontology"/>
+      <xs:enumeration value="GI_PO_paleoecology"/>
+      <xs:enumeration value="GI_PO_fossil"/>
+      <xs:enumeration value="GI_PO_evolutionaryPaleontology"/>
+      <xs:enumeration value="GI_PO_biostratigraphy"/>
+      <xs:enumeration value="GI_PO_paleoanthropology"/>
+      <xs:enumeration value="GI_PO_ichnology"/>
+      <xs:enumeration value="GI_PO_invertebratePaleontology"/>
+      <xs:enumeration value="GI_PO_molecularPaleontology"/>
+      <xs:enumeration value="GI_PO_geobiology"/>
+      <xs:enumeration value="GI_PO_paleobotany"/>
+      <xs:enumeration value="GI_PO_palynology"/>
+      <xs:enumeration value="GI_PO_taphonomy"/>
+      <xs:enumeration value="GI_PO_micropaleontology"/>
+      <xs:enumeration value="GI_PO_paleobiogeography"/>
+      <xs:enumeration value="GI_geochronology"/>
+      <xs:enumeration value="GI_GC_radioIsotopicDating"/>
+      <xs:enumeration value="GI_GC_non-radioIsotopicDating"/>
+      <xs:enumeration value="GI_sedimentology"/>
+      <xs:enumeration value="GI_SM_sedimentaryRock"/>
+      <xs:enumeration value="GI_SM_sedimentaryPhysicalProperty"/>
+      <xs:enumeration value="GI_SM_sedimentaryGeochemistry"/>
+      <xs:enumeration value="GI_SM_sedimentaryProcess"/>
+      <xs:enumeration value="GI_magmaticPetrology"/>
+      <xs:enumeration value="GI_MAP_compositionAndClassification"/>
+      <xs:enumeration value="GI_MAP_geochemicalProperties"/>
+      <xs:enumeration value="GI_MAP_physicalProperties"/>
+      <xs:enumeration value="GI_MAP_magmatismAndOrigin"/>
+      <xs:enumeration value="GI_metamorphicPetrology"/>
+      <xs:enumeration value="GI_MMP_metamorphicFabrics"/>
+      <xs:enumeration value="GI_MMP_dynamicMetamorphism"/>
+      <xs:enumeration value="GI_MMP_impactMetamorphism"/>
+      <xs:enumeration value="GI_MMP_contactMetamorphism"/>
+      <xs:enumeration value="GI_MMP_metasomatism"/>
+      <xs:enumeration value="GI_MMP_regionalMetamorphism"/>
+      <xs:enumeration value="GI_MMP_ocean-floorMetamorphism"/>
+      <xs:enumeration value="GI_MMP_burialMetamorphism"/>
+      <xs:enumeration value="GI_MMP_migmatite"/>
+      <xs:enumeration value="GI_MMP_metamorphicHistory"/>
+      <xs:enumeration value="GI_structureGeology"/>
+      <xs:enumeration value="GI_SGE_historicalStructure"/>
+      <xs:enumeration value="GI_SGE_activeStructure"/>
+      <xs:enumeration value="GI_tectonics"/>
+      <xs:enumeration value="GI_TN_plateTectonics"/>
+      <xs:enumeration value="GI_TN_deepEarthTectonics"/>
+      <xs:enumeration value="GI_TN_thermochronology"/>
+      <xs:enumeration value="GI_TN_geodynamics"/>
+      <xs:enumeration value="GI_geologicMapping"/>
+      <xs:enumeration value="GI_GM_geologicalSurvey"/>
+      <xs:enumeration value="GI_GM_geologicalCompilation"/>
+      <xs:enumeration value="GI_GM_digitalGeologicalMapping"/>
+      <xs:enumeration value="GI_hydrogeology"/>
+      <xs:enumeration value="GI_HG_storageOfGroundwater"/>
+      <xs:enumeration value="GI_HG_groundwaterFlow"/>
+      <xs:enumeration value="GI_HG_groundwaterQuality"/>
+      <xs:enumeration value="GI_HG_geologicalProcessesOfGroundwater"/>
+      <xs:enumeration value="GI_HG_groundwaterDependentEcosystems"/>
+      <xs:enumeration value="GI_engineeringGeologyGeotechnology"/>
+      <xs:enumeration value="GI_EGG_regionalEngineeringGeology"/>
+      <xs:enumeration value="GI_EGG_soilMassEngineeringGeology"/>
+      <xs:enumeration value="GI_EGG_rockMassEngineeringGeology"/>
+      <xs:enumeration value="GI_EGG_appliedEngineeringGeology"/>
+      <xs:enumeration value="GI_EGG_geologicalHazards"/>
+      <xs:enumeration value="GI_EGG_intelligentEngineeringGeology"/>
+      <xs:enumeration value="GI_environmentalGeology"/>
+      <xs:enumeration value="GI_petroleumGeology"/>
+      <xs:enumeration value="GI_PG_oilAndGasResourcesAssessment"/>
+      <xs:enumeration value="GI_PG_geologicalElements"/>
+      <xs:enumeration value="GI_PG_petroleumAccumulation"/>
+      <xs:enumeration value="GI_mathematicalGeoscience"/>
+      <xs:enumeration value="GI_MMG_dataVisualization‎"/>
+      <xs:enumeration value="GI_MMG_analysis"/>
+      <xs:enumeration value="GI_MMG_modelling"/>
+      <xs:enumeration value="GI_MMG_computation"/>
+      <xs:enumeration value="GI_marineGeology"/>
+      <xs:enumeration value="GI_MG_submarineGeomorphology"/>
+      <xs:enumeration value="GI_MG_marineSedimentology"/>
+      <xs:enumeration value="GI_MG_marineSedimentDynamics"/>
+      <xs:enumeration value="GI_MG_paleoceanographyAndPaleoclimatology"/>
+      <xs:enumeration value="GI_MG_marineGeochronology"/>
+      <xs:enumeration value="GI_MG_marinePetrology "/>
+      <xs:enumeration value="GI_MG_marineGeochemistry"/>
+      <xs:enumeration value="GI_MG_seafloorTectonicsAndGeodynamics"/>
+      <xs:enumeration value="GI_MG_marineGeohazards"/>
+      <xs:enumeration value="GI_MG_coastalMorphoDynamics"/>
+      <xs:enumeration value="GI_MG_marinePaleontologyAndMicropaleontology "/>
+      <xs:enumeration value="GI_MG_seafloorHabitat"/>
+      <xs:enumeration value="GI_MG_subseafloorBiosphere"/>
+      <xs:enumeration value="GI_mineralogy"/>
+      <xs:enumeration value="GI_MI_mineralPropertiesAndItsApplications"/>
+      <xs:enumeration value="GI_MI_crystallography"/>
+      <xs:enumeration value="GI_MI_mineralGenesisAndItsOccurrence"/>
+      <xs:enumeration value="GI_MI_mineralClassificationAndDescription"/>
+      <xs:enumeration value="GI_MI_chemicalCompositionAndCrystalStructure"/>
+      <xs:enumeration value="GI_gravimetricAndGravityExploration"/>
+      <xs:enumeration value="GI_geomagnetismAndMagneticExploration"/>
+      <xs:enumeration value="GI_geoelectricityAndElectricalExploration"/>
+      <xs:enumeration value="GI_seismologyAndSeismicExploration"/>
+      <xs:enumeration value="GI_nuclearGeophysicsandRadioactiveExploration"/>
+      <xs:enumeration value="GI_drillAndGeophysicalLogging"/>
+      <xs:enumeration value="GI_DGL_instrumentsForDrillingAndWellLogging"/>
+      <xs:enumeration value="GI_DGL_coringAndCoreAnalysis"/>
+      <xs:enumeration value="GI_DGL_loggingDataAnalysis"/>
+      <xs:enumeration value="GI_paleomagnetism"/>
+      <xs:enumeration value="GI_rockPhysics"/>
+      <xs:enumeration value="GI_integratedGeophysics"/>
+      <xs:enumeration value="GI_geochemistry"/>
+      <xs:enumeration value="GI_remoteSensing"/>
+      <xs:enumeration value="GI_RS_remoteSensingInfrastructure"/>
+      <xs:enumeration value="GI_RS_appliedRemoteSensing"/>
+      <xs:enumeration value="GI_RS_photogrammetry"/>
+      <xs:enumeration value="GI_geomorphology"/>
+      <xs:enumeration value="GI_GPH_specialGeomorphology"/>
+      <xs:enumeration value="GI_GPH_dynamicalGeomorphology"/>
+      <xs:enumeration value="GI_GPH_regionalGeomorphology"/>
+      <xs:enumeration value="GI_GPH_appliedGeomorphology"/>
+      <xs:enumeration value="GI_GPH_experimentalGeomorphology"/>
+      <xs:enumeration value="GI_GPH_geomorphologicalMapping"/>
+      <xs:enumeration value="GI_GPH_climaticGeomorphology"/>
+      <xs:enumeration value="GI_GPH_quantitativeGeomorphology"/>
+      <xs:enumeration value="GI_GPH_fractalGeomorphology"/>
+      <xs:enumeration value="GI_GPH_historicalGeomorphology"/>
+      <xs:enumeration value="GI_paleoclimatology"/>
+      <xs:enumeration value="GI_paleogeography"/>
+      <xs:enumeration value="GI_PGG_lithofaciesPaleogeography"/>
+      <xs:enumeration value="GI_PGG_tectono-paleogeography"/>
+      <xs:enumeration value="GI_PGG_climatePaleogeography"/>
+      <xs:enumeration value="GI_PGG_paleobiogeography"/>
+      <xs:enumeration value="GI_earthResource"/>
+      <xs:enumeration value="GI_ER_mineralResource"/>
+      <xs:enumeration value="GI_ER_groundwater"/>
+      <xs:enumeration value="GI_ER_oilAndGas"/>
+      <xs:enumeration value="GI_ER_shaleGasAndOilShale"/>
+      <xs:enumeration value="GI_ER_coalAndCoalbedMethane"/>
+      <xs:enumeration value="GI_ER_gasHydrate"/>
+      <xs:enumeration value="GI_ER_organicMaterial"/>
+      <xs:enumeration value="GI_geothermics"/>
+      <xs:enumeration value="GI_GTH_theoreticalGeothermics"/>
+      <xs:enumeration value="GI_GTH_appliedGeothermics"/>
+      <xs:enumeration value="GI_GTH_geothermalEnergy"/>
+      <xs:enumeration value="GI_GTH_dryHotRock"/>
+      <xs:enumeration value="GI_geoexploration"/>
+      <xs:enumeration value="GI_mining"/>
+      <xs:enumeration value="GI_economicalGeology"/>
+      <xs:enumeration value="GI_ECG_characteristicsOfOreDeposits"/>
+      <xs:enumeration value="GI_ECG_depositType"/>
+      <xs:enumeration value="GI_ECG_oreGenesis"/>
+      <xs:enumeration value="GI_ECG_metallogeny"/>
+      <xs:enumeration value="GI_geologicalLiterature"/>
+      <xs:enumeration value="GI_GL_dinosaur"/>
+      <xs:enumeration value="GI_GL_geopark"/>
+      <xs:enumeration value="GI_GL_geo-education"/>
+      <xs:enumeration value="GI_GL_geologicalPublications"/>
+      <xs:enumeration value="GI_GL_geologicalArchives"/>
+      <xs:enumeration value="GI_planetaryGeology"/>
+      <xs:enumeration value="GI_biogeology"/>
+      <xs:enumeration value="GI_volcanology"/>
+      <xs:enumeration value="GI_forensicGeology"/>
+      <xs:enumeration value="GI_otherGeoscientificTopics"/>
+      <xs:enumeration value="health"/>
+      <xs:enumeration value="imageryBaseMapsEarthCover"/>
+      <xs:enumeration value="intelligenceMilitary"/>
+      <xs:enumeration value="inlandWaters"/>
+      <xs:enumeration value="location"/>
+      <xs:enumeration value="oceans"/>
+      <xs:enumeration value="planningCadastre"/>
+      <xs:enumeration value="society"/>
+      <xs:enumeration value="structure"/>
+      <xs:enumeration value="transportation"/>
+      <xs:enumeration value="utilitiesCommunication"/>
+      <xs:enumeration value="extraTerrestrial"/>
+      <xs:enumeration value="disaster"/>
+      <xs:enumeration value="dataScience"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CountryCode">
+    <xs:restriction base="xs:token">
+      <xs:length value="2"/>
+      <xs:enumeration value="AD"/>
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="AF"/>
+      <xs:enumeration value="AG"/>
+      <xs:enumeration value="AI"/>
+      <xs:enumeration value="AL"/>
+      <xs:enumeration value="AM"/>
+      <xs:enumeration value="AO"/>
+      <xs:enumeration value="AQ"/>
+      <xs:enumeration value="AR"/>
+      <xs:enumeration value="AS"/>
+      <xs:enumeration value="AT"/>
+      <xs:enumeration value="AU"/>
+      <xs:enumeration value="AW"/>
+      <xs:enumeration value="AX"/>
+      <xs:enumeration value="AZ"/>
+      <xs:enumeration value="BA"/>
+      <xs:enumeration value="BB"/>
+      <xs:enumeration value="BD"/>
+      <xs:enumeration value="BE"/>
+      <xs:enumeration value="BF"/>
+      <xs:enumeration value="BG"/>
+      <xs:enumeration value="BH"/>
+      <xs:enumeration value="BI"/>
+      <xs:enumeration value="BJ"/>
+      <xs:enumeration value="BL"/>
+      <xs:enumeration value="BM"/>
+      <xs:enumeration value="BN"/>
+      <xs:enumeration value="BO"/>
+      <xs:enumeration value="BQ"/>
+      <xs:enumeration value="BR"/>
+      <xs:enumeration value="BS"/>
+      <xs:enumeration value="BT"/>
+      <xs:enumeration value="BV"/>
+      <xs:enumeration value="BW"/>
+      <xs:enumeration value="BY"/>
+      <xs:enumeration value="BZ"/>
+      <xs:enumeration value="CA"/>
+      <xs:enumeration value="CC"/>
+      <xs:enumeration value="CD"/>
+      <xs:enumeration value="CF"/>
+      <xs:enumeration value="CG"/>
+      <xs:enumeration value="CH"/>
+      <xs:enumeration value="CI"/>
+      <xs:enumeration value="CK"/>
+      <xs:enumeration value="CL"/>
+      <xs:enumeration value="CM"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="CO"/>
+      <xs:enumeration value="CR"/>
+      <xs:enumeration value="CU"/>
+      <xs:enumeration value="CV"/>
+      <xs:enumeration value="CW"/>
+      <xs:enumeration value="CX"/>
+      <xs:enumeration value="CY"/>
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="DE"/>
+      <xs:enumeration value="DJ"/>
+      <xs:enumeration value="DK"/>
+      <xs:enumeration value="DM"/>
+      <xs:enumeration value="DO"/>
+      <xs:enumeration value="DZ"/>
+      <xs:enumeration value="EC"/>
+      <xs:enumeration value="EE"/>
+      <xs:enumeration value="EG"/>
+      <xs:enumeration value="EH"/>
+      <xs:enumeration value="ER"/>
+      <xs:enumeration value="ES"/>
+      <xs:enumeration value="ET"/>
+      <xs:enumeration value="FI"/>
+      <xs:enumeration value="FJ"/>
+      <xs:enumeration value="FK"/>
+      <xs:enumeration value="FM"/>
+      <xs:enumeration value="FO"/>
+      <xs:enumeration value="FR"/>
+      <xs:enumeration value="GA"/>
+      <xs:enumeration value="GB"/>
+      <xs:enumeration value="GD"/>
+      <xs:enumeration value="GE"/>
+      <xs:enumeration value="GF"/>
+      <xs:enumeration value="GG"/>
+      <xs:enumeration value="GH"/>
+      <xs:enumeration value="GI"/>
+      <xs:enumeration value="GL"/>
+      <xs:enumeration value="GM"/>
+      <xs:enumeration value="GN"/>
+      <xs:enumeration value="GP"/>
+      <xs:enumeration value="GQ"/>
+      <xs:enumeration value="GR"/>
+      <xs:enumeration value="GS"/>
+      <xs:enumeration value="GT"/>
+      <xs:enumeration value="GU"/>
+      <xs:enumeration value="GW"/>
+      <xs:enumeration value="GY"/>
+      <xs:enumeration value="HK"/>
+      <xs:enumeration value="HM"/>
+      <xs:enumeration value="HN"/>
+      <xs:enumeration value="HR"/>
+      <xs:enumeration value="HT"/>
+      <xs:enumeration value="HU"/>
+      <xs:enumeration value="ID"/>
+      <xs:enumeration value="IE"/>
+      <xs:enumeration value="IL"/>
+      <xs:enumeration value="IM"/>
+      <xs:enumeration value="IN"/>
+      <xs:enumeration value="IO"/>
+      <xs:enumeration value="IQ"/>
+      <xs:enumeration value="IR"/>
+      <xs:enumeration value="IS"/>
+      <xs:enumeration value="IT"/>
+      <xs:enumeration value="JE"/>
+      <xs:enumeration value="JM"/>
+      <xs:enumeration value="JO"/>
+      <xs:enumeration value="JP"/>
+      <xs:enumeration value="KE"/>
+      <xs:enumeration value="KG"/>
+      <xs:enumeration value="KH"/>
+      <xs:enumeration value="KI"/>
+      <xs:enumeration value="KM"/>
+      <xs:enumeration value="KN"/>
+      <xs:enumeration value="KP"/>
+      <xs:enumeration value="KR"/>
+      <xs:enumeration value="KW"/>
+      <xs:enumeration value="KY"/>
+      <xs:enumeration value="KZ"/>
+      <xs:enumeration value="LA"/>
+      <xs:enumeration value="LB"/>
+      <xs:enumeration value="LC"/>
+      <xs:enumeration value="LI"/>
+      <xs:enumeration value="LK"/>
+      <xs:enumeration value="LR"/>
+      <xs:enumeration value="LS"/>
+      <xs:enumeration value="LT"/>
+      <xs:enumeration value="LU"/>
+      <xs:enumeration value="LV"/>
+      <xs:enumeration value="LY"/>
+      <xs:enumeration value="MA"/>
+      <xs:enumeration value="MC"/>
+      <xs:enumeration value="MD"/>
+      <xs:enumeration value="ME"/>
+      <xs:enumeration value="MF"/>
+      <xs:enumeration value="MG"/>
+      <xs:enumeration value="MH"/>
+      <xs:enumeration value="MK"/>
+      <xs:enumeration value="ML"/>
+      <xs:enumeration value="MM"/>
+      <xs:enumeration value="MN"/>
+      <xs:enumeration value="MO"/>
+      <xs:enumeration value="MP"/>
+      <xs:enumeration value="MQ"/>
+      <xs:enumeration value="MR"/>
+      <xs:enumeration value="MS"/>
+      <xs:enumeration value="MT"/>
+      <xs:enumeration value="MU"/>
+      <xs:enumeration value="MV"/>
+      <xs:enumeration value="MW"/>
+      <xs:enumeration value="MX"/>
+      <xs:enumeration value="MY"/>
+      <xs:enumeration value="MZ"/>
+      <xs:enumeration value="NA"/>
+      <xs:enumeration value="NC"/>
+      <xs:enumeration value="NE"/>
+      <xs:enumeration value="NF"/>
+      <xs:enumeration value="NG"/>
+      <xs:enumeration value="NI"/>
+      <xs:enumeration value="NL"/>
+      <xs:enumeration value="NO"/>
+      <xs:enumeration value="NP"/>
+      <xs:enumeration value="NR"/>
+      <xs:enumeration value="NU"/>
+      <xs:enumeration value="NZ"/>
+      <xs:enumeration value="OM"/>
+      <xs:enumeration value="PA"/>
+      <xs:enumeration value="PE"/>
+      <xs:enumeration value="PF"/>
+      <xs:enumeration value="PG"/>
+      <xs:enumeration value="PH"/>
+      <xs:enumeration value="PK"/>
+      <xs:enumeration value="PL"/>
+      <xs:enumeration value="PM"/>
+      <xs:enumeration value="PN"/>
+      <xs:enumeration value="PR"/>
+      <xs:enumeration value="PS"/>
+      <xs:enumeration value="PT"/>
+      <xs:enumeration value="PW"/>
+      <xs:enumeration value="PY"/>
+      <xs:enumeration value="QA"/>
+      <xs:enumeration value="RE"/>
+      <xs:enumeration value="RO"/>
+      <xs:enumeration value="RS"/>
+      <xs:enumeration value="RU"/>
+      <xs:enumeration value="RW"/>
+      <xs:enumeration value="SA"/>
+      <xs:enumeration value="SB"/>
+      <xs:enumeration value="SC"/>
+      <xs:enumeration value="SD"/>
+      <xs:enumeration value="SE"/>
+      <xs:enumeration value="SG"/>
+      <xs:enumeration value="SH"/>
+      <xs:enumeration value="SI"/>
+      <xs:enumeration value="SJ"/>
+      <xs:enumeration value="SK"/>
+      <xs:enumeration value="SL"/>
+      <xs:enumeration value="SM"/>
+      <xs:enumeration value="SN"/>
+      <xs:enumeration value="SO"/>
+      <xs:enumeration value="SR"/>
+      <xs:enumeration value="SS"/>
+      <xs:enumeration value="ST"/>
+      <xs:enumeration value="SV"/>
+      <xs:enumeration value="SX"/>
+      <xs:enumeration value="SY"/>
+      <xs:enumeration value="SZ"/>
+      <xs:enumeration value="TC"/>
+      <xs:enumeration value="TD"/>
+      <xs:enumeration value="TF"/>
+      <xs:enumeration value="TG"/>
+      <xs:enumeration value="TH"/>
+      <xs:enumeration value="TJ"/>
+      <xs:enumeration value="TK"/>
+      <xs:enumeration value="TL"/>
+      <xs:enumeration value="TM"/>
+      <xs:enumeration value="TN"/>
+      <xs:enumeration value="TO"/>
+      <xs:enumeration value="TR"/>
+      <xs:enumeration value="TT"/>
+      <xs:enumeration value="TV"/>
+      <xs:enumeration value="TW"/>
+      <xs:enumeration value="TZ"/>
+      <xs:enumeration value="UA"/>
+      <xs:enumeration value="UG"/>
+      <xs:enumeration value="UM"/>
+      <xs:enumeration value="US"/>
+      <xs:enumeration value="UY"/>
+      <xs:enumeration value="UZ"/>
+      <xs:enumeration value="VA"/>
+      <xs:enumeration value="VC"/>
+      <xs:enumeration value="VE"/>
+      <xs:enumeration value="VG"/>
+      <xs:enumeration value="VI"/>
+      <xs:enumeration value="VN"/>
+      <xs:enumeration value="VU"/>
+      <xs:enumeration value="WF"/>
+      <xs:enumeration value="WS"/>
+      <xs:enumeration value="YE"/>
+      <xs:enumeration value="YT"/>
+      <xs:enumeration value="ZA"/>
+      <xs:enumeration value="ZM"/>
+      <xs:enumeration value="ZW"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
