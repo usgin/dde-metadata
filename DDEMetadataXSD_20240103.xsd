@@ -164,6 +164,7 @@
 
   <xs:complexType name="EX_GeographicExtent">
     <xs:sequence>
+      <xs:element name="verbatimCoordinateLocation" type = "metadata:CharacterString_Type"  maxOccurs="1"/>
       <xs:element name="geographicIdentifier" type="metadata:MD_Identifier" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="elevation" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
