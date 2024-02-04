@@ -2,46 +2,47 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
 
-    <!-- SMR 2023-10-02 -->
+    <!-- SMR 2023-10-02
+      update 2024-02-04 for current DDE resourceType codes -->
 
     <xsl:variable name="resourceTypeMapping">
         <!-- key id DDE resourceType, Value is ISO19115-3 scope code -->
-        <entry key="Aggregate" value="aggregate"/>
-        <entry key="Application" value="application"/>
-        <entry key="Web Application" value="application"/>
-        <entry key="Collection" value="collection"/>
-        <entry key="Dataset" value="dataset"/>
-        <entry key="DataCatalog" value="dataset"/>
-        <entry key="GeographicDataset" value="dataset"/>
-        <entry key="NonGeographicDataset" value="nonGeographicDataset"/>
-        <entry key="Document" value="document"/>
-        <entry key="Article" value="document"/>
-        <entry key="Thesis" value="document"/>
-        <entry key="Book" value="document"/>
-        <entry key="Poster" value="document"/>
-        <entry key="WebPage" value="document"/>
-        <entry key="Image" value="document"/>
-        <entry key="Map" value="document"/>
-        <entry key="Photograph" value="document"/>
-        <entry key="ExplanatoryFigure" value="document"/>
-        <entry key="Initiative" value="initiative"/>
-        <entry key="FieldSession" value="fieldSession"/>
-        <entry key="LearningResource" value="document"/>
-        <entry key="Guide" value="document"/>
-        <entry key="Model" value="model"/>
-        <entry key="Movie" value="document"/>
-        <entry key="Repository" value="repository"/>
-        <entry key="Semantic resource" value="dataset"/>
-        <entry key="DefinedTermSet" value="dataset"/>
-        <entry key="Series" value="series"/>
-        <entry key="Service" value="service"/>
-        <entry key="WebAPI" value="service"/>
-        <entry key="Software" value="software"/>
-        <entry key="Sound" value="document"/>
+        <entry key="aggregate" value="aggregate"/>
+        <entry key="application" value="application"/>
+        <entry key="webApplication" value="application"/>
+        <entry key="collection" value="collection"/>
+        <entry key="dataset" value="dataset"/>
+        <entry key="dataCatalog" value="dataset"/>
+        <entry key="geographicDataset" value="dataset"/>
+        <entry key="nonGeographicDataset" value="nonGeographicDataset"/>
+        <entry key="document" value="document"/>
+        <entry key="article" value="document"/>
+        <entry key="thesis" value="document"/>
+        <entry key="book" value="document"/>
+        <entry key="poster" value="document"/>
+        <entry key="webPage" value="document"/>
+        <entry key="image" value="document"/>
+        <entry key="map" value="document"/>
+        <entry key="photograph" value="document"/>
+        <entry key="explanatoryFigure" value="document"/>
+        <entry key="initiative" value="initiative"/>
+        <entry key="fieldSession" value="fieldSession"/>
+        <entry key="learningResource" value="document"/>
+        <entry key="guide" value="document"/>
+        <entry key="model" value="model"/>
+        <entry key="movie" value="document"/>
+        <entry key="repository" value="repository"/>
+        <entry key="semanticResource" value="dataset"/>
+        <entry key="definedTermSet" value="dataset"/>
+        <entry key="series" value="series"/>
+        <entry key="service" value="service"/>
+        <entry key="webAPI" value="service"/>
+        <entry key="software" value="software"/>
+        <entry key="sound" value="document"/>
     </xsl:variable>
     
-    <xsl:variable name="ISO2DDEresourceMapping">
-        <!-- key id DDE resourceType, Value is ISO19115-3 scope code -->
+<!--    <xsl:variable name="ISO2DDEresourceMapping">
+        <!-\- key id DDE resourceType, Value is ISO19115-3 scope code -\->
         <entry key="Aggregate" value="aggregate"/>
         <entry key="Aggregate" value="aggregate"/>
         <entry key="Application" value="application"/>
@@ -76,7 +77,8 @@
         <entry key="Software" value="software"/>
         <entry key="Sound" value="document"/>
     </xsl:variable>
-
+-->
+    
     <xsl:template name="TimePositionFormat">
         <!-- from USGIN transformations -->
         <xsl:param name="tpos"/>
@@ -213,8 +215,5 @@
         </xsl:choose>-->
         <xsl:value-of select="concat(string($var_DateString), 'T', string($var_timeString))"/>
     </xsl:template>
-
-
-
 
 </xsl:stylesheet>
