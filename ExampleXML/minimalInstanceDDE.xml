@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:MD_Metadata
+    xmlns:metadata="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
+    <metadata:metadataIdentifier>
+        <metadata:code>http://www.ddeworld.org/metadata/3427q5wuh4oy</metadata:code>
+    </metadata:metadataIdentifier>
+    <metadata:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</metadata:metadataStandardName>
+    <metadata:metadataResponsibleParty>
+        <metadata:name>metadata curator</metadata:name>
+        <metadata:role>author</metadata:role>
+    </metadata:metadataResponsibleParty>
+    <metadata:metadataDate>
+        <metadata:date>2006-05-04</metadata:date>
+        <metadata:dateType>lastUpdate</metadata:dateType>
+    </metadata:metadataDate>
+    <metadata:identificationInfo>
+        <metadata:resourceIdentifier>
+            <metadata:code>http://doi.org/24676/alhgwreopyi</metadata:code>
+        </metadata:resourceIdentifier>
+        <metadata:title>Geology of the thrust belt</metadata:title>
+        <metadata:abstract>lots of information; this field must contain at least 250 characters to validate, so think of all the useful information you can about the subject resource. This record demonstrates the length of 250 characters required by the DDE metadata specification.</metadata:abstract>
+        <metadata:keyword>thrust fault</metadata:keyword>
+        <metadata:topicCategory>GI_SGE_structureGeology</metadata:topicCategory>
+        <metadata:resourceType>document</metadata:resourceType>
+        <metadata:language>eng</metadata:language>
+        <metadata:characterEncoding>UTF-8</metadata:characterEncoding>
+        <metadata:restriction>
+            <metadata:restrictionCode>unrestricted</metadata:restrictionCode>
+        </metadata:restriction>
+        <metadata:geoTime>Jurassic</metadata:geoTime>
+        <metadata:distributionInfo>
+            <metadata:onlineResource>
+                <metadata:linkage>http://doi.org/24676/alhgwreopyi</metadata:linkage>
+            </metadata:onlineResource>
+        </metadata:distributionInfo>
+    </metadata:identificationInfo>
+</metadata:MD_Metadata>
