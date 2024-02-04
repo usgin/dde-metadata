@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MD_Metadata xmlns="https://www.ddeworld.org/resource/1.0/metadata"
+<MD_Metadata xmlns="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://www.ddeworld.org/resource/1.0/metadata ../DDEMetadata20231103.xsd">
+    xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
     <metadataIdentifier>
-        <authority>Arizona Geological Survey</authority>
+        <authority>
+            <name>Arizona Geological Survey</name>
+            <role>resourceProvider</role>
+        </authority>
         <code>c98705ae-058a-43fb-85a2-7b5209d9a4b3</code>
         <codeSpace>UUID</codeSpace>
     </metadataIdentifier>
@@ -12,16 +15,19 @@
         <name>publications manager</name>
         <role>pointOfContact</role>
         <identifier>
-            <authority>ORCID</authority>
+            <authority>
+                <name>ORCID</name>
+                <role>resourceProvider</role>
+            </authority>
             <code>https://orcid.org/0000-0041-6041-6309</code>
         </identifier>
-        <country>USA</country>
+        <country>US</country>
         <electronicMailAddress>metadata@azgs.az.gov</electronicMailAddress>
     </metadataResponsibleParty>
     <metadataResponsibleParty>
         <name>Jennifer Page</name>
         <role>author</role>
-        <country>USA</country>
+        <country>US</country>
         <electronicMailAddress>nil:withheld</electronicMailAddress>
     </metadataResponsibleParty>
     <metadataDate>
@@ -34,7 +40,10 @@
     </metadataDate>
     <identificationInfo>
         <resourceIdentifier>
-            <authority>DataCite</authority>
+            <authority>
+                <name>DataCite</name>
+                <role>resourceProvider</role>
+            </authority>
             <code>https://doi.org/23609/53w7klh</code>
         </resourceIdentifier>
         <title>US-AZ_AZGS_1M_Lithostratigraphy</title>
@@ -47,38 +56,44 @@
             <date>2016-04-14</date>
             <dateType>lastUpdate</dateType>
         </resourceDate>
-        <abstract>Lithostratigraphic unit distribution for the Geologic Map of Arizona at 1:1,000,000-scale.</abstract>
+        <abstract>Lithostratigraphic unit distribution for the Geologic Map of Arizona at 1:1,000,000-scale. Shows entire state with map units defined broadly by age and lithologic type. The map was compiled by modifying the previous 1:1000000 statemap version with more recent mapping.</abstract>
         
         <keyword>geographicarea@United States</keyword>
-        <keyword uri="https://edits.nationalmap.gov/apps/gaz-domestic/public/gaz-record/1779777">Arizona</keyword>
+        <keyword href="https://edits.nationalmap.gov/apps/gaz-domestic/public/gaz-record/1779777">Arizona</keyword>
         <keyword>Geology</keyword>
         <keyword>Geologic Map</keyword>
         <topicCategory>geoscientificInformation</topicCategory>
-        <topicCategory>8_02-paleontology</topicCategory>
-        <topicCategory>8_10-hydrogeology</topicCategory>
+        <topicCategory>GI_PO_paleontology</topicCategory>
+        <topicCategory>GI_HG_hydrogeology</topicCategory>
         <topicCategory>environment</topicCategory>
-        <resourceType>Dataset</resourceType>
+        <resourceType>dataset</resourceType>
+        <additionalDocumentation>additionalDocumentation0</additionalDocumentation>
         <resourceResponsibleParty>
             <name>Ryan Clark</name>
             <role>pointOfContact</role>
             <identifier>
-                <authority>ORCID</authority>
+                <authority>
+                    <name>ORCID</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>https://orcid.org/0000-0041-6041-6309</code>
             </identifier>
-            <country>USA</country>
+            <country>US</country>
             <electronicMailAddress>clarkr@azgs.az.gov</electronicMailAddress>
         </resourceResponsibleParty>
         <resourceResponsibleParty>
             <name>Stephen Richard</name>
             <role>author</role>
             <identifier>
-                <authority>ORCID</authority>
+                <authority>
+                    <name>ORCID</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>https://orcid.org/0000-0001-6041-5302</code>
             </identifier>
-            <country>USA</country>
+            <country>US</country>
             <electronicMailAddress>richards@azgs.az.gov</electronicMailAddress>
-        </resourceResponsibleParty>
-        
+        </resourceResponsibleParty>        
         <browseGraphic>
             <title>Quick view lithostratigraphic map of Arizona</title>
             <applicationProfile>application/xml</applicationProfile>
@@ -94,16 +109,15 @@
             <linkage>http://azgs.az.gov/repository/browse/2222.jpg</linkage>
             <function>browseGraphic</function>
         </browseGraphic>
-        <additionalDocumentation>additionalDocumentation0</additionalDocumentation>
         <language>eng</language>
-        <characterEncoding>utf8</characterEncoding>
+        <characterEncoding>UTF-8</characterEncoding>
         <restriction>
-            <restrictionText uri="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons — CC0 1.0 Universal</restrictionText>
+            <restrictionText href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons — CC0 1.0 Universal</restrictionText>
             <restrictionCode>licenceUnrestricted</restrictionCode>
             <restrictionCode>unrestricted</restrictionCode>
         </restriction>
         <restriction>
-            <restrictionText uri="https://test.org/otherlicense/zero/1.0/">other license test</restrictionText>
+            <restrictionText href="https://test.org/otherlicense/zero/1.0/">other license test</restrictionText>
             <restrictionCode>copyright</restrictionCode>
             <restrictionCode>private</restrictionCode>
         </restriction>
@@ -111,34 +125,43 @@
         <edition>4</edition>
         <dataQuality>Line work reviewed for consistency with source maps</dataQuality>
         <lineage>Source maps generalized at source scale then reduced to compilation scale and redrawn to harmonize with other source</lineage>
-        <source uri="https://doi.org/24596/tehou246">source0</source>
-        <source uri="https://doi.org/24596/h35wp59y">source1</source>
-        <acquisitionType>digital conversion from published source</acquisitionType>
-        <acquisitionType>multiple sources</acquisitionType>
+        <source href="https://doi.org/24596/tehou246">source0</source>
+        <source href="https://doi.org/24596/h35wp59y">source1</source>
+        <acquisitionType>digitalConversionFromPublishedSource</acquisitionType>
+        <acquisitionType>synthesisFromMultipleSources</acquisitionType>
         <geoTime>Early Proterozoic, Middle Proterozoic, Cambrian, Devonian, Mississippian, Pennsylvanian, Permian, Mesozoic, Paleogene, Neogene, Holocene</geoTime>
         <geographicExtent>
+            <verbatimCoordinateLocation nilReason="missing"/>
             <geographicIdentifier>
-                <authority>Wikidata</authority>
+                <authority>
+                    <name>Wikidata</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>https://www.wikidata.org/wiki/Q816</code>
                 <description>Arizona</description>
             </geographicIdentifier>
+            <elevation>70 to 12,633 feet above sea level</elevation>
             <westBoundLongitude>-114.81651</westBoundLongitude>
             <eastBoundLongitude>-109.045223</eastBoundLongitude>
             <southBoundLatitude>31.332177</southBoundLatitude>
             <northBoundLatitude>37.00426</northBoundLatitude>
-            <elevation>70 to 12,633 feet above sea level</elevation>
         </geographicExtent>
         
         <temporalExtent>
             <beginName >Early Proterozoic</beginName>
             <beginIdentifier>
-                <authority>International Commission on Stratigraphy</authority>
+                <authority>
+                    <name>International Commission on Stratigraphy</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>http://resource.geosciml.org/classifier/ics/ischart/Paleoproterozoic</code>
                 <description>Paleoproterozoic</description>
             </beginIdentifier>
             <endName>Holocene</endName>
             <endIdentifier>
-                <authority>International Commission on Stratigraphy</authority>
+                <authority>
+                    <name>International Commission on Stratigraphy</name>
+                    <role>resourceProvider</role></authority>
                 <code>http://resource.geosciml.org/classifier/ics/ischart/Holocene</code>
                 <description>Holocene</description>
             </endIdentifier>
@@ -166,27 +189,33 @@
                 <linkage>http://services.azgs.az.gov/ArcGIS/services/OneGeology/AZGS_Arizona_Geology_WFS/MapServer/WFSServer?</linkage>
                 <function>information</function>
             </onlineResource>
+            <distributionResponsibleParty>
+                <name>Arizona Geological Survey</name>
+                <role>distributor</role>
+                <identifier>
+                    <authority>
+                        <name>Research Organization Registry</name>
+                        <role>resourceProvider</role>
+                    </authority>
+                    <code>https://ror.org/00vcszp55</code>
+                </identifier>
+                <country>US</country>
+                <electronicMailAddress>info@azgs.az.gov</electronicMailAddress>
+            </distributionResponsibleParty>
             <spatialRepresentationInfo>
                 <spatialRepresentationType>vector</spatialRepresentationType>
                 <spatialResolution>1:1000000</spatialResolution>
                 <referenceSystemType>projected</referenceSystemType>
                 <referenceSystemIdentifier>
-                    <authority>Klokan Technologies GmbH</authority>
+                    <authority>
+                        <name>Klokan Technologies GmbH</name>
+                        <role>resourceProvider</role>
+                    </authority>
                     <code>EPSG:4326</code>
                     <codeSpace>https://epsg.io/</codeSpace>
                     <description>WGS84</description>
                 </referenceSystemIdentifier>
             </spatialRepresentationInfo>
-            <distributionResponsibleParty>
-                <name>Arizona Geological Survey</name>
-                <role>distributor</role>
-                <identifier>
-                    <authority>Research Organization Registry</authority>
-                    <code>https://ror.org/00vcszp55</code>
-                </identifier>
-                <country>USA</country>
-                <electronicMailAddress>info@azgs.az.gov</electronicMailAddress>
-            </distributionResponsibleParty>
         </distributionInfo>
         <distributionInfo>
             <distributionFormat>image/jpg</distributionFormat>
@@ -199,27 +228,33 @@
                 <linkage>http://services.azgs.az.gov/ArcGIS/services/OneGeology/AZGS_Arizona_Geology/MapServer/WMSServer?</linkage>
                 <function>browsing</function>
             </onlineResource>
+            <distributionResponsibleParty>
+                <name>Arizona Geological Survey</name>
+                <role>pointOfContact</role>
+                <identifier>
+                    <authority>
+                        <name>Research Organization Registry</name>
+                        <role>resourceProvider</role>
+                    </authority>
+                    <code>https://ror.org/00vcszp55</code>
+                </identifier>
+                <country>US</country>
+                <electronicMailAddress>data@azgs.az.gov</electronicMailAddress>
+            </distributionResponsibleParty>
             <spatialRepresentationInfo>
                 <spatialRepresentationType>grid</spatialRepresentationType>
                 <spatialResolution>1:1000000</spatialResolution>
                 <referenceSystemType>projected</referenceSystemType>
                 <referenceSystemIdentifier>
-                    <authority>Klokan Technologies GmbH</authority>
+                    <authority>
+                        <name>Klokan Technologies GmbH</name>
+                        <role>resourceProvider</role>
+                    </authority>
                     <code>EPSG:4326</code>
                     <codeSpace>https://epsg.io/</codeSpace>
                     <description>WGS84</description>
                 </referenceSystemIdentifier>
             </spatialRepresentationInfo>
-            <distributionResponsibleParty>
-                <name>Arizona Geological Survey</name>
-                <role>pointOfContact</role>
-                <identifier>
-                    <authority>Research Organization Registry</authority>
-                    <code>https://ror.org/00vcszp55</code>
-                </identifier>
-                <country>USA</country>
-                <electronicMailAddress>data@azgs.az.gov</electronicMailAddress>
-            </distributionResponsibleParty>
         </distributionInfo>
     </identificationInfo>
 </MD_Metadata>

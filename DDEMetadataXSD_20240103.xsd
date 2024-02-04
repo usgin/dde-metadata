@@ -164,6 +164,7 @@
 
   <xs:complexType name="EX_GeographicExtent">
     <xs:sequence>
+      <xs:element name="verbatimCoordinateLocation" type = "metadata:CharacterString_Type"  maxOccurs="1"/>
       <xs:element name="geographicIdentifier" type="metadata:MD_Identifier" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="elevation" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
@@ -230,7 +231,7 @@
       <xs:element name="signalGenerator" type="metadata:CharacterString_Type" minOccurs="0"
         maxOccurs="1"/>
       <xs:element name="wavelength" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="processingLevel" type="metadata:ProcessedLevelCode" minOccurs="0"
+      <xs:element name="processingLevel" type="metadata:ProcessingLevelCode" minOccurs="0"
         maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
@@ -803,7 +804,7 @@
     </xs:union>
   </xs:simpleType>
 
-  <xs:simpleType name="ProcessedLevelCode">
+  <xs:simpleType name="ProcessingLevelCode">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Level0"/>
       <xs:enumeration value="Level1"/>

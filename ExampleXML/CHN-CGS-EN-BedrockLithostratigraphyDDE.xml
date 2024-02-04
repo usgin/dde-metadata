@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MD_Metadata xmlns="https://www.ddeworld.org/resource/1.0/metadata"
-    xmlns:metadata="https://www.ddeworld.org/resource/1.0/metadata"
+<MD_Metadata xmlns="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+    xmlns:metadata="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://www.ddeworld.org/resource/1.0/metadata ../DDEMetadata20231103.xsd">
+    xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
     <metadataIdentifier>
-        <authority>China Geological Survey</authority>
+        <authority>
+            <name>China Geological Survey</name>
+            <role>resourceProvider</role>
+        </authority>
         <code>22e1d1ca752a7bc3ff4e90014e760e8a08947654</code>
         <codeSpace>UUID</codeSpace>
     </metadataIdentifier>
@@ -15,7 +18,7 @@
         <identifier>
             <code>http://orcid.org/q34r2675427</code>
         </identifier>
-        <country>CHN</country>
+        <country>CN</country>
         <electronicMailAddress>ytiantian@mail.cgs.gov.cn</electronicMailAddress>
     </metadataResponsibleParty>
     <metadataDate>
@@ -40,8 +43,8 @@
         <keyword>continent@Asia</keyword>
         <keyword>geographicarea@China</keyword>
         <topicCategory>geoscientificInformation</topicCategory>
-        <resourceType>GeographicDataset</resourceType>
-        <resourceType>Map</resourceType>
+        <resourceType>geographicDataset</resourceType>
+        <resourceType>map</resourceType>
         <browseGraphic>
             <title>thumbnail</title>
             <applicationProfile>image/png</applicationProfile>
@@ -55,15 +58,16 @@
             <function>browseGraphic</function>
         </browseGraphic>
         <language>zho</language>
-        <characterEncoding>utf8</characterEncoding>
+        <characterEncoding>UTF-8</characterEncoding>
         <restriction>
             <restrictionCode>licenceUnrestricted</restrictionCode>
         </restriction>
-        
-        <acquisitionType>geological mapping</acquisitionType>
-        <acquisitionType>data integration synthesis</acquisitionType>
+
+        <acquisitionType>geologicalMapping</acquisitionType>
+        <acquisitionType>dataIntegrationSynthesis</acquisitionType>
         <geoTime>Paleoarchean through Holocene</geoTime>
         <geographicExtent>
+            <verbatimCoordinateLocation nilReason="missing"/>
             <westBoundLongitude>73.499</westBoundLongitude>
             <eastBoundLongitude>135.08</eastBoundLongitude>
             <southBoundLatitude>18.1609</southBoundLatitude>
@@ -72,13 +76,19 @@
         <temporalExtent>
             <beginName>Paleoarchean</beginName>
             <beginIdentifier>
-                <authority>International Commission on Stratigraphy</authority>
+                <authority>
+                    <name>International Commission on Stratigraphy</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>http://resource.geosciml.org/classifier/ics/ischart/Paleoarchean</code>
                 <description>Paleoarchean</description>
             </beginIdentifier>
             <endName>Holocene</endName>
             <endIdentifier>
-                <authority>International Commission on Stratigraphy</authority>
+                <authority>
+                    <name>International Commission on Stratigraphy</name>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>http://resource.geosciml.org/classifier/ics/ischart/Holocene</code>
                 <description>Holocene</description>
             </endIdentifier>
@@ -106,13 +116,13 @@
             <spatialRepresentationInfo>
                 <spatialRepresentationType>grid</spatialRepresentationType>
                 <spatialResolution>1:1000000</spatialResolution>
-                
+
                 <referenceSystemIdentifier>
                     <code>nil:missing</code>
-                    
+
                 </referenceSystemIdentifier>
             </spatialRepresentationInfo>
         </distributionInfo>
-        
+
     </identificationInfo>
 </MD_Metadata>
