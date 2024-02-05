@@ -136,7 +136,7 @@
         maxOccurs="unbounded"/>
       <xs:element name="temporalExtent" type="metadata:EX_TemporalExtent" minOccurs="0"
         maxOccurs="1"/>
-      <xs:element name="associatedResource" type="metadata:CI_OnlineResource" minOccurs="0"
+      <xs:element name="associatedResource" type="metadata:MD_AssociatedResource" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="metadataReference" type="metadata:CI_OnlineResource" minOccurs="0"
         maxOccurs="unbounded"/>
@@ -146,7 +146,15 @@
       <xs:element name="imageryInfo" type="metadata:MD_Imagery" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-
+  
+  <xs:complexType name="MD_AssociatedResource">
+    <xs:sequence>
+      <xs:element name="resourceCitation" type="metadata:CI_OnlineResource"/>
+      <xs:element name="relation" type="metadata:CharacterString_Type" minOccurs="0"
+        maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:complexType name="EX_TemporalExtent">
     <xs:sequence>
       <xs:element name="beginName" type="metadata:CharacterString_Type"/>
@@ -207,7 +215,7 @@
 
   <xs:complexType name="CI_OnlineResource">
     <xs:sequence>
-      <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="title" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
       <xs:element name="applicationProfile" type="metadata:Anchor_Type" minOccurs="0"
         maxOccurs="unbounded">
         <xs:annotation>
@@ -216,8 +224,8 @@
             distributionFormat element. See https://www.w3.org/TR/dx-prof/</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="linkage" type="xs:anyURI"/>
+      <xs:element name="description" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="linkage" type="metadata:CharacterString_Type"/>
       <xs:element name="function" type="metadata:FunctionCode" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
@@ -805,13 +813,27 @@
   </xs:simpleType>
 
   <xs:simpleType name="ProcessingLevelCode">
-    <xs:restriction base="xs:token">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
       <xs:enumeration value="Level0"/>
       <xs:enumeration value="Level1"/>
       <xs:enumeration value="Level2"/>
       <xs:enumeration value="Level3"/>
       <xs:enumeration value="Level4"/>
     </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>handle non-standard processing codes, prefix 'other:' followed by a string of
+            two or more characters with no included spaces. 
+          </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="other:\w{2,}"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
   </xs:simpleType>
 
   <xs:simpleType name="ReferenceSystemTypeCode ">
@@ -1016,6 +1038,7 @@
       <xs:enumeration value="tin"/>
       <xs:enumeration value="stereoModel"/>
       <xs:enumeration value="video"/>
+      <xs:enumeration value="missing"/>
     </xs:restriction>
   </xs:simpleType>
 
