@@ -1,128 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MD_Metadata xmlns="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
-    xmlns:metadata="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
-    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
-    <metadataIdentifier>
-        <authority>
-            <name>China Geological Survey</name>
-            <role>resourceProvider</role>
-        </authority>
-        <code>22e1d1ca752a7bc3ff4e90014e760e8a08947654</code>
-        <codeSpace>UUID</codeSpace>
-    </metadataIdentifier>
-    <metadataStandardName>DDE S01-2023: Geosciences Information Metadata</metadataStandardName>
-    <metadataResponsibleParty>
-        <name>Yang Tiantian</name>
-        <role>pointOfContact</role>
-        <identifier>
-            <code>http://orcid.org/q34r2675427</code>
-        </identifier>
-        <country>CN</country>
-        <electronicMailAddress>ytiantian@mail.cgs.gov.cn</electronicMailAddress>
-    </metadataResponsibleParty>
-    <metadataDate>
-        <date>2018-09-07T08:49:30</date>
-        <dateType>lastUpdate</dateType>
-    </metadataDate>
-    <identificationInfo>
-        <resourceIdentifier>
-            <code>nil:missing</code>
-        </resourceIdentifier>
-        <title>CHN CGS EN 1:1M Bedrock Lithostratigraphy</title>
-        <alternateTitle>Bedrock lithostratigraphic map of China@eng</alternateTitle>
-        <alternateTitle>中国基岩地层图@zho</alternateTitle>
-        <resourceDate>
-            <date>2018-09-07T08:49:30</date>
-            <dateType>revision</dateType>
-        </resourceDate>
-        <abstract>China 1:1M Bedrock Geology layer are composed by 63 sheets separate geological layers and information about sedimentary strata, quaternary strata , Igneous and metamorphic rocks. Sedimentary strata are be mapped by chronostratigraphic unitsand the rock formations. Intrusive rocks are be showed  by the "rock plus years," Pliocene strata are expressed by lithology and volcanic pattern. The layer includes more than 5,000 lithostratigraphic units and more than 1700 intrusive unit. Each geological units have attributes.  
-            For more information about  China geological maps that are available please visit http://en.cgs.gov.cn/</abstract>
-        <keyword>OneGeology</keyword>
-        <keyword>geology</keyword>
-        <keyword>continent@Asia</keyword>
-        <keyword>geographicarea@China</keyword>
-        <topicCategory>geoscientificInformation</topicCategory>
-        <resourceType>geographicDataset</resourceType>
-        <resourceType>map</resourceType>
-        <browseGraphic>
-            <title>thumbnail</title>
-            <applicationProfile>image/png</applicationProfile>
-            <linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</linkage>
-            <function>browseGraphic</function>
-        </browseGraphic>
-        <browseGraphic>
-            <title>large thumbnail</title>
-            <applicationProfile>image/png</applicationProfile>
-            <linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</linkage>
-            <function>browseGraphic</function>
-        </browseGraphic>
-        <language>zho</language>
-        <characterEncoding>UTF-8</characterEncoding>
-        <restriction>
-            <restrictionCode>licenceUnrestricted</restrictionCode>
-        </restriction>
-
-        <acquisitionType>geologicalMapping</acquisitionType>
-        <acquisitionType>dataIntegrationSynthesis</acquisitionType>
-        <geoTime>Paleoarchean through Holocene</geoTime>
-        <geographicExtent>
-            <verbatimCoordinateLocation nilReason="missing"/>
-            <westBoundLongitude>73.499</westBoundLongitude>
-            <eastBoundLongitude>135.08</eastBoundLongitude>
-            <southBoundLatitude>18.1609</southBoundLatitude>
-            <northBoundLatitude>53.5585</northBoundLatitude>
-        </geographicExtent>
-        <temporalExtent>
-            <beginName>Paleoarchean</beginName>
-            <beginIdentifier>
-                <authority>
-                    <name>International Commission on Stratigraphy</name>
-                    <role>resourceProvider</role>
-                </authority>
-                <code>http://resource.geosciml.org/classifier/ics/ischart/Paleoarchean</code>
-                <description>Paleoarchean</description>
-            </beginIdentifier>
-            <endName>Holocene</endName>
-            <endIdentifier>
-                <authority>
-                    <name>International Commission on Stratigraphy</name>
-                    <role>resourceProvider</role>
-                </authority>
-                <code>http://resource.geosciml.org/classifier/ics/ischart/Holocene</code>
-                <description>Holocene</description>
-            </endIdentifier>
-            <beginCoordinate>3804</beginCoordinate>
-            <endCoordinate>0</endCoordinate>
-            <coordinateUnits>Ma</coordinateUnits>
-        </temporalExtent>
-        <associatedResource>
-            <title>China geological maps that are available</title>
-            <applicationProfile>application/html</applicationProfile>
-            <linkage>http://en.cgs.gov.cn/</linkage>
-            <function>order</function>
-        </associatedResource>
-        <distributionInfo>
-            <distributionFormat>image/jpg</distributionFormat>
-            <distributionFormat>image/png</distributionFormat>
-            <distributionFormat>image/tif</distributionFormat>
-            <onlineResource>
-                <title>CHN_CGS_EN_1M_BLS</title>
-                <applicationProfile>OGC:WMS-1.3.0-http-get-map</applicationProfile>
-                <description>CHN CGS EN 1:1M Bedrock Lithostratigraphy</description>
-                <linkage>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;</linkage>
-                <function>browsing</function>
-            </onlineResource>
-            <spatialRepresentationInfo>
-                <spatialRepresentationType>grid</spatialRepresentationType>
-                <spatialResolution>1:1000000</spatialResolution>
-
-                <referenceSystemIdentifier>
-                    <code>nil:missing</code>
-
-                </referenceSystemIdentifier>
-            </spatialRepresentationInfo>
-        </distributionInfo>
-
-    </identificationInfo>
-</MD_Metadata>
+<dde:MD_Metadata xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
+   <dde:metadataIdentifier>
+      <dde:code>22e1d1ca752a7bc3ff4e90014e760e8a08947654</dde:code>
+      <dde:codeSpace/>
+      <dde:version/>
+      <dde:description/>
+   </dde:metadataIdentifier>
+   <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
+   <dde:metadataResponsibleParty>
+      <dde:name>China Geological Survey Yang Tiantian</dde:name>
+      <dde:role>pointOfContact</dde:role>
+      <dde:country>CH</dde:country>
+      <dde:electronicMailAddress>ytiantian@mail.cgs.gov.cn</dde:electronicMailAddress>
+   </dde:metadataResponsibleParty>
+   <dde:metadataDate>
+      <dde:date>2018-09-07T08:49:30</dde:date>
+      <dde:dateType>creation</dde:dateType>
+   </dde:metadataDate>
+   <dde:identificationInfo>
+      <dde:resourceIdentifier>
+         <dde:code>https://id.org/38748i</dde:code>
+         <dde:codeSpace/>
+         <dde:version/>
+         <dde:description/>
+      </dde:resourceIdentifier>
+      <dde:title>CHN CGS EN 1:1M Bedrock Lithostratigraphy</dde:title>
+      <dde:alternateTitle>备用标题 @chi</dde:alternateTitle>
+      <dde:resourceDate>
+         <dde:date>2018-09-07T08:49:30</dde:date>
+         <dde:dateType>revision</dde:dateType>
+      </dde:resourceDate>
+      <dde:abstract>China 1:1M Bedrock Geology layer is composed of 63 sheets separate geological layers and information about sedimentary strata, Quaternary strata, igneous, and metamorphic rocks. Sedimentary strata are be mapped by chronostratigraphic units and rock formation. Intrusive rocks are shown by "rock plus years," Pliocene strata are expressed by lithology and volcanic pattern. The layer includes more than 5,000 lithostratigraphic units and more than 1700 intrusive unit. Each geological unit has attributes.  For more information about China geological maps that are available please visit http://en.cgs.gov.cn/</dde:abstract>
+      <dde:keyword>OneGeology</dde:keyword>
+      <dde:keyword>geology</dde:keyword>
+      <dde:keyword>China</dde:keyword>
+      <dde:keyword>continent@Asia</dde:keyword>
+      <dde:keyword>subcontinent@Eastern Asia</dde:keyword>
+      <dde:keyword>geographicarea@China</dde:keyword>
+      <dde:keyword>serviceprovider@China Geological Survey</dde:keyword>
+      <dde:keyword>dataprovider@China Geological Survey</dde:keyword>
+      <dde:keyword>DS_TOPIC@geoscientificinformation</dde:keyword>
+      <dde:keyword>DS_DATE@2014-4-22</dde:keyword>
+      <dde:keyword>China</dde:keyword>
+      <dde:keyword>Data integration and compilation</dde:keyword>
+      <dde:keyword>geological map compilation</dde:keyword>
+      <dde:keyword>Proterozoic</dde:keyword>
+      <dde:keyword>Phanerozoic&gt;Paleozoic</dde:keyword>
+      <dde:keyword>Phanerozoic&gt;Mesozoic</dde:keyword>
+      <dde:keyword>Phanerozoic&gt;Neogene</dde:keyword>
+      <dde:topicCategory>geoscientificInformation</dde:topicCategory>
+      <dde:resourceType>dataset</dde:resourceType>
+      <dde:resourceResponsibleParty>
+         <dde:name>Randome Author</dde:name>
+         <dde:role>author</dde:role>
+      </dde:resourceResponsibleParty>
+      <dde:resourceResponsibleParty>
+         <dde:name>China Geological SurveyInternational Cooperation</dde:name>
+         <dde:role>pointOfContact</dde:role>
+         <dde:country>CH</dde:country>
+         <dde:electronicMailAddress>ytiantian@mail.cgs.gov.cn</dde:electronicMailAddress>
+      </dde:resourceResponsibleParty>
+      <dde:browseGraphic>
+         <dde:title>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</dde:title>
+         <dde:applicationProfile>png</dde:applicationProfile>
+         <dde:description>thumbnail</dde:description>
+         <dde:linkage/>
+         <dde:function>browseGraphic</dde:function>
+      </dde:browseGraphic>
+      <dde:browseGraphic>
+         <dde:title>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</dde:title>
+         <dde:applicationProfile>png</dde:applicationProfile>
+         <dde:description>large_thumbnail</dde:description>
+         <dde:linkage/>
+         <dde:function>browseGraphic</dde:function>
+      </dde:browseGraphic>
+      <dde:language>eng</dde:language>
+      <dde:characterEncoding>US-ASCII</dde:characterEncoding>
+      <dde:restriction>
+         <dde:restrictionText>useLimitation:The 1:1M geological map data is available online for your personal, teaching, research, or non-commercial use (The copyright belongs to Development Research Center of China Geological Survey). Your use of any information provided at http://en.cgs.gov.cn/ is at your own risk.; </dde:restrictionText>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+      </dde:restriction>
+      <dde:dataQuality>standaloneQualityReport:Text summary of quality information here; </dde:dataQuality>
+      <dde:lineage>statement:statement about lineage; source:description of a source; </dde:lineage>
+      <dde:geoTime>geoTime description not provided</dde:geoTime>
+      <dde:geographicExtent>
+         <dde:verbatimCoordinateLocation nilReason="missing"/>
+         <dde:westBoundLongitude>73.499</dde:westBoundLongitude>
+         <dde:eastBoundLongitude>135.08</dde:eastBoundLongitude>
+         <dde:southBoundLatitude>18.1609</dde:southBoundLatitude>
+         <dde:northBoundLatitude>53.5585</dde:northBoundLatitude>
+      </dde:geographicExtent>
+      <dde:associatedResource>
+         <dde:resourceCitation>
+            <dde:title>CHN CGS EN 1:1M Bedrock Lithostratigraphy</dde:title>
+            <dde:description/>
+            <dde:linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng/catalog.search#/metadata/22e1d1ca752a7bc3ff4e90014e760e8a08947654</dde:linkage>
+         </dde:resourceCitation>
+         <dde:relation>crossReference</dde:relation>
+      </dde:associatedResource>
+      <dde:metadataReference>
+         <dde:title>alt metadata</dde:title>
+         <dde:description/>
+         <dde:linkage nilReason="missing"/>
+      </dde:metadataReference>
+      <dde:distributionInfo>
+         <dde:onlineResource>
+            <dde:title>CHN_CGS_EN_1M_BLS</dde:title>
+            <dde:description>CHN CGS EN 1:1M Bedrock Lithostratigraphy</dde:description>
+            <dde:linkage>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;</dde:linkage>
+            <dde:function>fileAccess</dde:function>
+         </dde:onlineResource>
+         <dde:onlineResource>
+            <dde:title>default (LegendURL)</dde:title>
+            <dde:description/>
+            <dde:linkage>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=CHN_CGS_EN_1M_BLS&amp;format=image/png&amp;STYLE=default</dde:linkage>
+            <dde:function>fileAccess</dde:function>
+         </dde:onlineResource>
+         <dde:distributionResponsibleParty>
+            <dde:name>China Geological Survey</dde:name>
+            <dde:role>distributor</dde:role>
+            <dde:electronicMailAddress>ytiantian@mail.cgs.gov.cn</dde:electronicMailAddress>
+         </dde:distributionResponsibleParty>
+         <dde:spatialRepresentationInfo>
+            <dde:spatialRepresentationType>vector</dde:spatialRepresentationType>
+            <dde:spatialResolution/>
+            <dde:referenceSystemType>projected</dde:referenceSystemType>
+            <dde:referenceSystemIdentifier>
+               <dde:authority>
+                  <dde:name>Klokan Technologies GmbH, Switzerland</dde:name>
+                  <dde:role>resourceProvider</dde:role>
+               </dde:authority>
+               <dde:code>EPSG:33329</dde:code>
+               <dde:codeSpace>https://epsg.io/</dde:codeSpace>
+               <dde:version/>
+               <dde:description/>
+            </dde:referenceSystemIdentifier>
+         </dde:spatialRepresentationInfo>
+      </dde:distributionInfo>
+   </dde:identificationInfo>
+</dde:MD_Metadata>

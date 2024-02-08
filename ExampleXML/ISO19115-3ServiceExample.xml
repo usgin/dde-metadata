@@ -35,6 +35,7 @@
             </mcc:code>
         </mcc:MD_Identifier>
     </mdb:metadataIdentifier>
+ 
     <mdb:defaultLocale>
         <lan:PT_Locale>
             <lan:language>
@@ -44,9 +45,7 @@
         </lan:PT_Locale>
     </mdb:defaultLocale>
     <mdb:metadataScope>
-        
         <mdb:MD_MetadataScope>
-            
             <mdb:resourceScope>
                 <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode" codeListValue="service"/>
             </mdb:resourceScope>
@@ -97,7 +96,7 @@
                                     <cit:postalCode>
                                         <gco:CharacterString>00044</gco:CharacterString>
                                     </cit:postalCode>
-                                    <cit:country>
+                                    <cit:country>  
                                         <gco:CharacterString>Italy</gco:CharacterString>
                                     </cit:country>
                                     <cit:electronicMailAddress>
@@ -150,6 +149,7 @@
     <mdb:identificationInfo>
 
         <srv:SV_ServiceIdentification>
+            
             <mri:citation>
                 <cit:CI_Citation>
                     <cit:title>

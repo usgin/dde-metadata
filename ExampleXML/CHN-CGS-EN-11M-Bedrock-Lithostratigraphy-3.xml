@@ -452,17 +452,17 @@
                   xlink:title="CC0 No Rights Reserved"/>
                <!-- access and use constraints are mandatory; license text can be put in the use Limitation element -->
                <mco:accessConstraints>
-                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestriction"/>
+                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestrictions"/>
                </mco:accessConstraints>
                <mco:useConstraints>
-                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestriction"/>
+                  <mco:MD_RestrictionCode codeList="iscodelist:MD_RestrictionCode" codeListValue="otherRestrictions"/>
                </mco:useConstraints>
             </mco:MD_LegalConstraints>
          </mri:resourceConstraints>
          <mri:associatedResource>
             <!-- DDE Conditional: if metadataReference not documented citation information about the associated resource that describes association between resources to allow users to navigate between related resources in a discovery context -->
             <mri:MD_AssociatedResource>
-               <mri:name>
+               <mri:name> 
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>CHN CGS EN 1:1M Bedrock Lithostratigraphy</gco:CharacterString>
@@ -496,7 +496,7 @@
                   <lan:LanguageCode codeList="iscodelist:LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
                </lan:language>
                <lan:characterEncoding>
-                  <lan:MD_CharacterSetCode codeList="iscodelist:MD_CharacterSetCode" codeListValue="utf8">utf8</lan:MD_CharacterSetCode>
+                  <lan:MD_CharacterSetCode codeList="iscodelist:MD_CharacterSetCode" codeListValue="usascii">utf8</lan:MD_CharacterSetCode>
                </lan:characterEncoding>
             </lan:PT_Locale>
          </mri:defaultLocale>

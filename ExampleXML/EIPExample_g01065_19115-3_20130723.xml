@@ -53,7 +53,7 @@
          </lan:characterEncoding>
       </lan:PT_Locale>
    </mdb:defaultLocale>
-   <mdb:metadataScope xmlns:gml="http://www.opengis.net/gml/3.2">
+   <mdb:metadataScope>
       <mdb:MD_MetadataScope>
          <mdb:resourceScope>
             <mcc:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
@@ -61,7 +61,7 @@
          </mdb:resourceScope>
       </mdb:MD_MetadataScope>
    </mdb:metadataScope>
-   <mdb:contact xlink:title="Brian Meyer" xlink:type="simple">
+   <mdb:contact xlink:title="Brian Meyer">
       <cit:CI_Responsibility uuid="7df204c0-eb7c-47de-af08-9d2afb5c15a0">
          <cit:role>
             <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -85,7 +85,7 @@
                            </cit:numberType>
                         </cit:CI_Telephone>
                      </cit:phone>
-                     <cit:address xlink:type="simple">
+                     <cit:address>
                         <cit:CI_Address>
                            <cit:electronicMailAddress>
                               <gco:CharacterString>Brian.Meyer@noaa.gov</gco:CharacterString>
@@ -126,11 +126,11 @@
          </cit:edition>
       </cit:CI_Citation>
    </mdb:metadataStandard>
-   <mdb:referenceSystemInfo xlink:title="WGS84" xlink:type="simple">
+   <mdb:referenceSystemInfo xlink:title="WGS84">
       <mrs:MD_ReferenceSystem uuid="2504d000-8345-11e1-b0c4-0800200c9a66">
-         <mrs:referenceSystemIdentifier xlink:type="simple">
+         <mrs:referenceSystemIdentifier>
             <mcc:MD_Identifier xmlns:gml="http://www.opengis.net/gml/3.2">
-               <mcc:authority xlink:type="simple">
+               <mcc:authority>
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>World Geodetic System 1984</gco:CharacterString>
@@ -138,7 +138,7 @@
                      <cit:alternateTitle>
                         <gco:CharacterString>WGS 84</gco:CharacterString>
                      </cit:alternateTitle>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>2007-08-27T00:00:00</gco:DateTime>
@@ -149,8 +149,8 @@
                            </cit:dateType>
                         </cit:CI_Date>
                      </cit:date>
-                     <cit:citedResponsibleParty xlink:type="simple"/>
-                     <cit:citedResponsibleParty xlink:title="EPSG Registry" xlink:type="simple">
+                     <cit:citedResponsibleParty/>
+                     <cit:citedResponsibleParty xlink:title="EPSG Registry">
                         <cit:CI_Responsibility uuid="68498237-c535-48dd-a292-17c2fc36cb97">
                            <cit:role>
                               <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -163,7 +163,7 @@
                                  </cit:name>
                                  <cit:contactInfo>
                                     <cit:CI_Contact>
-                                       <cit:onlineResource xlink:type="simple">
+                                       <cit:onlineResource>
                                           <cit:CI_OnlineResource>
                                              <cit:linkage>
                                                 <gco:CharacterString>http://www.epsg-registry.org/</gco:CharacterString>
@@ -186,7 +186,7 @@
                            </cit:party>
                         </cit:CI_Responsibility>
                      </cit:citedResponsibleParty>
-                     <cit:onlineResource xlink:type="simple">
+                     <cit:onlineResource>
                         <cit:CI_OnlineResource>
                            <cit:linkage>
                               <gco:CharacterString>http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4326</gco:CharacterString>
@@ -214,12 +214,13 @@
    </mdb:referenceSystemInfo>
    <mdb:identificationInfo>
       <mri:MD_DataIdentification>
-         <mri:citation xlink:type="simple">
+         <mri:citation>
             <cit:CI_Citation>
+               
                <cit:title>
                   <gco:CharacterString>Total Sediment Thickness of the World's Oceans &amp; Marginal Seas</gco:CharacterString>
                </cit:title>
-               <cit:date xlink:type="simple">
+               <cit:date>
                   <cit:CI_Date>
                      <cit:date>
                         <gco:DateTime>2003-12-23T00:00:00</gco:DateTime>
@@ -230,6 +231,32 @@
                      </cit:dateType>
                   </cit:CI_Date>
                </cit:date>
+               <cit:identifier>
+                  <mcc:MD_Identifier>
+                     <mcc:code>
+                        <gco:CharacterString>g01056Identifier1</gco:CharacterString>
+                     </mcc:code>
+                     <mcc:codeSpace>
+                        <gco:CharacterString>CodespaceForIdentifier1</gco:CharacterString>
+                     </mcc:codeSpace>
+                     <mcc:description>
+                        <gco:CharacterString>identifier1 in some scope</gco:CharacterString>
+                     </mcc:description>
+                  </mcc:MD_Identifier>
+               </cit:identifier>
+               <cit:identifier>
+                  <mcc:MD_Identifier>
+                     <mcc:code>
+                        <gco:CharacterString>g01056Identifier2</gco:CharacterString>
+                     </mcc:code>
+                     <mcc:codeSpace>
+                        <gco:CharacterString>ADifferntCodespaceForIdentifier2</gco:CharacterString>
+                     </mcc:codeSpace>
+                     <mcc:description>
+                        <gco:CharacterString>identifier2 in some other scope</gco:CharacterString>
+                     </mcc:description>
+                  </mcc:MD_Identifier>
+               </cit:identifier>
                <cit:citedResponsibleParty>
                   <cit:CI_Responsibility uuid="A085BFDF-C10F-818D-3EA8-08330125842F">
                      <cit:role>
@@ -265,7 +292,7 @@
                                        </cit:numberType>
                                     </cit:CI_Telephone>
                                  </cit:phone>
-                                 <cit:address xlink:type="simple">
+                                 <cit:address>
                                     <cit:CI_Address>
                                        <cit:deliveryPoint>
                                           <gco:CharacterString>National Geophysical Data Center NOAA, Mail Code E/GC, 325 Broadway</gco:CharacterString>
@@ -338,7 +365,7 @@
                                        </cit:numberType>
                                     </cit:CI_Telephone>
                                  </cit:phone>
-                                 <cit:address xlink:type="simple">
+                                 <cit:address>
                                     <cit:CI_Address>
                                        <cit:deliveryPoint>
                                           <gco:CharacterString>NOAA/NESDIS/NGDC</gco:CharacterString>
@@ -401,7 +428,7 @@
             <mcc:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode"
                                  codeListValue="completed">completed</mcc:MD_ProgressCode>
          </mri:status>
-         <mri:pointOfContact xlink:title="Barry Eakins" xlink:type="simple">
+         <mri:pointOfContact xlink:title="Barry Eakins">
             <cit:CI_Responsibility uuid="A5B0BAEE-2A90-103F-E040-0AC8C5BB459F">
                <cit:role>
                   <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -436,7 +463,7 @@
                                  </cit:numberType>
                               </cit:CI_Telephone>
                            </cit:phone>
-                           <cit:address xlink:type="simple">
+                           <cit:address>
                               <cit:CI_Address>
                                  <cit:deliveryPoint>
                                     <gco:CharacterString>NOAA/NESDIS/NGDC</gco:CharacterString>
@@ -486,9 +513,9 @@
          <mri:topicCategory>
             <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
          </mri:topicCategory>
-         <mri:extent xlink:type="simple">
+         <mri:extent>
             <gex:EX_Extent id="boundingExtent">
-               <gex:geographicElement xlink:type="simple">
+               <gex:geographicElement>
                   <gex:EX_GeographicBoundingBox id="boundingGeographicBoundingBox">
                      <gex:westBoundLongitude>
                         <gco:Decimal>-180.0000</gco:Decimal>
@@ -504,10 +531,12 @@
                      </gex:northBoundLatitude>
                   </gex:EX_GeographicBoundingBox>
                </gex:geographicElement>
-               <gex:temporalElement xlink:type="simple">
+               <gex:temporalElement>
                   <gex:EX_TemporalExtent id="boundingTemporalExtent">
-                     <gex:extent xlink:type="simple">
+                     <gex:extent>
+                        
                         <gml:TimePeriod gml:id="d1e546" frame="#ISO-8601">
+                           
                            <gml:beginPosition frame="#ISO-8601">1979-01-01</gml:beginPosition>
                            <gml:endPosition frame="#ISO-8601">2003-01-01</gml:endPosition>
                         </gml:TimePeriod>
@@ -516,7 +545,7 @@
                </gex:temporalElement>
             </gex:EX_Extent>
          </mri:extent>
-         <mri:resourceMaintenance xlink:type="simple">
+         <mri:resourceMaintenance>
             <mmi:MD_MaintenanceInformation>
                <mmi:maintenanceAndUpdateFrequency>
                   <mmi:MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
@@ -524,7 +553,7 @@
                </mmi:maintenanceAndUpdateFrequency>
             </mmi:MD_MaintenanceInformation>
          </mri:resourceMaintenance>
-         <mri:graphicOverview xlink:type="simple">
+         <mri:graphicOverview>
             <mcc:MD_BrowseGraphic>
                <mcc:fileName>
                   <gco:CharacterString>http://www.ngdc.noaa.gov/mgg/image/sedthick9.jpg</gco:CharacterString>
@@ -537,7 +566,7 @@
                </mcc:fileType>
             </mcc:MD_BrowseGraphic>
          </mri:graphicOverview>
-         <mri:descriptiveKeywords xlink:type="simple">
+         <mri:descriptiveKeywords>
             <mri:MD_Keywords>
                <mri:keyword>
                   <gco:CharacterString>EARTH SCIENCE&gt;OCEANS&gt;Marine Sediments</gco:CharacterString>
@@ -546,12 +575,12 @@
                   <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
                                           codeListValue="theme">theme</mri:MD_KeywordTypeCode>
                </mri:type>
-               <mri:thesaurusName xlink:title="NASA/GCMD Science Keywords" xlink:type="simple">
+               <mri:thesaurusName xlink:title="NASA/GCMD Science Keywords">
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>NASA/Global Change Master Directory (GCMD) Earth Science Keywords</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>2007-04-01T00:00:00</gco:DateTime>
@@ -568,7 +597,7 @@
                      <cit:editionDate>
                         <gco:DateTime>2007-04-01T00:00:00</gco:DateTime>
                      </cit:editionDate>
-                     <cit:citedResponsibleParty xlink:type="simple">
+                     <cit:citedResponsibleParty>
                         <cit:CI_Responsibility>
                            <cit:role>
                               <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -581,7 +610,7 @@
                                  </cit:name>
                                  <cit:contactInfo>
                                     <cit:CI_Contact>
-                                       <cit:onlineResource xlink:type="simple">
+                                       <cit:onlineResource>
                                           <cit:CI_OnlineResource>
                                              <cit:linkage>
                                                 <gco:CharacterString>http://gcmd.gsfc.nasa.gov/Resources/valids/archives/keyword_list.html</gco:CharacterString>
@@ -614,7 +643,7 @@
                </mri:thesaurusName>
             </mri:MD_Keywords>
          </mri:descriptiveKeywords>
-         <mri:descriptiveKeywords xlink:type="simple">
+         <mri:descriptiveKeywords>
             <mri:MD_Keywords>
                <mri:keyword>
                   <gco:CharacterString>Sediment Thickness</gco:CharacterString>
@@ -623,17 +652,17 @@
                   <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
                                           codeListValue="theme">theme</mri:MD_KeywordTypeCode>
                </mri:type>
-               <mri:thesaurusName xlink:type="simple">
+               <mri:thesaurusName>
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>Uncontrolled Keywords</gco:CharacterString>
                      </cit:title>
-                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
+                     <cit:date gco:nilReason="unknown"/>
                   </cit:CI_Citation>
                </mri:thesaurusName>
             </mri:MD_Keywords>
          </mri:descriptiveKeywords>
-         <mri:descriptiveKeywords xlink:type="simple">
+         <mri:descriptiveKeywords>
             <mri:MD_Keywords>
                <mri:keyword>
                   <gco:CharacterString>H : 1 km - &lt; 10 km or approximately .01 degree - &lt; .09 degree</gco:CharacterString>
@@ -645,17 +674,17 @@
                   <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
                                           codeListValue="theme">theme</mri:MD_KeywordTypeCode>
                </mri:type>
-               <mri:thesaurusName xlink:type="simple">
+               <mri:thesaurusName>
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>NASA/GCMD Data Resolution Keywords</gco:CharacterString>
                      </cit:title>
-                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
+                     <cit:date gco:nilReason="unknown"/>
                   </cit:CI_Citation>
                </mri:thesaurusName>
             </mri:MD_Keywords>
          </mri:descriptiveKeywords>
-         <mri:descriptiveKeywords xlink:type="simple">
+         <mri:descriptiveKeywords>
             <mri:MD_Keywords>
                <mri:keyword>
                   <gco:CharacterString>Ocean&gt;Atlantic Ocean</gco:CharacterString>
@@ -676,13 +705,13 @@
                   <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
                                           codeListValue="place">place</mri:MD_KeywordTypeCode>
                </mri:type>
-               <mri:thesaurusName xlink:title="GCMD Location Keywords" xlink:type="simple">
+               <mri:thesaurusName xlink:title="GCMD Location Keywords">
                   <cit:CI_Citation>
                      <cit:title>
                         <gco:CharacterString>NASA/GCMD Location Keywords</gco:CharacterString>
                      </cit:title>
-                     <cit:date gco:nilReason="unknown" xlink:type="simple"/>
-                     <cit:citedResponsibleParty xlink:title="GCMD User Support Office" xlink:type="simple">
+                     <cit:date gco:nilReason="unknown"/>
+                     <cit:citedResponsibleParty xlink:title="GCMD User Support Office">
                         <cit:CI_Responsibility uuid="8294BEE08B11359FE040AC8C5AB460D1">
                            <cit:role>
                               <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -695,14 +724,14 @@
                                  </cit:name>
                                  <cit:contactInfo>
                                     <cit:CI_Contact>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:electronicMailAddress>
                                                 <gco:CharacterString>gcmduso@gcmd.gsfc.nasa.gov</gco:CharacterString>
                                              </cit:electronicMailAddress>
                                           </cit:CI_Address>
                                        </cit:address>
-                                       <cit:onlineResource xlink:type="simple">
+                                       <cit:onlineResource>
                                           <cit:CI_OnlineResource>
                                              <cit:linkage>
                                                 <gco:CharacterString>http://gcmd.nasa.gov/MailComments/MailComments.jsf?rcpt=gcmduso</gco:CharacterString>
@@ -732,8 +761,8 @@
                            </cit:party>
                         </cit:CI_Responsibility>
                      </cit:citedResponsibleParty>
-                     <cit:citedResponsibleParty xlink:title="GCMD Valids" xlink:type="simple"/>
-                     <cit:onlineResource xlink:title="GCMD Keyword Page" xlink:type="simple">
+                     <cit:citedResponsibleParty xlink:title="GCMD Valids"/>
+                     <cit:onlineResource xlink:title="GCMD Keyword Page">
                         <cit:CI_OnlineResource uuid="18ec3410-4289-11df-9879-0800200c9a66">
                            <cit:linkage>
                               <gco:CharacterString>http://gcmd.nasa.gov/Resources/valids/</gco:CharacterString>
@@ -754,14 +783,14 @@
                </mri:thesaurusName>
             </mri:MD_Keywords>
          </mri:descriptiveKeywords>
-         <mri:resourceConstraints xlink:title="NOAA Disclaimer" xlink:type="simple">
+         <mri:resourceConstraints xlink:title="NOAA Disclaimer">
             <mco:MD_LegalConstraints uuid="dadd4ac3-2b9f-4db5-8603-71285b94c3d7">
                <mco:useLimitation>
                   <gco:CharacterString>While every effort has been made to ensure that these data are accurate and reliable within the limits of the current state of the art, NOAA cannot assume liability for any damages caused by any errors or omissions in the data, nor as a result of the failure of the data to function on a particular system. NOAA makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</gco:CharacterString>
                </mco:useLimitation>
             </mco:MD_LegalConstraints>
          </mri:resourceConstraints>
-         <mri:resourceConstraints xlink:type="simple">
+         <mri:resourceConstraints>
             <mco:MD_LegalConstraints>
                <mco:useConstraints>
                   <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"
@@ -772,7 +801,7 @@
                </mco:otherConstraints>
             </mco:MD_LegalConstraints>
          </mri:resourceConstraints>
-         <mri:resourceConstraints xlink:type="simple">
+         <mri:resourceConstraints>
             <mco:MD_LegalConstraints>
                <mco:accessConstraints>
                   <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"
@@ -790,7 +819,7 @@
                      <cit:title>
                         <gco:CharacterString>Isopach Map of the Sediments in the Pacific Ocean Basin</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>1979-01-01T00:00:00</gco:DateTime>
@@ -814,7 +843,7 @@
                                  </cit:name>
                                  <cit:contactInfo>
                                     <cit:CI_Contact>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:city>
                                                 <gco:CharacterString>Tulsa</gco:CharacterString>
@@ -883,7 +912,7 @@
                      <cit:title>
                         <gco:CharacterString>Sediment Thickness map of the Indian Ocean</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>1988-01-01T00:00:00</gco:DateTime>
@@ -907,7 +936,7 @@
                                  </cit:name>
                                  <cit:contactInfo>
                                     <cit:CI_Contact>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:city>
                                                 <gco:CharacterString>Tulsa</gco:CharacterString>
@@ -991,7 +1020,7 @@
                      <cit:title>
                         <gco:CharacterString>Thickness of Sedimentary Cover for the South Atlantic</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>1990-01-01T00:00:00</gco:DateTime>
@@ -1037,7 +1066,7 @@
                                              </cit:numberType>
                                           </cit:CI_Telephone>
                                        </cit:phone>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:deliveryPoint>
                                                 <gco:CharacterString>1 rue Miollis</gco:CharacterString>
@@ -1118,7 +1147,7 @@
                      <cit:title>
                         <gco:CharacterString>Sediment Isopachs: Circum-Antarctic to 30S,</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>1991-01-01T00:00:00</gco:DateTime>
@@ -1153,7 +1182,7 @@
                                              </cit:numberType>
                                           </cit:CI_Telephone>
                                        </cit:phone>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:deliveryPoint>
                                                 <gco:CharacterString>2000 Florida Avenue N.W.</gco:CharacterString>
@@ -1237,7 +1266,7 @@
                      <cit:title>
                         <gco:CharacterString>Thickness of Sedimentary Cover in the Eastern Pacific Ocean</gco:CharacterString>
                      </cit:title>
-                     <cit:date xlink:type="simple">
+                     <cit:date>
                         <cit:CI_Date>
                            <cit:date>
                               <gco:DateTime>2003-01-01T00:00:00</gco:DateTime>
@@ -1283,7 +1312,7 @@
                                              </cit:numberType>
                                           </cit:CI_Telephone>
                                        </cit:phone>
-                                       <cit:address xlink:type="simple">
+                                       <cit:address>
                                           <cit:CI_Address>
                                              <cit:deliveryPoint>
                                                 <gco:CharacterString>1 rue Miollis</gco:CharacterString>
@@ -1353,9 +1382,9 @@
          </mri:defaultLocale>
       </mri:MD_DataIdentification>
    </mdb:identificationInfo>
-   <mdb:distributionInfo xlink:type="simple">
+   <mdb:distributionInfo>
       <mrd:MD_Distribution>
-         <mrd:distributionFormat xlink:type="simple">
+         <mrd:distributionFormat>
             <mrd:MD_Format>
                <mrd:formatSpecificationCitation>
                   <cit:CI_Citation>
@@ -1383,7 +1412,7 @@
                </mrd:fileDecompressionTechnique>
             </mrd:MD_Format>
          </mrd:distributionFormat>
-         <mrd:distributionFormat xlink:type="simple">
+         <mrd:distributionFormat>
             <mrd:MD_Format>
                <mrd:formatSpecificationCitation>
                   <cit:CI_Citation>
@@ -1411,7 +1440,7 @@
                </mrd:fileDecompressionTechnique>
             </mrd:MD_Format>
          </mrd:distributionFormat>
-         <mrd:distributionFormat xlink:type="simple">
+         <mrd:distributionFormat>
             <mrd:MD_Format>
                <mrd:formatSpecificationCitation>
                   <cit:CI_Citation>
@@ -1439,10 +1468,10 @@
                </mrd:fileDecompressionTechnique>
             </mrd:MD_Format>
          </mrd:distributionFormat>
-         <mrd:distributor xlink:type="simple">
+         <mrd:distributor>
             <mrd:MD_Distributor>
                
-               <mrd:distributorContact xlink:title="User Services" xlink:type="simple">
+               <mrd:distributorContact xlink:title="User Services">
                   <cit:CI_Responsibility uuid="A085BFDF-C10F-818D-3EA8-08330125842F">
                      <cit:role>
                         <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -1477,7 +1506,7 @@
                                        </cit:numberType>
                                     </cit:CI_Telephone>
                                  </cit:phone>
-                                 <cit:address xlink:type="simple">
+                                 <cit:address>
                                     <cit:CI_Address>
                                        <cit:deliveryPoint>
                                           <gco:CharacterString>National Geophysical Data Center NOAA, Mail Code E/GC, 325 Broadway</gco:CharacterString>
@@ -1516,7 +1545,7 @@
                   </cit:CI_Responsibility>
                </mrd:distributorContact>
                
-               <mrd:distributionOrderProcess xlink:type="simple">
+               <mrd:distributionOrderProcess>
                   <mrd:MD_StandardOrderProcess>
                      <mrd:fees>
                         <gco:CharacterString>None</gco:CharacterString>
@@ -1525,12 +1554,12 @@
                </mrd:distributionOrderProcess>
             </mrd:MD_Distributor>
          </mrd:distributor>
-         <mrd:transferOptions xlink:type="simple">
+         <mrd:transferOptions>
             <mrd:MD_DigitalTransferOptions>
                <mrd:transferSize>
                   <gco:Real>35600000</gco:Real>
                </mrd:transferSize>
-               <mrd:onLine xlink:type="simple">
+               <mrd:onLine>
                   <cit:CI_OnlineResource>
                      <cit:linkage>
                         <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/gmt_netcdf/</gco:CharacterString>
@@ -1539,12 +1568,12 @@
                </mrd:onLine>
             </mrd:MD_DigitalTransferOptions>
          </mrd:transferOptions>
-         <mrd:transferOptions xlink:type="simple">
+         <mrd:transferOptions>
             <mrd:MD_DigitalTransferOptions>
                <mrd:transferSize>
                   <gco:Real>31000000</gco:Real>
                </mrd:transferSize>
-               <mrd:onLine xlink:type="simple">
+               <mrd:onLine>
                   <cit:CI_OnlineResource>
                      <cit:linkage>
                         <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/ascii_nans/</gco:CharacterString>
@@ -1553,12 +1582,12 @@
                </mrd:onLine>
             </mrd:MD_DigitalTransferOptions>
          </mrd:transferOptions>
-         <mrd:transferOptions xlink:type="simple">
+         <mrd:transferOptions>
             <mrd:MD_DigitalTransferOptions>
                <mrd:transferSize>
                   <gco:Real>9700000</gco:Real>
                </mrd:transferSize>
-               <mrd:onLine xlink:type="simple">
+               <mrd:onLine>
                   <cit:CI_OnlineResource>
                      <cit:linkage>
                         <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/arcgis/</gco:CharacterString>
@@ -1571,7 +1600,7 @@
    </mdb:distributionInfo>
    <mdb:dataQualityInfo xmlns:gml="http://www.opengis.net/gml/3.2">
       <dqm:DQ_DataQuality>
-         <dqm:scope xlink:type="simple"/>
+         <dqm:scope/>
          <dqm:report>
             <dqm:DQ_CompletenessCommission>
                   <dqm:measure>
@@ -1585,7 +1614,7 @@
                      <dqm:evaluationProcedure/>
                   </dqm:DQ_FullInspection>
                </dqm:evaluationMethod>
-               <dqm:result gco:nilReason="unknown" xlink:type="simple"/>
+               <dqm:result gco:nilReason="unknown"/>
 
             </dqm:DQ_CompletenessCommission>
          </dqm:report>
@@ -1603,7 +1632,7 @@
                      <dqm:evaluationProcedure/>
                   </dqm:DQ_FullInspection>
                </dqm:evaluationMethod>
-               <dqm:result gco:nilReason="unknown" xlink:type="simple"/>
+               <dqm:result gco:nilReason="unknown"/>
 
             </dqm:DQ_ConceptualConsistency>
          </dqm:report>
@@ -1619,7 +1648,7 @@
                </mcc:level>
             </mcc:MD_Scope>
          </mrl:scope>
-         <mrl:processStep xlink:type="simple">
+         <mrl:processStep>
             
             <mrl:LI_ProcessStep>
                <mrl:description>
@@ -1632,7 +1661,7 @@
                </mrl:stepDateTime>
             </mrl:LI_ProcessStep>
          </mrl:processStep>
-         <mrl:processStep xlink:type="simple">
+         <mrl:processStep>
             <mrl:LI_ProcessStep>
                <mrl:description>
                   <gco:CharacterString>The digitized data were then gridded at NGDC using the algorithm for "Gridding with Continuous Curvature Splines in Tension" of Smith and Wessel [1990].</gco:CharacterString>
@@ -1646,7 +1675,7 @@
          </mrl:processStep>
       </mrl:LI_Lineage>
    </mdb:resourceLineage>
-   <mdb:metadataConstraints xlink:type="simple">
+   <mdb:metadataConstraints>
       <mco:MD_LegalConstraints>
          <mco:accessConstraints>
             <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"
@@ -1657,7 +1686,7 @@
          </mco:otherConstraints>
       </mco:MD_LegalConstraints>
    </mdb:metadataConstraints>
-   <mdb:metadataConstraints xlink:type="simple">
+   <mdb:metadataConstraints>
       <mco:MD_LegalConstraints>
          <mco:accessConstraints>
             <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"
@@ -1668,7 +1697,7 @@
          </mco:otherConstraints>
       </mco:MD_LegalConstraints>
    </mdb:metadataConstraints>
-   <mdb:metadataMaintenance xlink:type="simple">
+   <mdb:metadataMaintenance>
       <mmi:MD_MaintenanceInformation>
          <mmi:maintenanceAndUpdateFrequency>
             <mmi:MD_MaintenanceFrequencyCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
@@ -1732,7 +1761,7 @@
                </cit:party>
             </cit:CI_Responsibility>
          </mmi:contact>
-         <mmi:contact xlink:title="Brian Meyer" xlink:type="simple">
+         <mmi:contact xlink:title="Brian Meyer">
             <cit:CI_Responsibility uuid="7df204c0-eb7c-47de-af08-9d2afb5c15a0">
                <cit:role>
                   <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
@@ -1756,7 +1785,7 @@
                                  </cit:numberType>
                               </cit:CI_Telephone>
                            </cit:phone>
-                           <cit:address xlink:type="simple">
+                           <cit:address>
                               <cit:CI_Address>
                                  <cit:electronicMailAddress>
                                     <gco:CharacterString>Brian.Meyer@noaa.gov</gco:CharacterString>

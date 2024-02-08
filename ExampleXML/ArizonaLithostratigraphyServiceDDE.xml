@@ -39,7 +39,6 @@
         <dateType>lastUpdate</dateType>
     </metadataDate>
     <identificationInfo>
-
         <resourceIdentifier>
             <authority>
                 <name>DataCite</name>
@@ -65,6 +64,7 @@
         <topicCategory>geoscientificInformation</topicCategory>
         <topicCategory>GI_PO_paleontology</topicCategory>
         <topicCategory>GI_HG_hydrogeology</topicCategory>
+        <topicCategory>dataScience</topicCategory>
         <topicCategory>environment</topicCategory>
         <resourceType>service</resourceType>
         <additionalDocumentation>additionalDocumentation0</additionalDocumentation>
@@ -97,7 +97,7 @@
 
         <browseGraphic>
             <title>Quick view lithostratigraphic map of Arizona</title>
-            <applicationProfile>application/xml</applicationProfile>
+            <applicationProfile>image/jpg</applicationProfile>
             <description>description of the browse image</description>
             <linkage>http://azgs.az.gov/repository/browse/3757.jpg</linkage>
             <function>browseGraphic</function>
@@ -171,10 +171,15 @@
             <coordinateUnits>Ma</coordinateUnits>
         </temporalExtent>
         <associatedResource>
-            <title>Geologic Map of Arizona</title>
-            <description>This is the 4th and latest compilation of the Geologic Map of Arizona published in 2000 at 1:1,000,000 map scale.</description>
-            <linkage>https://hdl.handle.net/10150/630741</linkage>
-            <function>information</function>
+            <resourceCitation>
+                <title>Geologic Map of Arizona</title>
+                <description>This is the 4th and latest compilation of the Geologic Map of Arizona published in 2000 at 1:1,000,000 map scale.</description>
+                <linkage>https://hdl.handle.net/10150/630741</linkage>
+                <function>information</function>
+            </resourceCitation>
+            <relation>
+                supplemental information
+            </relation>
         </associatedResource>
         <metadataReference>
             <title>ISO19115 metadata record</title>

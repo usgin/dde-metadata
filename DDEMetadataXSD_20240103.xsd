@@ -37,9 +37,10 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="codeSpace" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="version" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="codeSpace" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="version" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="description" type="metadata:CharacterString_Type" minOccurs="0"
+        maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -54,7 +55,8 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="alternateTitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="alternateTitle" type="metadata:CharacterString_Type" minOccurs="0"
+        maxOccurs="unbounded"/>
       <xs:element name="resourceDate" type="metadata:CI_Date" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="abstract" maxOccurs="1">
         <xs:simpleType>
@@ -64,7 +66,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="keyword" type="metadata:Anchor_Type" minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="keyword" type="metadata:Anchor_Type" minOccurs="3" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation>using Anchor_Type allows including URIs for keywords in the href
             attribute. This will enable interoperability and linked data</xs:documentation>
@@ -73,7 +75,8 @@
       <xs:element name="topicCategory" type="metadata:TopicCategoryCode" minOccurs="1"
         maxOccurs="unbounded"/>
       <xs:element name="resourceType" type="metadata:ResourceTypeCode" maxOccurs="unbounded"/>
-      <xs:element name="additionalDocumentation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="additionalDocumentation" type="metadata:CharacterString_Type" minOccurs="0"
+        maxOccurs="1"/>
       <xs:element name="resourceResponsibleParty" type="metadata:CI_Responsibility" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="browseGraphic" type="metadata:CI_OnlineResource" minOccurs="0"
@@ -107,7 +110,7 @@
       </xs:element>
       <xs:element name="restriction" type="metadata:MD_Constraints" minOccurs="1"
         maxOccurs="unbounded"/>
-      <xs:element name="edition" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="edition" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
       <xs:element name="dataQuality" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Use of the anchor type allows an href link to a more complete data
@@ -146,7 +149,7 @@
       <xs:element name="imageryInfo" type="metadata:MD_Imagery" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="MD_AssociatedResource">
     <xs:sequence>
       <xs:element name="resourceCitation" type="metadata:CI_OnlineResource"/>
@@ -154,7 +157,7 @@
         maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="EX_TemporalExtent">
     <xs:sequence>
       <xs:element name="beginName" type="metadata:CharacterString_Type"/>
@@ -172,7 +175,8 @@
 
   <xs:complexType name="EX_GeographicExtent">
     <xs:sequence>
-      <xs:element name="verbatimCoordinateLocation" type = "metadata:CharacterString_Type"  maxOccurs="1"/>
+      <xs:element name="verbatimCoordinateLocation" type="metadata:CharacterString_Type"
+        maxOccurs="1"/>
       <xs:element name="geographicIdentifier" type="metadata:MD_Identifier" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="elevation" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
@@ -224,7 +228,8 @@
             distributionFormat element. See https://www.w3.org/TR/dx-prof/</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="description" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="description" type="metadata:CharacterString_Type" minOccurs="0"
+        maxOccurs="1"/>
       <xs:element name="linkage" type="metadata:CharacterString_Type"/>
       <xs:element name="function" type="metadata:FunctionCode" minOccurs="0"/>
     </xs:sequence>
@@ -360,8 +365,8 @@
       </xs:simpleType>
       <xs:simpleType>
         <xs:annotation>
-          <xs:documentation>other acquisition type, prefix 'other:' followed by a string of
-            two or more characters with no included spaces. Implication is that none of the other 
+          <xs:documentation>other acquisition type, prefix 'other:' followed by a string of two or
+            more characters with no included spaces. Implication is that none of the other
             acquisition codes apply</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
@@ -455,10 +460,9 @@
       </xs:simpleType>
       <xs:simpleType>
         <xs:annotation>
-          <xs:documentation>other character set code from IANA register,  prefix 'other:' followed by a string of
-            two or more characters with no included spaces. Implication is that none of the  
-             characater codes in the codelist here apply
-          </xs:documentation>
+          <xs:documentation>other character set code from IANA register, prefix 'other:' followed by
+            a string of two or more characters with no included spaces. Implication is that none of
+            the characater codes in the codelist here apply </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
           <xs:pattern value="other:\w{2,}"/>
@@ -468,6 +472,11 @@
   </xs:simpleType>
 
   <xs:simpleType name="CountryCode">
+    <xs:annotation>
+      <xs:documentation>Extracted from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements. 
+      The DDEUtilities.xsd file contains a lookup table to map country names (with some permutations
+      and three-letter country codes to these 2 letter values.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:token">
       <xs:length value="2"/>
       <xs:enumeration value="AD"/>
@@ -719,6 +728,8 @@
       <xs:enumeration value="ZA"/>
       <xs:enumeration value="ZM"/>
       <xs:enumeration value="ZW"/>
+      <xs:enumeration value="--"/>
+      <!-- this is a sentinel value meaning unknown -->
     </xs:restriction>
   </xs:simpleType>
 
@@ -800,10 +811,9 @@
       </xs:simpleType>
       <xs:simpleType>
         <xs:annotation>
-          <xs:documentation>other brief explanation, prefix 'other:' followed by a string of
-            two or more characters with no included spaces. Implication is that none of the other 
-            nilReasons codes apply
-          </xs:documentation>
+          <xs:documentation>other brief explanation, prefix 'other:' followed by a string of two or
+            more characters with no included spaces. Implication is that none of the other
+            nilReasons codes apply </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
           <xs:pattern value="other:\w{2,}"/>
@@ -816,18 +826,17 @@
     <xs:union>
       <xs:simpleType>
         <xs:restriction base="xs:token">
-      <xs:enumeration value="Level0"/>
-      <xs:enumeration value="Level1"/>
-      <xs:enumeration value="Level2"/>
-      <xs:enumeration value="Level3"/>
-      <xs:enumeration value="Level4"/>
-    </xs:restriction>
+          <xs:enumeration value="Level0"/>
+          <xs:enumeration value="Level1"/>
+          <xs:enumeration value="Level2"/>
+          <xs:enumeration value="Level3"/>
+          <xs:enumeration value="Level4"/>
+        </xs:restriction>
       </xs:simpleType>
       <xs:simpleType>
         <xs:annotation>
-          <xs:documentation>handle non-standard processing codes, prefix 'other:' followed by a string of
-            two or more characters with no included spaces. 
-          </xs:documentation>
+          <xs:documentation>handle non-standard processing codes, prefix 'other:' followed by a
+            string of two or more characters with no included spaces. </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
           <xs:pattern value="other:\w{2,}"/>
@@ -1015,32 +1024,45 @@
       <xs:simpleType>
         <xs:annotation>
           <xs:documentation>other brief explanation, prefix 'otherService:' followed by a string of
-            two or more characters with no included spaces. Implication is that none of the other 
+            two or more characters with no included spaces. Implication is that none of the other
             nilReasons codes apply</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-          <xs:pattern value="otherService:\w{2,}"/>
+          <xs:pattern value="other:\w{2,}"/>
         </xs:restriction>
       </xs:simpleType>
-
     </xs:union>
   </xs:simpleType>
 
   <xs:simpleType name="SpatialRepresentationTypeCode">
-    <xs:annotation>
-      <xs:documentation>Codes that specify the method used to represent geographic information in
-        the resource</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="vector"/>
-      <xs:enumeration value="grid"/>
-      <xs:enumeration value="textTable"/>
-      <xs:enumeration value="tin"/>
-      <xs:enumeration value="stereoModel"/>
-      <xs:enumeration value="video"/>
-      <xs:enumeration value="missing"/>
-    </xs:restriction>
+    <xs:union>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>Codes that specify the method used to represent geographic information
+            in the resource. Code list is from ISO 19115:
+ http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_SpatialRepresentationTypeCode.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="vector"/>
+          <xs:enumeration value="grid"/>
+          <xs:enumeration value="textTable"/>
+          <xs:enumeration value="tin"/>
+          <xs:enumeration value="stereoModel"/>
+          <xs:enumeration value="video"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>if source metadata doesn't provide a value, use this sentinel
+            code</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="other:missing"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
   </xs:simpleType>
+
 
   <xs:simpleType name="TemporalUnitsEnum">
     <xs:restriction base="xs:token">
@@ -1050,207 +1072,225 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="TopicCategoryCode">
+
+  <xs:simpleType name="TopicCategoryCode ">
     <xs:annotation>
-      <xs:documentation>This codelist extends the ISO19115-1 codelist (see
+      <xs:documentation>This is a set of categories to categorize the content of the described
+        resource. ISO19115 does not require a topic category in the metadata, so need to allow
+        'other:missing' for dde to validate. This codelist extends the ISO19115-1 codelist (see
         https://wiki.esipfed.org/ISO_19115-3_Codelists#MD_TopicCategoryCode) with more granular
         topic categories for geoscience resources. The categories that do not have an 'GI_' prefix
         are from the ISO19115-3 codelist, except for DataScience, which is also added in this
         vocabulary.</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="farming"/>
-      <xs:enumeration value="biota"/>
-      <xs:enumeration value="boundaries"/>
-      <xs:enumeration value="climatologyMeteorologyAtmosphere"/>
-      <xs:enumeration value="economy"/>
-      <xs:enumeration value="elevation"/>
-      <xs:enumeration value="environment"/>
-      <xs:enumeration value="geoscientificInformation"/>
-      <xs:enumeration value="GI_SG_stratigraphy"/>
-      <xs:enumeration value="GI_SG_magnetostratigraphy"/>
-      <xs:enumeration value="GI_SG_cyclostratigraphy"/>
-      <xs:enumeration value="GI_SG_chronostratigraphy"/>
-      <xs:enumeration value="GI_SG_sequenceStratigraphy"/>
-      <xs:enumeration value="GI_SG_lithotratigraphy"/>
-      <xs:enumeration value="GI_SG_biostratigraphy"/>
-      <xs:enumeration value="GI_SG_chemostratigraphy"/>
-      <xs:enumeration value="GI_SG_eventStratigraphy"/>
-      <xs:enumeration value="GI_SG_geologicTimeScale"/>
-      <xs:enumeration value="GI_PO_paleontology"/>
-      <xs:enumeration value="GI_PO_paleoecology"/>
-      <xs:enumeration value="GI_PO_fossil"/>
-      <xs:enumeration value="GI_PO_evolutionaryPaleontology"/>
-      <xs:enumeration value="GI_PO_biostratigraphy"/>
-      <xs:enumeration value="GI_PO_paleoanthropology"/>
-      <xs:enumeration value="GI_PO_ichnology"/>
-      <xs:enumeration value="GI_PO_invertebratePaleontology"/>
-      <xs:enumeration value="GI_PO_molecularPaleontology"/>
-      <xs:enumeration value="GI_PO_geobiology"/>
-      <xs:enumeration value="GI_PO_paleobotany"/>
-      <xs:enumeration value="GI_PO_palynology"/>
-      <xs:enumeration value="GI_PO_taphonomy"/>
-      <xs:enumeration value="GI_PO_micropaleontology"/>
-      <xs:enumeration value="GI_PO_paleobiogeography"/>
-      <xs:enumeration value="GI_GC_geochronology"/>
-      <xs:enumeration value="GI_GC_radioIsotopicDating"/>
-      <xs:enumeration value="GI_GC_nonradioIsotopicDating"/>
-      <xs:enumeration value="GI_SM_Sedimentology"/>
-      <xs:enumeration value="GI_SM_sedimentaryRock"/>
-      <xs:enumeration value="GI_SM_sedimentaryPhysicalProperty"/>
-      <xs:enumeration value="GI_SM_sedimentaryGeochemistry"/>
-      <xs:enumeration value="GI_SM_sedimentaryProcess"/>
-      <xs:enumeration value="GI_MAP_magmaticPetrology"/>
-      <xs:enumeration value="GI_MAP_compositionAndClassification"/>
-      <xs:enumeration value="GI_MAP_geochemicalProperties"/>
-      <xs:enumeration value="GI_MAP_physicalProperties"/>
-      <xs:enumeration value="GI_MAP_magmatismAndOrigin"/>
-      <xs:enumeration value="GI_MMP_metamorphicPetrology"/>
-      <xs:enumeration value="GI_MMP_metamorphicFabrics"/>
-      <xs:enumeration value="GI_MMP_dynamicMetamorphism"/>
-      <xs:enumeration value="GI_MMP_impactMetamorphism"/>
-      <xs:enumeration value="GI_MMP_contactMetamorphism"/>
-      <xs:enumeration value="GI_MMP_metasomatism"/>
-      <xs:enumeration value="GI_MMP_regionalMetamorphism"/>
-      <xs:enumeration value="GI_MMP_oceanfloorMetamorphism"/>
-      <xs:enumeration value="GI_MMP_burialMetamorphism"/>
-      <xs:enumeration value="GI_MMP_migmatite"/>
-      <xs:enumeration value="GI_MMP_metamorphicHistory"/>
-      <xs:enumeration value="GI_SGE_structureGeology"/>
-      <xs:enumeration value="GI_SGE_historicalStructure"/>
-      <xs:enumeration value="GI_SGE_activeStructure"/>
-      <xs:enumeration value="GI_TN_tectonics"/>
-      <xs:enumeration value="GI_TN_plateTectonics"/>
-      <xs:enumeration value="GI_TN_deepEarthTectonics"/>
-      <xs:enumeration value="GI_TN_thermochronology"/>
-      <xs:enumeration value="GI_TN_geodynamics"/>
-      <xs:enumeration value="GI_GM_geologicMapping"/>
-      <xs:enumeration value="GI_GM_geologicalSurvey"/>
-      <xs:enumeration value="GI_GM_geologicalCompilation"/>
-      <xs:enumeration value="GI_GM_digitalGeologicalMapping"/>
-      <xs:enumeration value="GI_HG_hydrogeology"/>
-      <xs:enumeration value="GI_HG_storageOfGroundwater"/>
-      <xs:enumeration value="GI_HG_groundwaterFlow"/>
-      <xs:enumeration value="GI_HG_groundwaterQuality"/>
-      <xs:enumeration value="GI_HG_geologicalProcessesOfGroundwater"/>
-      <xs:enumeration value="GI_HG_groundwaterDependentEcosystems"/>
-      <xs:enumeration value="GI_EGG_engineeringGeologyGeotechnology"/>
-      <xs:enumeration value="GI_EGG_regionalEngineeringGeology"/>
-      <xs:enumeration value="GI_EGG_soilMassEngineeringGeology"/>
-      <xs:enumeration value="GI_EGG_rockMassEngineeringGeology"/>
-      <xs:enumeration value="GI_EGG_appliedEngineeringGeology"/>
-      <xs:enumeration value="GI_EGG_geologicalHazards"/>
-      <xs:enumeration value="GI_EGG_intelligentEngineeringGeology"/>
-      <xs:enumeration value="GI_environmentalGeology"/>
-      <xs:enumeration value="GI_PG_petroleumGeology"/>
-      <xs:enumeration value="GI_PG_oilAndGasResourcesAssessment"/>
-      <xs:enumeration value="GI_PG_geologicalElements"/>
-      <xs:enumeration value="GI_PG_petroleumAccumulation"/>
-      <xs:enumeration value="GI_MMG_mathematicalGeoscience"/>
-      <xs:enumeration value="GI_MMG_dataVisualization‎"/>
-      <xs:enumeration value="GI_MMG_analysis"/>
-      <xs:enumeration value="GI_MMG_modelling"/>
-      <xs:enumeration value="GI_MMG_computation"/>
-      <xs:enumeration value="GI_MG_marineGeology"/>
-      <xs:enumeration value="GI_MG_submarineGeomorphology"/>
-      <xs:enumeration value="GI_MG_marineSedimentology"/>
-      <xs:enumeration value="GI_MG_marineSedimentDynamics"/>
-      <xs:enumeration value="GI_MG_paleoceanographyAndPaleoclimatology"/>
-      <xs:enumeration value="GI_MG_marineGeochronology"/>
-      <xs:enumeration value="GI_MG_marinePetrology "/>
-      <xs:enumeration value="GI_MG_marineGeochemistry"/>
-      <xs:enumeration value="GI_MG_seafloorTectonicsAndGeodynamics"/>
-      <xs:enumeration value="GI_MG_marineGeohazards"/>
-      <xs:enumeration value="GI_MG_coastalMorphoDynamics"/>
-      <xs:enumeration value="GI_MG_marinePaleontologyAndMicropaleontology "/>
-      <xs:enumeration value="GI_MG_seafloorHabitat"/>
-      <xs:enumeration value="GI_MG_subseafloorBiosphere"/>
-      <xs:enumeration value="GI_MI_mineralogy"/>
-      <xs:enumeration value="GI_MI_mineralPropertiesAndItsApplications"/>
-      <xs:enumeration value="GI_MI_crystallography"/>
-      <xs:enumeration value="GI_MI_mineralGenesisAndItsOccurrence"/>
-      <xs:enumeration value="GI_MI_mineralClassificationAndDescription"/>
-      <xs:enumeration value="GI_MI_chemicalCompositionAndCrystalStructure"/>
-      <xs:enumeration value="GI_gravimetricAndGravityExploration"/>
-      <xs:enumeration value="GI_geomagnetismAndMagneticExploration"/>
-      <xs:enumeration value="GI_geoelectricityAndElectricalExploration"/>
-      <xs:enumeration value="GI_seismologyAndSeismicExploration"/>
-      <xs:enumeration value="GI_nuclearGeophysicsandRadioactiveExploration"/>
-      <xs:enumeration value="GI_DGL_drillAndGeophysicalLogging"/>
-      <xs:enumeration value="GI_DGL_instrumentsForDrillingAndWellLogging"/>
-      <xs:enumeration value="GI_DGL_coringAndCoreAnalysis"/>
-      <xs:enumeration value="GI_DGL_loggingDataAnalysis"/>
-      <xs:enumeration value="GI_paleomagnetism"/>
-      <xs:enumeration value="GI_rockPhysics"/>
-      <xs:enumeration value="GI_integratedGeophysics"/>
-      <xs:enumeration value="GI_geochemistry"/>
-      <xs:enumeration value="GI_RS_remoteSensing"/>
-      <xs:enumeration value="GI_RS_remoteSensingInfrastructure"/>
-      <xs:enumeration value="GI_RS_appliedRemoteSensing"/>
-      <xs:enumeration value="GI_RS_photogrammetry"/>
-      <xs:enumeration value="GI_GPH_geomorphology"/>
-      <xs:enumeration value="GI_GPH_specialGeomorphology"/>
-      <xs:enumeration value="GI_GPH_dynamicalGeomorphology"/>
-      <xs:enumeration value="GI_GPH_regionalGeomorphology"/>
-      <xs:enumeration value="GI_GPH_appliedGeomorphology"/>
-      <xs:enumeration value="GI_GPH_experimentalGeomorphology"/>
-      <xs:enumeration value="GI_GPH_geomorphologicalMapping"/>
-      <xs:enumeration value="GI_GPH_climaticGeomorphology"/>
-      <xs:enumeration value="GI_GPH_quantitativeGeomorphology"/>
-      <xs:enumeration value="GI_GPH_fractalGeomorphology"/>
-      <xs:enumeration value="GI_GPH_historicalGeomorphology"/>
-      <xs:enumeration value="GI_paleoclimatology"/>
-      <xs:enumeration value="GI_PGG_paleogeography"/>
-      <xs:enumeration value="GI_PGG_lithofaciesPaleogeography"/>
-      <xs:enumeration value="GI_PGG_tectono-paleogeography"/>
-      <xs:enumeration value="GI_PGG_climatePaleogeography"/>
-      <xs:enumeration value="GI_PGG_paleobiogeography"/>
-      <xs:enumeration value="GI_ER_earthResource"/>
-      <xs:enumeration value="GI_ER_mineralResource"/>
-      <xs:enumeration value="GI_ER_groundwater"/>
-      <xs:enumeration value="GI_ER_oilAndGas"/>
-      <xs:enumeration value="GI_ER_shaleGasAndOilShale"/>
-      <xs:enumeration value="GI_ER_coalAndCoalbedMethane"/>
-      <xs:enumeration value="GI_ER_gasHydrate"/>
-      <xs:enumeration value="GI_ER_organicMaterial"/>
-      <xs:enumeration value="GI_GTH_geothermics"/>
-      <xs:enumeration value="GI_GTH_theoreticalGeothermics"/>
-      <xs:enumeration value="GI_GTH_appliedGeothermics"/>
-      <xs:enumeration value="GI_GTH_geothermalEnergy"/>
-      <xs:enumeration value="GI_GTH_dryHotRock"/>
-      <xs:enumeration value="GI_geoexploration"/>
-      <xs:enumeration value="GI_mining"/>
-      <xs:enumeration value="GI_ECG_economicalGeology"/>
-      <xs:enumeration value="GI_ECG_characteristicsOfOreDeposits"/>
-      <xs:enumeration value="GI_ECG_depositType"/>
-      <xs:enumeration value="GI_ECG_oreGenesis"/>
-      <xs:enumeration value="GI_ECG_metallogeny"/>
-      <xs:enumeration value="GI_GL_geologicalLiterature"/>
-      <xs:enumeration value="GI_GL_dinosaur"/>
-      <xs:enumeration value="GI_GL_geopark"/>
-      <xs:enumeration value="GI_GL_geo-education"/>
-      <xs:enumeration value="GI_GL_geologicalPublications"/>
-      <xs:enumeration value="GI_GL_geologicalArchives"/>
-      <xs:enumeration value="GI_planetaryGeology"/>
-      <xs:enumeration value="GI_biogeology"/>
-      <xs:enumeration value="GI_volcanology"/>
-      <xs:enumeration value="GI_forensicGeology"/>
-      <xs:enumeration value="GI_otherGeoscientificTopics"/>
-      <xs:enumeration value="health"/>
-      <xs:enumeration value="imageryBaseMapsEarthCover"/>
-      <xs:enumeration value="intelligenceMilitary"/>
-      <xs:enumeration value="inlandWaters"/>
-      <xs:enumeration value="location"/>
-      <xs:enumeration value="oceans"/>
-      <xs:enumeration value="planningCadastre"/>
-      <xs:enumeration value="society"/>
-      <xs:enumeration value="structure"/>
-      <xs:enumeration value="transportation"/>
-      <xs:enumeration value="utilitiesCommunication"/>
-      <xs:enumeration value="extraTerrestrial"/>
-      <xs:enumeration value="disaster"/>
-      <xs:enumeration value="dataScience"/>
-    </xs:restriction>
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="farming"/>
+          <xs:enumeration value="biota"/>
+          <xs:enumeration value="boundaries"/>
+          <xs:enumeration value="climatologyMeteorologyAtmosphere"/>
+          <xs:enumeration value="economy"/>
+          <xs:enumeration value="elevation"/>
+          <xs:enumeration value="environment"/>
+          <xs:enumeration value="geoscientificInformation"/>
+          <xs:enumeration value="GI_SG_stratigraphy"/>
+          <xs:enumeration value="GI_SG_magnetostratigraphy"/>
+          <xs:enumeration value="GI_SG_cyclostratigraphy"/>
+          <xs:enumeration value="GI_SG_chronostratigraphy"/>
+          <xs:enumeration value="GI_SG_sequenceStratigraphy"/>
+          <xs:enumeration value="GI_SG_lithotratigraphy"/>
+          <xs:enumeration value="GI_SG_biostratigraphy"/>
+          <xs:enumeration value="GI_SG_chemostratigraphy"/>
+          <xs:enumeration value="GI_SG_eventStratigraphy"/>
+          <xs:enumeration value="GI_SG_geologicTimeScale"/>
+          <xs:enumeration value="GI_PO_paleontology"/>
+          <xs:enumeration value="GI_PO_paleoecology"/>
+          <xs:enumeration value="GI_PO_fossil"/>
+          <xs:enumeration value="GI_PO_evolutionaryPaleontology"/>
+          <xs:enumeration value="GI_PO_biostratigraphy"/>
+          <xs:enumeration value="GI_PO_paleoanthropology"/>
+          <xs:enumeration value="GI_PO_ichnology"/>
+          <xs:enumeration value="GI_PO_invertebratePaleontology"/>
+          <xs:enumeration value="GI_PO_molecularPaleontology"/>
+          <xs:enumeration value="GI_PO_geobiology"/>
+          <xs:enumeration value="GI_PO_paleobotany"/>
+          <xs:enumeration value="GI_PO_palynology"/>
+          <xs:enumeration value="GI_PO_taphonomy"/>
+          <xs:enumeration value="GI_PO_micropaleontology"/>
+          <xs:enumeration value="GI_PO_paleobiogeography"/>
+          <xs:enumeration value="GI_GC_geochronology"/>
+          <xs:enumeration value="GI_GC_radioIsotopicDating"/>
+          <xs:enumeration value="GI_GC_nonradioIsotopicDating"/>
+          <xs:enumeration value="GI_SM_Sedimentology"/>
+          <xs:enumeration value="GI_SM_sedimentaryRock"/>
+          <xs:enumeration value="GI_SM_sedimentaryPhysicalProperty"/>
+          <xs:enumeration value="GI_SM_sedimentaryGeochemistry"/>
+          <xs:enumeration value="GI_SM_sedimentaryProcess"/>
+          <xs:enumeration value="GI_MAP_magmaticPetrology"/>
+          <xs:enumeration value="GI_MAP_compositionAndClassification"/>
+          <xs:enumeration value="GI_MAP_geochemicalProperties"/>
+          <xs:enumeration value="GI_MAP_physicalProperties"/>
+          <xs:enumeration value="GI_MAP_magmatismAndOrigin"/>
+          <xs:enumeration value="GI_MMP_metamorphicPetrology"/>
+          <xs:enumeration value="GI_MMP_metamorphicFabrics"/>
+          <xs:enumeration value="GI_MMP_dynamicMetamorphism"/>
+          <xs:enumeration value="GI_MMP_impactMetamorphism"/>
+          <xs:enumeration value="GI_MMP_contactMetamorphism"/>
+          <xs:enumeration value="GI_MMP_metasomatism"/>
+          <xs:enumeration value="GI_MMP_regionalMetamorphism"/>
+          <xs:enumeration value="GI_MMP_oceanfloorMetamorphism"/>
+          <xs:enumeration value="GI_MMP_burialMetamorphism"/>
+          <xs:enumeration value="GI_MMP_migmatite"/>
+          <xs:enumeration value="GI_MMP_metamorphicHistory"/>
+          <xs:enumeration value="GI_SGE_structureGeology"/>
+          <xs:enumeration value="GI_SGE_historicalStructure"/>
+          <xs:enumeration value="GI_SGE_activeStructure"/>
+          <xs:enumeration value="GI_TN_tectonics"/>
+          <xs:enumeration value="GI_TN_plateTectonics"/>
+          <xs:enumeration value="GI_TN_deepEarthTectonics"/>
+          <xs:enumeration value="GI_TN_thermochronology"/>
+          <xs:enumeration value="GI_TN_geodynamics"/>
+          <xs:enumeration value="GI_GM_geologicMapping"/>
+          <xs:enumeration value="GI_GM_geologicalSurvey"/>
+          <xs:enumeration value="GI_GM_geologicalCompilation"/>
+          <xs:enumeration value="GI_GM_digitalGeologicalMapping"/>
+          <xs:enumeration value="GI_HG_hydrogeology"/>
+          <xs:enumeration value="GI_HG_storageOfGroundwater"/>
+          <xs:enumeration value="GI_HG_groundwaterFlow"/>
+          <xs:enumeration value="GI_HG_groundwaterQuality"/>
+          <xs:enumeration value="GI_HG_geologicalProcessesOfGroundwater"/>
+          <xs:enumeration value="GI_HG_groundwaterDependentEcosystems"/>
+          <xs:enumeration value="GI_EGG_engineeringGeologyGeotechnology"/>
+          <xs:enumeration value="GI_EGG_regionalEngineeringGeology"/>
+          <xs:enumeration value="GI_EGG_soilMassEngineeringGeology"/>
+          <xs:enumeration value="GI_EGG_rockMassEngineeringGeology"/>
+          <xs:enumeration value="GI_EGG_appliedEngineeringGeology"/>
+          <xs:enumeration value="GI_EGG_geologicalHazards"/>
+          <xs:enumeration value="GI_EGG_intelligentEngineeringGeology"/>
+          <xs:enumeration value="GI_environmentalGeology"/>
+          <xs:enumeration value="GI_PG_petroleumGeology"/>
+          <xs:enumeration value="GI_PG_oilAndGasResourcesAssessment"/>
+          <xs:enumeration value="GI_PG_geologicalElements"/>
+          <xs:enumeration value="GI_PG_petroleumAccumulation"/>
+          <xs:enumeration value="GI_MMG_mathematicalGeoscience"/>
+          <xs:enumeration value="GI_MMG_dataVisualization‎"/>
+          <xs:enumeration value="GI_MMG_analysis"/>
+          <xs:enumeration value="GI_MMG_modelling"/>
+          <xs:enumeration value="GI_MMG_computation"/>
+          <xs:enumeration value="GI_MG_marineGeology"/>
+          <xs:enumeration value="GI_MG_submarineGeomorphology"/>
+          <xs:enumeration value="GI_MG_marineSedimentology"/>
+          <xs:enumeration value="GI_MG_marineSedimentDynamics"/>
+          <xs:enumeration value="GI_MG_paleoceanographyAndPaleoclimatology"/>
+          <xs:enumeration value="GI_MG_marineGeochronology"/>
+          <xs:enumeration value="GI_MG_marinePetrology "/>
+          <xs:enumeration value="GI_MG_marineGeochemistry"/>
+          <xs:enumeration value="GI_MG_seafloorTectonicsAndGeodynamics"/>
+          <xs:enumeration value="GI_MG_marineGeohazards"/>
+          <xs:enumeration value="GI_MG_coastalMorphoDynamics"/>
+          <xs:enumeration value="GI_MG_marinePaleontologyAndMicropaleontology "/>
+          <xs:enumeration value="GI_MG_seafloorHabitat"/>
+          <xs:enumeration value="GI_MG_subseafloorBiosphere"/>
+          <xs:enumeration value="GI_MI_mineralogy"/>
+          <xs:enumeration value="GI_MI_mineralPropertiesAndItsApplications"/>
+          <xs:enumeration value="GI_MI_crystallography"/>
+          <xs:enumeration value="GI_MI_mineralGenesisAndItsOccurrence"/>
+          <xs:enumeration value="GI_MI_mineralClassificationAndDescription"/>
+          <xs:enumeration value="GI_MI_chemicalCompositionAndCrystalStructure"/>
+          <xs:enumeration value="GI_gravimetricAndGravityExploration"/>
+          <xs:enumeration value="GI_geomagnetismAndMagneticExploration"/>
+          <xs:enumeration value="GI_geoelectricityAndElectricalExploration"/>
+          <xs:enumeration value="GI_seismologyAndSeismicExploration"/>
+          <xs:enumeration value="GI_nuclearGeophysicsandRadioactiveExploration"/>
+          <xs:enumeration value="GI_DGL_drillAndGeophysicalLogging"/>
+          <xs:enumeration value="GI_DGL_instrumentsForDrillingAndWellLogging"/>
+          <xs:enumeration value="GI_DGL_coringAndCoreAnalysis"/>
+          <xs:enumeration value="GI_DGL_loggingDataAnalysis"/>
+          <xs:enumeration value="GI_paleomagnetism"/>
+          <xs:enumeration value="GI_rockPhysics"/>
+          <xs:enumeration value="GI_integratedGeophysics"/>
+          <xs:enumeration value="GI_geochemistry"/>
+          <xs:enumeration value="GI_RS_remoteSensing"/>
+          <xs:enumeration value="GI_RS_remoteSensingInfrastructure"/>
+          <xs:enumeration value="GI_RS_appliedRemoteSensing"/>
+          <xs:enumeration value="GI_RS_photogrammetry"/>
+          <xs:enumeration value="GI_GPH_geomorphology"/>
+          <xs:enumeration value="GI_GPH_specialGeomorphology"/>
+          <xs:enumeration value="GI_GPH_dynamicalGeomorphology"/>
+          <xs:enumeration value="GI_GPH_regionalGeomorphology"/>
+          <xs:enumeration value="GI_GPH_appliedGeomorphology"/>
+          <xs:enumeration value="GI_GPH_experimentalGeomorphology"/>
+          <xs:enumeration value="GI_GPH_geomorphologicalMapping"/>
+          <xs:enumeration value="GI_GPH_climaticGeomorphology"/>
+          <xs:enumeration value="GI_GPH_quantitativeGeomorphology"/>
+          <xs:enumeration value="GI_GPH_fractalGeomorphology"/>
+          <xs:enumeration value="GI_GPH_historicalGeomorphology"/>
+          <xs:enumeration value="GI_paleoclimatology"/>
+          <xs:enumeration value="GI_PGG_paleogeography"/>
+          <xs:enumeration value="GI_PGG_lithofaciesPaleogeography"/>
+          <xs:enumeration value="GI_PGG_tectono-paleogeography"/>
+          <xs:enumeration value="GI_PGG_climatePaleogeography"/>
+          <xs:enumeration value="GI_PGG_paleobiogeography"/>
+          <xs:enumeration value="GI_ER_earthResource"/>
+          <xs:enumeration value="GI_ER_mineralResource"/>
+          <xs:enumeration value="GI_ER_groundwater"/>
+          <xs:enumeration value="GI_ER_oilAndGas"/>
+          <xs:enumeration value="GI_ER_shaleGasAndOilShale"/>
+          <xs:enumeration value="GI_ER_coalAndCoalbedMethane"/>
+          <xs:enumeration value="GI_ER_gasHydrate"/>
+          <xs:enumeration value="GI_ER_organicMaterial"/>
+          <xs:enumeration value="GI_GTH_geothermics"/>
+          <xs:enumeration value="GI_GTH_theoreticalGeothermics"/>
+          <xs:enumeration value="GI_GTH_appliedGeothermics"/>
+          <xs:enumeration value="GI_GTH_geothermalEnergy"/>
+          <xs:enumeration value="GI_GTH_dryHotRock"/>
+          <xs:enumeration value="GI_geoexploration"/>
+          <xs:enumeration value="GI_mining"/>
+          <xs:enumeration value="GI_ECG_economicalGeology"/>
+          <xs:enumeration value="GI_ECG_characteristicsOfOreDeposits"/>
+          <xs:enumeration value="GI_ECG_depositType"/>
+          <xs:enumeration value="GI_ECG_oreGenesis"/>
+          <xs:enumeration value="GI_ECG_metallogeny"/>
+          <xs:enumeration value="GI_GL_geologicalLiterature"/>
+          <xs:enumeration value="GI_GL_dinosaur"/>
+          <xs:enumeration value="GI_GL_geopark"/>
+          <xs:enumeration value="GI_GL_geo-education"/>
+          <xs:enumeration value="GI_GL_geologicalPublications"/>
+          <xs:enumeration value="GI_GL_geologicalArchives"/>
+          <xs:enumeration value="GI_planetaryGeology"/>
+          <xs:enumeration value="GI_biogeology"/>
+          <xs:enumeration value="GI_volcanology"/>
+          <xs:enumeration value="GI_forensicGeology"/>
+          <xs:enumeration value="GI_otherGeoscientificTopics"/>
+          <xs:enumeration value="health"/>
+          <xs:enumeration value="imageryBaseMapsEarthCover"/>
+          <xs:enumeration value="intelligenceMilitary"/>
+          <xs:enumeration value="inlandWaters"/>
+          <xs:enumeration value="location"/>
+          <xs:enumeration value="oceans"/>
+          <xs:enumeration value="planningCadastre"/>
+          <xs:enumeration value="society"/>
+          <xs:enumeration value="structure"/>
+          <xs:enumeration value="transportation"/>
+          <xs:enumeration value="utilitiesCommunication"/>
+          <xs:enumeration value="extraTerrestrial"/>
+          <xs:enumeration value="disaster"/>
+          <xs:enumeration value="dataScience"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>if source metadata doesn't provid a topic category, use 'other:missing'.
+            Construct as an xs:union to keep the DDE vocabulary separate from this sentinel
+            value</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="other:missing"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+
   </xs:simpleType>
 
 </xs:schema>
