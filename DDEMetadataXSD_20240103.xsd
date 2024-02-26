@@ -237,11 +237,11 @@
 
   <xs:complexType name="MD_Imagery">
     <xs:sequence>
-      <xs:element name="sensor" type="metadata:CharacterString_Type" minOccurs="0"
+      <xs:element name="sensor" type="metadata:Anchor_Type" minOccurs="0"
         maxOccurs="unbounded"/>
-      <xs:element name="platform" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="equipment" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="signalGenerator" type="metadata:CharacterString_Type" minOccurs="0"
+      <xs:element name="platform" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="equipment" type="metadata:Anchor_Type" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="signalGenerator" type="metadata:Anchor_Type" minOccurs="0"
         maxOccurs="1"/>
       <xs:element name="wavelength" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>
       <xs:element name="processingLevel" type="metadata:ProcessingLevelCode" minOccurs="0"
@@ -301,6 +301,7 @@
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+        <xs:attribute name="nilReason" type="metadata:NilReasonType" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -473,9 +474,10 @@
 
   <xs:simpleType name="CountryCode">
     <xs:annotation>
-      <xs:documentation>Extracted from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements. 
-      The DDEUtilities.xsd file contains a lookup table to map country names (with some permutations
-      and three-letter country codes to these 2 letter values.</xs:documentation>
+      <xs:documentation>Extracted from
+        https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements. The
+        DDEUtilities.xsd file contains a lookup table to map country names (with some permutations
+        and three-letter country codes to these 2 letter values.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
       <xs:length value="2"/>
@@ -916,25 +918,39 @@
   </xs:simpleType>
 
   <xs:simpleType name="RestrictionCode">
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="copyright"/>
-      <xs:enumeration value="patent"/>
-      <xs:enumeration value="patentPending"/>
-      <xs:enumeration value="trademark"/>
-      <xs:enumeration value="licence"/>
-      <xs:enumeration value="intellectualPropertyRights"/>
-      <xs:enumeration value="restricted"/>
-      <xs:enumeration value="otherRestrictions"/>
-      <xs:enumeration value="unrestricted"/>
-      <xs:enumeration value="licenceUnrestricted"/>
-      <xs:enumeration value="licenceEndUser"/>
-      <xs:enumeration value="licenceDistributor"/>
-      <xs:enumeration value="private"/>
-      <xs:enumeration value="statutory"/>
-      <xs:enumeration value="confidential"/>
-      <xs:enumeration value="SBU"/>
-      <xs:enumeration value="in-confidence"/>
-    </xs:restriction>
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="copyright"/>
+          <xs:enumeration value="patent"/>
+          <xs:enumeration value="patentPending"/>
+          <xs:enumeration value="trademark"/>
+          <xs:enumeration value="license"/>
+          <xs:enumeration value="intellectualPropertyRights"/>
+          <xs:enumeration value="restricted"/>
+          <xs:enumeration value="otherRestrictions"/>
+          <xs:enumeration value="unrestricted"/>
+          <xs:enumeration value="licenceUnrestricted"/>
+          <xs:enumeration value="licenceEndUser"/>
+          <xs:enumeration value="licenceDistributor"/>
+          <xs:enumeration value="private"/>
+          <xs:enumeration value="statutory"/>
+          <xs:enumeration value="confidential"/>
+          <xs:enumeration value="SBU"/>
+          <xs:enumeration value="in-confidence"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>other restriction type, prefix 'other:' followed by a string of two or
+            more characters with no included spaces. Implication is that none of the other
+            restriction codes apply, or the value is missing</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="other:\w{2,}"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
   </xs:simpleType>
 
   <xs:simpleType name="RoleTypeCode">
@@ -1040,7 +1056,7 @@
         <xs:annotation>
           <xs:documentation>Codes that specify the method used to represent geographic information
             in the resource. Code list is from ISO 19115:
- http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_SpatialRepresentationTypeCode.</xs:documentation>
+            http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_SpatialRepresentationTypeCode.</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:token">
           <xs:enumeration value="vector"/>
