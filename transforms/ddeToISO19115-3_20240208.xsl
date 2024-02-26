@@ -39,11 +39,13 @@
     xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0" exclude-result-prefixes="#all">
+    xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+    exclude-result-prefixes="#all">
 
 
     <xsl:import href="utility/create19115-3Namespaces.xsl"/>
     <xsl:import href="utility/DDEutilities.xsl"/>
+    <xsl:import href="utility/fromISO19115-3.2014.xsl"/>        <!-- utilities to get 2018 namespaces for ISO19115-3 -->
     <xsl:output method="xml" indent="yes"/>
     <xsl:strip-space elements="*"/>
 
@@ -65,8 +67,8 @@
                     <xsl:with-param name="anIdentifier" select="dde:metadataIdentifier"/>
                 </xsl:call-template>
             </mdb:metadataIdentifier>
-            
-            <xsl:if test="exists(dde:identificationInfo/dde:resourceType[text() = 'Service'])">
+
+            <xsl:if test="exists(dde:identificationInfo/dde:resourceType[text() = 'service'])">
                 <mdb:defaultLocale>
                     <lan:PT_Locale>
                         <lan:language>
@@ -74,16 +76,19 @@
                                 <xsl:with-param name="elementName" select="'lan:LanguageCode'"/>
                                 <xsl:with-param name="codeListName"
                                     select="'https://www.loc.gov/standards/iso639-2/php/code_list.php'"/>
-                                <xsl:with-param name="codeListValue" select="dde:identificationInfo/dde:language[1]"/>
+                                <xsl:with-param name="codeListValue"
+                                    select="dde:identificationInfo/dde:language[1]"/>
                             </xsl:call-template>
                         </lan:language>
-                        
+
                         <lan:characterEncoding>
                             <xsl:call-template name="writeCodelistElement">
-                                <xsl:with-param name="elementName" select="'lan:MD_CharacterSetCode'"/>
+                                <xsl:with-param name="elementName"
+                                    select="'lan:MD_CharacterSetCode'"/>
                                 <xsl:with-param name="codeListName"
                                     select="'http://www.iana.org/assignments/character-sets'"/>
-                                <xsl:with-param name="codeListValue" select="dde:identificationInfo/dde:characterEncoding[1]"/>
+                                <xsl:with-param name="codeListValue"
+                                    select="dde:identificationInfo/dde:characterEncoding[1]"/>
                             </xsl:call-template>
                         </lan:characterEncoding>
                     </lan:PT_Locale>
@@ -94,7 +99,7 @@
                 <mdb:metadataScope>
                     <mdb:MD_MetadataScope>
                         <mdb:resourceScope>
-                            <xsl:variable name="rtype" select="."/>
+                            <xsl:variable name="rtype" select="string(.)"/>
                             <xsl:variable name="clstval"
                                 select="$resourceTypeMapping/entry[@key = $rtype]/@value"/>
                             <xsl:call-template name="writeCodelistElement">
@@ -106,7 +111,7 @@
                         </mdb:resourceScope>
                         <mdb:name>
                             <gco:CharacterString>
-                                <xsl:value-of select="."/>
+                                <xsl:value-of select="string(.)"/>
                             </gco:CharacterString>
                         </mdb:name>
                     </mdb:MD_MetadataScope>
@@ -160,17 +165,20 @@
                                 <xsl:value-of select="dde:title"/>
                             </gco:CharacterString>
                         </cit:title>
+                        <xsl:if test="dde:linkage and not(dde:linkage/@nilReason)">
                         <cit:onlineResource>
                             <xsl:call-template name="CI_OnlineResource">
                                 <xsl:with-param name="theOLR" select="."/>
                             </xsl:call-template>
                         </cit:onlineResource>
+                        </xsl:if>
                     </cit:CI_Citation>
                 </mdb:alternativeMetadataReference>
             </xsl:for-each>
 
             <!-- spatial reference system -->
-            <xsl:for-each select="dde:distributionInfo/dde:spatialRepresentationInfo">
+            <xsl:for-each
+                select="dde:identificationInfo/dde:distributionInfo/dde:spatialRepresentationInfo">
                 <mdb:referenceSystemInfo>
                     <mrs:MD_ReferenceSystem>
                         <xsl:for-each select="dde:referenceSystemIdentifier">
@@ -197,7 +205,8 @@
 
             <mdb:identificationInfo>
                 <xsl:choose>
-                    <xsl:when test="exists(dde:identificationInfo/dde:resourceType[text() = 'Service'])">
+                    <xsl:when
+                        test="exists(dde:identificationInfo/dde:resourceType[text() = 'service'])">
                         <srv:SV_ServiceIdentification>
                             <xsl:call-template name="MD_Identification">
                                 <xsl:with-param name="IDobject" select="dde:identificationInfo"/>
@@ -209,16 +218,18 @@
                                         <xsl:attribute name="codeSpace"
                                             select="string('DDE service type vocabulary')"/>
                                         <xsl:value-of
-                                            select="dde:identificationInfo/dde:serviceIdentificationInfo/dde:serviceType"/>
+                                            select="dde:identificationInfo/dde:serviceIdentificationInfo/dde:serviceType"
+                                        />
                                     </gco:ScopedName>
                                 </srv:serviceType>
-                                <xsl:if test="dde:identificationInfo/dde:serviceIdentificationInfo/dde:accessProperties">
+                                <xsl:if
+                                    test="dde:identificationInfo/dde:serviceIdentificationInfo/dde:accessProperties">
                                     <srv:accessProperties>
                                         <mrd:MD_StandardOrderProcess>
                                             <mrd:orderingInstructions>
                                                 <gco:CharacterString>
                                                   <xsl:value-of
-                                                      select="dde:identificationInfo/dde:serviceIdentificationInfo/dde:accessProperties"
+                                                  select="dde:identificationInfo/dde:serviceIdentificationInfo/dde:accessProperties"
                                                   />
                                                 </gco:CharacterString>
                                             </mrd:orderingInstructions>
@@ -263,16 +274,14 @@
                                 <xsl:with-param name="IDobject"/>
                             </xsl:call-template>
 
-                            <xsl:if test="dde:imageryInfo">
-                                <!-- imagery metadata mostly fits into acquisition -->
-                            </xsl:if>
+
                         </mri:MD_DataIdentification>
                     </xsl:otherwise>
                 </xsl:choose>
             </mdb:identificationInfo>
 
 
-            <xsl:for-each select="dde:distributionInfo">
+            <xsl:for-each select="dde:identificationInfo/dde:distributionInfo">
                 <mdb:distributionInfo>
                     <mrd:MD_Distribution>
                         <xsl:for-each select="dde:distributionFormat">
@@ -282,8 +291,19 @@
                                         <cit:CI_Citation>
                                             <cit:title>
                                                 <gco:CharacterString>
-                                                  <xsl:value-of select="."/>
+                                                  <xsl:value-of select="string(.)"/>
                                                 </gco:CharacterString>
+                                                <xsl:if test="./@href">
+                                                  <cit:onlineResource>
+                                                  <cit:CI_OnlineResource>
+                                                  <cit:linkage>
+                                                  <gco:CharacterString>
+                                                  <xsl:value-of select="./@href"/>
+                                                  </gco:CharacterString>
+                                                  </cit:linkage>
+                                                  </cit:CI_OnlineResource>
+                                                  </cit:onlineResource>
+                                                </xsl:if>
                                             </cit:title>
                                         </cit:CI_Citation>
                                     </mrd:formatSpecificationCitation>
@@ -343,7 +363,33 @@
                         <dqm:scope gco:nilReason="missing"/>
                         <dqm:standaloneQualityReport>
                             <dqm:DQ_StandaloneQualityReportInformation>
-                                <dqm:reportReference gco:nilReason="missing"/>
+                                <xsl:choose>
+                                    <xsl:when test="dde:identificationInfo/dde:dataQuality/@href">
+                                        <mdq:reportReference>
+                                            <cit:CI_Citation>
+                                                <cit:title>
+                                                  <gco:CharacterString>Quality Report
+                                                  Link</gco:CharacterString>
+                                                </cit:title>
+                                                <cit:onlineResource>
+                                                  <cit:CI_OnlineResource>
+                                                  <cit:linkage>
+                                                  <gco:CharacterString>
+                                                  <xsl:value-of
+                                                  select="dde:identificationInfo/dde:dataQuality/@href"
+                                                  />
+                                                  </gco:CharacterString>
+                                                  </cit:linkage>
+                                                  </cit:CI_OnlineResource>
+                                                </cit:onlineResource>
+                                            </cit:CI_Citation>
+                                        </mdq:reportReference>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <dqm:reportReference gco:nilReason="missing"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+
                                 <dqm:abstract>
                                     <gco:CharacterString>
                                         <xsl:value-of
@@ -361,31 +407,41 @@
                 <mdb:resourceLineage>
                     <mrl:LI_Lineage>
                         <mrl:statement>
-                            <gco:CharacterString>
-                                <xsl:value-of select="dde:identificationInfo/dde:lineage"/>
-                            </gco:CharacterString>
+                            <xsl:choose>
+                                <xsl:when test="dde:identificationInfo/dde:lineage/@href">
+                                    <xsl:element name="gcx:Anchor">
+                                        <xsl:attribute name="xlink:href"
+                                            select="dde:identificationInfo/dde:lineage/@href"/>
+                                        <xsl:value-of select="dde:identificationInfo/dde:lineage/text()"/>
+                                    </xsl:element>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <gco:CharacterString>
+                                        <xsl:value-of select="dde:identificationInfo/dde:lineage/text()"/>
+                                    </gco:CharacterString>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </mrl:statement>
                         <xsl:for-each select="dde:identificationInfo/dde:source">
                             <mrl:source>
                                 <mrl:LI_Source>
                                     <mrl:sourceCitation>
                                         <cit:CI_Citation>
-
                                             <cit:title>
                                                 <gco:CharacterString>
-                                                  <xsl:value-of select="."/>
+                                                  <xsl:value-of select="string(.)"/>
                                                 </gco:CharacterString>
                                             </cit:title>
-                                            <xsl:if test="./@uri">
-                                                <cit:identifier>
-                                                  <mcc:MD_Identifier>
-                                                  <mcc:code>
+                                            <xsl:if test="./@href">
+                                                <cit:onlineResource>
+                                                  <cit:CI_OnlineResource>
+                                                  <cit:linkage>
                                                   <gco:CharacterString>
-                                                  <xsl:value-of select="./@uri"/>
+                                                  <xsl:value-of select="./@href"/>
                                                   </gco:CharacterString>
-                                                  </mcc:code>
-                                                  </mcc:MD_Identifier>
-                                                </cit:identifier>
+                                                  </cit:linkage>
+                                                  </cit:CI_OnlineResource>
+                                                </cit:onlineResource>
                                             </xsl:if>
                                         </cit:CI_Citation>
                                     </mrl:sourceCitation>
@@ -397,14 +453,14 @@
                 </mdb:resourceLineage>
             </xsl:if>
 
-            <xsl:for-each select="dde:identificationInfo/dde:acquisitionType">
+<!--            <xsl:for-each select="dde:identificationInfo/dde:acquisitionType">
                 <mdb:acquisitionInformation>
                     <mac:MI_AcquisitionInformation>
                         <mac:operation>
                             <mac:MI_Operation>
                                 <mac:description>
                                     <gco:CharacterString>
-                                        <xsl:value-of select="."/>
+                                        <xsl:value-of select="string(.)"/>
                                     </gco:CharacterString>
                                 </mac:description>
                                 <mac:status gco:nilReason="unknown"/>
@@ -412,7 +468,165 @@
                         </mac:operation>
                     </mac:MI_AcquisitionInformation>
                 </mdb:acquisitionInformation>
-            </xsl:for-each>
+            </xsl:for-each>-->
+
+            <xsl:if test="dde:identificationInfo/dde:imageryInfo or dde:identificationInfo/dde:acquisitionType">
+                <!-- imagery metadata mostly fits into acquisition 
+                have to handle:  (all minOccurs="0" maxOccurs="unbounded")
+            name="sensor" type="metadata:CharacterString_Type"  put in MI_Sensor
+            name="platform" type="metadata:CharacterString_Type"   put in MI_Platform
+            name="equipment" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>  put in MI_Instrument
+            name="signalGenerator" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>  MI_Operation/mac:otherProperty/gco:Record
+                    use otherProperty to distinguish dde:acquisitionType which goes in MI_Operation/description
+            name="wavelength" type="metadata:CharacterString_Type" minOccurs="0" maxOccurs="1"/>   put in operation other property
+            name="processingLevel"    several places in ISO19115-1....     -->
+
+                <mdb:acquisitionInformation>
+                    <mac:MI_AcquisitionInformation>
+                        
+                        <xsl:for-each select="dde:identificationInfo/dde:imageryInfo/dde:sensor">
+                            <mac:instrument>
+                                <mac:MI_Sensor>
+                                    <!-- identifier and type are mandatory -->
+                                    <mac:identifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gco:CharacterString>
+                                                  <xsl:choose>
+                                                    <xsl:when test="./@href">
+                                                        <xsl:value-of select="./@href"/>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="string('Missing')"/>
+                                                    </xsl:otherwise>
+                                                  </xsl:choose>
+                                                </gco:CharacterString>
+                                            </mcc:code>
+                                        </mcc:MD_Identifier>
+                                    </mac:identifier>
+                                    <mac:type>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="string(.)"/>
+                                        </gco:CharacterString>
+                                    </mac:type>
+                                </mac:MI_Sensor>
+                            </mac:instrument>
+                        </xsl:for-each>
+                        <!-- sensor -->
+
+                        <xsl:for-each select="dde:identificationInfo/dde:imageryInfo/dde:equipment">
+                            <mac:instrument>
+                                <mac:MI_Instrument>
+                                    <mac:identifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gco:CharacterString>
+                                                  <xsl:choose>
+                                                  <xsl:when test="./@href">
+                                                  <xsl:value-of select="./@href"/>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="string('Missing')"/>
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                </gco:CharacterString>
+                                            </mcc:code>
+                                        </mcc:MD_Identifier>
+                                    </mac:identifier>
+                                    <mac:type>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="string(.)"/>
+                                        </gco:CharacterString>
+                                    </mac:type>
+                                </mac:MI_Instrument>
+                            </mac:instrument>
+                        </xsl:for-each>
+                        <!-- equipment maps to instrument -->
+
+                        <xsl:for-each select="dde:identificationInfo/dde:imageryInfo/dde:signalGenerator">  
+                                <mac:operation>
+                                    <mac:MI_Operation>
+                                        <mac:description>
+                                            <xsl:choose>
+                                                <xsl:when test="./@href">
+                                                    <xsl:element name="gcx:Anchor">
+                                                        <xsl:if test="./@href">
+                                                            <xsl:attribute name="xlink:href" select="./@href"/>
+                                                        </xsl:if>
+                                                        <xsl:value-of select="concat(string('signalGenerator: '), string(.))"/>
+                                                    </xsl:element>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <gco:CharacterString>
+                                                        <xsl:value-of select="concat(string('signalGenerator: '), string(.))"/>
+                                                    </gco:CharacterString>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </mac:description>
+                                        <mac:status gco:nilReason="unknown"/>
+                                    </mac:MI_Operation>
+                                </mac:operation>
+                        </xsl:for-each>
+                                    
+                        <xsl:for-each select="dde:identificationInfo/dde:imageryInfo/dde:wavelength">
+                            <mac:operation>
+                                <mac:MI_Operation>
+                                    <mac:description>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="concat(string('wavelength: '), string(.))"/>
+                                        </gco:CharacterString>
+                                    </mac:description>
+                                    <mac:status gco:nilReason="unknown"/>
+                                </mac:MI_Operation>
+                            </mac:operation>
+                        </xsl:for-each> 
+                                    
+                        <xsl:for-each select="dde:identificationInfo/dde:acquisitionType">
+                            <mac:operation>
+                                <mac:MI_Operation>
+                                    <mac:description>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="string(.)"/>
+                                        </gco:CharacterString>
+                                    </mac:description>
+                                    <mac:status gco:nilReason="unknown"/>
+                                </mac:MI_Operation>
+                            </mac:operation>
+                        </xsl:for-each>
+
+                        <xsl:for-each select="dde:identificationInfo/dde:imageryInfo/dde:platform">
+                            <mac:platform>
+                                <mac:MI_Platform>
+                                    <mac:identifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gco:CharacterString>
+                                                  <xsl:choose>
+                                                  <xsl:when test="./@href">
+                                                  <xsl:value-of select="./@href"/>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="string('Missing')"/>
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                </gco:CharacterString>
+                                            </mcc:code>
+                                        </mcc:MD_Identifier>
+                                    </mac:identifier>
+                                    <mac:description>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="string(.)"/>
+                                        </gco:CharacterString>
+                                    </mac:description>
+                                    <mac:instrument gco:nilReason="missing"/>
+                                </mac:MI_Platform>
+                            </mac:platform>
+                            <!-- platform -->
+                        </xsl:for-each>
+
+                    </mac:MI_AcquisitionInformation>
+                </mdb:acquisitionInformation>
+            </xsl:if>
         </xsl:element>
         <!-- end of mdb:MD_Metadata -->
 
@@ -426,7 +640,7 @@
                     <cit:CI_Citation>
                         <cit:title>
                             <gco:CharacterString>
-                                <xsl:value-of select="$anIdentifier/dde:authority"/>
+                                <xsl:value-of select="$anIdentifier/dde:authority/dde:name"/>
                             </gco:CharacterString>
                         </cit:title>
                     </cit:CI_Citation>
@@ -543,11 +757,39 @@
             </cit:linkage>
             <xsl:if test="dde:applicationProfile">
                 <cit:applicationProfile>
-                    <gco:CharacterString>
-                        <xsl:value-of select="dde:applicationProfile"/>
-                    </gco:CharacterString>
+                    <!-- dde allows multiple appliction profiles, ISO only alows one, 
+                        concatenate multiple values.  An applicationProfile may have an href -->
+                    <xsl:choose>
+                        <xsl:when test="./child::dde:applicationProfile/@href">
+                            <!-- if there's an href on any applicationProfile, use gcx:Anchor -->
+                            <xsl:element name="gcx:Anchor">
+                                <xsl:for-each select="dde:applicationProfile">
+                                    <!-- xlink:href will be the one for the last (or only) applicationProfile href -->
+                                    <xsl:if test="./@href">
+                                        <xsl:attribute name="xlink:href" select="./@href"/>
+                                    </xsl:if>
+                                    <!-- put in a delimiter if necessary -->
+                                     <xsl:value-of select="string(.)"/>
+                                    <xsl:if test="position() > 1">
+                                        <xsl:value-of select="string(' | ')"/>
+                                    </xsl:if>
+                                </xsl:for-each>
+                            </xsl:element>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:element name="gco:CharacterString">
+                                <xsl:for-each select="dde:applicationProfile">
+                                    <xsl:value-of select="string(.)"/>
+                                    <xsl:if test="position() > 1">
+                                        <xsl:value-of select="string(' | ')"/>
+                                    </xsl:if>
+                                </xsl:for-each>
+                            </xsl:element>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </cit:applicationProfile>
             </xsl:if>
+
             <xsl:if test="dde:title">
                 <cit:description>
                     <gco:CharacterString>
@@ -581,7 +823,7 @@
                     <xsl:for-each select="dde:alternateTitle">
                         <cit:alternateTitle>
                             <gco:CharacterString>
-                                <xsl:value-of select="."/>
+                                <xsl:value-of select="string(.)"/>
                             </gco:CharacterString>
                         </cit:alternateTitle>
                     </xsl:for-each>
@@ -630,8 +872,7 @@
                     </mri:pointOfContact>
                 </xsl:if>
             </xsl:for-each>
-            <xsl:for-each
-                select="//dde:spatialRepresentationInfo/dde:spatialRepresentationType">
+            <xsl:for-each select="//dde:spatialRepresentationInfo/dde:spatialRepresentationType">
                 <mri:spatialRepresentationType>
                     <xsl:call-template name="writeCodelistElement">
                         <xsl:with-param name="elementName"
@@ -642,8 +883,7 @@
                     </xsl:call-template>
                 </mri:spatialRepresentationType>
             </xsl:for-each>
-            <xsl:for-each
-                select="//dde:spatialRepresentationInfo/dde:spatialResolution">
+            <xsl:for-each select="//dde:spatialRepresentationInfo/dde:spatialResolution">
                 <mri:spatialResolution>
                     <mri:MD_Resolution>
                         <xsl:choose>
@@ -651,26 +891,31 @@
                                 <mri:equivalentScale>
                                     <mri:MD_RepresentativeFraction>
                                         <mri:denominator>
-                                            <gco:Integer><xsl:value-of select="substring-after(., ':')" /></gco:Integer>
+                                            <gco:Integer>
+                                                <xsl:value-of select="substring-after(., ':')"/>
+                                            </gco:Integer>
                                         </mri:denominator>
                                     </mri:MD_RepresentativeFraction>
                                 </mri:equivalentScale>
                             </xsl:when>
                             <xsl:otherwise>
                                 <mri:levelOfDetail>
-                                    <gco:CharacterString><xsl:value-of select="." /></gco:CharacterString>
+                                    <gco:CharacterString>
+                                        <xsl:value-of select="string(.)"/>
+                                    </gco:CharacterString>
                                 </mri:levelOfDetail>
                             </xsl:otherwise>
                         </xsl:choose>
                     </mri:MD_Resolution>
-                </mri:spatialResolution> </xsl:for-each>
+                </mri:spatialResolution>
+            </xsl:for-each>
             <!-- DDE topic category extension terms have GI_ prefix -->
             <xsl:for-each select="dde:topicCategory">
                 <!-- <xsl:if test= doesn't start with 'GI_' -->
-                <xsl:if test="not(starts-with(., 'GI_')) and not(.[text()='dataScience'])">
+                <xsl:if test="not(starts-with(., 'GI_')) and not(.[text() = 'dataScience'])">
                     <mri:topicCategory>
                         <mri:MD_TopicCategoryCode>
-                            <xsl:value-of select="."/>
+                            <xsl:value-of select="string(.)"/>
                         </mri:MD_TopicCategoryCode>
                     </mri:topicCategory>
                 </xsl:if>
@@ -682,9 +927,9 @@
                     <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
                 </mri:topicCategory>
             </xsl:if>
-            
+
             <xsl:if
-                test="exists(dde:topicCategory[text()='dataScience']) and not(exists(dde:topicCategory[starts-with(text(), 'GI_')])) and not(exists(dde:topicCategory[text() = 'geoscientificInformation']))">
+                test="exists(dde:topicCategory[text() = 'dataScience']) and not(exists(dde:topicCategory[starts-with(text(), 'GI_')])) and not(exists(dde:topicCategory[text() = 'geoscientificInformation']))">
                 <mri:topicCategory>
                     <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
                 </mri:topicCategory>
@@ -743,161 +988,174 @@
                             <gex:EX_TemporalExtent>
                                 <xsl:choose>
                                     <!-- check if temporal extent uses calendar dates -->
-                                <xsl:when test="dde:temporalExtent/dde:beginDate or dde:temporalExtent/dde:endDate">
-                                    <gex:extent>
-                                        <gml:TimePeriod>
-                                            <gml:description>
-                                                <xsl:value-of select="concat('geoTime: ', ../dde:geoTime)"/>
-                                            </gml:description>
-                                            <gml:begin>
-                                                <gml:TimeInstant>
+                                    <xsl:when
+                                        test="dde:temporalExtent/dde:beginDate or dde:temporalExtent/dde:endDate">
+                                        <gex:extent>
+                                            <gml:TimePeriod>
+                                                <gml:description>
+                                                  <xsl:value-of
+                                                  select="concat('geoTime: ', ../dde:geoTime)"/>
+                                                </gml:description>
+                                                <gml:begin>
+                                                  <gml:TimeInstant>
                                                     <gml:name>
                                                         <xsl:value-of select="dde:beginName"/>
                                                     </gml:name>
                                                     <gml:timePosition>
-                                                        <xsl:choose>   
-                                                            <xsl:when  test="dde:temporalExtent/dde:beginDate">
-                                                                <xsl:value-of  select="dde:temporalExtent/dde:beginDate"/>
+                                                        <xsl:choose>
+                                                            <xsl:when test="dde:temporalExtent/dde:beginDate">
+                                                                <xsl:value-of select="dde:temporalExtent/dde:beginDate"/>
                                                             </xsl:when>
                                                             <xsl:otherwise>
                                                                 <xsl:attribute name="indeterminatePosition" select="unknown"/>
                                                             </xsl:otherwise>
                                                         </xsl:choose>
                                                     </gml:timePosition>
-                                                </gml:TimeInstant>
-                                            </gml:begin>
-                                            <gml:end>
-                                                <gml:TimeInstant>
-                                                    <xsl:if test="dde:endName">
-                                                        <gml:name>
-                                                            <xsl:value-of select="dde:endName"/>
-                                                        </gml:name>
-                                                    </xsl:if>
-                                                    <gml:timePosition>
-                                                        <xsl:choose>   
-                                                            <xsl:when  test="dde:temporalExtent/dde:endDate">
-                                                                <xsl:value-of  select="dde:temporalExtent/dde:endDate"/>
-                                                            </xsl:when>
-                                                            <xsl:otherwise>
-                                                                <xsl:attribute name="indeterminatePosition" select="unknown"/>
-                                                            </xsl:otherwise>
-                                                        </xsl:choose>
-                                                    </gml:timePosition>
-                                                </gml:TimeInstant>
-                                            </gml:end>
-                                        </gml:TimePeriod>
-                                    </gex:extent>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <!-- geologic age, by name, interval (geologic age) identifier or time position coordinates... -->
-                                    <gex:extent>
-                                        <gml:TimePeriod>
-                                            <gml:description>
-                                                <xsl:value-of select="concat('geoTime: ', ../dde:geoTime)"/>
-                                            </gml:description>
-                                            <gml:begin>  <!-- beginName is mandatory in DDE -->
-                                                <gml:TimeInstant>
-                                                    <xsl:if test="dde:beginIdentifier">
-                                                        <xsl:element name="gml:identifier">
-                                                            <xsl:attribute name="codeSpace">
-                                                            <!-- codespace is required -->
-                                                                 <xsl:choose>
-                                                                     <xsl:when test="dde:beginIdentifier/dde:codespace">
-                                                                         <xsl:value-of select="dde:beginIdentifier/dde:codespace"/>
-                                                                     </xsl:when>
-                                                                     <xsl:when test="dde:beginIdentifier/dde:authority">
-                                                                         <xsl:value-of  select="dde:beginIdentifier/dde:authority"/>
-                                                                     </xsl:when>
-                                                                     <xsl:otherwise>
-                                                                         <xsl:value-of select="string('nilReason missing')" />
-                                                                     </xsl:otherwise>
-                                                                 </xsl:choose>
-                                                            </xsl:attribute>
-                                                            <xsl:value-of  select="dde:beginIdentifier/dde:code"/>
-                                                        </xsl:element>
-                                                    </xsl:if>
-                                                    <!-- begin name is required -->
-                                                    <gml:name>
-                                                      <xsl:value-of select="dde:beginName"/>
-                                                    </gml:name>
-                                                    <xsl:choose>
-                                                      <xsl:when test="dde:beginCoordinate">
-                                                            <xsl:element name="gml:timePosition">
-                                                                <xsl:attribute name="frame">
-                                                                    <xsl:value-of  select="concat(dde:coordinateUnits, ' before present')"/>
-                                                                </xsl:attribute>
-                                                                <xsl:value-of select="dde:beginCoordinate"/>
-                                                            </xsl:element>
-                                                      </xsl:when>
-                                                      <xsl:otherwise>
-                                                            <gml:timePosition indeterminatePosition="unknown" />
-                                                      </xsl:otherwise>
-                                                    </xsl:choose>
-                                                </gml:TimeInstant>
-                                            </gml:begin>
-                                            <xsl:choose>
-                                                <xsl:when
-                                                    test="(count(dde:endIdentifier) + count(dde:endName) + count(dde:endCoordinate)) > 0">
-                                                    <gml:end>
-                                                      <gml:TimeInstant>
-                                                      <xsl:if test="dde:endIdentifier">
-                                                      <xsl:element name="gml:identifier">
-                                                      <xsl:attribute name="codeSpace">
-                                                      <!-- codespace is required -->
-                                                      <xsl:choose>
-                                                      <xsl:when test="dde:endIdentifier/dde:codespace">
-                                                      <xsl:value-of
-                                                      select="dde:endIdentifier/dde:codespace"/>
-                                                      </xsl:when>
-                                                      <xsl:when test="dde:endIdentifier/dde:authority">
-                                                      <xsl:value-of
-                                                      select="dde:endIdentifier/dde:authority"/>
-                                                      </xsl:when>
-                                                      <xsl:otherwise>
-                                                      <xsl:value-of select="string('nilReason missing')"
-                                                      />
-                                                      </xsl:otherwise>
-                                                      </xsl:choose>
-                                                      </xsl:attribute>
-                                                      <xsl:value-of select="dde:endIdentifier/dde:code"
-                                                      />
-                                                      </xsl:element>
-                                                      </xsl:if>
-                                                      <xsl:if test="dde:endName">
-                                                      <gml:name>
-                                                      <xsl:value-of select="dde:endName"/>
-                                                      </gml:name>
-                                                      </xsl:if>
-                                                      <xsl:choose>
-                                                      <xsl:when test="dde:endCoordinate">
-                                                      <xsl:element name="gml:timePosition">
-                                                      <xsl:attribute name="frame">
-                                                      <xsl:value-of
-                                                      select="concat(dde:coordinateUnits, ' before present')"
-                                                      />
-                                                      </xsl:attribute>
-                                                      <xsl:value-of select="dde:endCoordinate"/>
-                                                      </xsl:element>
-                                                      </xsl:when>
-                                                      <xsl:otherwise>
-                                                      <gml:timePosition indeterminatePosition="unknown"
-                                                      />
-                                                      </xsl:otherwise>
-                                                      </xsl:choose>
-                                                      </gml:TimeInstant>
-                                                    </gml:end>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:element name="gml:end">
-                                                      <xsl:attribute name="nilReason">
-                                                      <xsl:value-of select="string('inapplicable')"/>
-                                                      </xsl:attribute>
-                                                    </xsl:element>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </gml:TimePeriod>
-                                    </gex:extent>
-                                </xsl:otherwise>
+                                                  </gml:TimeInstant>
+                                                </gml:begin>
+                                                <gml:end>
+                                                  <gml:TimeInstant>
+                                                  <xsl:if test="dde:endName">
+                                                  <gml:name>
+                                                  <xsl:value-of select="dde:endName"/>
+                                                  </gml:name>
+                                                  </xsl:if>
+                                                  <gml:timePosition>
+                                                  <xsl:choose>
+                                                  <xsl:when test="dde:temporalExtent/dde:endDate">
+                                                  <xsl:value-of
+                                                  select="dde:temporalExtent/dde:endDate"/>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:attribute name="indeterminatePosition"
+                                                  select="unknown"/>
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </gml:timePosition>
+                                                  </gml:TimeInstant>
+                                                </gml:end>
+                                            </gml:TimePeriod>
+                                        </gex:extent>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <!-- geologic age, by name, interval (geologic age) identifier or time position coordinates... -->
+                                        <gex:extent>
+                                            <gml:TimePeriod>
+                                                <gml:description>
+                                                  <xsl:value-of
+                                                  select="concat('geoTime: ', ../dde:geoTime)"/>
+                                                </gml:description>
+                                                <gml:begin>
+                                                  <!-- beginName is mandatory in DDE -->
+                                                  <gml:TimeInstant>
+                                                  <xsl:if test="dde:beginIdentifier">
+                                                  <xsl:element name="gml:identifier">
+                                                  <xsl:attribute name="codeSpace">
+                                                  <!-- codespace is required -->
+                                                  <xsl:choose>
+                                                  <xsl:when test="dde:beginIdentifier/dde:codespace">
+                                                  <xsl:value-of
+                                                  select="dde:beginIdentifier/dde:codespace"/>
+                                                  </xsl:when>
+                                                  <xsl:when test="dde:beginIdentifier/dde:authority">
+                                                  <xsl:value-of
+                                                  select="dde:beginIdentifier/dde:authority"/>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="string('nilReason missing')"
+                                                  />
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </xsl:attribute>
+                                                  <xsl:value-of
+                                                  select="dde:beginIdentifier/dde:code"/>
+                                                  </xsl:element>
+                                                  </xsl:if>
+                                                  <!-- begin name is required -->
+                                                  <gml:name>
+                                                  <xsl:value-of select="dde:beginName"/>
+                                                  </gml:name>
+                                                  <xsl:choose>
+                                                  <xsl:when test="dde:beginCoordinate">
+                                                  <xsl:element name="gml:timePosition">
+                                                  <xsl:attribute name="frame">
+                                                  <xsl:value-of
+                                                  select="concat(dde:coordinateUnits, ' before present')"
+                                                  />
+                                                  </xsl:attribute>
+                                                  <xsl:value-of select="dde:beginCoordinate"/>
+                                                  </xsl:element>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <gml:timePosition indeterminatePosition="unknown"
+                                                  />
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </gml:TimeInstant>
+                                                </gml:begin>
+                                                <xsl:choose>
+                                                  <xsl:when
+                                                  test="(count(dde:endIdentifier) + count(dde:endName) + count(dde:endCoordinate)) > 0">
+                                                  <gml:end>
+                                                  <gml:TimeInstant>
+                                                  <xsl:if test="dde:endIdentifier">
+                                                  <xsl:element name="gml:identifier">
+                                                  <xsl:attribute name="codeSpace">
+                                                  <!-- codespace is required -->
+                                                  <xsl:choose>
+                                                  <xsl:when test="dde:endIdentifier/dde:codespace">
+                                                  <xsl:value-of
+                                                  select="dde:endIdentifier/dde:codespace"/>
+                                                  </xsl:when>
+                                                  <xsl:when test="dde:endIdentifier/dde:authority">
+                                                  <xsl:value-of
+                                                  select="dde:endIdentifier/dde:authority"/>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="string('nilReason missing')"
+                                                  />
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </xsl:attribute>
+                                                  <xsl:value-of select="dde:endIdentifier/dde:code"
+                                                  />
+                                                  </xsl:element>
+                                                  </xsl:if>
+                                                  <xsl:if test="dde:endName">
+                                                  <gml:name>
+                                                  <xsl:value-of select="dde:endName"/>
+                                                  </gml:name>
+                                                  </xsl:if>
+                                                  <xsl:choose>
+                                                  <xsl:when test="dde:endCoordinate">
+                                                  <xsl:element name="gml:timePosition">
+                                                  <xsl:attribute name="frame">
+                                                  <xsl:value-of
+                                                  select="concat(dde:coordinateUnits, ' before present')"
+                                                  />
+                                                  </xsl:attribute>
+                                                  <xsl:value-of select="dde:endCoordinate"/>
+                                                  </xsl:element>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <gml:timePosition indeterminatePosition="unknown"
+                                                  />
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  </gml:TimeInstant>
+                                                  </gml:end>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:element name="gml:end">
+                                                  <xsl:attribute name="nilReason">
+                                                  <xsl:value-of select="string('inapplicable')"/>
+                                                  </xsl:attribute>
+                                                  </xsl:element>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
+                                            </gml:TimePeriod>
+                                        </gex:extent>
+                                    </xsl:otherwise>
                                 </xsl:choose>
                             </gex:EX_TemporalExtent>
                         </gex:temporalElement>
@@ -915,6 +1173,19 @@
             </mri:extent>
             <!-- end if there is a geographic or temporal extent -->
 
+<!--  DDE processingLevel is in imagery section  -->
+            <xsl:if test="//dde:imageryInfo//dde:processingLevel">
+            <mri:processingLevel>
+                <mcc:MD_Identifier>
+                    <mcc:code>
+                        <gco:CharacterString>
+                            <xsl:value-of select="//dde:imageryInfo//dde:processingLevel"/>
+                        </gco:CharacterString>
+                    </mcc:code>
+                </mcc:MD_Identifier>
+            </mri:processingLevel>
+            </xsl:if>
+            
             <xsl:for-each select="dde:browseGraphic">
                 <mri:graphicOverview>
                     <mcc:MD_BrowseGraphic>
@@ -957,16 +1228,24 @@
                 </mri:graphicOverview>
             </xsl:for-each>
             <!-- <xsl:if test= if there is a topic category starts with 'GI_' -->
-            <xsl:if test="exists(dde:topicCategory[starts-with(text(), 'GI_')]) or dde:topicCategory[text() = 'dataScience']">
+            <xsl:if
+                test="exists(dde:topicCategory[starts-with(text(), 'GI_')]) or dde:topicCategory[text() = 'dataScience']">
                 <mri:descriptiveKeywords>
                     <mri:MD_Keywords>
                         <xsl:for-each select="dde:topicCategory[starts-with(text(), 'GI_')]">
                             <mri:keyword>
                                 <gco:CharacterString>
-                                    <xsl:value-of select="."/>
+                                    <xsl:value-of select="string(.)"/>
                                 </gco:CharacterString>
                             </mri:keyword>
                         </xsl:for-each>
+                        <xsl:if test="dde:topicCategory[text() = 'dataScience']">
+                            <mri:keyword>
+                                <gco:CharacterString>
+                                    <xsl:value-of select="string('dataScience')"/>
+                                </gco:CharacterString>
+                            </mri:keyword>
+                        </xsl:if>
                         <mri:type>
                             <mri:MD_KeywordTypeCode
                                 codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
@@ -975,7 +1254,8 @@
                         <mri:thesaurusName>
                             <cit:CI_Citation>
                                 <cit:title>
-                                    <gco:CharacterString>DDE topic category extensions</gco:CharacterString>
+                                    <gco:CharacterString>DDE topic category
+                                        extensions</gco:CharacterString>
                                 </cit:title>
                             </cit:CI_Citation>
                         </mri:thesaurusName>
@@ -989,9 +1269,19 @@
                 <mri:MD_Keywords>
                     <xsl:for-each select="dde:keyword">
                         <mri:keyword>
-                            <gco:CharacterString>
-                                <xsl:value-of select="."/>
-                            </gco:CharacterString>
+                            <xsl:choose>
+                                <xsl:when test="./@href">
+                                    <xsl:element name="gcx:Anchor">
+                                        <xsl:attribute name="xlink:href" select="./@href"/>
+                                        <xsl:value-of select="string(.)"/>
+                                    </xsl:element>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <gco:CharacterString>
+                                        <xsl:value-of select="string(.)"/>
+                                    </gco:CharacterString>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </mri:keyword>
                     </xsl:for-each>
                     <mri:type>
@@ -1005,9 +1295,24 @@
             <xsl:for-each select="dde:restriction">
                 <mri:resourceConstraints>
                     <mco:MD_LegalConstraints>
-                        <xsl:if test="dde:restrictionText/@uri">
+                        <xsl:if test="dde:restrictionText/@href">
                             <mco:reference>
-                                <xsl:attribute name="xlink:href" select="dde:restrictionText/@uri"/>
+                                <cit:CI_Citation>
+                                    <cit:title>
+                                        <gco:CharacterString>
+                                            <xsl:value-of select="dde:restrictionText"/>
+                                        </gco:CharacterString>
+                                    </cit:title>
+                                    <cit:onlineResource>
+                                        <cit:CI_OnlineResource>
+                                            <cit:linkage>
+                                                <gco:CharacterString>
+                                                  <xsl:value-of select="dde:restrictionText/@href"/>
+                                                </gco:CharacterString>
+                                            </cit:linkage>
+                                        </cit:CI_OnlineResource>
+                                    </cit:onlineResource>
+                                </cit:CI_Citation>
                             </mco:reference>
                         </xsl:if>
                         <xsl:for-each select="dde:restrictionCode">
@@ -1021,7 +1326,7 @@
                                 </xsl:call-template>
                             </mco:useConstraints>
                         </xsl:for-each>
-                        <xsl:if test="dde:restrictionText">
+                        <xsl:if test="dde:restrictionText and not(dde:restrictionText/@href)">
                             <mco:otherConstraints>
                                 <gco:CharacterString>
                                     <xsl:value-of select="dde:restrictionText"/>
@@ -1041,19 +1346,21 @@
                                     <xsl:choose>
                                         <xsl:when test="dde:resourceCitation/dde:title">
                                             <gco:CharacterString>
-                                                <xsl:value-of select="dde:resourceCitation/dde:title"/>
+                                                <xsl:value-of
+                                                  select="dde:resourceCitation/dde:title"/>
                                             </gco:CharacterString>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <xsl:attribute name="gco:nilReason" select ="missing"/>
+                                            <xsl:attribute name="gco:nilReason" select="missing"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </cit:title>
-                                
+
                                 <cit:onlineResource>
                                     <xsl:for-each select="dde:resourceCitation">
                                         <xsl:call-template name="CI_OnlineResource">
-                                            <xsl:with-param name="theOLR" select="./dde:resourceCitation"/>
+                                            <xsl:with-param name="theOLR"
+                                                select="./dde:resourceCitation"/>
                                         </xsl:call-template>
                                     </xsl:for-each>
                                 </cit:onlineResource>
@@ -1061,48 +1368,53 @@
                         </mri:name>
                         <mri:associationType>
                             <xsl:element name="mri:DS_AssociationTypeCode">
-                                <xsl:attribute name= "codeList" select="concat($DDEcodeListLocation, string('#DS_AssociationTypeCode'))"/>
-                                <xsl:attribute name="codeListValue" select="string('crossReference')"/>
+                                <xsl:attribute name="codeList"
+                                    select="concat($DDEcodeListLocation, string('#DS_AssociationTypeCode'))"/>
+                                <xsl:attribute name="codeListValue"
+                                    select="string('crossReference')"/>
                                 <!--  the dde:relation value is the text content of the associationtype code   -->
                                 <xsl:if test="dde:relation">
                                     <xsl:value-of select="dde:relation"/>
                                 </xsl:if>
                             </xsl:element>
-                         </mri:associationType>
+                        </mri:associationType>
                     </mri:MD_AssociatedResource>
                 </mri:associatedResource>
-            </xsl:for-each>  <!-- done with associated resources -->
+            </xsl:for-each>
+            <!-- done with associated resources -->
 
-            <xsl:if test="not(exists(dde:resourceType[text() = 'Service']))">
-            <mri:defaultLocale>
-                <lan:PT_Locale>
-                    <lan:language>
-                        <xsl:call-template name="writeCodelistElement">
-                            <xsl:with-param name="elementName" select="'lan:LanguageCode'"/>
-                            <xsl:with-param name="codeListName"
-                                select="'https://www.loc.gov/standards/iso639-2/php/code_list.php'"/>
-                            <xsl:with-param name="codeListValue" select="dde:language[1]"/>
-                        </xsl:call-template>
-                    </lan:language>
+            <xsl:if test="not(exists(dde:resourceType[text() = 'service']))">
+                <mri:defaultLocale>
+                    <lan:PT_Locale>
+                        <lan:language>
+                            <xsl:call-template name="writeCodelistElement">
+                                <xsl:with-param name="elementName" select="'lan:LanguageCode'"/>
+                                <xsl:with-param name="codeListName"
+                                    select="'https://www.loc.gov/standards/iso639-2/php/code_list.php'"/>
+                                <xsl:with-param name="codeListValue" select="dde:language[1]"/>
+                            </xsl:call-template>
+                        </lan:language>
 
-                    <lan:characterEncoding>
-                        <xsl:call-template name="writeCodelistElement">
-                            <xsl:with-param name="elementName" select="'lan:MD_CharacterSetCode'"/>
-                            <xsl:with-param name="codeListName"
-                                select="'http://www.iana.org/assignments/character-sets'"/>
-                            <xsl:with-param name="codeListValue" select="dde:characterEncoding[1]"/>
-                        </xsl:call-template>
-                    </lan:characterEncoding>
-                </lan:PT_Locale>
-            </mri:defaultLocale>
+                        <lan:characterEncoding>
+                            <xsl:call-template name="writeCodelistElement">
+                                <xsl:with-param name="elementName"
+                                    select="'lan:MD_CharacterSetCode'"/>
+                                <xsl:with-param name="codeListName"
+                                    select="'http://www.iana.org/assignments/character-sets'"/>
+                                <xsl:with-param name="codeListValue"
+                                    select="dde:characterEncoding[1]"/>
+                            </xsl:call-template>
+                        </lan:characterEncoding>
+                    </lan:PT_Locale>
+                </mri:defaultLocale>
 
-            <xsl:if test="dde:additionalDocumentation">
-                <mri:supplementalInformation>
-                    <gco:CharacterString>
-                        <xsl:value-of select="dde:additionalDocumentation"/>
-                    </gco:CharacterString>
-                </mri:supplementalInformation>
-            </xsl:if>
+                <xsl:if test="dde:additionalDocumentation">
+                    <mri:supplementalInformation>
+                        <gco:CharacterString>
+                            <xsl:value-of select="dde:additionalDocumentation"/>
+                        </gco:CharacterString>
+                    </mri:supplementalInformation>
+                </xsl:if>
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
@@ -1127,9 +1439,9 @@
                         <!-- the anyValidURI value is used for testing with paths -->
                         <!--<xsl:value-of select="'anyValidURI'"/>-->
                         <!-- commented out for testing -->
-                        <xsl:value-of select="."/>
+                        <xsl:value-of select="string(.)"/>
                     </xsl:attribute>
-                    <xsl:value-of select="."/>
+                    <xsl:value-of select="string(.)"/>
                 </xsl:element>
                 <!--  </xsl:element> -->
                 <!--<xsl:if test="@*">

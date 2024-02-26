@@ -55,6 +55,9 @@
          <mdb:resourceScope>
             <mcc:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
          </mdb:resourceScope>
+         <mdb:name>
+            <gco:CharacterString>webPage</gco:CharacterString>
+         </mdb:name>
       </mdb:MD_MetadataScope>
    </mdb:metadataScope>
    <mdb:contact xlink:title="Brian Meyer" >
@@ -257,11 +260,13 @@
 
    <mdb:identificationInfo>
       <mri:MD_DataIdentification>
+         
          <mri:citation >
             <cit:CI_Citation>
                <cit:title>
                   <gco:CharacterString>Total Sediment Thickness of the World's Oceans &amp; Marginal Seas</gco:CharacterString>
-               </cit:title>         
+               </cit:title> 
+               
                <cit:alternateTitle>
                   <gco:CharacterString>alt title</gco:CharacterString>
                </cit:alternateTitle>
@@ -278,6 +283,13 @@
                <cit:edition>
                   <gco:CharacterString></gco:CharacterString>
                </cit:edition>
+               <cit:identifier>
+                  <mcc:MD_Identifier>
+                     <mcc:code>
+                        <gco:CharacterString>alc:ksghj5r4py0h</gco:CharacterString>
+                     </mcc:code>
+                  </mcc:MD_Identifier>
+               </cit:identifier>
                <cit:citedResponsibleParty>
                   <cit:CI_Responsibility uuid="A085BFDF-C10F-818D-3EA8-08330125842F">
                      <cit:role>
@@ -1378,6 +1390,7 @@
                </mri:initiativeType>
             </mri:MD_AssociatedResource>
          </mri:associatedResource>
+         
          <mri:defaultLocale>
             <lan:PT_Locale>
                <lan:language>
@@ -1558,8 +1571,11 @@
                <mrd:distributionOrderProcess >
                   <mrd:MD_StandardOrderProcess>
                      <mrd:fees>
-                        <gco:CharacterString>None</gco:CharacterString>
+                        <gco:CharacterString>No fees</gco:CharacterString>
                      </mrd:fees>
+                     <mrd:orderingInstructions>
+                        <gco:CharacterString>standard order process ordering instructions</gco:CharacterString>
+                     </mrd:orderingInstructions>
                   </mrd:MD_StandardOrderProcess>
                </mrd:distributionOrderProcess>
             </mrd:MD_Distributor>
@@ -1572,10 +1588,11 @@
                <mrd:onLine >
                   <cit:CI_OnlineResource>
                      <cit:linkage>
-                        <gco:CharacterString xmlns:gml="http://www.opengis.net/gml/3.2">http://www.ngdc.noaa.gov/mgg/sedthick/data/gmt_netcdf/</gco:CharacterString>
+                        <gco:CharacterString>http://www.ngdc.noaa.gov/mgg/sedthick/data/gmt_netcdf/</gco:CharacterString>
                      </cit:linkage>
                   </cit:CI_OnlineResource>
                </mrd:onLine>
+               <mrd:offLine></mrd:offLine>
             </mrd:MD_DigitalTransferOptions>
          </mrd:transferOptions>
          <mrd:transferOptions >
@@ -1608,7 +1625,7 @@
          </mrd:transferOptions>
       </mrd:MD_Distribution>
    </mdb:distributionInfo>
-   <mdb:dataQualityInfo xmlns:gml="http://www.opengis.net/gml/3.2">
+   <mdb:dataQualityInfo>
       <dqm:DQ_DataQuality>
 
          <dqm:scope>

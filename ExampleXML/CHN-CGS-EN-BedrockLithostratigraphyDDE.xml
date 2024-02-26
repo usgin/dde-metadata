@@ -5,9 +5,6 @@
                  xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 ../DDEMetadataXSD_20240103.xsd">
    <dde:metadataIdentifier>
       <dde:code>22e1d1ca752a7bc3ff4e90014e760e8a08947654</dde:code>
-      <dde:codeSpace/>
-      <dde:version/>
-      <dde:description/>
    </dde:metadataIdentifier>
    <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
    <dde:metadataResponsibleParty>
@@ -64,24 +61,23 @@
          <dde:electronicMailAddress>ytiantian@mail.cgs.gov.cn</dde:electronicMailAddress>
       </dde:resourceResponsibleParty>
       <dde:browseGraphic>
-         <dde:title>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</dde:title>
+         <dde:title>small thumbnail geologic map of China</dde:title>
          <dde:applicationProfile>png</dde:applicationProfile>
          <dde:description>thumbnail</dde:description>
-         <dde:linkage/>
+         <dde:linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654_s.png</dde:linkage>
          <dde:function>browseGraphic</dde:function>
       </dde:browseGraphic>
       <dde:browseGraphic>
-         <dde:title>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</dde:title>
+         <dde:title>Large thumbnail geologic map of China</dde:title>
          <dde:applicationProfile>png</dde:applicationProfile>
          <dde:description>large_thumbnail</dde:description>
-         <dde:linkage/>
+         <dde:linkage>http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//resources.get?uuid=22e1d1ca752a7bc3ff4e90014e760e8a08947654&amp;fname=22e1d1ca752a7bc3ff4e90014e760e8a08947654.png</dde:linkage>
          <dde:function>browseGraphic</dde:function>
       </dde:browseGraphic>
       <dde:language>eng</dde:language>
       <dde:characterEncoding>US-ASCII</dde:characterEncoding>
       <dde:restriction>
          <dde:restrictionText>useLimitation:The 1:1M geological map data is available online for your personal, teaching, research, or non-commercial use (The copyright belongs to Development Research Center of China Geological Survey). Your use of any information provided at http://en.cgs.gov.cn/ is at your own risk.; </dde:restrictionText>
-         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
          <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
       </dde:restriction>
       <dde:dataQuality>standaloneQualityReport:Text summary of quality information here; </dde:dataQuality>
@@ -104,7 +100,6 @@
       </dde:associatedResource>
       <dde:metadataReference>
          <dde:title>alt metadata</dde:title>
-         <dde:description/>
          <dde:linkage nilReason="missing"/>
       </dde:metadataReference>
       <dde:distributionInfo>
@@ -116,7 +111,6 @@
          </dde:onlineResource>
          <dde:onlineResource>
             <dde:title>default (LegendURL)</dde:title>
-            <dde:description/>
             <dde:linkage>http://onegeologychina.cgs.gov.cn/cgi-bin/mapserv.exe?map=C:/ms4w/apps/CHINAGEOLOGY/CHINAMMAP_ENGLISH.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=CHN_CGS_EN_1M_BLS&amp;format=image/png&amp;STYLE=default</dde:linkage>
             <dde:function>fileAccess</dde:function>
          </dde:onlineResource>
@@ -127,7 +121,9 @@
          </dde:distributionResponsibleParty>
          <dde:spatialRepresentationInfo>
             <dde:spatialRepresentationType>vector</dde:spatialRepresentationType>
-            <dde:spatialResolution/>
+            <dde:spatialResolution>
+               1:500,000
+            </dde:spatialResolution>
             <dde:referenceSystemType>projected</dde:referenceSystemType>
             <dde:referenceSystemIdentifier>
                <dde:authority>
@@ -136,8 +132,6 @@
                </dde:authority>
                <dde:code>EPSG:33329</dde:code>
                <dde:codeSpace>https://epsg.io/</dde:codeSpace>
-               <dde:version/>
-               <dde:description/>
             </dde:referenceSystemIdentifier>
          </dde:spatialRepresentationInfo>
       </dde:distributionInfo>

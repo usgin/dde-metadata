@@ -57,7 +57,7 @@
             <dateType>lastUpdate</dateType>
         </resourceDate>
         <abstract>Lithostratigraphic unit distribution for the Geologic Map of Arizona at 1:1,000,000-scale. Shows entire state with map units defined broadly by age and lithologic type. The map was compiled by modifying the previous 1:1000000 statemap version with more recent mapping.</abstract>
-        
+
         <keyword>geographicarea@United States</keyword>
         <keyword href="https://edits.nationalmap.gov/apps/gaz-domestic/public/gaz-record/1779777">Arizona</keyword>
         <keyword>Geology</keyword>
@@ -93,7 +93,7 @@
             </identifier>
             <country>US</country>
             <electronicMailAddress>richards@azgs.az.gov</electronicMailAddress>
-        </resourceResponsibleParty>        
+        </resourceResponsibleParty>
         <browseGraphic>
             <title>Quick view lithostratigraphic map of Arizona</title>
             <applicationProfile>application/xml</applicationProfile>
@@ -121,7 +121,7 @@
             <restrictionCode>copyright</restrictionCode>
             <restrictionCode>private</restrictionCode>
         </restriction>
-        
+
         <edition>4</edition>
         <dataQuality>Line work reviewed for consistency with source maps</dataQuality>
         <lineage>Source maps generalized at source scale then reduced to compilation scale and redrawn to harmonize with other source</lineage>
@@ -146,9 +146,9 @@
             <southBoundLatitude>31.332177</southBoundLatitude>
             <northBoundLatitude>37.00426</northBoundLatitude>
         </geographicExtent>
-        
+
         <temporalExtent>
-            <beginName >Early Proterozoic</beginName>
+            <beginName>Early Proterozoic</beginName>
             <beginIdentifier>
                 <authority>
                     <name>International Commission on Stratigraphy</name>
@@ -161,7 +161,8 @@
             <endIdentifier>
                 <authority>
                     <name>International Commission on Stratigraphy</name>
-                    <role>resourceProvider</role></authority>
+                    <role>resourceProvider</role>
+                </authority>
                 <code>http://resource.geosciml.org/classifier/ics/ischart/Holocene</code>
                 <description>Holocene</description>
             </endIdentifier>
@@ -169,10 +170,13 @@
             <coordinateUnits>Ma</coordinateUnits>
         </temporalExtent>
         <associatedResource>
-            <title>Geologic Map of Arizona</title>
-            <description>This is the 4th and latest compilation of the Geologic Map of Arizona published in 2000 at 1:1,000,000 map scale.</description>
-            <linkage>https://hdl.handle.net/10150/630741</linkage>
-            <function>information</function>
+            <resourceCitation>
+                <title>Geologic Map of Arizona</title>
+                <description>This is the 4th and latest compilation of the Geologic Map of Arizona published in 2000 at 1:1,000,000 map scale.</description>
+                <linkage>https://hdl.handle.net/10150/630741</linkage>
+                <function>information</function>
+            </resourceCitation>
+            <relation>repository</relation>
         </associatedResource>
         <metadataReference>
             <title>ISO19115 metadata record</title>
@@ -256,5 +260,11 @@
                 </referenceSystemIdentifier>
             </spatialRepresentationInfo>
         </distributionInfo>
+        <imageryInfo>
+            <equipment>this is some equipement</equipment>
+            <signalGenerator>big honking amplifier</signalGenerator>
+            <processingLevel>Level1</processingLevel>
+        </imageryInfo>
+
     </identificationInfo>
 </MD_Metadata>
