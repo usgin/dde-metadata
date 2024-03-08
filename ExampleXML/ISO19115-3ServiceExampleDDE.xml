@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dde:MD_Metadata xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 DDEMetadataXSD_20240103.xsd">
+   <dde:metadataIdentifier>
+      <dde:code>eo-pdgs-landsat-datacube-dde</dde:code>
+   </dde:metadataIdentifier>
+   <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
+   <dde:metadataResponsibleParty>
+      <dde:name>ESA/ESRINESRIN Earth Observation Help
+                                    Desk</dde:name>
+      <dde:role>pointOfContact</dde:role>
+      <dde:country>IT</dde:country>
+      <dde:electronicMailAddress>eohelp@esa.int</dde:electronicMailAddress>
+   </dde:metadataResponsibleParty>
+   <dde:metadataDate>
+      <dde:date>2019-05-15T09:00:00</dde:date>
+      <dde:dateType>revision</dde:dateType>
+   </dde:metadataDate>
+   <dde:metadataDate>
+      <dde:date>2024-02-27T11:01:41.1731028-07:00</dde:date>
+      <dde:dateType>unavailable</dde:dateType>
+   </dde:metadataDate>
+   <dde:identificationInfo>
+      <dde:resourceIdentifier>
+         <dde:code>eo-pdgs-landsat-datacube</dde:code>
+      </dde:resourceIdentifier>
+      <dde:title>Example service metadata</dde:title>
+      <dde:resourceDate>
+         <dde:date>2020-12-04T00:00:00</dde:date>
+         <dde:dateType>revision</dde:dateType>
+      </dde:resourceDate>
+      <dde:abstract>ESA PDGS-DataCube enables multi-temporal and pixel-based access
+                    to a subset of the data available in the European Space Agency dissemination
+                    services, including Heritage Missions (HM), Third-Party Missions (TPM) and Earth
+                    Explorer (EE) data.</dde:abstract>
+      <dde:keyword href="https://earth.esa.int/concept/landsat-7">Landsat7</dde:keyword>
+      <dde:keyword href="https://earth.esa.int/concept/landsat-8">Landsat8</dde:keyword>
+      <dde:keyword nilReason="missing"/>
+      <dde:topicCategory>other:missing</dde:topicCategory>
+      <dde:resourceType>service</dde:resourceType>
+      <dde:additionalDocumentation/>
+      <dde:resourceResponsibleParty>
+         <dde:name>ESA/ESRINESRIN Earth Observation Help
+                                            Desk</dde:name>
+         <dde:role>pointOfContact</dde:role>
+         <dde:country>IT</dde:country>
+         <dde:electronicMailAddress>eohelp@esa.int</dde:electronicMailAddress>
+      </dde:resourceResponsibleParty>
+      <dde:language>--</dde:language>
+      <dde:characterEncoding>other:missing</dde:characterEncoding>
+      <dde:restriction>
+         <dde:restrictionText>otherConstraints:No conditions apply to access and use.; </dde:restrictionText>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+      </dde:restriction>
+      <dde:restriction>
+         <dde:restrictionText>otherConstraints:no limitations to public access.; </dde:restrictionText>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+      </dde:restriction>
+      <dde:edition>9.5</dde:edition>
+      <dde:dataQuality>title:OGC Web Coverage Service 2.0; explanation:This Spatial Data Service is conformant with
+                                    the OGC Web Coverage Service 2.0
+                                    specification; </dde:dataQuality>
+      <dde:lineage>Data acquisition information: description:remoteSensing; title:Landsat7; alternateTitle:LANDSAT-7; code:Landsat7; description:; title:ETM; alternateTitle:ETM+; code:ETM; </dde:lineage>
+      <dde:acquisitionType>remoteSensing</dde:acquisitionType>
+      <dde:geoTime>geoTime description not provided</dde:geoTime>
+      <dde:geographicExtent>
+         <dde:verbatimCoordinateLocation nilReason="missing"/>
+         <dde:westBoundLongitude>-180</dde:westBoundLongitude>
+         <dde:eastBoundLongitude>180</dde:eastBoundLongitude>
+         <dde:southBoundLatitude>-90</dde:southBoundLatitude>
+         <dde:northBoundLatitude>90</dde:northBoundLatitude>
+      </dde:geographicExtent>
+      <dde:associatedResource>
+         <dde:resourceCitation>
+            <dde:title>Landsat 7 ETM+ (Enhanced Thematic Mapper Plus) Geolocated Terrain Corrected Systematic processing Identifier: https://idn.ceos.org:C1532648148-ESA</dde:title>
+            <dde:description/>
+            <dde:linkage>https://eovoc.spacebel.be/collections/series/items/LANDSAT.ETM.GTC</dde:linkage>
+         </dde:resourceCitation>
+         <dde:relation>dependency</dde:relation>
+      </dde:associatedResource>
+      <dde:distributionInfo>
+         <dde:onlineResource>
+            <dde:title>DescribeCoverage</dde:title>
+            <dde:description>accessPoint</dde:description>
+            <dde:linkage>https://datacube.pdgs.eo.esa.int/wcs?service=WCS&amp;Request=DescribeCove
+                                    rage&amp;version=2.0.0&amp;CoverageId=LE7_RGB</dde:linkage>
+            <dde:function>information</dde:function>
+         </dde:onlineResource>
+         <dde:onlineResource>
+            <dde:title>GetCapabilities</dde:title>
+            <dde:description>accessPoint</dde:description>
+            <dde:linkage>https://datacube.pdgs.eo.esa.int/wcs?service=WCS&amp;Request=GetCapabilit
+                                    ies&amp;version=2.0.0</dde:linkage>
+            <dde:function>information</dde:function>
+         </dde:onlineResource>
+         <dde:distributionResponsibleParty>
+            <dde:name>Arizona Geological Survey</dde:name>
+            <dde:role>pointOfContact</dde:role>
+            <dde:country>US</dde:country>
+            <dde:electronicMailAddress>data@azgs.az.gov</dde:electronicMailAddress>
+         </dde:distributionResponsibleParty>
+      </dde:distributionInfo>
+      <dde:serviceIdentificationInfo>
+         <dde:serviceType>other:transformation</dde:serviceType>
+         <dde:containOperations>operationName:getData; operationDescription:Description of the operation inputs, outputs, effects; invocationName:operationInvocationName; connectPoint:https://operation.connectpoint.org/427637; parameter:operation parameter aName; operation parmeter attribute type aName; </dde:containOperations>
+         <dde:containOperations>operationName:simpleOperation; connectPoint:https://operation.org/connectPoint?{parameter1}; </dde:containOperations>
+         <dde:accessProperties>fees:fees to use sevice; orderingInstructions:service access properties ordering instructions; turnaround:serviceturnaround; </dde:accessProperties>
+      </dde:serviceIdentificationInfo>
+   </dde:identificationInfo>
+</dde:MD_Metadata>

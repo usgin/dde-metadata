@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
                  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
-                 xmlns:dqm="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+                 xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
                  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
                  xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
@@ -14,7 +14,6 @@
                  xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
                  xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
                  xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
-                 xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
                  xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
                  xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
                  xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
@@ -49,10 +48,8 @@
    </mdb:metadataIdentifier>
    <mdb:metadataScope>
       <mdb:MD_MetadataScope>
-         <mdb:resourceScope>
-            <mcc:MD_ScopeCode codeList="https://www.ddeworld.org/resource/codelist/ResourceTypeCode"
-                              codeListValue="dataset">dataset</mcc:MD_ScopeCode>
-         </mdb:resourceScope>
+         
+         <mdb:resourceScope gco:nilReason="missing"/>
          <mdb:name>
             <gco:CharacterString>dataset</gco:CharacterString>
          </mdb:name>
@@ -260,6 +257,7 @@
                <cit:alternateTitle>
                   <gco:CharacterString>Arizona 1:1000000 Lithostratigraphic map</gco:CharacterString>
                </cit:alternateTitle>
+               
                <cit:date>
                   <cit:CI_Date>
                      <cit:date>
@@ -287,6 +285,7 @@
                </cit:edition>
                <cit:identifier>
                   <mcc:MD_Identifier>
+                     
                      <mcc:authority>
                         <cit:CI_Citation>
                            <cit:title>
@@ -297,6 +296,12 @@
                      <mcc:code>
                         <gco:CharacterString>https://doi.org/23609/53w7klh</gco:CharacterString>
                      </mcc:code>
+                     <mcc:codeSpace>
+                        <gco:CharacterString></gco:CharacterString>
+                     </mcc:codeSpace>
+                     <mcc:description>
+                        <gco:CharacterString></gco:CharacterString>
+                     </mcc:description>
                   </mcc:MD_Identifier>
                </cit:identifier>
                <cit:citedResponsibleParty>
@@ -411,13 +416,9 @@
          </mri:spatialResolution>
          <mri:spatialResolution>
             <mri:MD_Resolution>
-               <mri:equivalentScale>
-                  <mri:MD_RepresentativeFraction>
-                     <mri:denominator>
-                        <gco:Integer>1000000</gco:Integer>
-                     </mri:denominator>
-                  </mri:MD_RepresentativeFraction>
-               </mri:equivalentScale>
+               <mri:levelOfDetail>
+                  <gco:CharacterString></gco:CharacterString>
+               </mri:levelOfDetail>
             </mri:MD_Resolution>
          </mri:spatialResolution>
          <mri:topicCategory>
@@ -469,6 +470,7 @@
                   <gex:EX_TemporalExtent>
                      <gex:extent>
                         <gml:TimePeriod>
+                           
                            <gml:description>geoTime: Early Proterozoic, Middle Proterozoic, Cambrian, Devonian, Mississippian, Pennsylvanian, Permian, Mesozoic, Paleogene, Neogene, Holocene</gml:description>
                            <gml:begin>
                               <gml:TimeInstant>
@@ -867,18 +869,18 @@
       </mrd:MD_Distribution>
    </mdb:distributionInfo>
    <mdb:dataQualityInfo>
-      <dqm:DQ_DataQuality>
-         <dqm:scope gco:nilReason="missing"/>
-         <dqm:standaloneQualityReport>
-            <dqm:DQ_StandaloneQualityReportInformation>
-               <dqm:reportReference gco:nilReason="missing"/>
-               <dqm:abstract>
+      <mdq:DQ_DataQuality>
+         <mdq:scope gco:nilReason="missing"/>
+         <mdq:standaloneQualityReport>
+            <mdq:DQ_StandaloneQualityReportInformation>
+               <mdq:reportReference gco:nilReason="missing"/>
+               <mdq:abstract>
                   <gco:CharacterString>Line work reviewed for consistency with source maps</gco:CharacterString>
-               </dqm:abstract>
-            </dqm:DQ_StandaloneQualityReportInformation>
-         </dqm:standaloneQualityReport>
-         <dqm:report gco:nilReason="missing"/>
-      </dqm:DQ_DataQuality>
+               </mdq:abstract>
+            </mdq:DQ_StandaloneQualityReportInformation>
+         </mdq:standaloneQualityReport>
+         <mdq:report gco:nilReason="missing"/>
+      </mdq:DQ_DataQuality>
    </mdb:dataQualityInfo>
    <mdb:resourceLineage>
       <mrl:LI_Lineage>
@@ -927,6 +929,7 @@
       <mac:MI_AcquisitionInformation>
          <mac:operation>
             <mac:MI_Operation>
+               
                <mac:description>
                   <gco:CharacterString>digitalConversionFromPublishedSource</gco:CharacterString>
                </mac:description>
