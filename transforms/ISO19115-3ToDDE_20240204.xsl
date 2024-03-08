@@ -4,9 +4,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gcoold="http://www.isotc211.org/2005/gco" xmlns:gfcold="http://www.isotc211.org/2005/gfc"
     xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
-    xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx"
-    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss"
-    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srvold="http://www.isotc211.org/2005/srv"
+    xmlns:gmi="http://www.isotc211.org/2005/gmi" 
+    xmlns:gmx="http://www.isotc211.org/2005/gmx"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+    xmlns:gss="http://www.isotc211.org/2005/gss"
+    xmlns:gts="http://www.isotc211.org/2005/gts" 
+    xmlns:srvold="http://www.isotc211.org/2005/srv"
     xmlns:gml30="http://www.opengis.net/gml"
     xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
     xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
@@ -191,6 +194,25 @@
                         </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
+                <!-- schema requires min 3 keywords -->
+                <xsl:if test="count(//mri:keyword) &lt; 3">
+                    <xsl:variable name="kcount" select="count(//mri:keyword)"/>
+                   <xsl:choose>
+                       <xsl:when test="$kcount=1">
+                           <dde:keyword nilReason="missing"/>
+                           <dde:keyword nilReason="missing"/>
+                       </xsl:when>
+                       <xsl:when test="$kcount=2">
+                           <dde:keyword nilReason="missing"/>
+                       </xsl:when>
+                       <xsl:otherwise>
+                           <dde:keyword nilReason="missing"/>
+                           <dde:keyword nilReason="missing"/>
+                           <dde:keyword nilReason="missing"/>
+                       </xsl:otherwise>
+                   </xsl:choose>
+                </xsl:if>
+                
 
                 <xsl:for-each
                     select="//mri:descriptiveKeywords/mri:MD_Keywords[mri:thesaurusName//cit:title/gco:CharacterString = 'DDE topic category extensions']">
@@ -507,7 +529,7 @@
                                 test="mdb:contentInfo/mrc:MD_CoverageDescription | mdb:contentInfo/mrc:MD_ImageDescription">
                                 <!-- have imagery data; capture acquisition information about instrument, platform in imagery metadata  
                                    rest gets put here as text in lineage-->
-                                <xsl:text>  AcquisitionInformation:</xsl:text>
+                                <xsl:text>  Image or coverage acquisition information:</xsl:text>
                                 
                                 <xsl:for-each select="./mac:operation">
                                     <xsl:call-template name="getText">
@@ -537,6 +559,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <!-- not imagery, put all acquisition information here -->
+                                <xsl:value-of select="string('Data acquisition information: ')"/>
                                 <xsl:call-template name="getText">
                                     <xsl:with-param name="theNode" select="child::*"/>
                                 </xsl:call-template>
@@ -852,10 +875,11 @@
                         </dde:distributionInfo>
                     </xsl:if>
                 </xsl:for-each>
-
-                <xsl:for-each select="mdb:identificationInfo/srv:SV_ServiceIdentification">
+<!-- use local-name here to avoid problems with srv2.0 vs. srv2.1.  Geonetwork uses srv2.1, 
+                but there is not official ISO interchange schema using srv2.1, mds2.0 uses srv2.0. -->
+                <xsl:for-each select="mdb:identificationInfo/*[local-name(.)='SV_ServiceIdentification']">
                     <dde:serviceIdentificationInfo>
-                        <xsl:variable name="stype" select="string(.//child::srv:serviceType)"/>
+                        <xsl:variable name="stype" select="string(.//child::*[local-name(.)='serviceType'])"/>
                         <xsl:variable name="stval"
                             select="$serviceTypeCheck/entry[@key = $stype]/@value"/>
                         <dde:serviceType>
@@ -864,14 +888,14 @@
                                     <xsl:value-of select="$stype"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="concat('otherService:', $stype)"/>
+                                    <xsl:value-of select="concat('other:', $stype)"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </dde:serviceType>
 
-                        <xsl:for-each select="srv:containsOperations">
+                        <xsl:for-each select="*[local-name(.)='containsOperations']">
                             <dde:containOperations>
-                                <xsl:for-each select="srv:SV_OperationMetadata/*">
+                                <xsl:for-each select="*[local-name(.)='SV_OperationMetadata']/*">
                                     <xsl:if test=".//gco:CharacterString">
                                         <xsl:value-of select="local-name()"/>
                                         <xsl:text>:</xsl:text>
@@ -887,7 +911,7 @@
                         </xsl:for-each>
                         <dde:accessProperties>
                             <xsl:for-each
-                                select="srv:accessProperties/mrd:MD_StandardOrderProcess/*">
+                                select="*[local-name(.)='accessProperties']/mrd:MD_StandardOrderProcess/*">
                                 <xsl:if test=".//gco:CharacterString">
                                     <xsl:value-of select="local-name()"/>
                                     <xsl:text>:</xsl:text>
@@ -909,18 +933,33 @@
                 <xsl:if
                     test="mdb:contentInfo/mrc:MD_CoverageDescription | mdb:contentInfo/mrc:MD_ImageDescription">
                     <dde:imageryInfo>
-                        <!-- instrument and sensor descriptions -->
+                        <!-- instrument and sensor descriptions, other acquisition information is in lineage statement -->
                         <xsl:for-each
                             select="mdb:acquisitionInformation/mac:MI_AcquisitionInformation">
                             <!-- sensor or instrument; other acquisition information goes in lineage -->
                             <xsl:for-each select=".//mac:MI_Instrument | .//mac:MI_Sensor">
                                 <dde:sensor>
+                                    <xsl:if test="position()>1">
+                                        <xsl:value-of select="string('.  ')"/>
+                                    </xsl:if>
+                                    <xsl:choose>
+                                       <xsl:when test="local-name(.)='MI_Instrument'">
+                                           <xsl:value-of select="string('Instrument: ')"/>
+                                       </xsl:when>
+                                        <xsl:when test="local-name(.)='MI_Instrument'">
+                                            <xsl:value-of select="string('Sensor: ')"/>
+                                        </xsl:when>
+                                    </xsl:choose>
                                     <xsl:call-template name="getText">
                                         <xsl:with-param name="theNode" select="child::*"/>
                                     </xsl:call-template>
                                 </dde:sensor>
                             </xsl:for-each>
                             <xsl:for-each select=".//mac:MI_Platform">
+                                <xsl:if test="position()>1">
+                                    <xsl:value-of select="string('.  ')"/>
+                                </xsl:if>
+                                <xsl:value-of select="string('Platform: ')"/>
                                 <dde:platform>
                                     <xsl:call-template name="getText">
                                         <xsl:with-param name="theNode" select="child::*"/>
@@ -1171,7 +1210,7 @@
                             select="$countryLookup/entry[@key = $countryvb]/@value"/>
                         <xsl:choose>
                             <xsl:when test="$countryAbbrev">
-                                <xsl:value-of select="$countryAbbrev"/>
+                                <xsl:value-of select="$countryAbbrev[1]"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of select="string('--')"/>
