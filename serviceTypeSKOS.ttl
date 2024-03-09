@@ -1,0 +1,350 @@
+# baseURI: https://www.ddeworld.org/resource/ontology/serviceType
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ddest: <https://www.ddeworld.org/resource/codelist/servcieType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept
+  rdf:type owl:Class ;
+.
+skos:broader
+  rdf:type owl:AnnotationProperty ;
+.
+skos:inScheme
+  rdf:type owl:AnnotationProperty ;
+.
+skos:prefLabel
+  rdf:type owl:AnnotationProperty ;
+.
+skos:scopeNote
+  rdf:type owl:AnnotationProperty ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataAccessService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#dataService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1.1 Data Access Service"@en ;
+  skos:scopeNote "Service provide filtering and subsetting functions on one or more datasets, based on URL parameters. Operates on a data store provided by the service backend. Includes services for  graph queries (e.g. GQL, Cypher) against a graph database  and SPARQL queries against an RDF triple store  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataMapService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#dataService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1.4 Map service"@en ;
+  skos:scopeNote "services to provide a client view, access, or obtain to a geoscientific map product, the graphic data, a vector data map or image map in the format of WMS, WFS, png/jpeg/tiff, etc., for example.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataOtherService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#dataService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1.5 Other data service"@en ;
+  skos:scopeNote "data service(s) provided not defined above.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataProcessingService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#dataService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1.3 Data processing service"@en ;
+  skos:scopeNote "services provided on geoscience data processing, including disciplinary data processing tools software service (APP), data processing modules (API), data processing web Apps.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1. Data service"@en ;
+  skos:scopeNote "service that provides data.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#dataWorkflowService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#dataService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "1.2 Data workflow service"@en ;
+  skos:scopeNote "the service provided for geoscience data acquisition/collection, transfer, integration, storage, modelling, analysis and visualization, etc.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#discoveryService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "Discovery service"@en ;
+  skos:scopeNote "Service supports searching a non-DDE metadata catalog to locate resources of interest and return metadata records describing those resources.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeDDEScholar>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.5 DDE scholar"@en ;
+  skos:scopeNote "provides scholar portrait service (literatures and relationships) thru data mining from published journal papers.     "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeDeepShovel>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.4 Deep shovel"@en ;
+  skos:scopeNote "provides services of searching and finding information and/or knowledge form published papers.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeGeoscienceCatalogueService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.1 Geoscience knowledge catalogue service"@en ;
+  skos:scopeNote "provides services to return the DDE geoscience knowledge directory of specific disciplines/sub disciplines, or keywords.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeGeoscienceContentService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.2 Geoscience knowledge content service"@en ;
+  skos:scopeNote "provides services to return the DDE geoscience knowledge content (knowledge tuples) of specific disciplines/sub disciplines, or keywords.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeOtherService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.6 Other knowledge service"@en ;
+  skos:scopeNote "Other services provided by DDE geoscience knowledge not defined above.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeReasoningService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2.3Knowledge reasoning service"@en ;
+  skos:scopeNote "provide services to return the related knowledge content (knowledge tuples) obtained by reasoning for the specific keywords  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "2. Knowledge service"@en ;
+  skos:scopeNote "Service that provides synthesized information  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#other:xx>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "Other service"@en ;
+  skos:scopeNote "Service that does not fit in any other category.  . For other values not included in this codelist, use prefix ‘other:’ with a label token (alphanumeric characters, no spaces) of at least 2 characters to specify the service type  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformAPIService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.6 API Service"@en ;
+  skos:scopeNote "provides discovery services on DDE platform of metadata about API information provided by the DDE platform.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformAnnotationService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.5Annotation Service"@en ;
+  skos:scopeNote "provides discovery and management services on DDE platform of metadata about annotations used on the platform.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformCatalogueService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.1 Catalogue service"@en ;
+  skos:scopeNote "provides discovery and management services on DDE platform of metadata about instances. The metadata may be for dataset instances, e.g. dataset catalogue, or may contain service metadata, e.g. service catalogue.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformCloudComputingResourceService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.4 Cloud computing resource service"@en ;
+  skos:scopeNote "provides web-based computing facilities discovery and management services on DDE platform and DDE Cloud.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformDDEIdentifierService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.9 DDE identifier service"@en ;
+  skos:scopeNote "automatically generation of a DDE data code [resourceIdentifier?] to the data resource registered to be DDE resource  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformDataEvaluationService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.8 Data evaluation service"@en ;
+  skos:scopeNote "service for DDE accessible data evaluation based on six aspects/metrics of authority, quality, volume, openness, service capability and user scale metrics.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformEarthExplorer>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.7 Earth Explorer"@en ;
+  skos:scopeNote "provides a search engine service to search and visualize information, data and knowledge form DDE platform.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformModelService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.3 Model Service"@en ;
+  skos:scopeNote "provides discovery and management services on DDE platform of metadata about models.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformOtherPlatformService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.10 Other platform service"@en ;
+  skos:scopeNote "Other services provided by the DDE platform not defined above.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformRegistryService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#platformService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3.2 Registry service"@en ;
+  skos:scopeNote "provides access to DDE platform. Example registries are information community registries, type dictionaries, service registries and schema registries.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#platformService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "3. Platform service"@en ;
+  skos:scopeNote "Infrastructure services from a platform host like DDE.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#registryService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "Registry service"@en ;
+  skos:scopeNote "Service provides interface to interact with a non-DDE resource registry; provides capabilities e.g. to resolve URIs to return descriptions of a registered resource, return resource descriptions based on search criteria including labels, free text, or other properties included in registered resource descriptions.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicDigitalGeologicalOccurrenceService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.4 Digital geological occurrence service"@en ;
+  skos:scopeNote "provides service of visualization of geological observation spots and rock occurrence, etc.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicDinosaurService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.5 Dinosaur service"@en ;
+  skos:scopeNote "provides service of visualized living scenes of a group of specific dinosaurs in geological history.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicGeologicMappingGlobalService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.9 Geologic mapping service (Global layer)"@en ;
+  skos:scopeNote "services for view, access, and obtain geological map products, as well as complete online mapping and publishing, including relevant symbol libraries, etc.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicGeologicalTimelineService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.3 Geological timeline service"@en ;
+  skos:scopeNote "service for accurate geological timing.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicGeomorphologyMappingService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.7 Geomorphologic mapping service"@en ;
+  skos:scopeNote "service for geomorphologic mapping online with relevant data resources.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicGeoscienceStandardService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.8 Geoscience standards service"@en ;
+  skos:scopeNote "service for DDE geoscience standards access and download.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicGlobalNamingService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.6 Global naming service"@en ;
+  skos:scopeNote "services for name(s) globally with geographic position.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicMineralResourceAssessmentService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.1 Mineral resource assessment service"@en ;
+  skos:scopeNote "service for the regional assessment of specific minerals resources, porphyry copper for example.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicOtherService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader <https://www.ddeworld.org/resource/codelist/serviceType#thematicService> ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4.9 Other thematic service"@en ;
+  skos:scopeNote "thematic service(s) provided not defined above.  "@en ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#thematicService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "4. Thematic service"@en ;
+  skos:scopeNote "services providing information or functionality specific to a particulary topic.   "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#viewService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "View service"@en ;
+  skos:scopeNote "Service provides visualizations of geospatial or tabular data.  Works with geospatial data not integrated in DDE platform, in which case service type would be 1.4 DataService/MapService  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/codelist/serviceType#vocabularyService>
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/serviceType> ;
+  skos:prefLabel "Vocabulary service"@en ;
+  skos:scopeNote "Service implements vocabulary services based on SKOS properties. This category is for generic service provided from source other than DDE platform. Resolve concept URI to preferred label, definitions, related terms; test if a label is present in a vocabulary, return URI for label, etc.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/serviceType> ;
+.
+<https://www.ddeworld.org/resource/ontology/serviceType>
+  rdf:type owl:Ontology ;
+  rdf:type skos:ConceptScheme ;
+  rdfs:label "DDE service type"@en ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionIRI <https://www.ddeworld.org/resource/ontology/1.0/topicCategory> ;
+  skos:definition "Types of services that might be described in DDE metadata."@en ;
+  skos:prefLabel "DDE service type"@en ;
+.

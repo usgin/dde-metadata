@@ -1,0 +1,298 @@
+# baseURI: https://www.ddeworld.org/resource/ontology/resourceType
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix : <https://www.ddeworld.org/resource/codelist/resourceType#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ddert: <https://www.ddeworld.org/resource/codelist/resourceType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p1: <http://example.org/file1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept
+  rdf:type owl:Class ;
+.
+skos:broader
+  rdf:type owl:AnnotationProperty ;
+.
+skos:inScheme
+  rdf:type owl:AnnotationProperty ;
+.
+skos:prefLabel
+  rdf:type owl:AnnotationProperty ;
+.
+skos:scopeNote
+  rdf:type owl:AnnotationProperty ;
+.
+<https://www.ddeworld.org/resource/codelist/resourceType>
+  rdf:type skos:ConceptScheme ;
+  rdfs:label "DDE resource type"@en ;
+  skos:definition "Extended from ISO (Dublin Core) metadata scope resource types for more specific application"@en ;
+  skos:prefLabel "DDE resource type"@en ;
+.
+ddert:aggregate
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Aggregate"@en ;
+  skos:scopeNote "Set of resources of various types that are grouped into a single resource for some purpose. Component resources do not necessarily share the same format or information model. Source ISO19115-3, this vocabulary  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:application
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Application"@en ;
+  skos:scopeNote "See schema.org/SoftwareApplication. An executable unit of functionality. Typically an implementation of some software on a particular platform. Source ISO19115-3, this vocabulary  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:article
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:document ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Article"@en ;
+  skos:scopeNote "a document that is published in a print or electronic medium as part of a larger work or series. Source schema.org, https://en.wikipedia.org/wiki/Article_(publishing), this vocabulary.  "@en ;
+.
+ddert:book
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:document ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Book"@en ;
+  skos:scopeNote "a document that records information in the form of writing or images, typically composed of many pages bound together and protected by a cover. Source schema.org, https://artsandculture.google.com/entity/book/m0bt_c3  "@en ;
+.
+ddert:collection
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Collection"@en ;
+  skos:scopeNote "A set of related resource that share a similar format .(rev from  ISO19115-3, schema.org, Dublin Core)  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:dataCatalog
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:dataset ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Data catalog"@en ;
+  skos:scopeNote "a kind of dataset in which the records are documentation for datasets. A metadata dataset. schema.org  "@en ;
+.
+ddert:dataset
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Dataset"@en ;
+  skos:scopeNote "a collection of numeric or categorical values that convey information, describing the quantity, quality, fact, statistics, other basic units of meaning, or simply sequences of symbols that may be further interpreted formally. Sourcce ISO19115-3, schema.org, Dublin Core, definition based on https://en.wikipedia.org/wiki/Data  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:definedTermSet
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:semanticResource ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "DefinedTermSet"@en ;
+  skos:scopeNote "a set of terms with definitions, typically with identifiers for each term, and all related to some scope. Source schema.org, this vocabulary  "@en ;
+.
+ddert:document
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Document"@en ;
+  skos:scopeNote "a written, drawn, presented, or memorialized representation of thought, the manifestation of non-fictional or imaginary content. Source ISO19115-3, https://en.wikipedia.org/wiki/Document  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:explanatoryFigure
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:image ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Explanatory figure"@en ;
+  skos:scopeNote "Diagrams, data plots, flow charts, other kinds of graphics generated to present or explain ideas or data. Source this vocabulary.  "@en ;
+.
+ddert:fieldSession
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:initiative ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Field session"@en ;
+  skos:scopeNote "initiative that involves collecting data outside of a fixed laboratory environment, in situ, at the location where the subject of the observation is located (e.g. cruise) . Source  ISO19115-3, this vocabulary  "@en ;
+.
+ddert:geographicDataset
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:dataset ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Geographic dataset"@en ;
+  skos:scopeNote "Dataset in which the data are related to a geographic location  "@en ;
+.
+ddert:guide
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:learningResource ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Guide"@en ;
+  skos:scopeNote "a kind of learningResource. Source schema.org  "@en ;
+.
+ddert:image
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Image"@en ;
+  skos:scopeNote "visual representation of something. Source Dublin Core  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:initiative
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Initiative"@en ;
+  skos:scopeNote "activity that produces information resources or artifacts that might be cataloged. Source  ISO19115-3  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:learningResource
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "LearningResource"@en ;
+  skos:scopeNote "a resource intended to instruct a user about some topic or procedure. Often a composite of text, images, sound, and movie. Source schema.org, this vocabulary  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:map
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:image ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Map"@en ;
+  skos:scopeNote "symbolic visual representation of a spatial region. Source schema.org, https://en.wikipedia.org/wiki/Map  "@en ;
+.
+ddert:model
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Model"@en ;
+  skos:scopeNote "information applies to a copy or imitation of an existing or hypothetical object  ISO19115-3, Dublin Core  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:movie
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Movie  "@en ;
+  skos:scopeNote "a sequence of consecutive still images recorded in a series to be viewed on a screen in such rapid succession as to give the illusion of natural movement. Source schema.org, https://www.dictionary.com/browse/movie  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:nonGeographicDataset
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:dataset ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Non-geographic dataset"@en ;
+  skos:scopeNote "Dataset containing data that is not associated with a geographic location.(rev from ISO19115-3)  "@en ;
+.
+ddert:photograph
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:image ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Photograph"@en ;
+  skos:scopeNote "image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip. Source  schema.org, https://en.wikipedia.org/wiki/Photograph  "@en ;
+.
+ddert:poster
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:document ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Poster"@en ;
+  skos:scopeNote "a document intended for display on a large screen or printed sheet.  Source schema.org, Merriam-Webster  "@en ;
+.
+ddert:repository
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Repository"@en ;
+  skos:scopeNote "a container for other resources. Source  ISO19115-3, this vocabulary  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:semanticResource
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Semantic resource"@en ;
+  skos:scopeNote "resource that defines and information model or vocabulary used for information interchange, e.g. glossary, ontology, data model. . Source  this vocabulary.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:series
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Series  "@en ;
+  skos:scopeNote "a collection of related resources. Source  ISO19115-3, this vocabulary.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:service
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Service"@en ;
+  skos:scopeNote "a capability that a provider makes available to a user through an interface that define a input and output requirements and offered functionality.  (based on ISO19115-3, Dublin Core). This general service category includes services that are invoked via any communication channel. Service is distinguished from Application in that a service is not intended to be interactive in real time.  An Application might be constructed using one or more Services.  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:software
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Software"@en ;
+  skos:scopeNote "information applies to a computer program or routine  ISO19115-3, Dublin Core. See SoftwareSourceCode schema.org  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:sound
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Sound"@en ;
+  skos:scopeNote "resource is a reproducible representation of recorded acoustic phenomena. DublinCore, this vocabulary  "@en ;
+  skos:topConceptOf <https://www.ddeworld.org/resource/codelist/resourceType> ;
+.
+ddert:thesis
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:document ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Thesis"@en ;
+  skos:scopeNote "a document submitted in support of candidature for an academic degree or professional qualification presenting the author's research and findings. Source schema.org, https://en.wikipedia.org/wiki/Thesis, ISO 7144  "@en ;
+.
+ddert:webAPI
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:service ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "WebAPI"@en ;
+  skos:scopeNote "A service that communicates with the service user via HTTP operations. See https://schema.org/WebAPI  "@en ;
+.
+ddert:webApplication
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:application ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Web Application"@en ;
+  skos:scopeNote "An application that executes on a server via interaction with a human user through a web interface. Source this vocabulary.  "@en ;
+.
+ddert:webPage
+  rdf:type owl:NamedIndividual ;
+  rdf:type skos:Concept ;
+  skos:broader ddert:document ;
+  skos:inScheme <https://www.ddeworld.org/resource/codelist/resourceType> ;
+  skos:prefLabel "Web page"@en ;
+  skos:scopeNote "a document accessible on the world wide web, formatted for viewing on a computer screen. Source schema.org, this vocabulary,   "@en ;
+.
+<https://www.ddeworld.org/resource/ontology/resourceType>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionIRI <https://www.ddeworld.org/resource/ontology/1.0/resourceType> ;
+  skos:prefLabel "DDE resource type ontology"@en ;
+.
