@@ -25,7 +25,7 @@
     xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
     xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
     xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
-    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
     <mdb:metadataIdentifier>
@@ -367,7 +367,9 @@
                 <gco:ScopedName codeSpace="http://inspire.ec.europa.eu/metadatacodelist/SpatialDataServiceType">transformation</gco:ScopedName>
             </srv:serviceType>
             <srv:accessProperties>
+                
                 <mrd:MD_StandardOrderProcess>
+                    
                     <mrd:fees>
                         <gco:CharacterString>fees to use sevice</gco:CharacterString>
                     </mrd:fees>  
@@ -383,6 +385,7 @@
                 </mrd:MD_StandardOrderProcess>
             </srv:accessProperties>
             <srv:operatedDataset> <!-- see https://www.energistics.org/sites/default/files/2023-03/EIP_v1.1.pdf section 4.6.2 -->
+                
                 <cit:CI_Citation>
                     <cit:title>
                         <gco:CharacterString>Title of operatedDateset</gco:CharacterString>
@@ -414,23 +417,18 @@
             
             <srv:containsOperations>
                 <srv:SV_OperationMetadata>
+                    
                     <srv:operationName>
                         <gco:CharacterString>getData</gco:CharacterString>
                     </srv:operationName>
-                    <srv:distributedComputingPlatform/>
+                    <srv:distributedComputingPlatform gco:nilReason="missing"/>
                     <srv:operationDescription>
                         <gco:CharacterString>Description of the operation inputs, outputs, effects</gco:CharacterString>
                     </srv:operationDescription>
                     <srv:invocationName>
                         <gco:CharacterString>operationInvocationName</gco:CharacterString>
                     </srv:invocationName>
-                    <srv:connectPoint>
-                        <cit:CI_OnlineResource>
-                            <cit:linkage>
-                                <gco:CharacterString>https://operation.connectpoint.org/427637</gco:CharacterString>
-                            </cit:linkage>
-                        </cit:CI_OnlineResource>
-                    </srv:connectPoint>
+                    <srv:connectPoint gco:nilReason="missing"/>
                     <srv:parameter>
                         <srv:SV_Parameter>
                             <srv:name>

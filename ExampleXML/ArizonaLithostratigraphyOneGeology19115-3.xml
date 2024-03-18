@@ -583,6 +583,7 @@
          </mri:descriptiveKeywords>
          <mri:resourceConstraints>
             <mco:MD_LegalConstraints>
+               
                <mco:reference>
                   <cit:CI_Citation>
                      <cit:title>
@@ -598,6 +599,7 @@
                   </cit:CI_Citation>
                </mco:reference>
                <mco:useConstraints>
+                  
                   <mco:MD_RestrictionCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode"
                                           codeListValue="licenceUnrestricted">licenceUnrestricted</mco:MD_RestrictionCode>
                </mco:useConstraints>
