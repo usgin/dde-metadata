@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+                 xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+                 xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+                 xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+                 xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+                 xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
+                 xmlns:gml="http://www.opengis.net/gml/3.2"
+                 xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+                 xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+                 xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+                 xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+                 xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+                 xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+                 xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+                 xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+                 xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+                 xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+                 xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+                 xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+                 xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+                 xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+                 xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+                 xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+                 xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+                 xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+                 xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+                 xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mds/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
+   <mdb:metadataIdentifier>
+      <mcc:MD_Identifier>
+         <mcc:code>
+            <gco:CharacterString>291</gco:CharacterString>
+         </mcc:code>
+         <mcc:codeSpace>
+            <gco:CharacterString>tess_models</gco:CharacterString>
+         </mcc:codeSpace>
+      </mcc:MD_Identifier>
+   </mdb:metadataIdentifier>
+   <mdb:defaultLocale>
+      <lan:PT_Locale>
+         <lan:language>
+            <lan:LanguageCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#LanguageCode"
+                              codeListValue="en">en</lan:LanguageCode>
+         </lan:language>
+         <lan:characterEncoding gco:nilReason="unknown"/>
+      </lan:PT_Locale>
+   </mdb:defaultLocale>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode"
+                              codeListValue="model">model</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:contact>
+      <cit:CI_Responsibility>
+         <cit:role>
+            <cit:CI_RoleCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode"
+                             codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+         </cit:role>
+         <cit:party>
+            <cit:CI_Organisation>
+               <cit:name>
+                  <gco:CharacterString>Earthcube CINERGI Metadata Pipeline</gco:CharacterString>
+               </cit:name>
+               <cit:contactInfo>
+                  <cit:CI_Contact>
+                     <cit:address>
+                        <cit:CI_Address>
+                           <cit:electronicMailAddress>
+                              <gco:CharacterString>metadata@earthcube.org</gco:CharacterString>
+                           </cit:electronicMailAddress>
+                        </cit:CI_Address>
+                     </cit:address>
+                  </cit:CI_Contact>
+               </cit:contactInfo>
+               <cit:individual>
+                  <cit:CI_Individual>
+                     <cit:positionName>
+                        <gco:CharacterString>CINERGI Metadata Contact</gco:CharacterString>
+                     </cit:positionName>
+                  </cit:CI_Individual>
+               </cit:individual>
+            </cit:CI_Organisation>
+         </cit:party>
+      </cit:CI_Responsibility>
+   </mdb:contact>
+   <mdb:dateInfo gco:nilReason="unknown"/>
+   <mdb:identificationInfo>
+      <mri:MD_DataIdentification>
+         <mri:citation>
+            <cit:CI_Citation>
+               <cit:title>
+                  <gco:CharacterString>ARTIC: DEVELOPMENT OF A PHYSICALLY BASED, SPATIALLY
+                            DISTRIBUTED HYDROLOGIC MODEL FOR AN ARCTIC REGION</gco:CharacterString>
+               </cit:title>
+               <cit:date>
+                  <cit:CI_Date>
+                     <cit:date>
+                        <gco:Date>2015-04-30</gco:Date>
+                     </cit:date>
+                     <cit:dateType>
+                        <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                             codeListValue="publication">publication</cit:CI_DateTypeCode>
+                     </cit:dateType>
+                  </cit:CI_Date>
+               </cit:date>
+            </cit:CI_Citation>
+         </mri:citation>
+         <mri:abstract>
+            <gco:CharacterString>Keywords: arctic region, hydrologic regime, energy transfer
+                    processes, mass transfer processes Â Â The Arctic plays an important role in
+                    global climate dynamics. The system as a whole is a combination of many
+                    processes including terrestrial, aquatic and atmospheric processes. In addition,
+                    the hydrologic and thermal processes are the main linkages between the biosphere
+                    and the atmosphere. A physically based, spatially distributed hydrologic model
+                    is constructed to quantitatively simulate the energy and mass transfer processes
+                    of the hydrologic regime in an arctic region. This model may then be coupled
+                    with the biogeochemical processes of a watershed to help us better understand
+                    the mechanisms that impact global climate change. This hydrologic model deals
+                    mainly with the processes of subsurface, overland, and channel flow and other
+                    energy driven processes. During periods of rainfall and intense melting of snow,
+                    soils become saturated and three different flow regimes exist. At the same time,
+                    many other processes such as evapotranspiration, snow ablation and soil thawing
+                    may occur. This hydrologic model considers the dynamic interactions of each of
+                    these processes. [ Modeling Paradigm: Simulative prediction
+                    ]</gco:CharacterString>
+         </mri:abstract>
+         <mri:topicCategory>
+            <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:topicCategory>
+            <mri:MD_TopicCategoryCode>environment</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Water</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>catchment (examples: hydrological</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>water pollution)</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeSpace="ISOTC211/19115"
+                                          codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Source Model Keywords</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2015-01-01</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/realmHydroBody.owl#Channel">Channel</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Feature &gt; Hydrologic
+                                    Feature</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://www.semanticweb.org/administrator/ontologies/2015/5/untitled-ontology-4#Atmospheric_Process">Atmospheric Process</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://www.vocabularyserver.com/usgs/index.php?tema=13253&amp;/rain">Rainfall</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://www.vocabularyserver.com/usgs/index.php?tema=13366&amp;/snow">Snow</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Process &gt; Atmospheric
+                                    Process</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/realmGeol.owl#Subsurface">Subsurface</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Realm &gt; Subsurface</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://purl.obolibrary.org/obo/ENVO_00001998">Soil</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://purl.obolibrary.org/obo/CHEBI_15377">Water</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Material &gt; Environmental
+                                    Material</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/phenFluidDynamics.owl#Flow">Flow</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Property &gt; Measure</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#Geothermal">Geothermal</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Feature &gt; Geologic
+                                    Feature</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://www.vocabularyserver.com/usgs/index.php?tema=797&amp;/hydrology">Hydrology</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#biogeochemistry">Biogeochemistry</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Science Domain &gt; Earth
+                                    Science</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/realm.owl#Atmosphere">Atmosphere</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Realm &gt; Atmosphere</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/phenEnvirImpact.owl#WaterPollution">Water Pollution</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Activity &gt; Human
+                                    Impact</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#important_role">Important Role</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#dynamics">Dynamics</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#combination">Combination</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#mechanisms">Mechanism</gcx:Anchor>
+               </mri:keyword>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#global_climate_change">Global Climate Change</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Feature &gt; Marine
+                                    Feature</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#biogeochemistry">Biogeochemistry</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Science Domain &gt;
+                                    Chemistry</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gcx:Anchor xlink:href="http://sweet.jpl.nasa.gov/2.3/realmLandFluvial.owl#Watershed">Watershed</gcx:Anchor>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Feature &gt; Physiographic
+                                    Feature</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:Date>2018-09-26</gco:Date>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:otherCitationDetails>
+                        <gco:CharacterString>Cinergi keyword enhanced.File generated at Wed
+                                    Sep 26 20:05:25 UTC 2018</gco:CharacterString>
+                     </cit:otherCitationDetails>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:defaultLocale>
+            <lan:PT_Locale>
+               <lan:language>
+                  <lan:LanguageCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#LanguageCode"
+                                    codeListValue="en">en</lan:LanguageCode>
+               </lan:language>
+               <lan:characterEncoding gco:nilReason="unknown"/>
+            </lan:PT_Locale>
+         </mri:defaultLocale>
+      </mri:MD_DataIdentification>
+   </mdb:identificationInfo>
+   <mdb:distributionInfo>
+      <mrd:MD_Distribution>
+         <mrd:distributionFormat>
+            <mrd:MD_Format>
+               <mrd:formatSpecificationCitation>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Resource URL</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                     <cit:edition>
+                        <gco:CharacterString>0.0</gco:CharacterString>
+                     </cit:edition>
+                  </cit:CI_Citation>
+               </mrd:formatSpecificationCitation>
+            </mrd:MD_Format>
+         </mrd:distributionFormat>
+         <mrd:transferOptions>
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:onLine>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://ecobas.org/www-server/index.html</gco:CharacterString>
+                     </cit:linkage>
+                     <cit:name>
+                        <gco:CharacterString>Model Homepage</gco:CharacterString>
+                     </cit:name>
+                     <cit:function>
+                        <cit:CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode"
+                                                   codeListValue="download"/>
+                     </cit:function>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+      </mrd:MD_Distribution>
+   </mdb:distributionInfo>
+</mdb:MD_Metadata>

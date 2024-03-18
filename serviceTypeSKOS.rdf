@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#other:xx">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">Other service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service that does not fit in any other category. For other values not included in this codelist, use prefix 'other:' with a label token (alphanumeric characters, no spaces) of at least 2 characters to specify the service type</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataAccessService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#dataService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1.1 Data Access Service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service provide filtering and subsetting functions on one or more datasets, based on URL parameters. Operates on a data store provided by the service backend. Includes services for  graph queries (e.g. GQL, Cypher) against a graph database  and SPARQL queries against an RDF triple store</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataMapService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#dataService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1.4 Map service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">services to provide a client view, access, or obtain to a geoscientific map product, the graphic data, a vector data map or image map in the format of WMS, WFS, png/jpeg/tiff, etc., for example.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataOtherService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#dataService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1.5 Other data service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">data service(s) provided not defined above.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataProcessingService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#dataService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1.3 Data processing service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">services provided on geoscience data processing, including disciplinary data processing tools software service (APP), data processing modules (API), data processing web Apps.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1. Data service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service that provides data.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#dataWorkflowService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#dataService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">1.2 Data workflow service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">the service provided for geoscience data acquisition/collection, transfer, integration, storage, modelling, analysis and visualization, etc.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#discoveryService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">Discovery service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service supports searching a non DDE metadata catalog to locate resources of interest and return metadata records describing those resources.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeDDEScholar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.5 DDE scholar</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides scholar portrait service (literatures and relationships) thru data mining from published journal papers.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeDeepShovel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.4 Deep shovel</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides services of searching and finding information and/or knowledge form published papers.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeGeoscienceCatalogueService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.1 Geoscience knowledge catalogue service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides services to return the DDE geoscience knowledge directory of specific disciplines/sub disciplines, or keywords.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeGeoscienceContentService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.2 Geoscience knowledge content service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides services to return the DDE geoscience knowledge content (knowledge tuples) of specific disciplines/sub disciplines, or keywords.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeOtherService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.6 Other knowledge service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Other services provided by DDE geoscience knowledge not defined above.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeReasoningService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2.3 Knowledge reasoning service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provide services to return the related knowledge content (knowledge tuples) obtained by reasoning for the specific keywords</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#knowledgeService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">2. Knowledge service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service that provides synthesized information</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformAPIService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.6 API Service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides discovery services on DDE platform of metadata about API information provided by the DDE platform.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformAnnotationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.5 Annotation Service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides discovery and management services on DDE platform of metadata about annotations used on the platform.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformCatalogueService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.1 Catalogue service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides discovery and management services on DDE platform of metadata about instances. The metadata may be for dataset instances, e.g. dataset catalogue, or may contain service metadata, e.g. service catalogue.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformCloudComputingResourceService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.4 Cloud computing resource service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides web based computing facilities discovery and management services on DDE platform and DDE Cloud.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformDDEIdentifierService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.9 DDE identifier service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">automatically generation of a DDE data code [resourceIdentifier?] to the data resource registered to be DDE resource</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformDataEvaluationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.8 Data evaluation service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service for DDE accessible data evaluation based on six aspects/metrics of authority, quality, volume, openness, service capability and user scale metrics.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformEarthExplorer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.7 Earth Explorer</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides a search engine service to search and visualize information, data and knowledge form DDE platform.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformModelService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.3 Model Service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides discovery and management services on DDE platform of metadata about models.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformOtherPlatformService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.10 Other platform service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Other services provided by the DDE platform not defined above.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformRegistryService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#platformService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3.2 Registry service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides access to DDE platform. Example registries are information community registries, type dictionaries, service registries and schema registries.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#platformService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">3. Platform service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Infrastructure services from a platform host like DDE.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#registryService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">Registry service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service provides interface to interact with a non DDE resource registry; provides capabilities e.g. to resolve URIs to return descriptions of a registered resource, return resource descriptions based on search criteria including labels, free text, or other properties included in registered resource descriptions.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicDigitalGeologicalOccurrenceService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.4 Digital geological occurrence service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides service of visualization of geological observation spots and rock occurrence, etc.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicDinosaurService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.5 Dinosaur service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">provides service of visualized living scenes of a group of specific dinosaurs in geological history.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicGeologicMappingGlobalService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.9 Geologic mapping service (Global layer)</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">services for view, access, and obtain geological map products, as well as complete online mapping and publishing, including relevant symbol libraries, etc.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicGeologicalTimelineService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.3 Geological timeline service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service for accurate geological timing.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicGeomorphologyMappingService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.7 Geomorphologic mapping service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service for geomorphologic mapping online with relevant data resources.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicGeoscienceStandardService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.8 Geoscience standards service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service for DDE geoscience standards access and download.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicGlobalNamingService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.6 Global naming service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">services for name(s) globally with geographic position.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicMineralResourceAssessmentService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.1 Mineral resource assessment service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">service for the regional assessment of specific minerals resources, porphyry copper for example.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicOtherService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType#thematicService"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4.9 Other thematic service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">thematic service(s) provided not defined above.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#thematicService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">4. Thematic service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">services providing information or functionality specific to a particulary topic.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#viewService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">View service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service provides visualizations of geospatial or tabular data.  Works with geospatial data not integrated in DDE platform, in which case service type would be 1.4 DataService/MapService</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://www.ddeworld.org/resource/codelist/serviceType#vocabularyService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/serviceType"/>
+	<skos:prefLabel xml:lang="en">Vocabulary service</skos:prefLabel>
+	<skos:scopeNote xml:lang="en">Service implements vocabulary services based on SKOS properties. This category is for generic service provided from source other than DDE platform. Resolve concept URI to preferred label, definitions, related terms; test if a label is present in a vocabulary, return URI for label, etc.</skos:scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://custom.shared.obj.ch/concept#">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<dc:title xml:lang="en">DDE service types</dc:title>
+	<dc:description xml:lang="en">extended service types for DDE service resoruces</dc:description>
+	<dc:identifier>serviceTypeSKOS.rdf</dc:identifier>
+	<dc:type>theme</dc:type>
+</rdf:Description>
+
+</rdf:RDF>

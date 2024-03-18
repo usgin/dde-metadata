@@ -1,0 +1,135 @@
+
+How are fields with codelists matched to codelist in codelists.xml?  Things like DateTypeCode appear magically as dropdown menus. How?  can other fields be configured to use codelists like that?
+
+what does the action (add) template look like for a field that is defined as templateOnly?  
+
+How do I get my dde view to be the default view that comes up first?
+
+Is there any way to debug using standard breakpoints/single stepping, watch, etc...?
+
+The directory functions (e.g. to look up contacts) don't seem to be working, am I missing something?  Do I need to configure a PostGres backend?
+
+  
+I want to add DDE resourceTypes in the metadataScope/name; To start I have this in config-editor.xml:
+<field name="DDEresourceType"
+            xpath="/mdb:MD_Metadata/mdb:metadataScope/mdb:MD_MetadataScope/mdb:name" or="name"
+            in="/mdb:MD_Metadata/mdb:metadataScope/mdb:MD_MetadataScope"
+            if="contains('application webApplication collection dataset dataCatalog geographicDataset nonGeographicDataset document article thesis book poster webPage image map photograph explanatoryFigure initiative fieldSession learningResource guide model movie repository semanticResource definedTermSet series service webAPI software sound', mdb:MD_Metadata/mdb:metadataScope/mdb:MD_MetadataScope/mdb:name/gco:CharacterString)"/>
+			<!-- if condition tests for terms (preLabel) from DDE resourceType vocabulary -->
+         
+          <action type="add" name=" " btnLabel="Add DDE resource scope" 
+            or="metadataScope"
+            in="/mdb:MD_Metadata/*">
+            <template>
+              <snippet>
+                <mdb:metadataScope>
+                  <mdb:MD_MetadataScope>
+                    <mdb:resourceScope gco:nilReason="missing"/>
+                    <mdb:name>
+                      <gco:CharacterString/>
+                    </mdb:name>
+                  </mdb:MD_MetadataScope>
+                </mdb:metadataScope>
+              </snippet>
+            </template>
+          </action>      
+  Shouldn't the add button always show up allowing multiple values to be added?  It does not show up at all.  I want the prefLabel from the DDE resoruce type vocabulary, loaded as a skos thesaurus in local/themes
+   
+I want to populate service type from the DDE serviceType vocabulary, currently loaded as a local/theme/ skos vocabulary via the GN UI (classifications).
+in config-editor I have 
+<field name="serviceType"
+            xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/srv:serviceType"/>
+and in the fields definition I have :
+<for name="srv:serviceType" 
+      use="data-gn-keyword-picker">  <!-- smr add -->
+      <directiveAttributes 
+        data-thesaurus-key="local.theme.servicetypeskos"/>
+    </for>
+servicetypeskos.rdf is located in ...webapps\geonetwork\WEB-INF\data\config\codelist\local\thesauri\theme folder, via the GN classifications UI. 
+where do the recommended values e.g. on service type come from?  How to configure?
+
+
+what can't the UI handle multiple values for mdb:metadataScope?  I'd like to be able to add scope terms from the DDE resource type vocabulary, and serialize like this:
+   <mdb:metadataScope xlink:href="https://www.ddeworld.org/resource/codelist/resourceType#poster">
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope gco:nilReason="missing"/>
+         <mdb:name>
+            <gco:CharacterString>poster</gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   
+   this is a more general problem with fields that can have multiple values. why do some fields have a '+' to add values in thge UI and some do not. How do I get those to show up on fields that have repeating (0..N) values 
+   AlternateTitle offers a '+' icon to add more values, but I expect to see this to add values for other dates, adding keywords, adding topicCategory, i.e. any field that has 0..unbounded values; Ideally I'd like to be able to control limiting the number of values. For instance the DDE metadata spec requires a minimum of three Keywords...
+   
+   
+   
+DDE has a controlled vocabulary for acquisitionType that I was trying to map to /mdb:MD_Metadata/mdb:acquisitionInformation/mac:MI_AcquisitionInformation/mac:operation/mac:MI_Operation/mac:description/gco:CharacterString. There are other DDE properties for image (name="signalGenerator", name="wavelength") that do not map clearly into ISO19115, so I'm stuffing in mac:MI_Operation/mac:description as well. 
+Here's the config-editor setup, using a similar if condition as resourceType. 
+         <field name="DDEacquisitionType"
+            xpath="/*/mdb:acquisitionInformation//mac:operation/mac:MI_Operation/mac:description"
+            or="description"
+            in="/mdb:MD_Metadata//mdb:acquisitionInformation/mac:MI_AcquisitionInformation/mac:operation/mac:MI_Operation"
+            if="contains('geologicalMapping  survey  observation  directObservation  indirectObservation  outcropObservation  remoteSensing  drillBorehole  boreholeCuttingsObservation  boreholeGeophysicalLogMeasurements  drillCoreObservation  laboratoryInstrumentation  dataIntegrationSynthesis  dataFromSinglePublishedDescription  synthesisFromMultipleSources  synthesisOfMultipleOutcropObservations  synthesisOfMultiplePublishedDescriptions  digitaConversionFromPublishedSource  digitalSimulation  dataAndMapCompilation  webResource  other:', mdb:MD_Metadata//mdb:acquisitionInformation//mac:operation/mac:MI_Operation/mac:description/gco:CharacterString)"/>
+          
+          <action type="add" name="description" btnLabel="Add DDE aquisition type" 
+            or="acquisitionInformation"
+            in="/mdb:MD_Metadata">
+            <template>
+              <!--<values>
+                <key label="acquisitionCode" 
+                  xpath="gco:CharacterString">
+                  <codelist name="DDEAcqusitionTypeCode"/>
+                </key>
+              </values>-->
+              <snippet>
+                <mdb:acquisitionInformation>
+                  <mac:MI_AcquisitionInformation>
+                    <mac:operation>
+                      <mac:MI_Operation>
+                        <mac:description>
+                          <gco:CharacterString>{{acquisitionCode}}</gco:CharacterString>
+                        </mac:description>
+                        <mac:status gco:nilReason="unknown"/>
+                      </mac:MI_Operation>
+                    </mac:operation>
+                  </mac:MI_AcquisitionInformation>
+                </mdb:acquisitionInformation>
+              </snippet>
+            </template>
+          </action>
+		  
+This configuration doesn't work. The button shows up, but if I click it, everything from acquisition down in the UI disappears.  I need to limit the input values to values from the AcquisitionType  codelist (I've added to codelists.xml;  I could also make it a skos thesaurus. Is this possible? 
+
+
+directives to include in directive dictionary...
+
+use="gn-date-picker"
+use="gn-checkbox-with-nilreason"
+use="data-gn-codelist-picker"  in 
+
+for name="gmd:extent" addDirective="data-gn-directory-entry-selector"
+<directiveAttributes
+              data-template-add-action="false"
+              data-search-action="true"
+              data-popup-action="true"
+              data-template-type="format"
+              data-filter='{"root": "gmd:MD_Format"}'
+              data-insert-modes="xlink"/>
+	</for>		  
+<for name="gml:duration" use="data-gn-field-duration-div"/>
+<for name="gmx:FileName/src" use="data-gn-logo-selector"/>
+<for name="lan:languageCode" use="data-gn-language-picker"/>
+<for name="lan:country" use="data-gn-country-picker"/>    
+<for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
+      <directiveAttributes data-transformation="to-iso19115-3.2018-keyword"
+        data-include="xpath::string-join(*//mri:thesaurusName//cit:identifier/*/
+               mcc:code/gcx:Anchor/concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), ',')"   />
+    </for>
+<for name="mrs:referenceSystemIdentifier" addDirective="data-gn-crs-selector"/>
+data-gn-topiccategory-selector-div
+data-gn-anchor-switcher
+data-gn-keyword-picker
+data-gn-draw-bbox
+data-gn-checkbox-with-nilreason
+data-gn-field-upload-div

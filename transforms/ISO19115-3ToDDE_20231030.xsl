@@ -37,9 +37,9 @@
     xmlns:mai="http://standards.iso.org/iso/19115/-3/mai/1.0"
     xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
     xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    xmlns:dde="https://www.ddeworld.org/resource/metadata/0.4" exclude-result-prefixes="#all">
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0" exclude-result-prefixes="#all">
 
 
     <!--    <xsl:import href="utility/create19115-3Namespaces.xsl"/>-->
@@ -52,21 +52,22 @@
     <xsl:variable name="ISOcodeListLocation"
         select="'https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml'"/>
     <xsl:variable name="DDEcodeListLocation" select="'https://www.ddeworld.org/resource/codelist/'"/>
+        <!-- this is interim until we get a firm web location for DDE codelists -->
+
 
 
     <xsl:template match="mdb:MD_Metadata">
-        <xsl:element name="dde:MD_Metadata" xmlns="https://www.ddeworld.org/resource/metadata/0.4">
+        <xsl:element name="dde:MD_Metadata" xmlns="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0">
 
             <xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>
             <xsl:namespace name="xsi" select="'http://www.w3.org/2001/XMLSchema-instance'"/>
             <xsl:attribute name="xsi:schemaLocation"
-                select="string('https://www.ddeworld.org/resource/metadata/0.4 DraftDDEMetadataProposal20231030.xsd')"/>
+                select="string('https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 DDEMetadataXSD_20240103.xsd')"/>
 
             <dde:metadataIdentifier>
                 <xsl:apply-templates select="mdb:metadataIdentifier/mcc:MD_Identifier"/>
             </dde:metadataIdentifier>
-            <dde:metadataStandardName>DDE S01-2023: Geosciences Information
-                Metadata</dde:metadataStandardName>
+            <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
             <xsl:for-each select="mdb:contact">
                 <dde:metadataResponsibleParty>
                     <xsl:apply-templates select="cit:CI_Responsibility"/>
@@ -112,7 +113,7 @@
                         <xsl:for-each select="mri:MD_Keywords/mri:keyword">
                             <dde:keyword>
                                 <xsl:if test="child::*/@xlink:href">  <!-- only if keywords are gmx:Anchor -->
-                                    <xsl:attribute name="uri" select="string(child::*/@xlink:href)"/>
+                                    <xsl:attribute name="href" select="string(child::*/@xlink:href)"/>
                                 </xsl:if>
                                 <xsl:value-of select="string(child::*)"/>
                             </dde:keyword>
@@ -227,7 +228,7 @@
                         <dde:restrictionText>
                             <!-- beware, there might be multiple mco:reference elements -->
                             <xsl:if test="mco:reference/@xlink:href">
-                                <xsl:attribute name="uri" select=".//mco:reference/@xlink:href"/>
+                                <xsl:attribute name="href" select=".//mco:reference/@xlink:href"/>
                             </xsl:if>
                             <xsl:call-template name="getText">
                                 <!-- child could be MD_LegalConstraints, MD_Constraints, or MD_SecurityConstraints -->
@@ -339,7 +340,7 @@
                     <dde:source>
                         <xsl:if
                             test="mrl:sourceCitation//cit:identifier//mcc:code/gco:CharacterString">
-                            <xsl:attribute name="uri"
+                            <xsl:attribute name="href"
                                 select="mrl:sourceCitation//cit:identifier//mcc:code/gco:CharacterString"
                             />
                         </xsl:if>

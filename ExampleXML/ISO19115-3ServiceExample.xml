@@ -35,6 +35,7 @@
             </mcc:code>
         </mcc:MD_Identifier>
     </mdb:metadataIdentifier>
+ 
     <mdb:defaultLocale>
         <lan:PT_Locale>
             <lan:language>
@@ -44,14 +45,13 @@
         </lan:PT_Locale>
     </mdb:defaultLocale>
     <mdb:metadataScope>
-        
         <mdb:MD_MetadataScope>
-            
             <mdb:resourceScope>
                 <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode" codeListValue="service"/>
             </mdb:resourceScope>
         </mdb:MD_MetadataScope>
     </mdb:metadataScope>
+
     
     <mdb:contact>
         <cit:CI_Responsibility>
@@ -97,7 +97,7 @@
                                     <cit:postalCode>
                                         <gco:CharacterString>00044</gco:CharacterString>
                                     </cit:postalCode>
-                                    <cit:country>
+                                    <cit:country>  
                                         <gco:CharacterString>Italy</gco:CharacterString>
                                     </cit:country>
                                     <cit:electronicMailAddress>
@@ -148,8 +148,7 @@
         </cit:CI_Citation>
     </mdb:metadataStandard>
     <mdb:identificationInfo>
-
-        <srv:SV_ServiceIdentification>
+        <srv:SV_ServiceIdentification>          
             <mri:citation>
                 <cit:CI_Citation>
                     <cit:title>
@@ -368,7 +367,9 @@
                 <gco:ScopedName codeSpace="http://inspire.ec.europa.eu/metadatacodelist/SpatialDataServiceType">transformation</gco:ScopedName>
             </srv:serviceType>
             <srv:accessProperties>
+                
                 <mrd:MD_StandardOrderProcess>
+                    
                     <mrd:fees>
                         <gco:CharacterString>fees to use sevice</gco:CharacterString>
                     </mrd:fees>  
@@ -384,6 +385,7 @@
                 </mrd:MD_StandardOrderProcess>
             </srv:accessProperties>
             <srv:operatedDataset> <!-- see https://www.energistics.org/sites/default/files/2023-03/EIP_v1.1.pdf section 4.6.2 -->
+                
                 <cit:CI_Citation>
                     <cit:title>
                         <gco:CharacterString>Title of operatedDateset</gco:CharacterString>
@@ -392,12 +394,14 @@
                         <mcc:MD_Identifier>
                             <mcc:authority>
                                 <cit:CI_Citation>
-                                    <cit:title></cit:title>
+                                    <cit:title>
+                                        <gco:CharacterString>operatedDatasetIDauthority</gco:CharacterString>
+                                    </cit:title>
                                 </cit:CI_Citation>
                             </mcc:authority>
                             
                             <mcc:code>
-                                <gco:CharacterString>identifier for operated dataset</gco:CharacterString>
+                                <gco:CharacterString>https://identifier.for.org/operated/dataset</gco:CharacterString>
                             </mcc:code>
                             <mcc:codeSpace>
                                 <gco:CharacterString>operatedDataset id codespace</gco:CharacterString>
@@ -413,23 +417,18 @@
             
             <srv:containsOperations>
                 <srv:SV_OperationMetadata>
+                    
                     <srv:operationName>
-                        <gco:CharacterString></gco:CharacterString>
+                        <gco:CharacterString>getData</gco:CharacterString>
                     </srv:operationName>
-                    <srv:distributedComputingPlatform/>
+                    <srv:distributedComputingPlatform gco:nilReason="missing"/>
                     <srv:operationDescription>
-                        <gco:CharacterString>operation description</gco:CharacterString>
+                        <gco:CharacterString>Description of the operation inputs, outputs, effects</gco:CharacterString>
                     </srv:operationDescription>
                     <srv:invocationName>
-                        <gco:CharacterString>operation invocation name</gco:CharacterString>
+                        <gco:CharacterString>operationInvocationName</gco:CharacterString>
                     </srv:invocationName>
-                    <srv:connectPoint>
-                        <cit:CI_OnlineResource>
-                            <cit:linkage>
-                                <gco:CharacterString>https://operation.connectpoint.org/427637</gco:CharacterString>
-                            </cit:linkage>
-                        </cit:CI_OnlineResource>
-                    </srv:connectPoint>
+                    <srv:connectPoint gco:nilReason="missing"/>
                     <srv:parameter>
                         <srv:SV_Parameter>
                             <srv:name>
@@ -446,9 +445,15 @@
                                     </gco:attributeType>
                                 </gco:MemberName>
                             </srv:name>
-                            <srv:direction/>
-                            <srv:optionality/>
-                            <srv:repeatability/>
+                            <srv:direction>
+                                <srv:SV_ParameterDirection>in/out</srv:SV_ParameterDirection>
+                            </srv:direction>
+                            <srv:optionality>
+                                <gco:Boolean>true</gco:Boolean>
+                            </srv:optionality>
+                            <srv:repeatability>
+                                <gco:Boolean>false</gco:Boolean>
+                            </srv:repeatability>
                         </srv:SV_Parameter>
                     </srv:parameter>
                 </srv:SV_OperationMetadata>
@@ -456,11 +461,18 @@
             
             <srv:containsOperations>
                 <srv:SV_OperationMetadata>
+                    
                     <srv:operationName>
-                        <gco:CharacterString>simple operation</gco:CharacterString>
+                        <gco:CharacterString>simpleOperation</gco:CharacterString>
                     </srv:operationName>
                     <srv:distributedComputingPlatform/>
-                    <srv:connectPoint/>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://operation.org/connectPoint?{parameter1}</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
                 </srv:SV_OperationMetadata>
             </srv:containsOperations>
             
@@ -468,7 +480,7 @@
     </mdb:identificationInfo>
     <mdb:distributionInfo>
         <mrd:MD_Distribution>
-            <mrd:distributor xlink:type="simple">
+            <mrd:distributor>
                 <mrd:MD_Distributor>
                     <mrd:distributorContact>
                         <cit:CI_Responsibility>
@@ -611,7 +623,14 @@
     </mdb:dataQualityInfo>
     <mdb:acquisitionInformation>
         <mac:MI_AcquisitionInformation>
-            
+            <mac:operation>
+                <mac:MI_Operation>
+                    <mac:description>
+                        <gco:CharacterString>remoteSensing</gco:CharacterString>
+                    </mac:description>
+                    <mac:status/>
+                </mac:MI_Operation>
+            </mac:operation>
             <mac:platform>
                 <mac:MI_Platform>
                     <mac:citation>

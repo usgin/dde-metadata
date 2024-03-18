@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dde:MD_Metadata xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 DDEMetadataXSD_20240103.xsd">
+   <dde:metadataIdentifier>
+      <dde:code>291xxx</dde:code>
+      <dde:codeSpace>tess_models</dde:codeSpace>
+   </dde:metadataIdentifier>
+   <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
+   <dde:metadataResponsibleParty>
+      <dde:name>Earthcube CINERGI Metadata PipelineCINERGI Metadata Contact</dde:name>
+      <dde:role>pointOfContact</dde:role>
+      <dde:electronicMailAddress>metadata@earthcube.org</dde:electronicMailAddress>
+   </dde:metadataResponsibleParty>
+   <dde:metadataDate>
+      <dde:date>2024-02-22T18:25:08.8106706-07:00</dde:date>
+      <dde:dateType>unavailable</dde:dateType>
+   </dde:metadataDate>
+   <dde:identificationInfo>
+      <dde:resourceIdentifier>
+         <dde:code>MISSING</dde:code>
+         <dde:description>ERROR. A resource identifier is
+                                required</dde:description>
+      </dde:resourceIdentifier>
+      <dde:title>ARTIC: DEVELOPMENT OF A PHYSICALLY BASED, SPATIALLY
+                            DISTRIBUTED HYDROLOGIC MODEL FOR AN ARCTIC REGION</dde:title>
+      <dde:resourceDate>
+         <dde:date>2015-04-30</dde:date>
+         <dde:dateType>publication</dde:dateType>
+      </dde:resourceDate>
+      <dde:abstract>Keywords: arctic region, hydrologic regime, energy transfer
+                    processes, mass transfer processes Â Â The Arctic plays an important role in
+                    global climate dynamics. The system as a whole is a combination of many
+                    processes including terrestrial, aquatic and atmospheric processes. In addition,
+                    the hydrologic and thermal processes are the main linkages between the biosphere
+                    and the atmosphere. A physically based, spatially distributed hydrologic model
+                    is constructed to quantitatively simulate the energy and mass transfer processes
+                    of the hydrologic regime in an arctic region. This model may then be coupled
+                    with the biogeochemical processes of a watershed to help us better understand
+                    the mechanisms that impact global climate change. This hydrologic model deals
+                    mainly with the processes of subsurface, overland, and channel flow and other
+                    energy driven processes. During periods of rainfall and intense melting of snow,
+                    soils become saturated and three different flow regimes exist. At the same time,
+                    many other processes such as evapotranspiration, snow ablation and soil thawing
+                    may occur. This hydrologic model considers the dynamic interactions of each of
+                    these processes. [ Modeling Paradigm: Simulative prediction
+                    ]</dde:abstract>
+      <dde:keyword>Water</dde:keyword>
+      <dde:keyword>catchment (examples: hydrological</dde:keyword>
+      <dde:keyword>water pollution)</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/realmHydroBody.owl#Channel">Channel</dde:keyword>
+      <dde:keyword href="http://www.semanticweb.org/administrator/ontologies/2015/5/untitled-ontology-4#Atmospheric_Process">Atmospheric Process</dde:keyword>
+      <dde:keyword href="http://www.vocabularyserver.com/usgs/index.php?tema=13253&amp;/rain">Rainfall</dde:keyword>
+      <dde:keyword href="http://www.vocabularyserver.com/usgs/index.php?tema=13366&amp;/snow">Snow</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/realmGeol.owl#Subsurface">Subsurface</dde:keyword>
+      <dde:keyword href="http://purl.obolibrary.org/obo/ENVO_00001998">Soil</dde:keyword>
+      <dde:keyword href="http://purl.obolibrary.org/obo/CHEBI_15377">Water</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/phenFluidDynamics.owl#Flow">Flow</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#Geothermal">Geothermal</dde:keyword>
+      <dde:keyword href="http://www.vocabularyserver.com/usgs/index.php?tema=797&amp;/hydrology">Hydrology</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#biogeochemistry">Biogeochemistry</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/realm.owl#Atmosphere">Atmosphere</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/phenEnvirImpact.owl#WaterPollution">Water Pollution</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#important_role">Important Role</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#dynamics">Dynamics</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#combination">Combination</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#mechanisms">Mechanism</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi_ICRS.owl/ICRS#global_climate_change">Global Climate Change</dde:keyword>
+      <dde:keyword href="http://hydro10.sdsc.edu/cinergi_ontology/cinergi.owl#biogeochemistry">Biogeochemistry</dde:keyword>
+      <dde:keyword href="http://sweet.jpl.nasa.gov/2.3/realmLandFluvial.owl#Watershed">Watershed</dde:keyword>
+      <dde:topicCategory>geoscientificInformation</dde:topicCategory>
+      <dde:topicCategory>environment</dde:topicCategory>
+      <dde:resourceType>model</dde:resourceType>
+      <dde:language>en</dde:language>
+      <dde:characterEncoding>other:missing</dde:characterEncoding>
+      <dde:restriction>
+         <dde:restrictionCode>other:missing</dde:restrictionCode>
+      </dde:restriction>
+      <dde:dataQuality/>
+      <dde:lineage/>
+      <dde:geoTime>geoTime description not provided</dde:geoTime>
+      <dde:distributionInfo>
+         <dde:distributionFormat>Resource URL</dde:distributionFormat>
+         <dde:onlineResource>
+            <dde:title>Model Homepage</dde:title>
+            <dde:linkage>http://ecobas.org/www-server/index.html</dde:linkage>
+            <dde:function>download</dde:function>
+         </dde:onlineResource>
+      </dde:distributionInfo>
+   </dde:identificationInfo>
+</dde:MD_Metadata>

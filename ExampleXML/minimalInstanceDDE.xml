@@ -22,6 +22,8 @@
         <metadata:title>Geology of the thrust belt</metadata:title>
         <metadata:abstract>lots of information; this field must contain at least 250 characters to validate, so think of all the useful information you can about the subject resource. This record demonstrates the length of 250 characters required by the DDE metadata specification.</metadata:abstract>
         <metadata:keyword>thrust fault</metadata:keyword>
+        <metadata:keyword>two-keywords-required</metadata:keyword>
+        <metadata:keyword>three-keywords-required</metadata:keyword>
         <metadata:topicCategory>GI_SGE_structureGeology</metadata:topicCategory>
         <metadata:resourceType>document</metadata:resourceType>
         <metadata:language>eng</metadata:language>

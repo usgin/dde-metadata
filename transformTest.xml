@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dde:MD_Metadata xmlns:dde="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 DDEMetadataXSD_20240103.xsd">
+   <dde:metadataIdentifier>
+      <dde:code>356df710-2414-4623-966c-cb46f207227c</dde:code>
+      <dde:codeSpace>urn:uuid</dde:codeSpace>
+   </dde:metadataIdentifier>
+   <dde:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</dde:metadataStandardName>
+   <dde:metadataResponsibleParty>
+      <dde:name>Production géomatique et traitement de données (SPW - Secrétariat général - SPW Digital - Département Données transversales - Production géomatique et traitement de données)</dde:name>
+      <dde:role>pointOfContact</dde:role>
+      <dde:electronicMailAddress>geometrologie@spw.wallonie.be</dde:electronicMailAddress>
+   </dde:metadataResponsibleParty>
+   <dde:metadataDate>
+      <dde:date>2024-02-19T23:34:33.8556943Z</dde:date>
+      <dde:dateType>revision</dde:dateType>
+   </dde:metadataDate>
+   <dde:metadataDate>
+      <dde:date>2023-02-07T13:52:27.382Z</dde:date>
+      <dde:dateType>creation</dde:dateType>
+   </dde:metadataDate>
+   <dde:metadataDate>
+      <dde:date>2024-03-06T11:25:36.1413524-07:00</dde:date>
+      <dde:dateType>unavailable</dde:dateType>
+   </dde:metadataDate>
+   <dde:identificationInfo>
+      <dde:resourceIdentifier>
+         <dde:code>356df710-2414-4623-966c-cb46f207227c</dde:code>
+         <dde:codeSpace>http://geodata.wallonie.be/id/</dde:codeSpace>
+      </dde:resourceIdentifier>
+      <dde:title>Orthophotos, campagne 2022 Printemps - Série</dde:title>
+      <dde:alternateTitle>Orthos 2022 Printemps</dde:alternateTitle>
+      <dde:alternateTitle>orthophotos 2022 Printemps</dde:alternateTitle>
+      <dde:resourceDate>
+         <dde:date>2022-08-01</dde:date>
+         <dde:dateType>creation</dde:dateType>
+      </dde:resourceDate>
+      <dde:resourceDate>
+         <dde:date>2023-06-09</dde:date>
+         <dde:dateType>publication</dde:dateType>
+      </dde:resourceDate>
+      <dde:resourceDate>
+         <dde:date>2023-06-01</dde:date>
+         <dde:dateType>revision</dde:dateType>
+      </dde:resourceDate>
+      <dde:abstract>Cette série de couches de données reprend toutes les données géographiques rendues disponibles suite à la campagne Printemps d'acquisition des orthophotos 2022.
+
+- Orthophotos 2022 Printemps : imagerie orthorectifiée et mosaïquée acquise au Printemps 2022 couvrant le territoire wallon à une résolution de 25 cm.
+
+- Infrarouge des orthophotos 2022 Printemps : représentation de la mosaïque d'orthophotos 2022 Printemps en infrarouge fausses couleurs couvrant le territoire wallon.
+
+- Maillage et tuilage 2022 Printemps : couches de données vectorielles décrivant les informations sur les fichiers images (maillage) et les informations attributaires (tuilage) des orthophotos 2022 Printemps.</dde:abstract>
+      <dde:keyword href="https://metawal.wallonie.be/thesaurus/theme-geoportail-wallon#SubThemesGeoportailWallon/5010">Données topographiques</dde:keyword>
+      <dde:keyword href="https://metawal.wallonie.be/thesaurus/theme-geoportail-wallon#SubThemesGeoportailWallon/5030">Photos et imagerie</dde:keyword>
+      <dde:keyword>photogrammétrie</dde:keyword>
+      <dde:keyword>photographie aérienne</dde:keyword>
+      <dde:keyword>relief</dde:keyword>
+      <dde:keyword>Reporting INSPIRENO</dde:keyword>
+      <dde:keyword>vol</dde:keyword>
+      <dde:keyword>fond de plan</dde:keyword>
+      <dde:keyword>ortho</dde:keyword>
+      <dde:keyword>orthos</dde:keyword>
+      <dde:keyword>orthophoto</dde:keyword>
+      <dde:keyword>orthophotos</dde:keyword>
+      <dde:keyword>estompage</dde:keyword>
+      <dde:keyword>prise de vue aérienne</dde:keyword>
+      <dde:keyword>ciel</dde:keyword>
+      <dde:topicCategory>imageryBaseMapsEarthCover</dde:topicCategory>
+      <dde:resourceType>series</dde:resourceType>
+      <dde:additionalDocumentation>orderingInstructions:Les informations de distribution sont décrites au niveau de chaque donnée de cette série.; . . </dde:additionalDocumentation>
+      <dde:resourceResponsibleParty>
+         <dde:name>Helpdesk carto du SPW (SPW - Secrétariat général - SPW Digital - Département de la Géomatique - Direction de l'Intégration des géodonnées)</dde:name>
+         <dde:role>pointOfContact</dde:role>
+         <dde:electronicMailAddress>helpdesk.carto@spw.wallonie.be</dde:electronicMailAddress>
+      </dde:resourceResponsibleParty>
+      <dde:resourceResponsibleParty>
+         <dde:name>Production géomatique et traitement de données (SPW - Secrétariat général - SPW Digital - Département Données transversales - Production géomatique et traitement de données)</dde:name>
+         <dde:role>custodian</dde:role>
+         <dde:country>--</dde:country>
+         <dde:electronicMailAddress>geometrologie@spw.wallonie.be</dde:electronicMailAddress>
+      </dde:resourceResponsibleParty>
+      <dde:resourceResponsibleParty>
+         <dde:name>Service public de Wallonie (SPW) Géoportail de la Wallonie</dde:name>
+         <dde:role>owner</dde:role>
+         <dde:electronicMailAddress>helpdesk.carto@spw.wallonie.be</dde:electronicMailAddress>
+      </dde:resourceResponsibleParty>
+      <dde:browseGraphic>
+         <dde:title>Browse graphic</dde:title>
+         <dde:description>Printemps.png</dde:description>
+         <dde:linkage>https://metawal.wallonie.be/geonetwork/srv/api/records/356df710-2414-4623-966c-cb46f207227c/attachments/Printemps.png</dde:linkage>
+         <dde:function>browseGraphic</dde:function>
+      </dde:browseGraphic>
+      <dde:language>fre</dde:language>
+      <dde:characterEncoding>UTF-8</dde:characterEncoding>
+      <dde:restriction>
+         <dde:restrictionText>otherConstraints:Les conditions d'accès et d'utilisation sont décrites au niveau de chaque donnée de cette série.; </dde:restrictionText>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+         <dde:restrictionCode>otherRestrictions</dde:restrictionCode>
+      </dde:restriction>
+      <dde:dataQuality/>
+      <dde:lineage>statement:La généalogie et les informations de qualité sont décrites au niveau de chaque donnée de cette série.; other:Collection de données issues d'une même campagne d'acquisition; </dde:lineage>
+      <dde:geoTime>geoTime description not provided</dde:geoTime>
+      <dde:geographicExtent>
+         <dde:verbatimCoordinateLocation>Région wallonne</dde:verbatimCoordinateLocation>
+         <dde:westBoundLongitude>2.75</dde:westBoundLongitude>
+         <dde:eastBoundLongitude>6.50</dde:eastBoundLongitude>
+         <dde:southBoundLatitude>49.45</dde:southBoundLatitude>
+         <dde:northBoundLatitude>50.85</dde:northBoundLatitude>
+      </dde:geographicExtent>
+      <dde:distributionInfo>
+         <dde:onlineResource>
+            <dde:description>Ordering instructions: Les informations de distribution sont décrites au niveau de chaque donnée de cette série.</dde:description>
+            <dde:linkage nilReason="missing"/>
+         </dde:onlineResource>
+         <dde:distributionResponsibleParty>
+            <dde:name>Service public de Wallonie (SPW)</dde:name>
+            <dde:role>distributor</dde:role>
+            <dde:electronicMailAddress>helpdesk.carto@spw.wallonie.be</dde:electronicMailAddress>
+         </dde:distributionResponsibleParty>
+      </dde:distributionInfo>
+   </dde:identificationInfo>
+</dde:MD_Metadata>
