@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ddeac="https://www.ddeworld.org/resource/codelist/topicCategory#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <Ontology rdf:about="https://www.ddeworld.org/resource/ontology/acquisitioncode">
+        <versionIRI rdf:resource="https://www.ddeworld.org/resource/ontology/1.0/acquisitioncode"/>
+        <imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:prefLabel xml:lang="en">DDE data acquisition method type codes</skos:prefLabel>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <dc:description xml:lang="en">terms to categorize method(s) used to create an information resource, focused on geoscience datasets</dc:description>
+        <dc:title xml:lang="en">DDE acquisition method codes</dc:title>
+        <dcterms:issued>2023-11-04</dcterms:issued>
+        <dcterms:modified>2024-03-12</dcterms:modified>
+        <skos:prefLabel xml:lang="en">DDE acquisition method codes</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#boreholeCuttingsObservation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#boreholeCuttingsObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#drillBorehole"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">05.1 Borehole Cuttings Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data based on interpretation of borehole cuttings (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/borehole_cuttings_observation)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#boreholeGeophysicalLogMeasurements -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#boreholeGeophysicalLogMeasurements">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#drillBorehole"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">05.2 Borehole Geophysical Log Measurements</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data based on interpretation of geophysical measurement obtained by borehole logging tools(http://resource.geosciml.org/classifier/cgi/featureobservationmethod/borehole_geophysical_log_measurements).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#dataAndMapCompilation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataAndMapCompilation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">10 Data and Map Compilation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Geoscience data and map compilation from existing data, maps and other resources that are usually scattered and in larger scale and of higher spatial resolution. Or the collation of raw data and their transformation into a format that can be easily manipulated or combined with other data in preparation for further analysis(EiE Glossary, https://inee.org/eie-glossary/data-compilation).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#dataFromSinglePublishedDescription -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataFromSinglePublishedDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">07.1 Data From Single Published Description</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data are extracted from a published description of the feature (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/data_from_single_published_description)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">07 Data Integration Synthesis</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data or resource are the result of synthesis from other data or resources, or as the integration of other data or resources.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#digitaConversionFromPublishedSource -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#digitaConversionFromPublishedSource">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">08 Digital Conversion From Published Source</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Feature observation is based on published information, converted to a digital representation for database application (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/digital_conversion_from_published_source).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#digitalSimulation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#digitalSimulation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">09 Digital Simulation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data generated by digital analyses and simulations with software rather than physical acquisitions.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#directObservation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#directObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#observation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">03.1 Direct Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Feature observation is result of direct visual observation by a geologist (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/direct_observation).  Direct observation may include observation using a remote camera (e.g. downhole viewer, submarine camera).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#drillBorehole -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#drillBorehole">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">05 Drilling or Borehole</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Collection or records of drills and boreholes.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#drillCoreObservation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#drillCoreObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#drillBorehole"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">05.3 Drill Core Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data collected through observation of a single drill core interval(http://resource.geosciml.org/classifier/cgi/featureobservationmethod/drill_core_observation).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#geologicalMapping -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#geologicalMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">01 Geological Mapping</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data collected and acquisition mostly in the field by profiling and stationary observation, sampling, and following laboratory analysis, etc., typically, regional field geological mapping    </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#indirectObservation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#indirectObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#observation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">03.2 Indirect Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Feature observation based on inference from proxy observation(http://resource.geosciml.org/classifier/cgi/featureobservationmethod/indirect_method )  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#laboratoryInstrumentation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#laboratoryInstrumentation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">06 Laboratory Instrumentation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data or resource from rock specimen and chemical element analyses in laboratories.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#observation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#observation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">03 Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data collected by stationary measurement, etc. like ground water monitoring.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#outcropObservation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#outcropObservation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#observation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">03.3 Outcrop Observation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data collected in field through direct observation of a single outcrop. Observer defines scope of &apos;single outcrop&apos; - may be one point location, or averaged over an extended but connected area, e.g. a single polygon on a map (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/outcrop_observation).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#remoteSensing -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#remoteSensing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">04 Remote Sensing</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data collected with satellites, airplane platform on drone, etc., typically aero-photography and radar.  Also, (CGI) Geologic unit or structure characterized based on remotely sensed data (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/remotely_sensed_data )  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#survey -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#survey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">02 Survey</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data collected with equipment records and following processing with planned profile, or areal/regional data acquisition activity, etc., typically, aeromagnetic survey.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisFromMultipleSources -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisFromMultipleSources">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">07.2 Synthesis From Multiple Sources</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Feature observation is based on a synthesis of other observations by some compiler. The compiler may be the same individual that made the source observations (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/synthesis_from_multiple_sources).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisOfMultipleOutcropObservations -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisOfMultipleOutcropObservations">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">07.3 Synthesis Of Multiple Outcrop Observations</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data are the result of synthesis from multiple direct observations, possibly by more than one observer (http://resource.geosciml.org/classifier/cgi/featureobservationmethod/synthesis_of_multiple_outcrop_observations).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisOfMultiplePublishedDescriptions -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#synthesisOfMultiplePublishedDescriptions">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode#dataIntegrationSynthesis"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">07.4 Synthesis Of Multiple Published Descriptions</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">(CGI) Data are the result of synthesis from multiple published descriptions(http://resource.geosciml.org/classifier/cgi/featureobservationmethod/synthesis_of_multiple_published_descriptions).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#webResource -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#webResource">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">11 Web Resource</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data and resources obtained from the web.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#other: -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#other:">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">12 Other</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Data and resources obtained from source other than the above. For other values not included in this codelist, use prefix ‘other:’ with a label token (alphanumeric characters, no spaces) of at least 2 characters to specify the acquisition method.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/acquisitioncode#other:missing -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/acquisitioncode#other:missing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:topConceptOf rdf:resource="https://www.ddeworld.org/resource/codelist/acquisitioncode"/>
+        <skos:prefLabel xml:lang="en">Missing value</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Sentinel value to flag that no topic category was provided; need this because ISO19115-3 does not require a topic category.</skos:scopeNote>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

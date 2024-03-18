@@ -1,0 +1,2209 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ddetc="https://www.ddeworld.org/resource/codelist/topicCategory#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <Ontology rdf:about="https://www.ddeworld.org/resource/ontology/topicCategory">
+        <versionIRI rdf:resource="https://www.ddeworld.org/resource/ontology/1.0/topicCategory"/>
+        <skos:prefLabel xml:lang="en">DDE topic category extensions</skos:prefLabel>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <dc:description xml:lang="en">description of vocabulary</dc:description>
+        <dc:title>DDE topic category extensions</dc:title>
+        <dcterms:issued>2023-11-04</dcterms:issued>
+        <dcterms:modified>2024-03-07</dcterms:modified>
+        <skos:hasTopConcept rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:prefLabel xml:lang="en">DDE topic category extensions</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_coringAndCoreAnalysis -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_coringAndCoreAnalysis">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_drillAndGeophysicalLogging"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.22.2 Coring and core analysis</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description of instruments and technology used to acquire continuous subsurface samples along a borehole (core), and techniques for measuring properties of the samples at laboratory  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_drillAndGeophysicalLogging -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_drillAndGeophysicalLogging">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.22 Drill and geophysical logging</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Documentation and collection of data for physical and petrophysical properties of subsurface materials acquired using instruments lowered into boreholes.  Geophysical logging is based on physics (electric, nuclear, magnetic, etc.), mathematics and geology as the theoretical basis.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_instrumentsForDrillingAndWellLogging -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_instrumentsForDrillingAndWellLogging">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_drillAndGeophysicalLogging"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.22.1 Instruments for drilling and well logging</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description of instruments and technology used for drilling boreholes, colleting rock and sediment samples, and collecting subsurface data in boreholes.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_loggingDataAnalysis -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_loggingDataAnalysis">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_DGL_drillAndGeophysicalLogging"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.22.3 Logging data analysis</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of techniques for analyzing data collected by borehole logging instruments, and relating the data to physical properties and geologic events used for correlation.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_characteristicsOfOreDeposits -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_characteristicsOfOreDeposits">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.35.1 Characteristics of ore deposits</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and description of systematic information describing the attributes of the mineral deposits.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_depositType -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_depositType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.35.2 Deposit type</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Classifications of recognized mineral deposits that are defined by physical and genetic factors that can be consistently differentiated from those of other classes or deposit types.  (Bureau of Mines. Dictionary of mining, mineral, and related terms[M]. American Geological Institute, 1997)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.35 Economical geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of fuels, metals, and other materials from the Earth that are of interest to industry or the economy in general. It is concerned with the distribution of resources, the costs and benefits of their recovery, and the value and availability of existing materials. (Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_metallogeny -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_metallogeny">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.35.4 Metallogeny</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the genesis and regional-to-global distribution of metallic mineral deposits, with emphasis on their relationship in space and time to regional petrologic and tectonic features of the Earth&apos;s crust. (Gilbert J M, Park Jr C F. The geology of ore deposits[M]. Waveland Press, 2007)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_oreGenesis -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_oreGenesis">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ECG_economicalGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.35.3 Ore genesis</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the origin of economically producable concentrations of a mineral commodity.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11 Engineering geology(geotechnology)</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Investigation, study and solution of the engineering and environmental problems that arise as the result of the interaction between geology and the activities of humans, and the prediction and development of measures for prevention or remediation of geological hazards.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_appliedEngineeringGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_appliedEngineeringGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.4 Applied engineering geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Collection and evaluation of data useful for the design and engineering of structures. The subject comprises the modes of application of engineering geology, case histories, evaluation of investigations, design and realization of structures as well as their observation during and after construction.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_geologicalHazards -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_geologicalHazards">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.5 Geological hazards</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and assessment of natural geologic processes or man-made geologic conditions that represent a present-day or future hazard to man&apos;s life, health, or property. Six typical geological hazards, i.e., landslides, debris flows, rockfalls, avalanches, earthquakes, and volcanoes.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_intelligentEngineeringGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_intelligentEngineeringGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.6 Intelligent engineering geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Studies that combine innovative concepts with the new generation of information technology to intelligently collect geologic information useful for engineering, mine existing engineering geology knowledge, reveal  spatial-temporal characteristics and the evolution of engineering geological bodies, and predict their future development trends.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_regionalEngineeringGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_regionalEngineeringGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.1 Regional engineering geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geologic stability of a particular region that might be affected by crustal movements, volcanic activity or  fault activity, especially focused on those activities which might trigger earthquakes and consequent regional mass wasting processes such as rock falls, landslides, debris flow, liquefaction, plastic flows of clay, and uneven surface subsidence.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_rockMassEngineeringGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_rockMassEngineeringGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.3 Rock mass engineering geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the laws of formation and evolution of rock masses and their engineering behavior through the theories and methods of geomechanics.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_soilMassEngineeringGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EGG_soilMassEngineeringGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_EEG_engineeringGeologyGeotechnology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.11.2 Soil mass engineering geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of engineering properties of soil to solve geological problems related to engineering activities, and propose technical measures for improvement and hazard prevention in the planning, design, construction, use and development of engineering activities.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_coalAndCoalbedMethane -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_coalAndCoalbedMethane">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.5 Coal and coalbed methane</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of coal geology and coalbed methane geology, coal and coalbed methane exploration, coal and coalbed methane production and products, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31 Earth resource</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the occurrence of renewable resources and non-renewable resources that are found in the Earth. Non-renewable resources are the naturally resources that cannot be readily replaced by natural means such as oil and gas, minerals and metal ores, ground water, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_gasHydrate -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_gasHydrate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.6 Gas hydrate</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of gas hydrate, gas hydrate geology, gas hydrate exploration, gas hydrate exploitation, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_groundwater -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_groundwater">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.2 Groundwater</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of groundwater resources of the Earth in aquifers, including groundwater exploration, groundwater production, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_mineralResource -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_mineralResource">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.1 Mineral resource</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Mineral resources of the earth, including mineral geology, mineral exploration, mineral exploitation, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_oilAndGas -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_oilAndGas">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.3 Oil and gas</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of oil and gas resources in the Earth, including exploration, exploitation, production, distribution of oil and gas fields, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_organicMaterial -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_organicMaterial">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.7 Organic material</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of Earth material composed of organic compounds derived from the remains of dead organisms and their waste products in the environment. (CGI)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_shaleGasAndOilShale -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_shaleGasAndOilShale">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_ER_earthResource"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.31.4 Shale gas and oil shale</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geology, exploration, production of hydrocarbons from of oil shale or shale gas.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_Geochronology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_Geochronology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.3 Geochronology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The science of determining the age of rocks, fossils, and sediments using signatures inherent in the rocks themselves, using  radioactive isotopes,  paleomagnetism, stable isotope ratios or other physical evidence. By combining multiple geochronological (and biostratigraphic) indicators the precision of the recovered age can be improved.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_nonradioIsotopicDating -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_nonradioIsotopicDating">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_Geochronology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.3.2 Non-radio isotopic dating</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Geochronology that does not rely on the measurements of radiogenic decay.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_radioIsotopicDating -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_radioIsotopicDating">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GC_Geochronology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.3.1 Radio isotopic dating</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Geochronolgy based on the rates of radiogenic decay which is proportional to time.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_dinosaur -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_dinosaur">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36.1 Dinosaur</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and presentation of dinosaurs for geoscience and the public.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geo-education -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geo-education">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36.3 Geo-education</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Resources related to in-school and out-of-school learning. In school, geo-education takes place across many subjects in the traditional curriculum. Outside of school, geo-education takes place through guided experience in both the human and natural worlds.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalArchives -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalArchives">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36.5 Geological archives</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Geological reports and written materials that mostly are not published  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36 Geological literature</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Documentation of literature of or about geology  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalPublications -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalPublications">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36.4 Geological publications</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Publications of geology, such as books, periodicals, magazines, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geopark -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geopark">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GL_geologicalLiterature"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.36.2 Geopark</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and management of the UNESCO Geopark that are single, unified geographical areas where sites and landscapes of international geological significance are managed with a holistic concept of protection, education and sustainable development.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_digitalGeologicalMapping -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_digitalGeologicalMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicMapping"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.9.3 Digital geological mapping</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study or documentation of the process of using computer software to create a digital geological map or to construct database of geological maps.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicMapping -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.9 Geologic mapping</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study or documentation of the interpretive, geoscientific processes to produce depictions of the distribution of rocks and geologic structures in the Earth. Scope includes a range of map products for many different uses, including assessing ground-water quality and contamination risks; predicting earthquake, volcano, and landslide hazards; characterizing energy and mineral resources and their extraction costs; waste repository siting; land management and land-use planning; and general education. The products include geological, tectonic, seismological, geophysical and geochemical maps at different scales.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicalCompilation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicalCompilation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicMapping"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.9.2 Geological compilation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study or documentation of geoscience map compilation. A geological map may be compiled from other maps, usually of larger scale, or may be produced from original geoscientific surveys and photogrammetric compilations.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicalSurvey -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicalSurvey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GM_geologicMapping"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.9.1 Geological survey</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study or documentation of the process of collecting geological data by a variety of methods such as field profiling, drilling, remote sensing and sampling etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_appliedGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_appliedGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.4 Applied geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the use of principles and methods of geomorphology to solve practical problems. It links the study of geomorphology closely to the transformation of nature and human decision-making processes. It relates to environmental studies, resource surveys, disaster prevention, soil and water conservation, etc. Applied geomorphology includes multiple sub-fields, for example, agricultural geomorphology, engineering geomorphology and mining geomorphology.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_climaticGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_climaticGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.7 Climatic geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the processes of landform formation and their evolution under different climatic conditions.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_dynamicalGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_dynamicalGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.2 Dynamical geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the mechanisms of landform evolution focused on geomorphic processes. It can be divided into endodynamic geomorphology and exokinetic geomorphology. It applies the principles and methods of basic sciences such as mathematics, physics and chemistry, focusing on the modern process of landform formation and the relationship between landform and various action variables.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_experimentalGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_experimentalGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.5 Experimental geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The study of geomorphic process through indoor scale modelling or observation of a selected geomorphic feature under controlled conditions to reveal relationships between the development of landforms and different factors.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_fractalGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_fractalGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.9 Fractal geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the use of fractal methods and principles to study the surface morphology and its occurrence, development and distribution.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphologicalMapping -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphologicalMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.6 Geomorphological mapping</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description of the process of visualizing the scale, spatial distribution, classification or regionalization of various geomorphological objects and phenomena on a map. It is an important method and tool for geomorphological investigation and research, as well as a powerful illustration and supplement to the written description of geomorphological phenomena. The results of geomorphological mapping include geomorphological classification maps, geomorphological regionalization maps, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28 Geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the origin and evolution of physiography, topographic and bathymetric features created by physical, chemical or biological processes operating at or near the Earth&apos;s surface.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_historicalGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_historicalGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.10 Historical geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the temporal sequence of development of geomorphic features.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_quantitativeGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_quantitativeGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.8 Quantitative geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of land surface morphology, its formation and development through the analysis of quantitative data using mathematical methods. It includes the acquisition of quantitative data, the quantification of non-quantitative information, the processing and analysis of data, the creation of models and the simulation of geomorphological processes.  Includes digital geomorphology, which is a branch of geomorphology that studies surface morphology, landform types, spatial distribution, geomorphic formation and evolution process through comprehensive analysis of remote sensing images, digital terrain model (DTM) and other relevant geomorphic data in a geographic information system environment.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_regionalGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_regionalGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.3 Regional geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geomorphology of an area, with analysis of topographic characteristics, genetic dynamics, geomorphic evolution, geographical distribution and composition characteristics. Includes studies at different spatial scales, such as global geomorphology, intercontinental geomorphology, plate geomorphology, national geomorphology, and local regional geomorphology etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_specialGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_specialGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GPH_geomorphology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.28.1 Special geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the landforms and their geomorphic evolution formed by some geological agents (such as fluvial landforms, aeolian landform, glacial landform, karst landform, coastal landform, etc.) as its independent research object.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_appliedGeothermics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_appliedGeothermics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.32.2 Applied geothermics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Studies that investigate geothermal resource types, origin and distribution, geothermal resource exploration, geothermal resource evaluation, geothermal resource development and utilization, and geothermal disaster.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_dryHotRock -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_dryHotRock">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.32.4 Dry hot rock</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of underground dry hot rock exploration and utility, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermalEnergy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermalEnergy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.32.3 Geothermal energy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of heat energy that comes from the subsurface of the earth which contained in the rocks and fluids beneath the crust and originates from the formation of the planet or geological movements and radioactive decay of mass materials.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.32 Geothermics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of heat from within the Earth as a natural resource. It includes geothermal geology, geothermal exploration, geothermal exploitation, geothermal tourism, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_theoreticalGeothermics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_theoreticalGeothermics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_GTH_geothermics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.32.1 Theoretical geothermics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of fundamental topics related to heat in the Earth such as the thermal structure of crust and mantle, the deep thermal state and the formation mechanism and control factors of the thermal evolution of lithosphere structure.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_geologicalProcessesOfGroundwater -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_geologicalProcessesOfGroundwater">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10.4 Geological processes of groundwater</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the relationship between geologic processes and the occurrence and movement of groundwater.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterDependentEcosystems -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterDependentEcosystems">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10.5 Groundwater dependent ecosystems</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of ecosystems that depend on groundwater permanently or intermittently to meet all or some of their water requirements so as to maintain their communities of plants and animals, ecological processes and ecosystem services.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterFlow -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterFlow">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10.2 Groundwater flow</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of he movement of water through soil or rock bodies in the subsurface.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterQuality -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_groundwaterQuality">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10.3 Groundwater quality</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the physical, chemical and biological properties of groundwater related to its utilization for human activities.</skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10 Hydrogeology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the distribution and movement of groundwater in the soil and rocks of the Earth&apos;s crust, commonly in aquifers. Geology of ground water and hydrology, also including ground water dynamic, mining hydrogeology, regional hydrogeology, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_storageOfGroundwater -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_storageOfGroundwater">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_HG_hydrogeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.10.1 Storage of groundwater</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the hydrological properties of rock and soil as they relate to water as a constituent of the rock body.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.5  Magmatic petrology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of macroscopic and microscopic mineralogical and chemical composition of igneous rocks (or magmatic rocks)—formed through the cooling and solidification of molten material (magma or lava) either within the earth’s crust or at crust the surface of the earth.  The modern study of igneous rocks utilizes many techniques, some of them developed in the fields of chemistry, physics, or other earth sciences. Mineralogy, crystallography, and isotopy studies are common methods used in igneous petrology.  (from “Igneous rocks” by Jerram D. and Petford N. (2004), Robin Gill (2010) and Wikipedia).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_compositionAndClassification -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_compositionAndClassification">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.5.1 Composition and classification</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Mineral and geochemical composition of igneous rocks. The classification of igneous rocks refers to classifying igneous rocks according to their mineral and geochemical compositions. The rocks are generally classified into ultramafic, mafic, intermediate, and acidic igneous rocks, and some special and unclassified igneous rocks.  (from “Igneous rocks” by Tomkeieff S.T.(1983), R.W.Le Maitre (2002), Best M G (2003) and Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_geochemicalProperties -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_geochemicalProperties">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.5.2 Geochemical properties</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of major, trace element, and isotopic composition of igneous rocks. The chemistry of igneous systems provides clues to many important whole-earth evolution processes, including the origins of igneous, processes and timing of planetary differentiation, the production and destruction of the lithosphere, and the relationships between magmatic styles, composition, crust growth, mantle-crust convection, and plate-tectonic environment.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_magmatismAndOrigin -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_magmatismAndOrigin">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.5.4 Magmatism and origin</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of  the origin and emplacement of magma within or at the surface of the outer layers of a terrestrial planet to form igneous rocks. Includes the production, intrusion, and extrusion of magma or lava. Volcanism is the surface expression of magmatism.  The origin of igneous rocks is to study the source of magma, magma generation, magmatism, and other properties related to igneous formation.  (from “Igneous rocks” by Robin Gill (2010) and Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_physicalProperties -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_physicalProperties">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MAP_MagmaticPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.5.3 Physical properties</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the observable, measurable, and describable physical properties of igneous rocks and magma processes, including the occurrence in the field, texture, (ductile and brittle) structure of igneous rocks, as well as the physical properties of magma, such as temperature, pressure, and rheology etc.  (from “Igneous rocks” by Jerram D. and Petford N. (2004) and Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_coastalMorphoDynamics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_coastalMorphoDynamics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.10  Coastal morphodynamics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the changes in the morphology of the coastal zone, including the topography of the sea bed and the shoreline planform, in connection with waves, currents, tides and sea level rise.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeochemistry -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeochemistry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.7 Marine geochemistry</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the chemistry of geological materials such as rocks, sediments and water from the ocean or ocean floor.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeochronology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeochronology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.5 Marine geochronology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Determination of ages and time intervals for geologic materials, including marine sediments, and processes on geologic, archeologic, and historic time scales. It is the science of investigating the chronology of the earth constituents as induced from geologic data, based on absolute and relative dating methods.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeohazards -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeohazards">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.9  Marine geohazards</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of geological conditions at the sea floor or within sub-bottom sediments that could result in dangerous or catastrophic events with attendant risks to life and/or infrastructure. The major marine geohazards are coastal erosion, seawater intrusion, earthquakes, submarine landslides, subsidence, tsunamis, natural gas hydrate dissociation, seabed sand waves, shallow gas, overpressure strata, gas chimneys, mud volcanoes and mud diapirism  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15 Marine geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the history and structure of the ocean floor from shorelines to the continental shelf and deep sea. It involves geophysical, geochemical, sedimentological and paleontological investigations of the ocean floor and coastal zone.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marinePaleontologyAndMicropaleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marinePaleontologyAndMicropaleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.11  Marine paleontology and micropaleontology  </skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of ancient fossils and microfossils in the sediments in order to reconstruct past conditions of oceans and environments.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marinePetrology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marinePetrology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.6 Marine petrology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the mineralogy, textures, and chemical composition of igneous, sedimentary, and metamorphic rocks from the ocean floor, since their composition reflects the conditions at which they were formed and the time they needed to develop.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineSedimentDynamics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineSedimentDynamics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.3 Marine sediment dynamics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the motion of sediment particles during their formation, transport, and settling processes (Zhang, 2014).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineSedimentology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineSedimentology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.2 Marine sedimentology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description, classification, modeling, and interpretation of marine sediments so as to determine the physical, chemical, and biological processes by which they formed.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_paleoceanographyAndPaleoclimatology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_paleoceanographyAndPaleoclimatology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.4 Paleoceanography and paleoclimatology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the circulation, chemistry, biology, geology and patterns of sedimentation and biological productivity of the oceans  and climates as they were in the past, from a few hundred years to billions of years ago (Thomas, 2009).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_seafloorHabitat -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_seafloorHabitat">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.12 Seafloor habitat</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of physical structure, dimensions, and biological characteristics of specific species or groups of species occupying the seafloor (Diaz et al. 2004).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_seafloorTectonicsAndGeodynamics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_seafloorTectonicsAndGeodynamics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.8 Seafloor tectonics and geodynamics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the genesis, aging, motion, and destruction of oceanic plates (Koppers and Coggon, 2020) and their interactions with the earth’s interior.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_submarineGeomorphology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_submarineGeomorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.1 Submarine geomorphology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the morphology and evolution of seafloor landforms, and the processes responsible for their formation, in particular erosion and depositional processes, sediment movement and deformation, volcanic activity, fluid migration, and anthropogenic impacts.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_subseafloorBiosphere -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_subseafloorBiosphere">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MG_marineGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.15.13 Subseafloor biosphere</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the subseafloor ecosystem and environments (e.g., hydrothermal systems and cold seeps) that sustain them.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_chemicalCompositionAndCrystalStructure -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_chemicalCompositionAndCrystalStructure">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16.5 Chemical composition and crystal structure</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the identity and number of the chemical elements that make up any particular mineral  the ordered arrangement of atoms, ions or molecules in a crystalline material.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_crystallography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_crystallography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16.2 Crystallography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the external form and the crystal structure of crystalline solids and the principles that govern their growth, shape, and internal atomic arrangement.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralClassificationAndDescription -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralClassificationAndDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16.4 Mineral classification and description</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of  schemes for mineral classifications that are determined in the light of chemical composition and internal structure.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralGenesisAndItsOccurrence -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralGenesisAndItsOccurrence">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16.3 Mineral genesis and occurrence</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of minerals characteristics, species and assemblages as they relate to the physical and chemical conditions of  conditions and genetic processes.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralPropertiesAndItsApplications -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralPropertiesAndItsApplications">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16.1 Mineral properties and applications</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the properties of minerals, for understanding geological phenomena and synthesizing new materials.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MI_mineralogy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.16 Mineralogy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of natural minerals that formed on Earth and or were delivered from other planets.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_analysis -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_analysis">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.14.2 Analysis</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description of the analysis of geologic problems amenable to mathematical modeling.  Analysis is the process of breaking a complex topic or substance into smaller parts in order to gain a better understanding of it.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_computation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_computation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.14.4 Computation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and documentation of algorithms and implementation of algorithms in computer systems to build models or solve problems. Computation is any type of calculation that includes both arithmetical and non-arithmetical steps and follows a well-defined algorithm.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.14 Mathematical geoscience</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the application of mathematical methods to solve problems in geosciences.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_modelling -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_modelling">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.14.3 Modelling</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study, documentation and development of conceptualizations that can be used to explain observed data, and implementation of these conceptualizations in software to compare predicted behavior to the actual observed data, or to predict the outcome of an event.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6 Metamorphic petrology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the transformation of existing rock to new types of rock through solid-state mineralogical, chemical and/or structural changes.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_burialMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_burialMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.8 Burial metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism resulting from deep burial under a sedimentary or volcanic accumulation, typically not associated with deformation or magmatism.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_contactMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_contactMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.4 Contact metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism that affects the rocks adjacent to magma bodies emplaced in a variety of environments from volcanic to upper mantle depths, in both continental and oceanic settings.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_dynamicMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_dynamicMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.2 Dynamic metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism of local extent, associated with fault zones or shear zones.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_impactMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_impactMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.3 Impact metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism caused by the passage of a shock wave due to the impact of a planetary body (projectile or impactor) on a planetary surface (target). It includes melting and vaporization of the target rock(s).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metamorphicFabrics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metamorphicFabrics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.1 Metamorphic fabrics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the relative orientation of parts of a metamorphic rock mass, including metamorphic textures and structures.  Metamorphic textures develop in the solid state as mineral grains interact with their neighbors during deformation, recrystallization, and/or growth. Structure is the arrangement of the parts of a rock mass irrespective of scale, including spatial relationships between the parts, their relative size and shape and the internal features of the parts.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metamorphicHistory -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metamorphicHistory">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.10 Metamorphic history</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the temporal sequence of metamorphic facies, metamorphic series, metamorphic zones, and P-T-t paths in a rock or a geological unit. A metamorphic facies is a set of metamorphic mineral assemblages, repeatedly associated in time and space and showing a regular relationship between mineral composition and bulk chemical composition. A series of metamorphic facies developed under a particular range of P/T. A succession of metamorphic zones characterized by distinctive index minerals.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metasomatism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_metasomatism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.5 Metasomatism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphic processes through which the chemical composition of a rock body is altered, involving the introduction and/or removal of chemical components as a result of the interaction of the rock with aqueous or other fluids. During metasomatism the rock remains in a solid state.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_migmatite -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_migmatite">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.9 Migmatite</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of silicate metamorphic rock, pervasively heterogeneous on a meso- to megascopic scale, typically consisting of darker and lighter parts. The darker parts usually exhibit features of metamorphic rocks whereas the lighter parts are of igneous-looking appearance.    </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_oceanfloorMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_oceanfloorMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.7 Ocean-floor metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism related to the steep geothermal gradients occurring near spreading centers in oceanic environments.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_regionalMetamorphism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_regionalMetamorphism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMP_MetamorphicPetrology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.6.6 Regional metamorphism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of metamorphism that occurs over a wide extent, affecting a large rock volume, associated with large-scale tectonic processes, such as ocean-floor spreading, crustal thickening related to plate collision, deep basin subsidence, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_climatePaleogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_climatePaleogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.30.3 Climate paleogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the relationship between geography and climate in the geologic past, by adding climatic information to traditional paleogeography maps by using deep time climate classifications.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_lithofaciesPaleogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_lithofaciesPaleogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.30.1 Lithofacies paleogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the use of lithofacies analysis to reconstruct sedimentary environments and landforms during geological history and to study the distribution and evolution of sedimentary facies, with the task of providing basic theory and applied methods for resource prediction.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleobiogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleobiogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.30.4 Paleobiogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geographical distribution of faunas and floras in the past.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.30 Paleogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of historical geography, generally physical landscapes in the geologic past.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_tectono-paleogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_tectono-paleogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PGG_paleogeography"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.30.2 Tectono-paleogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the relationship between geography and plate tectonic development of the Earth , including the location of active plate boundaries and the changing extent of both oceanic and continental plates.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_geologicalElements -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_geologicalElements">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.13.2 Geological elements</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geological elements related to origin, occurrence, movement, and accumulation of oil or gas resources,  including source rocks, reservoirs, seals and traps.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_oilAndGasResourcesAssessment -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_oilAndGasResourcesAssessment">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.13.1 Oil and gas resources assessment</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Evaluation of oil and gas resources to estimate the subsurface oil and gas endowment in a specific geological entity.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumAccumulation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumAccumulation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.13.3 Petroleum accumulation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geological process of oil and gas entrapment in rock bodies through migration in the carrier beds and finally filling into traps following the generation of oil and gas.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PG_petroleumGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.13 Petroleum geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the origin, occurrence, movement, accumulation, and exploration of hydrocarbon fuels. It refers to the specific set of geological disciplines that are applied to the search for hydrocarbons (oil exploration).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2 Paleontology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of life in the geologic past, based on examination of fossilized remains of once living organisms to clarify their taxonomic classification and interactions with each other and their environments (their paleoecology).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_biostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_biostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.4 Biostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Correlation and assignment of relative age of rock strata using fossil assemblages contained within them. The primary objective of biostratigraphy is correlation, demonstrating that a particular horizon in one geological section represents the same period of time as another horizon at a different section.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_evolutionaryPaleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_evolutionaryPaleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.3 Evolutionary paleontology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Information related to reconstruction of the history of life on earth (historical paleontology, phylogeny) and the patterns and causes of evolutionary change and extinction (biological and physical processes and unique historical events).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_fossil -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_fossil">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.2 Fossil</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description of remnants, impressiosn, or traces of an animal or plant of a past geologic age, preserved in the rock record.  The preserved remains or replaced remains (casts) of plants or animals. A fossil type may have one or more described associated organisms. If particle type is materialFossil, an additional type property element may provide a reference to a Paleontologic description of the fossil.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_geobiology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_geobiology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.9 Geobiology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the interactions between the physical Earth and the biosphere. Geobiology focuses on microorganisms, and on the role that life plays in altering the chemical and physical environment of the pedosphere, which exists at the intersection of the lithosphere, atmosphere, hydrosphere and/or cryosphere.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_ichnology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_ichnology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.6 Ichnology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of fossils traces that record biological activity,  but are not the preserved remains of the plant or animal itself, including the tracks, borings, trails, burrows, impressions, and others left by ancient organisms. The study of Ichnology is to gain insight into ancient organisms&apos; behavior and ecology.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_invertebratePaleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_invertebratePaleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.7 Invertebrate Paleontology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of ancient invertebrates by analyzing invertebrate fossils in the geologic record.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_micropaleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_micropaleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.13 Micropaleontology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of microfossils (generally smaller than 1 mm) that require using microscope to observe and to study organism&apos;s morphology and characteristic details.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_molecularPaleontology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_molecularPaleontology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.8 Molecular Paleontology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Recovery and analysis of DNA, proteins, carbohydrates, or lipids, and their diagenetic products from ancient human, animal, and plant remains.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleoanthropology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleoanthropology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.5 Paleoanthropology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of early development of anatomically modern humans, through the reconstruction of evolutionary kinship lines within the family Hominidae, working from biological evidence (such as petrified skeletal remains, bone fragments, footprints) and cultural evidence (such as stone tools, artifacts, and settlement localities).  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleobiogeography -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleobiogeography">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.14 Paleobiogeography</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the past geographic distribution of organisms based on  the fossil record. Incorporates ecology, evolution, and geological processes, and use of the fossil record provides a time component that results in multiple time slices to examine biogeographic pattern.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleobotany -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleobotany">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.10 Paleobotany</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the recovery and identification of plant remains from geological contexts, and their use for the biological reconstruction of past environments, and the evolutionary history of plants, with a bearing upon the evolution of life in general. Paleobotany includes the study of terrestrial plant fossils and prehistoric marine photoautotrophs, such as photosynthetic algae, seaweeds or kelp.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleoecology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_paleoecology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.1 Paleoecology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of interactions between organisms and/or interactions between organisms and their environments across geologic timescales. As a discipline, paleoecology interacts with, depends on and informs a variety of fields including paleontology, ecology, climatology and biology.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_palynology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_palynology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.11 Palynology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of  contemporary and fossil palynomorphs, including pollen, spores, orbicules, dinocysts, acritarchs, chitinozoans and scolecodonts, together with particulate organic matter and kerogen found in sedimentary rocks and sediments.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_taphonomy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_taphonomy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_PO_Paleontology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.2.12 Taphonomy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of how organisms decay and become fossilized or preserved in the fossil record.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_appliedRemoteSensing -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_appliedRemoteSensing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensing"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.27.2 Applied remote sensing</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of techniques to obtain target information by using remote sensing technology or to obtain target attributes by analyzing remote sensing data.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_photogrammetry -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_photogrammetry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensing"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.27.3 Photogrammetry</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Techniques to obtain the shape, size, position, characteristics, and relationships of the subject from remote sensing images. Mostly related to production of topographic maps, establishing topographic databases, provide spatial basic data for various geographic information systems, land information systems, and various projects, and serve non-topographic fields.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensing -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.27 Remote sensing</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Descriptions acquisition and analysis of information about an object or phenomenon without making physical contact with the object, especially to acquiring information about the Earth from aircraft or satellites, for the study of hydrology, ecology, meteorology, oceanography, glaciology, geology, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensingInfrastructure -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensingInfrastructure">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_RS_remoteSensing"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.27.1 Remote sensing infrastructure</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and description of the techniques, hardware, and software to collect and analyze remote sensing data. It is especially associated with those devices and data analysis and process methods of the remote sensing system, including the sensors, sensing platforms, electromagnetic spectrum characteristics, and remote sensing data algorithms.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_activeStructure -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_activeStructure">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_structureGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.7.2 Active and Neo structure</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of recent tectonic deformation and tectonic geomorphic evolution on the Earth. Neo-structure concerns geological processes at time scales from Ma to ka, and emphasizes on the relationship between the past and present tectonic deformation. Active tectonics is focused on geological–geomorphological processes since 100 to 150ka, present, and future tectonic deformation. Active structure is typically used to describe those movement that have occurred over the timespan of human history and deals with the societal implications of ongoing deformation, such as seismic-hazard assessment, future sea-level rise, i.e. crustal movements that can be expected to recur within a future interval of concern to society.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_historicalStructure -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_historicalStructure">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_structureGeology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.7.1 Historical structure</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of deformational histories of rock units that occured before Quaternary time.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_structureGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SGE_structureGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.7 Structure geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the three-dimensional distribution of rock units with respect to their deformational histories. The primary goal of structural geology is to use measurements of present-day rock geometries to uncover information about the history of deformation (strain) in rocks, and ultimately, to understand the stress field that resulted in the observed strain and geometries.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1 Stratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The study of rock layers (strata) and layering (stratification), dealing with the description of all rock bodies form the Earth’s crust— sedimentary, igneous, and metamorphic— and their organization into distinctive, useful, mappable units based on their inherent properties or attributes. Stratigraphic procedures include the description, classification, naming, and correlation of these units for the purpose of establishing their relationship in space and their succession in time.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_biostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_biostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.6 Biostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Distribution of fossils in the stratigraphic record and the organization of strata into units on the basis of their contained fossils.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_chemostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_chemostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.7 Chemostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Geochemical signals, such as carbonate cycles and isotope cycles, as recorded in the stratigraphic record.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_chronostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_chronostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.3 Chronostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Relative time relations and ages of rock bodies.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_cyclostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_cyclostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.2 Cyclostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Identification, characterization, correlation, and interpretation of cyclic (periodic or quasi-periodic) variations in the stratigraphic record and, in particular, with their application in geochronology by improving the accuracy and resolution of time-stratigraphic frameworks. It uses astronomical cycles of known periodicities to date and interpret the sedimentary record.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_eventStratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_eventStratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.8 Event stratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of stratigraphic traces of relatively short-lived events (instant to thousands of years) compared to those normally observed on a geological time-scale. Events may be represented by depositional, erosional or geochemical features.  (http://quaternary.stratigraphy.org/stratigraphic-guide/event-stratigraphy/)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_geologicTimeScale -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_geologicTimeScale">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.9 Geologic time scale</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Representation of time based on the rock record of Earth, using chronostratigraphy and geochronology. It is used primarily to describe the timing and relationships of events in geologic history. (From Wikipedia, the free encyclopedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_lithotratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_lithotratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.5 Lithotratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Description and nomenclature of the rocks of the Earth based on their lithology and their stratigraphic relations.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_magnetostratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_magnetostratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.1 Magnetostratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Elements of stratigraphy that deal with the magnetic characteristics of rock units.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_sequenceStratigraphy -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_sequenceStratigraphy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_Stratigraphy"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.1.4 Sequence stratigraphy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Genetically related facies within a framework of chrono- stratigraphically significant surfaces  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_surficialGeochemistry -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SG_surficialGeochemistry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_geochemistry"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.26.1 Surficial geochemistry</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the chemical principles and processes active on the Earth surface  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.4 Sedimentology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the physical and chemical properties of sediments and sedimentary rocks and the processes involved in their formation. The interpretation of ancient environmental conditions in sediment source areas and depositional sites is a key objective of such  study. Sedimentologists examine the constituents, textures, structures, and fossil content of deposits formed in various geographic environments.  (https://www.vedantu.com/geography/sedimentology). Scope includes any material formed by accumulation of solid fragmental material deposited by air, water or ice, or material that accumulated by other natural agents such as chemical precipitation from solution or secretion by organisms.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryGeochemistry -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryGeochemistry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.4.3 Sedimentary geochemistry</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Sedimentary geochemistry has been in use to understand the conditions of deposition, climatic variations, tectonic setting, provenance, reservoir characteristics, etc. Chemical characteristics of an environment include the salinity (proportion of dissolved salts), acidity or basicity (pH), oxidation potential (Eh).   For characterization of depositional units for distinction and correlation based on stratigraphic variation of geochemical traits, usage of the term “chemostratigraphy” has been more frequent since the 1980s.  (ScienceDirect)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryPhysicalProperty -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryPhysicalProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.4.2 Sedimentary physical property</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The study of physical features of a sedimentary environment includes water depth and the velocity and persistence of currents.  (Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryProcess -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.4.4 Sedimentary process</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of how sedimentary rocks are formed, including erosion, weathering, dissolution, lithification, precipitation, etc. (WorldAtlas)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryRock -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_sedimentaryRock">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_SM_Sedimentology"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.4.1 Sedimentary rock</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of sedimentary rocks, which formed by accumulation and cementation of solid fragmental material deposited by air, water or ice, or as a result of other natural agents, such as precipitation from solution, the accumulation of organic material, or from biogenic processes, including secretion by organisms.    (CGI)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_deepEarthTectonics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_deepEarthTectonics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.8.2 Deep Earth tectonics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of Earth&apos;s interior layers and related features, including mantle, core, subducting slab, plume, LLSVPs, discontinuities etc., beneath the depth of the Moho surface.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_geodynamics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_geodynamics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.8.4 Geodynamics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of dynamic processes in the Earth, applying physics, chemistry, geology, and mathematics to the understanding of how mantle convections lead to plate tectonics and geologic phenomena such as seafloor spreading, mountain building, volcanoes, earthquakes, faulting etc. Methods of Geodynamics are also applied to exploration other planets.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_plateTectonics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_plateTectonics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.8.1 Plate tectonics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the motion and interaction between relatively rigid plates that comprise the Earth&apos;s crust. These motions account for most observable tectonic activity in the Earth, as well as the tectonic history recorded in the ocean basins. The theory of plate tectonics holds that the Earth&apos;s lithosphere is divided into a set of major and  minor relatively rigid plates that are in motion with respect to one another and that the motion of each plate is, to a first approximation, a rigid-body motion.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.8 Tectonics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the processes that control the structure and properties of the Earth&apos;s crust and its evolution through time.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_thermochronology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_thermochronology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_TN_tectonics"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.8.3 Thermochronology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the thermal evolution of a region of a planet. Thermochronology uses radiometric dating along with the concept of closure temperature that represents the temperature of the mineral being studies at the time given by the date recorded to understand the thermal history of a specific rock, mineral, or geologic unit. Thermochronology is closely associated with geochronology.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_biogeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_biogeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.38 Biogeology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the interactions between the Earth&apos;s biosphere and the lithosphere.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_environmentalGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_environmentalGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.12 Environmental geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">study of the practical application of the principles of geology to solving environmental problems created by man. It is a multidisciplinary field that is closely related to engineering geology and, to a lesser extent, to environmental geography  (Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_forensicGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_forensicGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.40 Forensic geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Resources about any aspect of geologic science that is subject to public debate in a court of law. Forensic geology applies the defining principles of the geologic sciences to the identification/evaluation of geologic materials that may be related to forensic problems.(John W. Lindemann: ENVIRONMENTAL AND ENGINEERING GEOLOGY - Vol. III)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_geochemistry -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_geochemistry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.26 Geochemistry</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Studies that use the tools and principles of chemistry to solve geoscience problems; includes isotope geochemistry, biogeochemistry, organic geochemistry, regional, environmental and exploration geochemistry, rock geochemical exploration, soil geochemical exploration, stream sediment geochemical exploration, atmospheric geochemical exploration, biogeochemical exploration, water geochemical exploration, geo-gas survey, chemical analysis, geochemical mapping, geothermal manifestation, radiometric dating, etc.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_geoelectricityAndElectricalExploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_geoelectricityAndElectricalExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.19 Geoelectricity and electrical exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and measurement of the electrical parameters of underground geological structures,  media and bodies (rocks, sediments, water, voids, etc.) both passive or active methods, to solve geoscience problems and for exploration.  Electrical exploration is an applied discipline that observes and studies electric and electromagnetic fields established naturally or artificially underground, and solves various geological problems related to the difference in the electrical properties of rock bodies.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_geoexploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_geoexploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.33 Geo-exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Desriptions of activities and processes of searching for or discovery of Earth resources. It includes mineral exploration activities such as reconnaissance, assessment and surface and subsurface exploration, ore geology, mining pilot, mining regulation and law, and relevant administration.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_geomagnetismAndMagneticExploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_geomagnetismAndMagneticExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.18 Geomagnetism and magnetic exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and measurement of the Earth’s total magnetic field or components of the field in various directions to solve problems of geosciences and for exploration.  Applications are to investigate subsurface geology on the basis of anomalies in the Earth’s magnetic field resulting from the magnetic properties of the underlying rocks.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_gravimetricAndGravityExploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_gravimetricAndGravityExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.17 Gravimetric and gravity exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study  and measurement of the strength of a gravitational field, the properties of matter responsible for its creation, and applications of this data for understanding the solid earth and for geological exploration.  Gravity exploration is one of the common and primary geophysical exploration methods. It is based on the density difference between the target object and its surroundings.   </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_integratedGeophysics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_integratedGeophysics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.25 Integrated geophysics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the simultaneous application of multiple geophysical methods, including gravity, electrical, magnetic, seismic and other methods in ocean, energy, environmental and other geophysical exploration problems. The combination of multiple geophysical methods can effectively reduce the multi-solution problem in the interpretation of a single geophysical exploration method and improve the reliability of geophysical exploration interpretation.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_mining -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_mining">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.34 Mining</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Descriptions of activities and processes for extraction of valuable minerals or other geological materials form the earth.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_nuclearGeophysicsandRadioactiveExploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_nuclearGeophysicsandRadioactiveExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.21 Nuclear geophysics and radioactive exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and measurement of the radioactive characteristics of subsurface rocks bodies, rocks or minerals, with applcations in mineral exploration and to solve geological problems.    </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_otherGeoscientificTopics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_otherGeoscientificTopics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.41 Other geoscientific topics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Resources related to geoscience that cannot be defined by the above categories.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_paleoclimatology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_paleoclimatology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.29 Paleoclimatology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of reconstruction of ancient climate to understand natural variation and the evolution of the current climate, for which direct measurements were not taken. It utilizes a variety of proxy methods from Earth and life sciences to obtain data previously preserved within rocks, sediments, boreholes, ice sheets, tree rings, corals, shells, and microfossils. Combined with techniques to date the proxies, the paleoclimate records are used to determine the past states of Earth&apos;s atmosphere.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_paleomagnetism -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_paleomagnetism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.23 Paleomagnetism</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the record of the Earth&apos;s magnetic field in rocks, sediment, or archeological materials to reveal the past behavior of Earth’s magnetic field and the past location of tectonic plates.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_planetaryGeology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_planetaryGeology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.37 Planetary geology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the geology of the celestial bodies such as the planets and their moons, asteroids, comets, and meteorites. Alternatively known as astrogeology or exogeology  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_rockPhysics -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_rockPhysics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.24  Rock physics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Stud of the the behavior and physicochemical properties of rocks in different environments such as surface and underground, including the characteristics of fluid reservoir rocks, as well as their interactions with oil, gas and water.   Mainly concerned with the physical properties of pore geology, the interaction between different fluids and rock pore surfaces. It is the theoretical basis of logging, geophysical exploration and reservoir engineering.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_seismologyAndSeismicExploration -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_seismologyAndSeismicExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.20 Seismology and seismic exploration</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of the propagation of elastic waves through the Earth or through other planet-like bodies, including studies for petroleum and other resources exploration, and study of earthquake and relevant environmental effects such as tsunamis as well as diverse seismic sources such as volcanic, tectonic, glacial, fluvial, oceanic, atmospheric, and artificial processes such as explosions.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_volcanology -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_volcanology">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.39 Volcanology</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study of volcanoes, lava, magma and related geological, geophysical and geochemical phenomena (volcanism).  (Wikipedia)  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#dataScience -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#dataScience">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#topConcept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">Data science</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study that uses scientific methods, processes, algorithms and systems to extract or extrapolate knowledge and insights from noisy, structured and unstructured data, and apply knowledge from data across a broad range of application domains. NOTE  data science is related to data mining, machine learning and big data.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#geoscientificInformation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">Geoscientific Information</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_dataVisualization‎ -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_dataVisualization‎">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#GI_MMG_mathematicalGeoscience"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">8.14.1 Data visualization‎</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Study and documentation of techniques for graphical representation of geoscience information and data.  </skos:scopeNote>
+    </NamedIndividual>
+    
+
+
+    <!-- https://www.ddeworld.org/resource/codelist/topicCategory#other:missing -->
+
+    <NamedIndividual rdf:about="https://www.ddeworld.org/resource/codelist/topicCategory#other:missing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory#topConcept"/>
+        <skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/topicCategory"/>
+        <skos:prefLabel xml:lang="en">Missing value</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Sentinel value to flag that no topic category was provided; need this because ISO19115-3 does not require a topic category.  </skos:scopeNote>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
