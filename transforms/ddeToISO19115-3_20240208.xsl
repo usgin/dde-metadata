@@ -19,7 +19,7 @@
     xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
     xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
     xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
-    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
     xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
     xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
     xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
@@ -51,7 +51,7 @@
 
     <xsl:import href="utility/create19115-3Namespaces.xsl"/>
     <xsl:import href="utility/DDEutilities.xsl"/>
-    <xsl:import href="utility/fromISO19115-3.2014.xsl"/>        <!-- utilities to get 2018 namespaces for ISO19115-3 -->
+    <!--   <xsl:import href="utility/fromISO19115-3.2014.xsl"/>         utilities to get 2018 namespaces for ISO19115-3 -->
     <xsl:output method="xml" indent="yes"/>
     <xsl:strip-space elements="*"/>
 
@@ -299,6 +299,7 @@
                                                 <gco:CharacterString>
                                                   <xsl:value-of select="string(.)"/>
                                                 </gco:CharacterString>
+                                            </cit:title>
                                                 <xsl:if test="./@href">
                                                   <cit:onlineResource>
                                                   <cit:CI_OnlineResource>
@@ -310,7 +311,7 @@
                                                   </cit:CI_OnlineResource>
                                                   </cit:onlineResource>
                                                 </xsl:if>
-                                            </cit:title>
+                                            
                                         </cit:CI_Citation>
                                     </mrd:formatSpecificationCitation>
                                 </mrd:MD_Format>
@@ -762,38 +763,7 @@
                 </gco:CharacterString>
             </cit:linkage>
             <xsl:if test="dde:applicationProfile">
-                <cit:applicationProfile>
-                    <!-- dde allows multiple appliction profiles, ISO only alows one, 
-                        concatenate multiple values.  An applicationProfile may have an href -->
-                    <xsl:choose>
-                        <xsl:when test="./child::dde:applicationProfile/@href">
-                            <!-- if there's an href on any applicationProfile, use gcx:Anchor -->
-                            <xsl:element name="gcx:Anchor">
-                                <xsl:for-each select="dde:applicationProfile">
-                                    <!-- xlink:href will be the one for the last (or only) applicationProfile href -->
-                                    <xsl:if test="./@href">
-                                        <xsl:attribute name="xlink:href" select="./@href"/>
-                                    </xsl:if>
-                                    <!-- put in a delimiter if necessary -->
-                                     <xsl:value-of select="string(.)"/>
-                                    <xsl:if test="position() > 1">
-                                        <xsl:value-of select="string(' | ')"/>
-                                    </xsl:if>
-                                </xsl:for-each>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:element name="gco:CharacterString">
-                                <xsl:for-each select="dde:applicationProfile">
-                                    <xsl:value-of select="string(.)"/>
-                                    <xsl:if test="position() > 1">
-                                        <xsl:value-of select="string(' | ')"/>
-                                    </xsl:if>
-                                </xsl:for-each>
-                            </xsl:element>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </cit:applicationProfile>
+                <xsl:call-template name="appProfile"/>
             </xsl:if>
 
             <xsl:if test="dde:title">
@@ -812,6 +782,64 @@
                 </xsl:call-template>
             </cit:function>
         </cit:CI_OnlineResource>
+    </xsl:template>
+    
+    <xsl:template name="appProfile">
+        <!--<xsl:param name="theOnlineResource"/>-->
+        <cit:applicationProfile>
+            <!-- dde allows multiple application profiles, ISO only alows one, 
+                        concatenate multiple values.  An applicationProfile may have an href -->
+            <xsl:choose>
+                <xsl:when test="./child::dde:applicationProfile/@href">
+                    <xsl:variable name="thehref">
+                        <xsl:for-each select="./child::dde:applicationProfile/@href">
+                            <xsl:if test="position() = 1">
+                                <!-- only take the first href -->
+                                <xsl:value-of select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:variable>
+                    <xsl:variable name="otherhref">
+                        <xsl:if test="count(./child::dde:applicationProfile/@href) > 1">
+                            <xsl:value-of select = "string('other links: ')"/>
+                        </xsl:if>
+                        <xsl:for-each select="./child::dde:applicationProfile/@href">
+                            <xsl:if test="position() > 1">
+                                <!-- only take the first href -->
+                                <xsl:value-of select="."/>
+                                <xsl:value-of select = "string('| ')"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:variable>
+                    <!-- if there's an href on any applicationProfile, use gcx:Anchor -->
+                    <xsl:element name="gcx:Anchor">
+                        <xsl:attribute name="xlink:href" select="$thehref"/>
+                        <xsl:if test="string-length($otherhref) > 0">
+                            <xsl:value-of select="$otherhref"/>
+                        </xsl:if>
+                        <xsl:for-each select="dde:applicationProfile">
+                            <!-- put in a delimiter if necessary -->
+                            <xsl:value-of select="string(.)"/>
+                            <xsl:if test="position() > 1 and position() &lt; count(dde:applicationProfile)">
+                                <xsl:value-of select="string(' | ')"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:element name="gco:CharacterString">
+                        <xsl:for-each select="dde:applicationProfile">
+                            <xsl:value-of select="string(.)"/>
+                            <xsl:if test="position() > 1">
+                                <xsl:value-of select="string(' | ')"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:element>
+                </xsl:otherwise>
+            </xsl:choose>
+        </cit:applicationProfile>
+        
+        
     </xsl:template>
 
     <xsl:template name="MD_Identification">
@@ -893,7 +921,7 @@
                 <mri:spatialResolution>
                     <mri:MD_Resolution>
                         <xsl:choose>
-                            <xsl:when test="contains(., ':')">
+                            <xsl:when test="contains(., ':') and substring-after(., ':') castable as xs:integer">
                                 <mri:equivalentScale>
                                     <mri:MD_RepresentativeFraction>
                                         <mri:denominator>
@@ -1048,8 +1076,17 @@
                                         <gex:extent>
                                             <gml:TimePeriod>
                                                 <gml:description>
-                                                  <xsl:value-of
-                                                  select="concat('geoTime: ', ../dde:geoTime)"/>
+                                                    <!-- DDE allow more than one dde:geoTime value -->
+                                                    <xsl:value-of
+                                                        select="string('geoTime: ')"/>
+                                                    <xsl:for-each select="../dde:geoTime">
+                                                        <xsl:value-of select="."/>
+                                                        <xsl:if test="position()&gt; 0 and position() &lt; count(../dde:geoTime)">
+                                                            <xsl:value-of select="string(', ')"/>
+                                                        </xsl:if>
+                                                    </xsl:for-each>
+                                                  <!--<xsl:value-of
+                                                  select="concat('geoTime: ', ../dde:geoTime)"/>-->
                                                 </gml:description>
                                                 <gml:begin>
                                                   <!-- beginName is mandatory in DDE -->
