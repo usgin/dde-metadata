@@ -9,6 +9,23 @@ Is there any way to debug using standard breakpoints/single stepping, watch, etc
 
 The directory functions (e.g. to look up contacts) don't seem to be working, am I missing something?  Do I need to configure a PostGres backend?
 
+How do I get all the fields in a table to show up as text controls?  e.g. I have identifier defined as a table; 
+<table for="mcc:MD_Identifier">
+      <header>
+        <col label="mcc:code"/>
+        <col label="mcc:authority"/>
+        <col label="mcc:codeSpace"/>
+        <col label="mcc:description"/>
+      </header>
+      <row>
+        <col xpath="mcc:code"/>
+        <col xpath="mcc:authority/cit:CI_Citation/cit:title"/>
+        <col xpath="mcc:codeSpace"/>
+        <col xpath="mcc:description"/>
+      </row>
+    </table>
+if all the elements for each row are not in the loaded metadat, the fields don't show up to add them. How can I set up the editor to add e.g. authority or codespace if those optional fields are not in the metadata record loaded into the editor? 
+
   
 I want to add DDE resourceTypes in the metadataScope/name; To start I have this in config-editor.xml:
 <field name="DDEresourceType"
