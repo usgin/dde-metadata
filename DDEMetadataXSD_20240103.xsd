@@ -283,7 +283,8 @@
   <xs:complexType name="CI_Responsibility">
     <xs:sequence>
       <xs:element name="name" type="xs:string"/>
-      <xs:element name="role" type="metadata:RoleTypeCode" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="role" type="metadata:RoleTypeCode" minOccurs="1" maxOccurs="1"/>
+      <!-- ISO19115-3 only allows one role on a responsible party.  -->
       <xs:element name="identifier" type="metadata:MD_Identifier" minOccurs="0"
         maxOccurs="unbounded"/>
       <xs:element name="country" type="metadata:CountryCode" minOccurs="0" maxOccurs="1"/>
@@ -1039,12 +1040,12 @@
       </xs:simpleType>
       <xs:simpleType>
         <xs:annotation>
-          <xs:documentation>other brief explanation, prefix 'otherService:' followed by a string of
+          <xs:documentation>other brief explanation, prefix 'other:' followed by a string of
             two or more characters with no included spaces. Implication is that none of the other
             nilReasons codes apply</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-          <xs:pattern value="other:\w{2,}"/>
+          <xs:pattern value="other:\S{2,}"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:union>

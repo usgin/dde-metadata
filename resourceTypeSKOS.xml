@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#" xml:base="http://www.w3.org/2002/07/owl" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ddetc="https://www.ddeworld.org/resource/codelist/topicCategory#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<Ontology rdf:about="https://www.ddeworld.org/resource/ontology/topicCategory">
+		<versionIRI rdf:resource="https://www.ddeworld.org/resource/ontology/1.0/topicCategory"/>
+		<skos:prefLabel xml:lang="en">DDE resource type</skos:prefLabel>
+	</Ontology>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#aggregate">
+		<skos:prefLabel xml:lang="en">Aggregate</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">Set of resources of various types that are grouped into a single resource for some purpose. Component resources do not necessarily share the same format or information model. Source ISO19115-3, this vocabulary  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#application">
+		<skos:prefLabel xml:lang="en">Application</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">See schema.org/SoftwareApplication. An executable unit of functionality. Typically an implementation of some software on a particular platform. Source ISO19115-3, this vocabulary  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#webApplication">
+		<skos:prefLabel xml:lang="en">Web Application</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">An application that executes on a server via interaction with a human user through a web interface. Source this vocabulary.  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#application"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#collection">
+		<skos:prefLabel xml:lang="en">Collection</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">A set of related resource that share a similar format .(rev from  ISO19115-3, schema.org, Dublin Core)  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#dataset">
+		<skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a collection of numeric or categorical values that convey information, describing the quantity, quality, fact, statistics, other basic units of meaning, or simply sequences of symbols that may be further interpreted formally. Sourcce ISO19115-3, schema.org, Dublin Core, definition based on https://en.wikipedia.org/wiki/Data  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#dataCatalog">
+		<skos:prefLabel xml:lang="en">Data catalog</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a kind of dataset in which the records are documentation for datasets. A metadata dataset. schema.org  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#dataset"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#geographicDataset">
+		<skos:prefLabel xml:lang="en">Geographic dataset</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">Dataset in which the data are related to a geographic location  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#dataset"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#nonGeographicDataset">
+		<skos:prefLabel xml:lang="en">Non-geographic dataset</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">Dataset containing data that is not associated with a geographic location.(rev from ISO19115-3)  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#dataset"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#document">
+		<skos:prefLabel xml:lang="en">Document</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a written, drawn, presented, or memorialized representation of thought, the manifestation of non-fictional or imaginary content. Source ISO19115-3, https://en.wikipedia.org/wiki/Document  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#article">
+		<skos:prefLabel xml:lang="en">Article</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a document that is published in a print or electronic medium as part of a larger work or series. Source schema.org, https://en.wikipedia.org/wiki/Article_(publishing), this vocabulary.  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#thesis">
+		<skos:prefLabel xml:lang="en">Thesis</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a document submitted in support of candidature for an academic degree or professional qualification presenting the author's research and findings. Source schema.org, https://en.wikipedia.org/wiki/Thesis, ISO 7144  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#book">
+		<skos:prefLabel xml:lang="en">Book</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a document that records information in the form of writing or images, typically composed of many pages bound together and protected by a cover. Source schema.org, https://artsandculture.google.com/entity/book/m0bt_c3  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#poster">
+		<skos:prefLabel xml:lang="en">Poster</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a document intended for display on a large screen or printed sheet.  Source schema.org, Merriam-Webster  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#webPage">
+		<skos:prefLabel xml:lang="en">Web page</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a document accessible on the world wide web, formatted for viewing on a computer screen. Source schema.org, this vocabulary,   </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#image">
+		<skos:prefLabel xml:lang="en">Image</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">visual representation of something. Source Dublin Core  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#map">
+		<skos:prefLabel xml:lang="en">Map</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">symbolic visual representation of a spatial region. Source schema.org, https://en.wikipedia.org/wiki/Map  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#image"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#photograph">
+		<skos:prefLabel xml:lang="en">Photograph</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip. Source  schema.org, https://en.wikipedia.org/wiki/Photograph  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#image"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#explanatoryFigure">
+		<skos:prefLabel xml:lang="en">Explanatory figure</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">Diagrams, data plots, flow charts, other kinds of graphics generated to present or explain ideas or data. Source this vocabulary.  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#image"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#initiative">
+		<skos:prefLabel xml:lang="en">Initiative</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">activity that produces information resources or artifacts that might be cataloged. Source  ISO19115-3  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#fieldSession">
+		<skos:prefLabel xml:lang="en">Field session</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">initiative that involves collecting data outside of a fixed laboratory environment, in situ, at the location where the subject of the observation is located (e.g. cruise) . Source  ISO19115-3, this vocabulary  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#initiative"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#learningResource">
+		<skos:prefLabel xml:lang="en">LearningResource</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a resource intended to instruct a user about some topic or procedure. Often a composite of text, images, sound, and movie. Source schema.org, this vocabulary  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#guide">
+		<skos:prefLabel xml:lang="en">Guide</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a kind of learningResource. Source schema.org  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#learningResource"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#model">
+		<skos:prefLabel xml:lang="en">Model</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">information applies to a copy or imitation of an existing or hypothetical object  ISO19115-3, Dublin Core  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#movie  ">
+		<skos:prefLabel xml:lang="en">Movie  </skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a sequence of consecutive still images recorded in a series to be viewed on a screen in such rapid succession as to give the illusion of natural movement. Source schema.org, https://www.dictionary.com/browse/movie  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#repository">
+		<skos:prefLabel xml:lang="en">Repository</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a container for other resources. Source  ISO19115-3, this vocabulary  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#semanticResource">
+		<skos:prefLabel xml:lang="en">Semantic resource</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">resource that defines and information model or vocabulary used for information interchange, e.g. glossary, ontology, data model. . Source  this vocabulary.  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#definedTermSet">
+		<skos:prefLabel xml:lang="en">DefinedTermSet</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a set of terms with definitions, typically with identifiers for each term, and all related to some scope. Source schema.org, this vocabulary  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#semanticResource"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#series  ">
+		<skos:prefLabel xml:lang="en">Series  </skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a collection of related resources. Source  ISO19115-3, this vocabulary.  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#service">
+		<skos:prefLabel xml:lang="en">Service</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">a capability that a provider makes available to a user through an interface that define a input and output requirements and offered functionality.  (based on ISO19115-3, Dublin Core). This general service category includes services that are invoked via any communication channel. Service is distinguished from Application in that a service is not intended to be interactive in real time.  An Application might be constructed using one or more Services.  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#webAPI">
+		<skos:prefLabel xml:lang="en">WebAPI</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">A service that communicates with the service user via HTTP operations. See https://schema.org/WebAPI  </skos:scopeNote>
+		<skos:broader rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType#service"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#software">
+		<skos:prefLabel xml:lang="en">Software</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">information applies to a computer program or routine  ISO19115-3, Dublin Core. See SoftwareSourceCode schema.org  </skos:scopeNote>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://www.ddeworld.org/resource/codelist/resourceType#sound">
+		<skos:prefLabel xml:lang="en">Sound</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://www.ddeworld.org/resource/codelist/resourceType"/>
+		<skos:scopeNote xml:lang="en">resource is a reproducible representation of recorded acoustic phenomena. DublinCore, this vocabulary  </skos:scopeNote>
+	</skos:Concept>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
