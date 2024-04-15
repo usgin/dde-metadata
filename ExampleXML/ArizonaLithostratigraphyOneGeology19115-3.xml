@@ -699,6 +699,7 @@
             <mrd:MD_Distributor>
                <mrd:distributorContact>
                   <cit:CI_Responsibility>
+                     
                      <cit:role>
                         <cit:CI_RoleCode codeList="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode"
                                          codeListValue="distributor">distributor</cit:CI_RoleCode>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:MD_Metadata xmlns:metadata="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://www.ddeworld.org/resource/standards/dde/ds01/metadata/1.0 file:/C:/Users/smrTu/OneDrive/Documents/GithubC/DDE/dde-metadata/DDEMetadataXSD_20240103.xsd">
+    <metadata:metadataIdentifier>
+        <metadata:authority>
+            <metadata:name>metadataIdentifierAuthority-name0</metadata:name>
+            <metadata:role>originator</metadata:role>
+            <metadata:country>AD</metadata:country>
+            <metadata:electronicMailAddress>metadataIdentifierAuthority@email.org</metadata:electronicMailAddress>
+        </metadata:authority>
+        <metadata:code>metadataIdentifier-IDCode0</metadata:code>
+        <metadata:codeSpace>metadataIdentifier-IDcodeSpace0</metadata:codeSpace>
+        <metadata:version nilReason="unknown"/>
+        <metadata:description>metadataIdentifier-IDdescription0</metadata:description>
+    </metadata:metadataIdentifier>
+    <metadata:metadataStandardName>DDE S01-2023: Geosciences Information Metadata</metadata:metadataStandardName>
+    <metadata:metadataResponsibleParty>
+        <metadata:name>metadataResponsibleParty-name1</metadata:name>
+        <metadata:role>author</metadata:role>
+        <metadata:identifier>
+            <metadata:code>metadataResponsibleParty-IDcode1</metadata:code>
+            <metadata:codeSpace/>
+            <metadata:version>metadataResponsibleParty-IDversion1</metadata:version>
+            <metadata:description>metadataResponsibleParty-IDdescription1</metadata:description>
+        </metadata:identifier>
+        <metadata:identifier>
+            <metadata:code>metadataResponsibleParty-ID2code2</metadata:code>
+            <metadata:codeSpace>metadataResponsibleParty-ID2CodeSpace2</metadata:codeSpace>
+            <metadata:version>metadataResponsibleParty-ID2version2</metadata:version>
+            <metadata:description>metadataResponsibleParty2-IDdescription</metadata:description>
+        </metadata:identifier>
+        <metadata:country>AD</metadata:country>
+        <metadata:electronicMailAddress>metadataResponsibleParty1@emial.org</metadata:electronicMailAddress>
+    </metadata:metadataResponsibleParty>
+    <metadata:metadataResponsibleParty>
+        <metadata:name>metadataResponsibleParty2-name2</metadata:name>
+        <metadata:role>pointOfContact</metadata:role>
+        <metadata:identifier>
+            <metadata:code>metadataResponsibleParty2-IDcode3</metadata:code>
+            <metadata:codeSpace>metadataResponsibleParty2-IDcodeSpace3</metadata:codeSpace>
+            <metadata:version>metadataResponsibleParty2-IDversion3</metadata:version>
+            <metadata:description nilReason="missing"/>
+        </metadata:identifier>
+        <metadata:country>CN</metadata:country>
+        <metadata:electronicMailAddress >metadataResponsibleParty2@email.org</metadata:electronicMailAddress>
+    </metadata:metadataResponsibleParty>
+    <metadata:metadataDate>
+        <metadata:date>2006-05-04</metadata:date>
+        <metadata:dateType>creation</metadata:dateType>
+    </metadata:metadataDate>
+    <metadata:metadataDate>
+        <metadata:date>2016-05-04</metadata:date>
+        <metadata:dateType>lastRevision</metadata:dateType>
+    </metadata:metadataDate>
+    <metadata:identificationInfo>
+        <metadata:resourceIdentifier>
+            <metadata:authority>
+                <metadata:name>resourceIdentifierAuthority-name</metadata:name>
+                <metadata:role>originator</metadata:role>
+                <metadata:country>AD</metadata:country>
+                <metadata:electronicMailAddress>resourceIdentifierAuthority@example.org</metadata:electronicMailAddress>
+            </metadata:authority>
+            <metadata:code>resourceIdentifier-code5</metadata:code>
+            <metadata:codeSpace>resourceIdentifier-codeSpace5</metadata:codeSpace>
+            <metadata:version>resourceIdentifier-version5</metadata:version>
+            <metadata:description>resourceIdentifier-description</metadata:description>
+        </metadata:resourceIdentifier>
+        <metadata:title>resource title has to be more than x characters</metadata:title>
+        <metadata:alternateTitle>resourcealternateTitle0</metadata:alternateTitle>
+        <metadata:alternateTitle>resourcealternateTitle1</metadata:alternateTitle>
+        <metadata:resourceDate>
+            <metadata:date>2006-05-04</metadata:date>
+            <metadata:dateType>adopted</metadata:dateType>
+        </metadata:resourceDate>
+        <metadata:resourceDate>
+            <metadata:date>2006-05-04</metadata:date>
+            <metadata:dateType>adopted</metadata:dateType>
+        </metadata:resourceDate>
+        <metadata:abstract>abstract has to have at least 250 characters; say something useful. slkjhgalshgkjlhkjlfdslfkdjhrdlfhkjrelhkjl111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</metadata:abstract>
+        <metadata:keyword href="https://example.com/keyword0">keyword0</metadata:keyword>
+        <metadata:keyword href="https://example.com/keyword1">keyword1</metadata:keyword>
+        <metadata:keyword href="https://example.com/keyword2">min 3 keywords</metadata:keyword>
+        <metadata:topicCategory>farming</metadata:topicCategory>
+        <metadata:topicCategory>biota</metadata:topicCategory>
+        <metadata:resourceType>geographicDataset</metadata:resourceType>
+        <metadata:resourceType>dataset</metadata:resourceType>
+        <metadata:additionalDocumentation >additionalDocumentation0</metadata:additionalDocumentation>
+        <metadata:resourceResponsibleParty>
+            <metadata:name>resourceResponsiblePartyname4</metadata:name>
+            <metadata:role>author</metadata:role>
+            <metadata:identifier>
+                <metadata:code>resourceResponsiblePartycode6</metadata:code>
+                <metadata:codeSpace>resourceResponsiblePartycodeSpace6</metadata:codeSpace>
+                <metadata:version>version6</metadata:version>
+                <metadata:description>description6</metadata:description>
+            </metadata:identifier>
+            <metadata:identifier>
+                <metadata:code>resourceResponsibleParty-identifier2</metadata:code>
+                <metadata:codeSpace nilReason="unknown"/>
+                <metadata:version nilReason="missing"/>
+            </metadata:identifier>
+            <metadata:country>AD</metadata:country>
+            <metadata:electronicMailAddress>eMailAddress4@resourceResponsibleParty.org</metadata:electronicMailAddress>
+        </metadata:resourceResponsibleParty>
+        <metadata:resourceResponsibleParty>
+            <metadata:name>resourceResponsibleParty2name5</metadata:name>
+            <metadata:role>author</metadata:role>
+            <metadata:identifier>
+                <metadata:code>resourceResponsibleParty2code8</metadata:code>
+            </metadata:identifier>
+            <metadata:identifier>
+                <metadata:code>resourceResponsibleParty2-identifier2code</metadata:code>
+                <metadata:codeSpace >resourceResponsibleParty2-identifier2codeSpace9</metadata:codeSpace>
+                <metadata:description>resourceResponsibleParty2-identifier2code-description</metadata:description>
+            </metadata:identifier>
+            <metadata:country>AD</metadata:country>
+          </metadata:resourceResponsibleParty>
+        <metadata:resourceResponsibleParty>
+            <metadata:name>resourceResponsibleParty3-fundername5</metadata:name>
+            <metadata:role>funder</metadata:role>
+            <metadata:identifier>
+                <metadata:code>resourceResponsibleParty3-IDcode8</metadata:code>
+            </metadata:identifier>
+            <metadata:identifier>
+                <metadata:code>resourceResponsibleParty3-ID2code</metadata:code>
+                <metadata:codeSpace >resourceResponsibleParty3-ID2codeSpace9</metadata:codeSpace>
+                <metadata:description>resourceResponsibleParty3-ID2description</metadata:description>
+            </metadata:identifier>
+            <metadata:country>AD</metadata:country>
+        </metadata:resourceResponsibleParty>
+        <metadata:browseGraphic>
+            <metadata:title>browseGraphic-title1</metadata:title>
+            <metadata:applicationProfile href="https://example.com/browseGraphic/profile1">browseGraphic-Profile1</metadata:applicationProfile>
+            <metadata:applicationProfile href="https://example.com/browseGraphic/profile2"/>
+            <metadata:description>browseGraphic-description</metadata:description>
+            <metadata:linkage>https://example.com/browseGraphic1</metadata:linkage>
+            <metadata:function>browseGraphic</metadata:function>
+        </metadata:browseGraphic>
+        <metadata:browseGraphic>
+            <metadata:title>browseGraphic-title2</metadata:title>
+            <metadata:applicationProfile>browseGraphic-Profile2</metadata:applicationProfile>
+            <metadata:applicationProfile>browseGraphic-Profile2a</metadata:applicationProfile>
+            <metadata:description>browseGraphic2-description1</metadata:description>
+            <metadata:linkage>https://example.com/browseGraphic2</metadata:linkage>
+            <metadata:function>browseGraphic</metadata:function>
+        </metadata:browseGraphic>
+        <metadata:language>en</metadata:language>
+        <metadata:language>de</metadata:language>
+        <metadata:characterEncoding>UTF-8</metadata:characterEncoding>
+        <metadata:characterEncoding>US-ASCII</metadata:characterEncoding>
+        <metadata:restriction>
+            <metadata:restrictionText href="https://example.com/restriction1Text1" >restrictionText1</metadata:restrictionText>
+            <metadata:restrictionText>restriction1Text2</metadata:restrictionText>
+            <metadata:restrictionCode>copyright</metadata:restrictionCode>
+            <metadata:restrictionCode>licenceDistributor</metadata:restrictionCode>
+        </metadata:restriction>
+        <metadata:restriction>
+            <metadata:restrictionText>restriction2Text1</metadata:restrictionText>
+            <metadata:restrictionText href="https://example.com/restriction2Text2">restriction2Text2</metadata:restrictionText>
+            <metadata:restrictionCode>copyright</metadata:restrictionCode>
+        </metadata:restriction>
+        <metadata:edition >edition0</metadata:edition>
+        <metadata:dataQuality href="https://example.com/dataQualityDoc.html">dataQuality--see linked document</metadata:dataQuality>
+        <metadata:lineage href="https://example.com/lineageDocument.html">Description of resource lineage/provenance</metadata:lineage>
+        <metadata:source href="https://doi.org/4326y753-ster">Black, J.D., 2011, Title of source resource, citation information.</metadata:source>
+        <metadata:source href="https://repository.org/datasource">Cidatation for specific data repository data downloard request</metadata:source>
+        <metadata:acquisitionType>geologicalMapping</metadata:acquisitionType>
+        <metadata:acquisitionType>synthesisFromMultipleSources</metadata:acquisitionType>
+        <metadata:geoTime>Jurassic</metadata:geoTime>
+        <metadata:geoTime>Cretaceous</metadata:geoTime>
+        <metadata:geographicExtent>
+            <metadata:verbatimCoordinateLocation >verbatimCoordinateLocation1Text</metadata:verbatimCoordinateLocation>
+            <metadata:geographicIdentifier>
+                <metadata:authority>
+                    <metadata:name>LocationAuthorityName</metadata:name>
+                    <metadata:role>originator</metadata:role>
+                    <metadata:country>AD</metadata:country>
+                    <metadata:electronicMailAddress >geoidauthority@email.org</metadata:electronicMailAddress>
+                </metadata:authority>
+                <metadata:code>geoIDcode1</metadata:code>
+                <metadata:codeSpace nilReason="unknown"/>
+                <metadata:version nilReason="inapplicable"/>
+                <metadata:description>geoidauthorityIDdescription</metadata:description>
+            </metadata:geographicIdentifier>
+            <metadata:geographicIdentifier>
+                <metadata:authority>
+                    <metadata:name>geoID2-authorityName</metadata:name>
+                    <metadata:role>pointOfContact</metadata:role>
+                    <metadata:country>AD</metadata:country>
+                </metadata:authority>
+                <metadata:code>geoIDcode2</metadata:code>
+                <metadata:codeSpace>geoIDcode2-codeSpace</metadata:codeSpace>
+                <metadata:description>geoIDcode2-description</metadata:description>
+            </metadata:geographicIdentifier>
+            <metadata:elevation >elevation-text</metadata:elevation>
+            <metadata:westBoundLongitude>19</metadata:westBoundLongitude>
+            <metadata:eastBoundLongitude>10</metadata:eastBoundLongitude>
+            <metadata:southBoundLatitude>50</metadata:southBoundLatitude>
+            <metadata:northBoundLatitude>55</metadata:northBoundLatitude>
+        </metadata:geographicExtent>
+        <metadata:geographicExtent>
+            <metadata:verbatimCoordinateLocation>verbatimCoordinateLocation2Text</metadata:verbatimCoordinateLocation>
+            <metadata:geographicIdentifier>
+                <metadata:authority>
+                    <metadata:name>CoordinateLocation2-authorityName</metadata:name>
+                    <metadata:role>originator</metadata:role>
+                </metadata:authority>
+                <metadata:code>CoordinateLocation2-authorityIDcode</metadata:code>
+                <metadata:codeSpace nilReason="inapplicable"/>
+            </metadata:geographicIdentifier>
+            <metadata:elevation nilReason="unknown"/>
+            <metadata:westBoundLongitude>40</metadata:westBoundLongitude>
+            <metadata:eastBoundLongitude>20</metadata:eastBoundLongitude>
+            <metadata:southBoundLatitude>-40</metadata:southBoundLatitude>
+            <metadata:northBoundLatitude>-20</metadata:northBoundLatitude>
+        </metadata:geographicExtent>
+        <metadata:temporalExtent>
+            <metadata:beginName>temporalExtent1-beginName0</metadata:beginName>
+            <metadata:beginIdentifier>
+                <metadata:authority>
+                    <metadata:name>temporalBeginIdentifier1-authorityName</metadata:name>
+                    <metadata:role>originator</metadata:role>
+                    <metadata:country>AD</metadata:country>
+                </metadata:authority>
+                <metadata:code>temporalBeginIdentifier1-code14</metadata:code>
+                <metadata:codeSpace >temporalBeginIdentifier1-codeSpace14</metadata:codeSpace>
+                <metadata:version nilReason="unknown"/>
+            </metadata:beginIdentifier>
+            <metadata:endName>temporalExtent-endName0</metadata:endName>
+            <metadata:endIdentifier>
+                <metadata:code>temporalExtent1-endIDcode15</metadata:code>
+                <metadata:codeSpace>temporalExtent1-endIDcodeSpace15</metadata:codeSpace>
+                <metadata:version>temporalExtent1-endIDversion15</metadata:version>
+            </metadata:endIdentifier>
+            <metadata:beginCoordinate>160</metadata:beginCoordinate>
+            <metadata:endCoordinate>80</metadata:endCoordinate>
+            <metadata:coordinateUnits>Ma</metadata:coordinateUnits>
+        </metadata:temporalExtent>
+        <metadata:associatedResource>
+            <metadata:resourceCitation>
+                <metadata:title>associatedResourceCitation-title4</metadata:title>
+                <metadata:applicationProfile href="https://example.com/resourceCitation-profile" >associatedResource citation format profile</metadata:applicationProfile>
+                <metadata:description >associatedResourceCitation-description18</metadata:description>
+                <metadata:linkage>https://example.org/associatedResourceCitation-linkage2.pdf</metadata:linkage>
+                <metadata:function>download</metadata:function>
+            </metadata:resourceCitation>
+            <metadata:relation>publication</metadata:relation>
+        </metadata:associatedResource>
+        <metadata:associatedResource>
+            <metadata:resourceCitation>
+                <metadata:title>associatedResource2Citation-title5</metadata:title>
+                <metadata:description>associatedResource supplemental description19</metadata:description>
+                <metadata:linkage>https://example.org/associatedResource2-linkage3</metadata:linkage>
+                <metadata:function>download</metadata:function>
+            </metadata:resourceCitation>
+            <metadata:relation>method description</metadata:relation>
+            <metadata:relation>error analysis</metadata:relation>
+        </metadata:associatedResource>
+        <metadata:metadataReference>
+            <metadata:title>metadataReference-title6</metadata:title>
+            <metadata:applicationProfile href="https://example.com/metadataReference-profile.ttl"/>
+            <metadata:applicationProfile href="https://example.com/metadataReference-parentProfile.ttl">High level format description, see link</metadata:applicationProfile>
+            <metadata:description>metadataReference-description20</metadata:description>
+            <metadata:linkage>https://example.org/metadataReference/fullmetadata/2346q346</metadata:linkage>
+            <metadata:function>completeMetadata</metadata:function>
+        </metadata:metadataReference>
+        <metadata:metadataReference>
+            <metadata:title>metadataReference-iso19115-3</metadata:title>
+            <metadata:applicationProfile href="https://isotc211.org/metadata/19115-3">ISO19115-3specification</metadata:applicationProfile>
+            <metadata:description>download 19115-3 xml version of this metadata</metadata:description>
+            <metadata:linkage>http://ddeworld.org/geonetwork/srv/api/records/e25d6117-ff65-4f0c-a776-e31df6153b7b/formatters/xml</metadata:linkage>
+            <metadata:function>completeMetadata</metadata:function>
+        </metadata:metadataReference>
+        <metadata:distributionInfo>
+            <metadata:distributionFormat href="https://example.com/distributionFormat1">distribution1Format1</metadata:distributionFormat>
+            <metadata:distributionFormat href="https://example.com/distributionFormat2">distribution1Format2</metadata:distributionFormat>
+            <metadata:onlineResource>
+                <metadata:title>distribution1OnlineResource1-title8</metadata:title>
+                <metadata:applicationProfile href="https://example.com/distributionOnlineResource1-formatProfile">distribution1OnlineResource1-applicationProfile12</metadata:applicationProfile>
+                <metadata:applicationProfile href="https://example.com/distributionOnlineResource1-formatSpecification">distribution1OnlineResource1-specification</metadata:applicationProfile>
+                <metadata:description>distribution1OnlineResource1-description22</metadata:description>
+                <metadata:linkage>https://datadistributor.org/distribution1OnlineResource1</metadata:linkage>
+                <metadata:function>download</metadata:function>
+            </metadata:onlineResource>
+            <metadata:onlineResource>
+                <metadata:title>distribution1OnlineResource2-title9</metadata:title>
+                <metadata:description>distribution1OnlineResource2-Landing page for dataset</metadata:description>
+                <metadata:linkage>https://datadistributor.org/distribution1OnlineResource1/landingpage.html</metadata:linkage>
+                <metadata:function>information</metadata:function>
+            </metadata:onlineResource>
+            <metadata:distributionResponsibleParty>
+                <metadata:name>distribution1ResponsibleParty-name12</metadata:name>
+                <metadata:role>pointOfContact</metadata:role>
+                <metadata:identifier>
+                    <metadata:code>distribution1ResponsibleParty-ID1code16</metadata:code>
+                    <metadata:codeSpace>distribution1ResponsibleParty-ID1codeSpace16</metadata:codeSpace>
+                    <metadata:version>distribution1ResponsibleParty-ID1version16</metadata:version>
+                    <metadata:description>distribution1ResponsibleParty-ID1description24</metadata:description>
+                </metadata:identifier>
+                <metadata:identifier>
+                    <metadata:code>distribution1ResponsibleParty-ID2code17</metadata:code>
+                </metadata:identifier>
+                <metadata:country>CA</metadata:country>
+                <metadata:electronicMailAddress nilReason="withheld"/>
+            </metadata:distributionResponsibleParty>
+            <metadata:distributionResponsibleParty>
+                <metadata:name>distribution1ResponsibleParty2-name13</metadata:name>
+                <metadata:role>custodian</metadata:role>
+                <metadata:identifier>
+                    <metadata:code>distribution1ResponsibleParty2-IDcode18</metadata:code>
+                    <metadata:codeSpace>distribution1ResponsibleParty2-IDcodeSpace18</metadata:codeSpace>
+                    <metadata:version nilReason="inapplicable"/>
+                    <metadata:description nilReason="missing"/>
+                </metadata:identifier>
+                <metadata:country>EE</metadata:country>
+                <metadata:electronicMailAddress>distribution1ResponsibleParty2@email.org</metadata:electronicMailAddress>
+            </metadata:distributionResponsibleParty>
+            <metadata:spatialRepresentationInfo>
+                <metadata:spatialRepresentationType>vector</metadata:spatialRepresentationType>
+                <metadata:spatialResolution>distribution1 resolution: 5 m</metadata:spatialResolution>
+                <metadata:referenceSystemType>geodeticGeographic2D</metadata:referenceSystemType>
+                <metadata:referenceSystemIdentifier>
+                    <metadata:authority>
+                        <metadata:name>distribution1SRS-Authority-name14</metadata:name>
+                        <metadata:role>custodian</metadata:role>
+                    </metadata:authority>
+                    <metadata:code>distribution1SRS-IDcode20</metadata:code>
+                    <metadata:codeSpace>distribution1SRS-IDcodeSpace20</metadata:codeSpace>
+                    <metadata:version>distribution1SRS-IDversion20</metadata:version>
+                    <metadata:description>distribution1SRS-IDdescription28</metadata:description>
+                </metadata:referenceSystemIdentifier>
+            </metadata:spatialRepresentationInfo>
+        </metadata:distributionInfo>
+        <metadata:distributionInfo>
+            <metadata:distributionFormat href="https://example.com/distribution2format1" nilReason="unknown">distribution2format1</metadata:distributionFormat>
+            <metadata:distributionFormat href="https://example.com/distribution2format2" >distribution2format2</metadata:distributionFormat>
+            <metadata:distributionFormat href="https://example.com/distribution2format3" >distribution2format3</metadata:distributionFormat>
+            <metadata:onlineResource>
+                <metadata:title>distribution2OnlineResource1-landingPage</metadata:title>
+                <metadata:description>distribution2OnlineResource1-title10description29</metadata:description>
+                <metadata:linkage>distribution2OnlineResource1-landingpage.html</metadata:linkage>
+                <metadata:function>information</metadata:function>
+            </metadata:onlineResource>
+            <metadata:onlineResource>
+                <metadata:title>distribution2OnlineResource2-title10</metadata:title>
+                <metadata:applicationProfile href="https://example.com/distribution2OnlineResource2-formatprofile.rdf"/>
+                <metadata:applicationProfile href="https://example.com/distribution2OnlineResource2-parentformatspecification">distribution2OnlineResource2-parentformatspecification</metadata:applicationProfile>
+                <metadata:description>distribution2OnlineResource2-description</metadata:description>
+                <metadata:linkage>https://example.org/distribution2OnlineResource2Link</metadata:linkage>
+                <metadata:function>download</metadata:function>
+            </metadata:onlineResource>
+            <metadata:distributionResponsibleParty>
+                <metadata:name>distribution2ResponsibleParty-name15</metadata:name>
+                <metadata:role>pointOfContact</metadata:role>
+                <metadata:identifier>
+                    <metadata:code>distribution2ResponsibleParty-IDcode22</metadata:code>
+                </metadata:identifier>
+                <metadata:country>AD</metadata:country>
+                <metadata:electronicMailAddress>distribution2ResponsibleParty@email.org</metadata:electronicMailAddress>
+            </metadata:distributionResponsibleParty>
+            <metadata:spatialRepresentationInfo>
+                <metadata:spatialRepresentationType>grid</metadata:spatialRepresentationType>
+                <metadata:spatialResolution>distribution2 resolution: 10 m</metadata:spatialResolution>
+                <metadata:referenceSystemType>projected</metadata:referenceSystemType>
+                <metadata:referenceSystemIdentifier>
+                    <metadata:authority>
+                        <metadata:name>distribution2SRS-Authority-name</metadata:name>
+                        <metadata:role>custodian</metadata:role>
+                    </metadata:authority>
+                    <metadata:code>distribution2SRS-IDcode</metadata:code>
+                    <metadata:codeSpace>distribution2SRS-IDcodeSpace</metadata:codeSpace>
+                    <metadata:version>distribution2SRS-IDversion</metadata:version>
+                </metadata:referenceSystemIdentifier>
+            </metadata:spatialRepresentationInfo>
+        </metadata:distributionInfo>
+
+        
+    </metadata:identificationInfo>
+</metadata:MD_Metadata>

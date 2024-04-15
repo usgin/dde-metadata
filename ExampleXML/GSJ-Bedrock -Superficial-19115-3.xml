@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+    xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+    xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+    xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+    xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+    xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+    xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+    xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+    xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+    xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+    xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+    xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+    xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+    xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+    xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+    xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd">
+
+    <mdb:metadataIdentifier>
+        <mcc:MD_Identifier>
+            <mcc:code>
+                <gco:CharacterString>1c15a9b08964547a766224139a527b19043ce51b</gco:CharacterString>
+            </mcc:code>
+        </mcc:MD_Identifier>
+    </mdb:metadataIdentifier>
+    <mdb:defaultLocale>
+        <lan:PT_Locale id="EN">
+            <lan:language>
+                <lan:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+            </lan:language>
+            <lan:characterEncoding>
+                <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_CharacterSetCode" codeListValue="utf8"/>
+            </lan:characterEncoding>
+        </lan:PT_Locale>
+    </mdb:defaultLocale>
+    <mdb:metadataScope>
+        <mdb:MD_MetadataScope>
+            <mdb:resourceScope>
+                <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="not"/>
+            </mdb:resourceScope>
+            <mdb:name>
+                <gco:CharacterString>service</gco:CharacterString>
+            </mdb:name>
+        </mdb:MD_MetadataScope>
+    </mdb:metadataScope>
+    <mdb:contact>
+        <cit:CI_Responsibility>
+            <cit:role>
+                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
+            </cit:role>
+            <cit:party>
+                <cit:CI_Organisation>
+                    <cit:name>
+                        <gco:CharacterString>Mineral Resources and Petroleum Authority of Mongolia (MRPAM)</gco:CharacterString>
+                    </cit:name>
+                    <cit:contactInfo>
+                        <cit:CI_Contact>
+                            <cit:phone>
+                                <cit:CI_Telephone>
+                                    <cit:number>
+                                        <gco:CharacterString>+976-51-263701</gco:CharacterString>
+                                    </cit:number>
+                                    <cit:numberType>
+                                        <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_TelephoneTypeCode" codeListValue="voice"/>
+                                    </cit:numberType>
+                                </cit:CI_Telephone>
+                            </cit:phone>
+                            <cit:phone>
+                                <cit:CI_Telephone>
+                                    <cit:number>
+                                        <gco:CharacterString>+976-11-310370</gco:CharacterString>
+                                    </cit:number>
+                                    <cit:numberType>
+                                        <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile"/>
+                                    </cit:numberType>
+                                </cit:CI_Telephone>
+                            </cit:phone>
+                            <cit:address>
+                                <cit:CI_Address>
+                                    <cit:electronicMailAddress>
+                                        <gco:CharacterString>info@mram.gov.mn</gco:CharacterString>
+                                    </cit:electronicMailAddress>
+                                </cit:CI_Address>
+                            </cit:address>
+                            <cit:address>
+                                <cit:CI_Address>
+                                    <cit:deliveryPoint>
+                                        <gco:CharacterString>Government Building 12, Chingeltei District</gco:CharacterString>
+                                    </cit:deliveryPoint>
+                                    <cit:city>
+                                        <gco:CharacterString>Ulaanbaatar</gco:CharacterString>
+                                    </cit:city>
+                                    <cit:administrativeArea gco:nilReason="missing">
+                                        <gco:CharacterString/>
+                                    </cit:administrativeArea>
+                                    <cit:postalCode>
+                                        <gco:CharacterString>15170</gco:CharacterString>
+                                    </cit:postalCode>
+                                    <cit:country>
+                                        <gco:CharacterString>Mongolia</gco:CharacterString>
+                                    </cit:country>
+                                </cit:CI_Address>
+                            </cit:address>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://cmcs.mrpam.gov.mn/</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Contact>
+                    </cit:contactInfo>
+                    <cit:individual>
+                        <cit:CI_Individual>
+                            <cit:name>
+                                <gco:CharacterString>Mr. Munkhbileg Namsrai</gco:CharacterString>
+                            </cit:name>
+                            <cit:positionName>
+                                <gco:CharacterString>Director, Mineral Resources Information Technology Center</gco:CharacterString>
+                            </cit:positionName>
+                        </cit:CI_Individual>
+                    </cit:individual>
+                </cit:CI_Organisation>
+            </cit:party>
+        </cit:CI_Responsibility>
+    </mdb:contact>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2019-09-09T09:41:23Z</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="creation"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2024-04-08T23:18:30.1903147Z</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:metadataStandard>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>ISO 19119/2005</gco:CharacterString>
+            </cit:title>
+            <cit:edition>
+                <gco:CharacterString>1.0</gco:CharacterString>
+            </cit:edition>
+        </cit:CI_Citation>
+    </mdb:metadataStandard>
+    <mdb:metadataLinkage>
+        <cit:CI_OnlineResource>
+            <cit:linkage>
+                <gco:CharacterString>http://localhost:8080/geonetwork/srv/api/records/1c15a9b08964547a766224139a527b19043ce51b</gco:CharacterString>
+            </cit:linkage>
+            <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="completeMetadata"/>
+            </cit:function>
+        </cit:CI_OnlineResource>
+    </mdb:metadataLinkage>
+    <mdb:identificationInfo>
+        <srv:SV_ServiceIdentification>
+            <mri:citation>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>GSJ MRPAM Combined Bedrock and Superficial Geology and Age</gco:CharacterString>
+                    </cit:title>
+                    <cit:date>
+                        <cit:CI_Date>
+                            <cit:date>
+                                <gco:DateTime>2019-09-09T09:41:23</gco:DateTime>
+                            </cit:date>
+                            <cit:dateType>
+                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision"/>
+                            </cit:dateType>
+                        </cit:CI_Date>
+                    </cit:date>
+                </cit:CI_Citation>
+            </mri:citation>
+            <mri:abstract>
+                <gco:CharacterString>This is the geological map produced and compiled by the Mineral Resources and Petroleum Authority of Mongolia(MRPAM). The attribute of each polygon includes the bedrock and superficial geology information and age.</gco:CharacterString>
+            </mri:abstract>
+            <mri:status>
+                <mcc:MD_ProgressCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ProgressCode" codeListValue="completed"/>
+            </mri:status>
+            <mri:pointOfContact>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>Mineral Resources and Petroleum Authority of Mongolia (MRPAM)</gco:CharacterString>
+                            </cit:name>
+                            <cit:contactInfo>
+                                <cit:CI_Contact>
+                                    <cit:phone>
+                                        <cit:CI_Telephone>
+                                            <cit:number>
+                                                <gco:CharacterString>+976-51-263701</gco:CharacterString>
+                                            </cit:number>
+                                            <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_TelephoneTypeCode" codeListValue="voice"/>
+                                            </cit:numberType>
+                                        </cit:CI_Telephone>
+                                    </cit:phone>
+                                    <cit:phone>
+                                        <cit:CI_Telephone>
+                                            <cit:number>
+                                                <gco:CharacterString>+976-11-310370</gco:CharacterString>
+                                            </cit:number>
+                                            <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_TelephoneTypeCode" codeListValue="facsimile"/>
+                                            </cit:numberType>
+                                        </cit:CI_Telephone>
+                                    </cit:phone>
+                                    <cit:address>
+                                        <cit:CI_Address>
+                                            <cit:electronicMailAddress>
+                                                <gco:CharacterString>info@mram.gov.mn</gco:CharacterString>
+                                            </cit:electronicMailAddress>
+                                        </cit:CI_Address>
+                                    </cit:address>
+                                    <cit:address>
+                                        <cit:CI_Address>
+                                            <cit:deliveryPoint>
+                                                <gco:CharacterString>Government Building 12, Chingeltei District</gco:CharacterString>
+                                            </cit:deliveryPoint>
+                                            <cit:city>
+                                                <gco:CharacterString>Ulaanbaatar</gco:CharacterString>
+                                            </cit:city>
+                                            <cit:administrativeArea gco:nilReason="missing">
+                                                <gco:CharacterString/>
+                                            </cit:administrativeArea>
+                                            <cit:postalCode>
+                                                <gco:CharacterString>15170</gco:CharacterString>
+                                            </cit:postalCode>
+                                            <cit:country>
+                                                <gco:CharacterString>Mongolia</gco:CharacterString>
+                                            </cit:country>
+                                        </cit:CI_Address>
+                                    </cit:address>
+                                    <cit:onlineResource>
+                                        <cit:CI_OnlineResource>
+                                            <cit:linkage>
+                                                <gco:CharacterString>https://cmcs.mrpam.gov.mn/</gco:CharacterString>
+                                            </cit:linkage>
+                                        </cit:CI_OnlineResource>
+                                    </cit:onlineResource>
+                                </cit:CI_Contact>
+                            </cit:contactInfo>
+                            <cit:individual>
+                                <cit:CI_Individual>
+                                    <cit:name>
+                                        <gco:CharacterString>Mr. Munkhbileg Namsrai</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:positionName>
+                                        <gco:CharacterString>Director, Mineral Resources Information Technology Center</gco:CharacterString>
+                                    </cit:positionName>
+                                </cit:CI_Individual>
+                            </cit:individual>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </mri:pointOfContact>
+            <mri:extent>
+                <gex:EX_Extent>
+                    <gex:geographicElement>
+                        <gex:EX_GeographicBoundingBox>
+                            <gex:westBoundLongitude>
+                                <gco:Decimal>87.7327</gco:Decimal>
+                            </gex:westBoundLongitude>
+                            <gex:eastBoundLongitude>
+                                <gco:Decimal>119.925</gco:Decimal>
+                            </gex:eastBoundLongitude>
+                            <gex:southBoundLatitude>
+                                <gco:Decimal>41.5787</gco:Decimal>
+                            </gex:southBoundLatitude>
+                            <gex:northBoundLatitude>
+                                <gco:Decimal>52.1581</gco:Decimal>
+                            </gex:northBoundLatitude>
+                        </gex:EX_GeographicBoundingBox>
+                    </gex:geographicElement>
+                </gex:EX_Extent>
+            </mri:extent>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>OneGeology</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:keyword>
+                        <gco:CharacterString>MD_DATE@2019-07-3</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:keyword>
+                        <gco:CharacterString>MD_LANG@ENG</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:resourceConstraints>
+                <mco:MD_LegalConstraints>
+                    <mco:accessConstraints>
+                        <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+                    </mco:accessConstraints>
+                    <mco:otherConstraints>
+                        <gco:CharacterString>The digital map data is available for free download for your personal, teaching, research or non-commercial use. Your use of any information provided by the Mineral Resources and Petroleum Authority of Mongolia (MRPAM) is at your own risk. MRPAM does not give any warranty, condition or representation as to the quality, accuracy or completeness of the information or its suitability for any use or purpose. All implied conditions relating to the quality or suitability of the information, and all liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</gco:CharacterString>
+                    </mco:otherConstraints>
+                </mco:MD_LegalConstraints>
+            </mri:resourceConstraints>
+<!-- Service metadata;  -->
+            
+            <srv:serviceType>
+                <gco:ScopedName>OGC:WMS</gco:ScopedName>
+            </srv:serviceType>
+            <srv:serviceTypeVersion>
+                <gco:CharacterString>1.3.0</gco:CharacterString>
+            </srv:serviceTypeVersion>
+            <srv:accessProperties>
+                <mrd:MD_StandardOrderProcess>
+                    <mrd:fees>
+                        <gco:CharacterString>service access order process fees</gco:CharacterString>
+                    </mrd:fees>
+                    <mrd:plannedAvailableDateTime>
+                        <gco:DateTime>2024-02-12T00:00:00</gco:DateTime>
+                    </mrd:plannedAvailableDateTime>
+                    <mrd:orderingInstructions>
+                        <gco:CharacterString>ordering instructions</gco:CharacterString>
+                    </mrd:orderingInstructions>
+                    <mrd:turnaround>
+                        <gco:CharacterString>turnaround time</gco:CharacterString>
+                    </mrd:turnaround>
+                    <mrd:orderOptionsType>
+                        <gco:RecordType>  record type string  </gco:RecordType>
+                    </mrd:orderOptionsType>
+                    <mrd:orderOptions>
+                        <gco:Record>any damn thing </gco:Record>
+                    </mrd:orderOptions>
+                </mrd:MD_StandardOrderProcess>
+            </srv:accessProperties>
+            
+            <srv:couplingType>
+                <srv:SV_CouplingType codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#SV_CouplingType" codeListValue="tight"/>
+            </srv:couplingType>
+            <srv:coupledResource>
+                <srv:SV_CoupledResource>
+                    
+                    <srv:scopedName>
+                        
+                        <gco:ScopedName>coupledResourceScopedName</gco:ScopedName>
+                    </srv:scopedName>
+                    <srv:resourceReference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>resourceReference1-title</gco:CharacterString>
+                            </cit:title>
+                            <cit:identifier>
+                                <mcc:MD_Identifier>
+                                    <mcc:code>
+                                        <gco:CharacterString>resourcereference1-IDcode</gco:CharacterString>
+                                    </mcc:code>
+                                </mcc:MD_Identifier>
+                            </cit:identifier>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://resourceReference1.org/onlineResource/linkage</gco:CharacterString></cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </srv:resourceReference>
+                    <srv:resourceReference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>resourceReference2-title</gco:CharacterString>
+                            </cit:title>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://resourceReference2.org/onlineResource/linkage</gco:CharacterString></cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </srv:resourceReference>
+                    <srv:operation>
+                        <srv:SV_OperationMetadata>
+                            <srv:operationName>
+                                <gco:CharacterString>coupledResourceOperationName</gco:CharacterString>
+                            </srv:operationName>
+                            <srv:distributedComputingPlatform><srv:DCPList codeList="http://DCP.org/codelistURI" codeListValue="DCPvalue"></srv:DCPList>
+                            </srv:distributedComputingPlatform>
+                            <srv:connectPoint>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://coupledResource.org/connectpoint/linkage</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </srv:connectPoint>
+                        </srv:SV_OperationMetadata>
+                    </srv:operation>
+                    <srv:resource>
+                        <mri:MD_DataIdentification>
+                            <mri:citation>
+                                <cit:CI_Citation>
+                                    <cit:title>
+                                        <gco:CharacterString>coupledResourceResourceCitationTitle</gco:CharacterString>
+                                    </cit:title>
+                                </cit:CI_Citation>
+                            </mri:citation>
+                            <mri:abstract/>
+                        </mri:MD_DataIdentification>
+                    </srv:resource>
+
+                </srv:SV_CoupledResource>
+            </srv:coupledResource>
+            <srv:operatedDataset>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of operated dataset1</gco:CharacterString>
+                    </cit:title>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString>IdentifierCodeOperatedDataset1</gco:CharacterString>
+                            </mcc:code>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://operatedDataset.org/onlineresource/linkage</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </srv:operatedDataset>
+            <srv:operatedDataset>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of operated dataset2</gco:CharacterString>
+                    </cit:title>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://operatedDataset.org/onlineresource/linkage</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </srv:operatedDataset>
+            <srv:profile>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of profile1</gco:CharacterString>
+                    </cit:title>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString>idcodeForProfile1</gco:CharacterString>
+                            </mcc:code>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                </cit:CI_Citation>
+            </srv:profile>
+            <srv:profile>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of profile2</gco:CharacterString>
+                    </cit:title>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://linkage.org/profile2/link</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </srv:profile>
+            <srv:serviceStandard>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of serviceStandard1</gco:CharacterString>
+                    </cit:title>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString>idcodeForServiceStandard1</gco:CharacterString>
+                            </mcc:code>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                </cit:CI_Citation>
+            </srv:serviceStandard>
+            <srv:serviceStandard>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>title of Service Standard2</gco:CharacterString>
+                    </cit:title>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://linkage.org/servicestandard2/link</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </srv:serviceStandard>
+            
+            <srv:containsOperations>
+                <srv:SV_OperationMetadata>
+
+                    <srv:operationName>
+                        <gco:CharacterString>GetFeatureInfo</gco:CharacterString>
+                    </srv:operationName>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-GET&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-POST&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:operationDescription>
+                        <gco:CharacterString>operation description</gco:CharacterString>
+                    </srv:operationDescription>
+
+                    <srv:invocationName>
+                        <gco:CharacterString>invocationName</gco:CharacterString>
+                    </srv:invocationName>
+
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>text/html</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                                  text/html</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>application/vnd.ogc.gml</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                                  application/vnd.ogc.gml</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>text/plain</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:name>
+                                <gco:CharacterString>onlineResource-name</gco:CharacterString>
+                            </cit:name>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                                  text/plain</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:parameter>
+                        <srv:SV_Parameter>
+                            <srv:name>
+                                <gco:MemberName>
+                                    <gco:aName>
+                                        <gco:CharacterString>parameter member name</gco:CharacterString>
+                                    </gco:aName>
+                                    <gco:attributeType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>parameter-member-attribute-typeName</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </gco:attributeType>
+                                </gco:MemberName>
+                            </srv:name>
+                            <srv:direction>
+                                <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                            </srv:direction>
+                            <srv:optionality>
+                                <gco:Boolean>false</gco:Boolean>
+                            </srv:optionality>
+                            <srv:repeatability>
+                                <gco:Boolean>false</gco:Boolean>
+                            </srv:repeatability>
+                        </srv:SV_Parameter>
+                    </srv:parameter>
+                    <srv:dependsOn>
+                        <srv:SV_OperationMetadata>
+                            <srv:operationName></srv:operationName>
+                            <srv:distributedComputingPlatform></srv:distributedComputingPlatform>
+                            <srv:connectPoint></srv:connectPoint>
+                        </srv:SV_OperationMetadata>
+                    </srv:dependsOn>
+                </srv:SV_OperationMetadata>
+            </srv:containsOperations>
+            <srv:containsOperations>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>
+                        <gco:CharacterString>GetCapabilities</gco:CharacterString>
+                    </srv:operationName>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-GET&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-POST&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>text/xml</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    text/xml</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                </srv:SV_OperationMetadata>
+            </srv:containsOperations>
+            <srv:containsOperations>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>
+                        <gco:CharacterString>GetMap</gco:CharacterString>
+                    </srv:operationName>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-GET&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#DCPList" codeListValue="&#xA;                      HTTP-POST&#xA;                    "/>
+                    </srv:distributedComputingPlatform>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>image/gif</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    image/gif</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>image/png</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    image/png</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>image/jpeg</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    image/jpeg</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>image/png; mode=8bit</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    image/png; mode=8bit</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>image/tiff</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Format :
+                    image/tiff</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                </srv:SV_OperationMetadata>
+            </srv:containsOperations>
+            <srv:operatesOn>
+                <mri:MD_DataIdentification>
+                    <mri:citation>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>title of operated dataset</gco:CharacterString>
+                            </cit:title>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://url.for.operatedDataset/324763</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mri:citation>
+                    <mri:abstract gco:nilReason="missing"/>
+                </mri:MD_DataIdentification>
+            </srv:operatesOn>
+            <srv:operatesOn uuidref="654a409b9becc3e66798d9598f93717401883abd"
+                xlink:href="http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng//xml.metadata.get?uuid=654a409b9becc3e66798d9598f93717401883abd"
+            />
+            <srv:containsChain>
+                <srv:SV_OperationChainMetadata>
+                    <srv:name></srv:name>
+                    <srv:operation></srv:operation>
+                </srv:SV_OperationChainMetadata>
+            </srv:containsChain>
+        </srv:SV_ServiceIdentification>
+    </mdb:identificationInfo>
+    <mdb:distributionInfo>
+        <mrd:MD_Distribution>
+            <mrd:distributionFormat>
+                <mrd:MD_Format>
+                    <mrd:formatSpecificationCitation>
+                        <cit:CI_Citation>
+                            <cit:title gco:nilReason="missing">
+                                <gco:CharacterString/>
+                            </cit:title>
+                            <cit:date gco:nilReason="unknown"/>
+                            <cit:edition gco:nilReason="unknown">
+                                <gco:CharacterString/>
+                            </cit:edition>
+                        </cit:CI_Citation>
+                    </mrd:formatSpecificationCitation>
+                </mrd:MD_Format>
+            </mrd:distributionFormat>
+            <mrd:transferOptions>
+                <mrd:MD_DigitalTransferOptions>
+                    <mrd:onLine>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>application/vnd.ogc.wms_xml</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>https://onegeology-asia.org/ows/GSJ_MRPAM_Combined_Bedrock_and_Superficial_Geology_and_Age/wms?</gco:CharacterString>
+                            </cit:description>
+                        </cit:CI_OnlineResource>
+                    </mrd:onLine>
+                </mrd:MD_DigitalTransferOptions>
+            </mrd:transferOptions>
+        </mrd:MD_Distribution>
+    </mdb:distributionInfo>
+    <mdb:resourceLineage>
+        <mrl:LI_Lineage>
+            <mrl:statement gco:nilReason="missing">
+                <gco:CharacterString/>
+            </mrl:statement>
+            <mrl:scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="service"/>
+                    </mcc:level>
+                    <mcc:levelDescription>
+                        <mcc:MD_ScopeDescription>
+                            <mcc:attributes/>
+                        </mcc:MD_ScopeDescription>
+                    </mcc:levelDescription>
+                </mcc:MD_Scope>
+            </mrl:scope>
+        </mrl:LI_Lineage>
+    </mdb:resourceLineage>
+</mdb:MD_Metadata>
