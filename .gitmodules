@@ -1,0 +1,3 @@
+[submodule "DDEcore-geonetwork"]
+	path = DDEcore-geonetwork
+	url = https://github.com/smrgeoinfo/core-geonetwork.git
