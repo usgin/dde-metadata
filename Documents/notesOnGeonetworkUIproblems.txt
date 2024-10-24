@@ -1,0 +1,91 @@
+-- on the Basic metadata tab (Deep Time Digital Earth editor view)
+-- This one works:
+<section name="resourceType" forEach="/mdb:MD_Metadata/mdb:metadataScope">
+          <field name="ISOresourceScope" xpath="*/mdb:resourceScope" or="resourceScope" in="*"
+            del="."/>
+#Gets ISO ScopeCode list drop down.
+
+# This one gets dropdown, but labels are all 'undefined'.  When I pick one, the correct label shows up in the text box.
+          <field name="DDEscopeName" xpath="*/mdb:name" or="name" in="*" del="."
+            use="data-gn-keyword-picker">
+            <directiveAttributes data-thesaurus-key="local.theme.resourcetypeskos" data-transformation="to-iso19115-3.2018-keyword"/>
+          </field>
+        </section>
+		
+		
+--this works  as expected: 
+          <field name="DDEtopicCategory"
+            xpath="//mri:descriptiveKeywords[ *//mri:thesaurusName//cit:title/child::*/text() = 'DDE topic category extensions']" />
+          <text ref="horizontalRule"/>
+#gets pick list perfectly from local.theme.topiccategoryskos, but I can't tell how that binding is made...  The only mention of topiccategoryskos is in the config <thesaurusList>
+		  
+ 
+          <field name="ISOtopicCategory" 
+            xpath="/mdb:MD_Metadata/mdb:identificationInfo//mri:topicCategory" or="topicCategory" 
+            in="/mdb:MD_Metadata/mdb:identificationInfo"/>
+#adds topic cateogries from ISO codelist. How?
+
+          <action type="add" btnLabel="Add topic category" or="topicCategory"
+            in="/mdb:MD_Metadata/mdb:identificationInfo/*"
+            if="count(mdb:MD_Metadata/mdb:identificationInfo//mri:topicCategory)=0">
+            <template>
+              <snippet>
+                <mri:topicCategory>
+                  <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
+                </mri:topicCategory>
+              </snippet>
+            </template>
+          </action>
+		  
+# I can add either DDE topics or ISO topics both work. I can't tell why. 
+
+
+Acquisition types:
+
+# displays drop down, but in drop down, all is 'undefined', when I select something, the correct label shows up.
+        <section forEach="/mdb:MD_Metadata/mdb:acquisitionInformation/mac:MI_AcquisitionInformation/mac:operation"> 
+          <field name="DDEacquisitionType" xpath="mac:MI_Operation/mac:description"  
+            or="description"  in="mac:MI_Operation"
+            use="data-gn-keyword-picker"  del="../../../..">
+            <directiveAttributes data-thesaurus-key="local.theme.acquisitioncodeskos" data-transformation="to-iso19115-3.2018-keyword"/>
+          </field>
+        </section>
+		
+<!-- DDE acquisition type -->
+        <section>
+          <!-- put the add acqusitionType in separate section so button isn't repeated  -->
+          <action type="add" btnLabel="Add DDE aquisition type" or="acquisitionInformation"
+            in="/mdb:MD_Metadata">
+            <template>
+               <snippet>
+                <mdb:acquisitionInformation>
+                  <mac:MI_AcquisitionInformation>
+                    <mac:operation>
+                      <mac:MI_Operation>
+                        <mac:description>
+                          <gco:CharacterString></gco:CharacterString>
+                        </mac:description>
+                        <mac:status gco:nilReason="unknown"/>
+                      </mac:MI_Operation>
+                    </mac:operation>
+                  </mac:MI_AcquisitionInformation>
+                </mdb:acquisitionInformation>
+              </snippet>
+            </template>
+          </action>
+          <text ref="horizontalRule"/>
+        </section>
+#button works as expected, except pick list is all 'undefined'
+
+
+
+-- in the service tab:
+          <field name="serviceType"
+            xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/srv:serviceType" or="serviceType"
+            in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"
+            use="data-gn-keyword-picker" >
+            <directiveAttributes data-thesaurus-key="local.theme.servicetypeskos" data-transformation="to-iso19115-3.2018-keyword" />
+          </field>
+if delete value from field, get pick list; all are 'undefined', but if you pick one, the correct label shows up in the text box.
+
+
