@@ -16,8 +16,13 @@ Two deliverables live here:
    GeoNetwork's ISO 19115-3:2018 schema plugin so records can be edited and exchanged in both DDE and
    ISO form. The bridge between the two is a pair of XSLT crosswalks.
 
-Remote: `https://opencode.deep-time.org/dde/dde-medata.git` (GitLab). Currently checked out on
+Remote: `https://github.com/usgin/dde-metadata.git`. Currently checked out on
 `GeoNetworkConfiguration`.
+
+The original remote, `https://opencode.deep-time.org/dde/dde-medata.git`, is **gone** — that GitLab
+instance refuses connections on both 80 and 443 while the rest of the DDE web estate is up, so it
+appears decommissioned. This repo was mirrored to GitHub on 2026-08-26 (all six branches) and
+`origin` repointed there.
 
 ## Content is split across branches — check before assuming something is missing
 
@@ -28,7 +33,7 @@ before concluding a file doesn't exist.
 |---|---|---|
 | `GeoNetworkConfiguration` | 2024-04-23 | **checked out.** The `DDEcore-geonetwork` submodule. |
 | `main` | 2024-10-24 | SKOS vocabularies at top level, `dde-2023/`, `Documents/` (UI-problem notes, decks), `geonetworkQuestions.txt`, transform test output. |
-| `geonetwork` | 2024-04-22 | `vocabularies/` (same SKOS, foldered), `GeoNetworkRelease/geonetwork.war` — a **git-LFS pointer**, 134 bytes on disk; needs `git lfs` to materialize. |
+| `geonetwork` | 2024-04-22 | `vocabularies/` (same SKOS, foldered), `GeoNetworkRelease/geonetwork.war` — a **git-LFS pointer**, 134 bytes on disk. Its LFS object lived on the retired GitLab and is **unrecoverable**; the pointer is now dangling. |
 | `updates2024-02`, `UpdateTransforms`, `UpdateTransforms-emerald` | Feb–Apr 2024 | Older transform/spec/example iterations. |
 
 The SKOS vocabularies (`TopicCategorySKOS`, `resourceTypeSKOS`, `serviceTypeSKOS`,
@@ -102,8 +107,20 @@ under the plugin's `schema/` directory, resolved through its `oasis-catalog.xml`
 
 ## The GeoNetwork submodule
 
-`DDEcore-geonetwork` → `https://opencode.deep-time.org/smrAzDDE/core-geonetwork.git`, branch
-`DDEconfig`. Initialize with `git submodule update --init --recursive`.
+`DDEcore-geonetwork` → `https://github.com/usgin/DDEcore-geonetwork.git`, branch `DDEconfig`.
+Initialize with `git submodule update --init --recursive`.
+
+That mirror was made from this machine's clone after the GitLab original went offline, and its
+**history was rewritten**: the 273 MB `geonetwork.war` exceeded GitHub's 100 MB blob limit and was
+stripped, which emptied the `add war file` commit (`f714717`) so it was pruned. Every SHA therefore
+differs from the original fork, and the gitlink now records the rewritten `fix import paths` commit,
+`c07e33ff`. Only the two local branches (`DDEconfig`, `main`) were mirrored — the 87 upstream
+branches and 109 tags are all available from `geonetwork/core-geonetwork` and were skipped.
+
+The submodule checkout in *this* working tree still sits on the pre-rewrite history (plus an
+uncommitted `loc/eng/strings.xml` edit), so `git status` reports it as modified. A fresh
+`git clone --recurse-submodules` resolves correctly; to realign this copy, commit or stash that edit
+first, then reset the submodule to `origin/DDEconfig`.
 
 DDE-specific customization is confined to
 `schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/`:
