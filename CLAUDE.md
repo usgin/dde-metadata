@@ -2,8 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Workspace-level context (sibling clones, the newer `usgin/geonetwork-DDE` line at
-`C:\GithubC\geonetwork\core-geonetwork`) is in `../CLAUDE.md`.
+Workspace-level context (sibling clones, the newer GeoNetwork fork at
+`C:\GithubC\geonetwork\core-geonetwork` — normative on the DDE GitLab as
+`Steve_Geonetwork/dde-geonetwork2026`, mirrored at `usgin/geonetwork-DDE`) is in `../CLAUDE.md`.
 
 ## Purpose
 
@@ -16,13 +17,24 @@ Two deliverables live here:
    GeoNetwork's ISO 19115-3:2018 schema plugin so records can be edited and exchanged in both DDE and
    ISO form. The bridge between the two is a pair of XSLT crosswalks.
 
-Remote: `https://github.com/usgin/dde-metadata.git`. Currently checked out on
-`GeoNetworkConfiguration`.
+Currently checked out on `GeoNetworkConfiguration`.
 
-The original remote, `https://opencode.deep-time.org/dde/dde-medata.git`, is **gone** — that GitLab
-instance refuses connections on both 80 and 443 while the rest of the DDE web estate is up, so it
-appears decommissioned. This repo was mirrored to GitHub on 2026-08-26 (all six branches) and
-`origin` repointed there.
+**The DDE GitLab is normative**, matching the arrangement in `../../geonetwork/core-geonetwork`
+(decided 2026-11-12):
+
+| Remote | URL | Role |
+|---|---|---|
+| `origin` | `code.axiomearth.ai/Steve_Geonetwork/dde-metadata` | **Normative.** Push here. |
+| `github` | `github.com/usgin/dde-metadata` | Mirror. Push deliberately; not the source of truth. |
+
+All six branches are on both, and as of 2026-11-12 both are level with this clone.
+
+This repo has now outlived two homes. The original remote,
+`https://opencode.deep-time.org/dde/dde-medata.git`, is **gone** — that GitLab refused connections on
+both 80 and 443 while the rest of the DDE web estate was up — so the repo was mirrored to GitHub on
+2026-08-26 to rescue it. The replacement DDE GitLab at `code.axiomearth.ai` appeared in 2026-11 and
+became normative; GitHub stays as the mirror rather than a second primary, because the earlier
+GitLab/GitHub/archived-fork tangle cost real work to unpick.
 
 ## Content is split across branches — check before assuming something is missing
 
@@ -31,8 +43,8 @@ before concluding a file doesn't exist.
 
 | Branch | Tip | Holds |
 |---|---|---|
-| `GeoNetworkConfiguration` | 2024-04-23 | **checked out.** The `DDEcore-geonetwork` submodule. |
-| `main` | 2024-10-24 | SKOS vocabularies at top level, `dde-2023/`, `Documents/` (UI-problem notes, decks), `geonetworkQuestions.txt`, transform test output. |
+| `GeoNetworkConfiguration` | 2026-11-12 | **checked out.** The `DDEcore-geonetwork` submodule. |
+| `main` | 2024-10-24 | SKOS vocabularies at top level, `dde-2023/` (**only** here now — dropped from `GeoNetworkConfiguration` 2026-11-12), `Documents/` (UI-problem notes, decks), `geonetworkQuestions.txt`, transform test output. |
 | `geonetwork` | 2024-04-22 | `vocabularies/` (same SKOS, foldered), `GeoNetworkRelease/geonetwork.war` — a **git-LFS pointer**, 134 bytes on disk. Its LFS object lived on the retired GitLab and is **unrecoverable**; the pointer is now dangling. |
 | `updates2024-02`, `UpdateTransforms`, `UpdateTransforms-emerald` | Feb–Apr 2024 | Older transform/spec/example iterations. |
 
@@ -117,10 +129,24 @@ differs from the original fork, and the gitlink now records the rewritten `fix i
 `c07e33ff`. Only the two local branches (`DDEconfig`, `main`) were mirrored — the 87 upstream
 branches and 109 tags are all available from `geonetwork/core-geonetwork` and were skipped.
 
-The submodule checkout in *this* working tree still sits on the pre-rewrite history (plus an
-uncommitted `loc/eng/strings.xml` edit), so `git status` reports it as modified. A fresh
-`git clone --recurse-submodules` resolves correctly; to realign this copy, commit or stash that edit
-first, then reset the submodule to `origin/DDEconfig`.
+That checkout was realigned on 2026-11-12 (`git submodule update --checkout`), so it is now detached
+at the recorded gitlink `c07e33ff` and `git status` is quiet. **The pre-rewrite history was not
+discarded** — the submodule's local branch `DDEconfig` still points at `f714717`, which keeps both
+the original SHAs and the one git copy of the 285,820,217-byte `geonetwork.war` blob (the other copy
+is the loose file at `C:\apache-tomcat-9.0.85\webapps\geonetwork.war`). That branch is local only:
+it diverges from `origin/DDEconfig` by 13,776 commits against 13,775, since the two are the same
+history before and after the rewrite. Consequences to respect:
+
+- Never `git pull` in the submodule while on `DDEconfig` — it would try to merge two rewrites of the
+  same history and produce nonsense. Fetch and compare instead.
+- Never `git gc --prune` away that branch expecting the war to survive elsewhere in git.
+- The war still cannot go to GitHub (273 MB against a 100 MB blob limit). If it should be preserved
+  off this machine, attach it to a GitLab release with a recorded checksum rather than committing it.
+
+A one-line `loc/eng/strings.xml` edit was stashed there in the same pass — it retitled `scopeName`
+from "Free text name for resource type" to "DDE resource type", which collides with the existing
+`DDEresourceType` label, so it was not ported to the live fork. Recover with
+`git -C DDEcore-geonetwork stash list`.
 
 DDE-specific customization is confined to
 `schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/`:
@@ -169,12 +195,18 @@ at `http://localhost:8080/geonetwork`. For dev, the notes disable ES security in
 **Windows build gotcha from the notes:** Maven fails with file-access errors while an editor or
 Explorer window holds the source tree open. Close them and rebuild before investigating the message.
 
-## Working-tree state — confirm before committing
+## Working-tree state
 
-- ~302 uncommitted deletions: the whole `dde-2023/` tree (an earlier schema-plugin copy lifted from a
-  deployed Tomcat instance) is removed from disk but still in `HEAD`. In-progress consolidation, not
-  damage. It still exists on `main`.
-- The `DDEcore-geonetwork` submodule pointer is modified and the submodule itself is dirty.
+Cleaned up 2026-11-12. The two long-standing items are resolved: the 302 `dde-2023/` deletions are
+committed (`415c6fd`; the tree survives on `main` and in history at `5a2ebd6`), and the submodule is
+realigned with its edit stashed — see **The GeoNetwork submodule** above for what that preserves.
+
+What remains:
+
+- `ResourceTypes.xlsx` is untracked. Two sheets, `FromResourceType.java` and
+  `fromResourceTypeCodelist`, comparing the DDE resource-type values as they appear in the Java
+  source against the codelist — source material for the standard, so it plausibly belongs here, but
+  it is a binary office file and has not been staged.
 - `core-geonetwork/` is an empty `.gitkeep` placeholder — an abandoned attempt to vendor the
   GeoNetwork source directly (the commit messages record it). The real dependency is the
   `DDEcore-geonetwork` submodule; don't populate it.
