@@ -197,16 +197,15 @@ Explorer window holds the source tree open. Close them and rebuild before invest
 
 ## Working-tree state
 
-Cleaned up 2026-11-12. The two long-standing items are resolved: the 302 `dde-2023/` deletions are
-committed (`415c6fd`; the tree survives on `main` and in history at `5a2ebd6`), and the submodule is
-realigned with its edit stashed — see **The GeoNetwork submodule** above for what that preserves.
+**The tree is clean** as of 2026-11-12. The three long-standing items are resolved: the 302
+`dde-2023/` deletions are committed (`415c6fd`; the tree survives on `main` and in history at
+`5a2ebd6`), the submodule is realigned with its edit stashed — see **The GeoNetwork submodule** above
+for what that preserves — and `ResourceTypes.xlsx` is committed (`89f5322`), a two-sheet comparison
+of the DDE resource-type values in the Java source against the codelist. That last one is a binary
+office file, so git produces no readable diff; say what changed in the commit message.
 
-What remains:
+Two standing quirks, neither worth changing:
 
-- `ResourceTypes.xlsx` is untracked. Two sheets, `FromResourceType.java` and
-  `fromResourceTypeCodelist`, comparing the DDE resource-type values as they appear in the Java
-  source against the codelist — source material for the standard, so it plausibly belongs here, but
-  it is a binary office file and has not been staged.
 - `core-geonetwork/` is an empty `.gitkeep` placeholder — an abandoned attempt to vendor the
   GeoNetwork source directly (the commit messages record it). The real dependency is the
   `DDEcore-geonetwork` submodule; don't populate it.
